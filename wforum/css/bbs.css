@@ -1,0 +1,117 @@
+body,td,th {
+	background: #f0f0f0;
+	color: #003264;
+	font-size: 80%;
+}
+a:hover {
+	text-decoration: underline;
+	color: #dd0000;
+}
+/* メイン記事番号色 */
+span.num {
+	color: #008000;
+}
+/* 検索・過去ログ画面タイトル背景色 */
+div.obi {
+	text-align: center;
+	padding: 2px;
+	background: #003264;
+	color: #fff;
+	font-weight: bold;
+}
+dt.p {
+	margin-top: 1em;
+}
+div.key {
+	float: left;
+	width: 3.5em;
+}
+div.val {
+	float: left;
+}
+p.red {
+	color: #dd0000;
+}
+a.ptop {
+	font-size: 10px;
+	text-decoration: none;
+}
+img.capt {
+	vertical-align: middle;
+}
+td.small {
+	font-size: 75%;
+}
+/* 掲示板タイトル */
+h1 {
+	font-size: 200%;
+	margin-bottom: 0;
+}
+/* 中央寄せ */
+div.main {
+	text-align: center;
+}
+
+div.clear {
+	clear: both;
+}
+/* メイン記事装飾 */
+div.art {
+	width: 92%;
+	background: #fff;
+	text-align: left;
+	padding: 0.7em 0.7em 0.7em 1em;
+	border: 1px solid gray;
+	margin: 1.2em auto;
+}
+/* メイン記事タイトル */
+div.art strong {
+	color: #008000;
+}
+.ta-r {
+	text-align: right !important;
+}
+/* 家アイコン位置 */
+img.icon {
+	vertical-align: middle;
+	border: none;
+	margin: 0 2px;
+}
+/* 投稿ボタン */
+input.btn {
+	width: 110px;
+}
+/* アクセス制限用 */
+table.enter {
+	margin:80px auto;
+	width:400px;
+	border:1px solid #0080c0;
+	border-collapse:collapse;
+}
+table.enter th {
+	border:1px solid #0080c0;
+	padding:1em;
+	background:#0080c0;
+	color:#fff;
+	text-align:left;
+}
+table.enter td {
+	border:1px solid #0080c0;
+	padding:1em;
+	background:#fff;
+	font-family:verdana,helvetica,arial;
+}
+input.len {
+	width:220px;
+}
+div.btn {
+	text-align:right;
+}
+div.btn input {
+	font-family:verdana,helvetica,arial;
+	width:100px; height:32px;
+}
+div.ta-c {
+	text-align:center;
+}
+

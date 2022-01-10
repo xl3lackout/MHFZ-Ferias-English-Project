@@ -1,0 +1,54 @@
+/*共通*/
+table {border-collapse:collapse;table-layout:fixed;}
+th {text-align:center;white-space:nowrap;font-weight:normal;background-color:silver;}
+th,td {white-space:nowrap;padding:2px;border:2px ridge #ffffff;}
+input {font-size:60%;padding-right:2px;padding-left:2px;}
+
+body {margin:7px}
+col#c1 {width:200px;}
+col#c1a {width:220px;}
+col#c1b {width:230px;}
+col#c2 {width:1em;}
+col#c3 {width:1.5em;}
+col#c4 {width:3.5em;}
+col#c5 {width:8.5em;}
+col#c6n {width:2em;text-align:right;}
+col#c7 {width:8.5em;}
+col#c8n {width:2em;text-align:right;}
+col#c9 {width:8.5em;}
+col#c10n {width:2em;text-align:right;}
+
+span.b {color:blue;} /*寒冷*/
+span.r {color:red;} /*炎天*/
+.c {text-align:center;}
+.y {background-color:silver;}
+a:hover {background-color:lightgrey;}
+img {display:block}
+
+.n {text-align:right;}
+table tr>td:first-child+td,
+table tr>td:first-child+td+td+td,
+table tr>td:first-child+td+td+td+td+td {text-align:right;}
+table tr>td.c:first-child+td,
+table tr>td.c:first-child+td+td+td,
+table tr>td.c:first-child+td+td+td+td+td {text-align:left;}
+table tr>td.l:first-child+td,
+table tr>td.l:first-child+td+td+td,
+table tr>td.l:first-child+td+td+td+td+td {text-align:left;}
+
+table tr>td.l:first-child+td+td+td+td,
+table tr>td.l:first-child+td+td+td+td+td+td,
+table tr>td.l:first-child+td+td+td+td+td+td+td+td {text-align:right;}
+table tr>td.c:first-child+td+td+td+td+td,
+table tr>td.c:first-child+td+td+td+td+td+td+td,
+table tr>td.c:first-child+td+td+td+td+td+td+td+td+td {text-align:right;}
+
+/* Firefox用ハック */
+html:not([lang*=""]) table,
+html:not([lang*=""]) td,
+html:not([lang*=""]) th
+{
+	border-collapse: separate;
+	border-spacing: 0;
+	margin:0;padding:0;
+}
