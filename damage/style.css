@@ -1,0 +1,56 @@
+* {margin:0; padding:0;}
+html,body {margin:5px;}
+th {text-align:center;white-space:nowrap;font-weight:normal;background-color:silver;}
+td {white-space:nowrap;padding:0 2px;border-color:silver;}
+select {font-family:"ÇlÇr ÉSÉVÉbÉN";}
+.t {text-align:center;background-color:silver;}
+.box {padding:0 0.4em;border-collapse:collapse;border:2px ridge #333333;background-color:silver;}
+#d_slot,#g_att,#g_attB {text-align:center;}
+#d_att,#d_cri,#g_cri,#i_att,#i_zoku,#i_cri {text-align:right;}
+#s_guns,#s_fue,#s_yumi_G,#s_gun_G,#c_gun_G,#c_yumi_G,#c_betu,#c_betu2,#c_sinka,#c_Gclass,#c_fueATup,#c_sizilkyoku {display:none}
+#s_gun_G {font-size:85%}
+.chkB {font-size:0.7em;margin-right:0; height:1.8em;}
+#damage small {color:mediumblue
+;}
+
+#damage .dai {background-color:silver;}
+#damage tr>td:first-child {background-color:silver;}
+.stop2 {color:blue;}
+.stop1 {color:green;}
+.stop0 {color:gray;}
+.aj1:after {content:"[éa]";font-size: x-small;}
+.aj2:after {content:"[ë≈]";font-size: x-small;}
+.aj3:after {content:"[íe]";font-size: x-small;}
+
+#niku .dai {background-color:silver;white-space:normal;}
+#niku tr>td:first-child {background-color:silver;white-space:normal;}
+#niku .suu {text-align:right;}
+#niku tr>td+td {text-align:right;}
+
+.fss {font-size:60%;} /*è¨Ç≥Çﬂï∂éö*/
+#d_doc {height:16px;font-size:80%;}
+/*#d_spec {}*/
+#c_sinka {font-size:85%;}
+#sub_WinBody .rep td {vertical-align:bottom;}
+#sub_WinBody .rep td {vertical-align:top;}
+#sub_WinBody .sozai td {vertical-align:top;}
+/*ïêäÌàÍóóÇÊÇË*/
+/*ìJ*/
+#d_spec .f {background-color:silver;}
+#d_spec .fr {color:red;}
+#d_spec .fb {color:blue;}
+#d_spec .fw {color:white;}
+#d_spec .fy {color:yellow;}
+#d_spec .fg {color:lime;}
+#d_spec .fa {color:aqua;}
+#d_spec .fp {color:fuchsia;}
+/*ÉQÅ[ÉWóp*/
+#d_spec ul {margin:0;padding:1px 0;height:10px;width:101px;list-style-type:none;font-size:1px;background-color:slategray;}
+#d_spec .r {float:left;height:10px;background-color:red;}
+#d_spec .o {float:left;height:10px;background-color:orange;}
+#d_spec .y {float:left;height:10px;background-color:yellow;}
+#d_spec .g {float:left;height:10px;background-color:lime;}
+#d_spec .b {float:left;height:10px;background-color:blue;}
+#d_spec .w {float:left;height:10px;background-color:white;}
+#d_spec .p {float:left;height:10px;background-color:violet;}
+#d_spec .s {float:left;height:10px;background-color:cyan;}

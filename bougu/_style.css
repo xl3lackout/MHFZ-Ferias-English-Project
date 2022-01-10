@@ -1,0 +1,80 @@
+/*共通*/
+th {text-align:center;white-space:nowrap;font-weight:normal;background-color:silver;}
+th,td {vertical-align:top;white-space:nowrap;padding:2px;}
+thead {height:2.4em;}
+/*html,body {height:100%; overflow:hidden;} ツリーと共通なのでコメント*/
+body {margin:5px; padding:0;}
+table {table-layout:fixed;margin-bottom:60em;}
+td {border-color:#c0c0c0;} /*FF,Operaの罫線対応*/
+
+#tree {height:99%;width:20%;overflow:scroll;float:left;white-space:nowrap;line-height:100%;}
+#tree small {font-size:60%;}
+#tree a {text-decoration:none;}
+#tree a:link,#tree a:visited {color:blue;}
+#tree a:hover {color:red;}
+#tree a:active {color:black;}
+#tree span {padding:2px;color:blue;cursor:pointer;}
+#t2L,#t3L,#t4L,#t5L,#t6L,#t7L,#t8L,#t9L,#t10L,#t11L,#t12L,#t13L,#t14L,#t15L {display:none;}
+#tree strong,td.new:first-line {font-weight:normal;color:crimson;} /*新防具*/
+#tree em {font-style: normal;color:darkred;font-size:80%} /*補足*/
+
+#bar {height:99%;width:3px;float:left;}
+#line {height:99%;width:3px;cursor:e-resize;background-color:gray;}
+#data {height:99%;width:78%;overflow: scroll;}
+
+input {font-size:60%;padding-right:2px;padding-left:2px;}
+.k {color:red;} /*キー素材*/
+table p {font-size:80%;color:red;} /*剛種武器*/
+td div {font-size:60%;margin-left:0.5em;} /*強化元先*/
+td div a {display:block;text-decoration: none;}
+td div a:link,td div A:visited {color:blue;}
+td div a:hover {color:red;}
+td div a:active {color:black;}
+b {font-size:80%;font-weight:normal;color:Navy;display:block;text-align:center;} /*GR*/
+s {font-size:80%;color:red;text-decoration:none;} /*説明欄*/
+
+#b {width:84.0em} /*防具*/
+#c {width:57.0em} /*装飾品*/
+#s {width:46.0em} /*シジル*/
+
+#b ul,#c ul,#s ul {margin:0;padding:1px 0;list-style-type:none;} /*スキル*/
+#b em,#c em,#s em {font-style:normal;display:block;float:left}
+
+#b col#cN {width:10em;}
+#c col#cN {width:8em;}
+#s col#cN {width:8em;}
+col#cTy {width:3em;}
+col#cR {width:1.2em}
+#b col#cDf {width:3.0em;text-align:right;}
+#b col#cTi {width:3.0em;}
+#c col#cSl {width:1.1em;text-align:center;}
+col#cSk {width:6.7em;text-align:right;}
+col#cSk2 {width:10em;text-align:right;}
+#s col#cSk {width:10em;text-align:right;}
+#s col#cRi {width:2.5em;}
+col#cZ {width:3.5em;text-align:right;}
+col#cHr {width:3em;text-align:right;}
+#b col#cS {width:34em;}
+#c col#cS {width:29em;}
+#s col#cS {width:10em;}
+#b tbody tr {height:7em}
+#c tbody tr {height:4em}
+#cDc {width:13.5em;}
+
+#s i {font-style:normal;font-size:80%;}
+
+#c td:first-child+td+td+td /*装飾品の3列目スロット*/
+	{text-align:center;}
+#b td:first-child+td+td+td+td+td, /*防具の5列目防御*/
+#b td:first-child+td+td+td+td+td+td+td, /*防具の7列目価格*/
+#b td:first-child+td+td+td+td+td+td, /*防具の6列目HR*/
+#b td:first-child+td+td+td+td, /*防具の4列目スキル*/
+#c td:first-child+td+td+td+td, /*装飾品の4列目スキル*/
+#c td:first-child+td+td+td+td+td, /*装飾品の5列目HR*/
+#c td:first-child+td+td+td+td+td+td, /*装飾品の6列目価格*/
+#s td:first-child+td, /*シジルの1列目スキル*/
+#s td:first-child+td+td, /*シジルの2列目確率*/
+#s td:first-child+td+td+td+td, /*シジルの4列目Gz*/
+#s td:first-child+td+td+td+td+td, /*シジルの5列目素材*/
+#s td:first-child+td+td+td+td+td+td /*シジルの6列目素材*/
+	{text-align:right;}

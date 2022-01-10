@@ -1,0 +1,85 @@
+/*ã§í */
+table {border-collapse:collapse;border:1px ridge #333333;}
+th,td {vertical-align:top;padding:2px;border:2px ridge #ffffff;}
+th {text-align:center;white-space:nowrap;font-weight:normal;background-color:silver;}
+
+body {margin:5px 0 0 5px;width:60em;}
+tr.l th {background-color:gray;}
+hr {clear:left;height:0;visibility:hidden}
+
+/*TOP*/
+#monsname {width:11em;float:left;}
+#tophosoku a {font-size:80%;text-decoration:none;}
+#tophosoku span.on {font-size:80%;background-color:#FFB400}
+#tophosoku span.kan {font-size:80%;background-color:#0080C0}
+#tophosoku span.han {font-size:80%;background-color:#00E100}
+/*ï‚ë´*/
+#hosoku {clear:both;margin:5px 0 0 0;padding:0;}
+#hosoku span {margin:0;padding:0 1px;border:1px solid silver;}
+#hosoku span em {margin:0 2px;padding:0 2px;font-style:normal;background-color:silver;}
+/*èÛë‘àŸèÌ*/
+#izyo {clear:both;margin:5px 5px 0 0;float:left;}
+#izyo col.c1 {width:2.5em;}
+#izyo col.c2 {width:3em;text-align:right;}
+#izyo col.c3 {width:4em;text-align:right;}
+#izyo col.c4 {width:5em;}
+#izyo col.c5 {}
+/*ì{ÇË*/
+#izyo td span {margin:0;padding:3px;border:1px solid gray;}
+#izyo td span.l {background-color:silver;}
+/*HPì{ÇË*/
+#hpang {margin:5px 5px 0 0;float:left;}
+#hpang td {text-align:right}
+/*ì¡àŸå¬ëÃ*/
+#hc {border-style:none;width:100%;}
+/*åÉå¬ëÃ*/
+#geki table {float:left;width:50%;}
+/*HP*/
+#hp {margin:5px 0 0 0;}
+#hp .hpn {text-align:right;}
+#hp tr.h {display:none;}
+#hp tr.h>td {display:none;}
+#hp input {font-size:60%;}
+/*#hp:hover tr.h {display:table-row;}
+#hp:hover tr.h>td {display:table-cell;}*/
+/*ì˜éø*/
+#niku {margin:0 5px 0 0;float:left;}
+#niku col.c1 {width:3em;}
+#niku col.c2n {width:2.2em;text-align:right;}
+/*ÇÊÇÎÇﬂÇ´*/
+#down1 col.c1 {width:2.5em;}
+#down col.c2n {width:3em;text-align:right;}
+#down1 col.c3 {width:23em;}
+#down div {margin:0 0 0 0;padding:0;}
+#down div span {margin:0;padding:0 1px;border:1px solid silver;}
+#down div span em {margin:0 2px;padding:0 2px;font-style:normal;background-color:silver;}
+/*çUåÇ*/
+#kou {clear:both;margin-top:1em}
+
+.n {text-align:right}
+#izyo td:first-child+td,
+#izyo td:first-child+td+td,
+#niku td+td,
+#hp td:first-child,
+#hp td:first-child+td+td,
+#hpang td:first-child,
+#hpang td:first-child+td,
+#down td:first-child+td,
+#kou td:first-child+td+td,
+#kou td:first-child+td+td+td,
+#kou td:first-child+td+td+td+td {text-align:right}
+#hc td:first-child+td+td+td,
+#hc td:first-child+td+td+td+td,
+#hc td:first-child+td+td+td+td+td,
+#hc td:first-child+td+td+td+td+td+td,
+#geki td:first-child+td+td+td {text-align:right}
+
+/* FirefoxópÉnÉbÉN */
+html:not([lang*=""]) table,
+html:not([lang*=""]) td,
+html:not([lang*=""]) th
+{
+	border-collapse: separate;
+	border-spacing: 0;
+	margin:0;padding:0;
+}

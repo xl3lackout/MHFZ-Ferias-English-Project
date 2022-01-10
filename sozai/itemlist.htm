@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=shift_JIS">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<style type="text/css">
+<!--
+ul {margin:0;padding:0;list-style-type:none;float:left;}
+li {margin:0;padding:1px;border:1px solid silver;font-size:80%;white-space:nowrap;}
+li, x:-moz-any-link, x:default {padding:0 1px;} /*FF?p*/
+li {_padding:0 1px;} /*IE6?p*/
+a:hover {background-color:lightgrey;}
+-->
+</style>
+<script type="text/javascript" src="0henkan.js"></script>
+<script type="text/javascript" src="item.js"></script>
+<title>?f???</title>
+</head>
+<body>
+<form name="ls" action="" onsubmit="location.href = 'itemlist.htm?' + document.ls.i_item.value;return false;" style="margin-bottom:1em;">
+<div>
+?????F<input type="text" value="" name="i_item" id="i_item" autocomplete="off" style="ime-mode: active;">
+<input type="submit" value="????"></div></form>
+<script type="text/javascript">
+<!--
+(function(document){
+/*@cc_on if (@_jscript_version < 9) {_d=document;eval('var document=_d');}@*/
+var MST_Item = setItem(),
+	i_item = document.getElementById("i_item"),
+	searchMei = /*@if (true) location.search.substring(1) @else@*/ UnescapeSJIS(location.search.substring(1)) /*@end@*/;
+setItem = null;
+i_item.focus();
+i_item.value = searchMei;
+
+var n = 0,cnt = 0,page = 1,list = [];
+for (var i in MST_Item) {
+	if (MST_Item[i][0].indexOf(searchMei) !== -1 && MST_Item[i][1] !== "-") {
+		list[n++] = MST_Item[i][5] + i;
+	}
+}
+list.sort();
+document.write("<ul>");
+for (var i = 0,t = ""; i < n; i++) {
+	if (cnt === 150) {
+		++page;
+		document.write("<\/ul><ul>");
+		cnt=0;
+	}
+	t = list[i].substring(4);
+	document.write("<li><a href=\"sozai.htm?"+t+"\">"+MST_Item[t][0]+"<\/a>");
+	cnt++;
+}
+
+document.write("<\/ul>");
+document.getElementsByTagName("body")[0].style.width = (page * 110) + "px";
+})(document);
+//-->
+</script>
+</body>
+</html>

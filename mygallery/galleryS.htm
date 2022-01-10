@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<style type="text/css">
+<!--
+html,body {margin:5px;}
+body {width:67.5em}
+table {table-layout:fixed;}
+th {white-space:nowrap;font-weight:normal;background-color:silver;}
+td {padding:0 2px;border-color:silver;}
+select {font-family:"?l?r ?S?V?b?N";}
+td.r {text-align:right;font-size:80%}
+td.n {text-align:right}
+#D_sozai {vertical-align:top}
+.fs {font-size:80%}
+table#List_type,table#List_series {table-layout:auto;}
+
+ul {margin:0 0 0 1em}
+-->
+</style>
+<title>?M???????[?V?~?????[?^</title>
+</head>
+<body>
+<div>
+<fieldset style="width:30em;float:left;"><legend>?^??</legend>
+	<select id="L_type"></select>
+	<select id="L_color"></select>
+	<select id="L_lv"></select>
+</fieldset>
+<fieldset><legend>??l??</legend>
+	<select id="L_skill"></select>
+</fieldset>
+</div>
+<fieldset style="clear:both;"><legend>???????</legend>
+	<select id="S_rank"></select><label for="S_extra" class="fs"><input type="checkbox" id="S_extra" name="S_extra" value="1">?G?N?X?g??</label><label for="S_event" class="fs"><input type="checkbox" id="S_event" name="S_event" value="1">?C?x???g</label>
+	<select id="S_type"></select>
+	<select id="S_color"></select>
+	<select id="S_series"></select>
+	<select id="S_set"></select><br>
+	<select id="S_sort"><option value="0">???O??<option value="1" selected="">?????N??<option value="2">??z??</select><select id="S_kagu_list"></select><input type="button" id="S_add" value="???">
+</fieldset>
+<fieldset style="width:45em;float:left;"><legend>?M???????[?z?u</legend>
+	<table>
+		<col style="width:10em"><col style="width:3em"><col style="width:4em"><col style="width:3.5em"><col style="width:25em">
+		<tr><th>???O</th><th>??</th><th>?[?j?[</th><th colspan="2">?f????? <small>(??z??N???b?N??????)</small></th></tr>
+		<tr><td id="G_kagu1Name"></td><td><select id="G_kagu1Suu"></select></td><td id="G_kagu1Zeny" class="n c"></td><td id="G_kagu1Sozai_Zeny" class="n c"></td><td id="G_kagu1Sozai" class="fs"></td></tr>
+		<tr><td id="G_kagu2Name"></td><td><select id="G_kagu2Suu"></select></td><td id="G_kagu2Zeny" class="n c"></td><td id="G_kagu2Sozai_Zeny" class="n c"></td><td id="G_kagu2Sozai" class="fs"></td></tr>
+		<tr><td id="G_kagu3Name"></td><td><select id="G_kagu3Suu"></select></td><td id="G_kagu3Zeny" class="n c"></td><td id="G_kagu3Sozai_Zeny" class="n c"></td><td id="G_kagu3Sozai" class="fs"></td></tr>
+		<tr><td id="G_kagu4Name"></td><td><select id="G_kagu4Suu"></select></td><td id="G_kagu4Zeny" class="n c"></td><td id="G_kagu4Sozai_Zeny" class="n c"></td><td id="G_kagu4Sozai" class="fs"></td></tr>
+		<tr><td id="G_kagu5Name"></td><td><select id="G_kagu5Suu"></select></td><td id="G_kagu5Zeny" class="n c"></td><td id="G_kagu5Sozai_Zeny" class="n c"></td><td id="G_kagu5Sozai" class="fs"></td></tr>
+		<tr><td id="G_kagu6Name"></td><td><select id="G_kagu6Suu"></select></td><td id="G_kagu6Zeny" class="n c"></td><td id="G_kagu6Sozai_Zeny" class="n c"></td><td id="G_kagu6Sozai" class="fs"></td></tr>
+		<tr><td id="G_kagu7Name"></td><td><select id="G_kagu7Suu"></select></td><td id="G_kagu7Zeny" class="n c"></td><td id="G_kagu7Sozai_Zeny" class="n c"></td><td id="G_kagu7Sozai" class="fs"></td></tr>
+		<tr><td id="G_kagu8Name"></td><td><select id="G_kagu8Suu"></select></td><td id="G_kagu8Zeny" class="n c"></td><td id="G_kagu8Sozai_Zeny" class="n c"></td><td id="G_kagu8Sozai" class="fs"></td></tr>
+		<tr><td id="G_kagu9Name"></td><td><select id="G_kagu9Suu"></select></td><td id="G_kagu9Zeny" class="n c"></td><td id="G_kagu9Sozai_Zeny" class="n c"></td><td id="G_kagu9Sozai" class="fs"></td></tr>
+		<tr><td id="G_kagu10Name"></td><td><select id="G_kagu10Suu"></select></td><td id="G_kagu10Zeny" class="n c"></td><td id="G_kagu10Sozai_Zeny" class="n c"><td id="G_kagu10Sozai" class="fs"></td></td></tr>
+		<tr><td>?v?F</td><td id="G_kaguZeny_Sum" class="n" colspan="2"></td><td id="G_kaguSozai_Sum" colspan="2"></td></tr>
+	</table>
+</fieldset>
+<fieldset style="width:17.5em;"><legend>???</legend>
+	<span id="D_name">-</span>
+	<hr>
+	<table>
+		<col style="width:5em;"><col style="width:5em;"><col style="width:7.5em;">
+		<tr><td>?????N</td><td id="D_rank">-</td><td id="D_series1">-</td></tr>
+		<tr><td>???^?C?v</td><td id="D_type">-</td><td id="D_series2">-</td></tr>
+		<tr><td>???F</td><td id="D_color">-</td><td id="D_series3">-</td></tr>
+		<tr><td>?V???[?YP</td><td class="n" id="D_point">-</td><td id="D_series4">-</td></tr>
+		<tr><td>?{?[?i?X</td><td class="n" id="D_bonus_point">-pt</td><td id="D_series5">-</td></tr>
+		<tr><td>??????????</td><td class="n" id="D_cool_point">-pt</td><td rowspan="5" id="D_sozai" class="fs">-</td></tr>
+		<tr><td>??????</td><td class="n" id="D_cute_point">-pt</td></tr>
+		<tr><td>???????</td><td class="n" id="D_zeny">-z</td></tr>
+		<tr><td>?f?????</td><td class="n" id="D_zeny_sozai">-z</td></tr>
+		<tr><td><br></td></tr>
+	</table>
+</fieldset>
+<hr style="clear:both;">
+<fieldset style="width:12em;float:left;"><legend>?????]??</legend>
+	<table>
+		<col style="width:6em;"><col>
+		<tr><td class="r">???]??</td><td class="n" id="G_point">-</td></tr>
+		<tr><td class="r">?z?u?^</td><td class="n" id="G_luck_point">-</td></tr>
+		<tr><td class="r">??l??</td><td class="n" id="G_skill_point">-</td></tr>
+		<tr><td>?]???|?C???g</td><td class="n" id="G_all_point">-</td></tr>
+		<tr><td colspan="2"><hr></td></tr>
+		<tr><td>??????????</td><td class="n" id="G_cool_point">-</td></tr>
+		<tr><td>??????</td><td class="n" id="G_cute_point">-</td></tr>
+	</table>
+	<input type="button" id="G_text" value="?e?L?X?g?o??">
+</fieldset>
+<fieldset style=""><legend>???]??</legend>
+	<table style="float:left;width:11em;">
+		<col style="width:7em;"><col>
+		<tr><td>?^?C?v</td><td class="n" id="K_type">-</td></tr>
+		<tr><td>?V???[?Y</td><td class="n" id="K_series">-</td></tr>
+		<tr><td>?Z?b?g</td><td class="n" id="K_set">-</td></tr>
+		<tr><td>?o???G?e?B</td><td class="n" id="K_variety">-</td></tr>
+		<tr><td>?{?[?i?X</td><td class="n" id="K_bonus">-</td></tr>
+		<tr><td>?????</td><td class="n" id="K_count">-</td></tr>
+		<tr><td>???]????F</td><td class="n" id="K_lucky_color">-</td></tr>
+		<tr><td>???]??????</td><td class="n" id="K_lucky_type">-</td></tr>
+	</table>
+	<table id="List_type" style="float:left;width:10em;margin-right:2em">
+	<caption>?^?C?v</caption>
+	</table>
+	<table id="List_series" style="float:left;width:12em;">
+	<caption>?V???[?Y</caption>
+	</table>
+</fieldset>
+<fieldset><legend style="clear:both;text-align:center;">???]?????</legend>
+<ul>
+	<li>????????10????u??????B</li>
+	<li>???????^?C?v??10???????B</li>
+	<li>???????V???[?Y??10???????B</li>
+</ul>
+</fieldset>
+<script type="text/javascript" src="global.js"></script>
+<script type="text/javascript" src="..\sozai\item.js"></script>
+<script type="text/javascript" src="data.js"></script>
+<script type="text/javascript" src="GalleryForm.js"></script>
+<script type="text/javascript">
+<!--
+var GF = new GalleryForm();
+itemS = setItem();
+// -->
+</script>
+</body>
+</html>
