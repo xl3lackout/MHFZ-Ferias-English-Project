@@ -4,7 +4,7 @@ th,td {vertical-align:top;white-space:nowrap;padding:2px;}
 thead {height:2.4em;}
 html,body {height:100%; overflow:hidden;}
 body {margin:5px; padding:0;}
-table {table-layout:fixed;margin-bottom:60em;width:100%!important;}
+table {table-layout:fixed;margin-bottom:60em;}
 td {border-color:#c0c0c0;} /*FF,Operaの罫線対応*/
 
 #tree {height:99%;width:20%;overflow:scroll;float:left;white-space:nowrap;line-height:100%;}
@@ -34,11 +34,10 @@ input {font-size:60%;padding-right:2px;padding-left:2px;}
 b {font-size:80%;font-weight:normal;color:Navy;display:block;text-align:center;} /*GR*/
 s {color:red;text-decoration:none;} /*マイナス会心,説明欄*/
 #data q {color:red;font-size:73%;clear:left;display:block;quotes: "" ""} /*辿異*/
-
-/*#ken {width:64.0em;}
+#ken {width:64.0em;}
 #yumi {width:65.5em;}
 #gun {width:77.0em;}
-*/
+
 #ken #cN {width:10.5em}
 #ken #cSp {width:110px}
 
