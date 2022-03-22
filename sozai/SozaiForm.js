@@ -7,9 +7,10 @@ var item_id = location.search.substring(1,5).toUpperCase(),
 	MST_Saisyu = setSaisyu(),
 	MST_Mos = setMonster(),
 	MST_Other = setOther(),
-	Quest_Season = ["","：温暖期","：繁殖期","：寒冷期"],
-	Quest_Time = ["","/昼","/夜"],
-	Saisyu_Name = ["汎用","密林","砂漠","沼地","雪山","火山","森丘","塔", "樹海","迎撃拠点","砦","城","決戦場","闘技演習","峡谷","絶島","高地","潮島","極海","花畑","白湖","彩の滝"],
+	Quest_Season = ["","：Warm","：Breeding","：Cold"],
+	Quest_Time = ["","/Day","/Night"],
+	Saisyu_Name = ["General","Jungle","Desert","Swamp","Snowy Mtn","Volcano","Forest & Hills","Tower", "Great Forest","Interception Base","Fortress","Town","Battleground",
+	"Arena","Gorge","Solitude Island","Highlands","Tidal Island","Polar Sea","Flower Field","White Lake","Painted Falls"],
 	Saisyu_Id	= ["",	"mitu","saba","numa","yuki","kaza","mori","tou","zyu", "def",		"toride","siro","kessen","tougi",	"kyou","sima","kou", "shio","kyoku","hana","bya","sai"];
 setItem = setQuest = setSaisyu = setMonster = setOther = null;
 var addEvent = function (elm, type, func) {
@@ -62,14 +63,14 @@ var creSaiLink = function (data,obj,rank,season) {
 	for (var i = 0,list = data.split(","),m = list.length,txt = ""; i < m; i++) {
 		var w = list[i].split("|"),
 			map_id = Saisyu_Id[w[0]] + "-";
-		txt += Saisyu_Name[w[0]] + " エリア：" +
-				(w[3].indexOf("h") !== -1	? w[3].replace("h"," <span id=\"" + map_id + w[1] + "." + map_id + rank + "." + w[2] + "." + season + i + "\"><span class=h>昼</span> ")
-											: w[3].replace("y"," <span id=\"" + map_id + w[1] + "." + map_id + rank + "." + w[2] + "." + season + i + "\"><span class=y>夜</span> ")
+		txt += Saisyu_Name[w[0]] + " Area：" +
+				(w[3].indexOf("h") !== -1	? w[3].replace("h"," <span id=\"" + map_id + w[1] + "." + map_id + rank + "." + w[2] + "." + season + i + "\"><span class=h>Day</span> ")
+											: w[3].replace("y"," <span id=\"" + map_id + w[1] + "." + map_id + rank + "." + w[2] + "." + season + i + "\"><span class=y>Night</span> ")
 				) + "%</span>" +
-				(w.length > 4	? " <span id=\"" + map_id + w[4] + "." + map_id + rank + "." + w[5] + "." + season + i + "\"><span class=y>夜</span> " + w[6] + "%</span><br>"
+				(w.length > 4	? " <span id=\"" + map_id + w[4] + "." + map_id + rank + "." + w[5] + "." + season + i + "\"><span class=y>Night</span> " + w[6] + "%</span><br>"
 								: "<br>");
 	}
-	obj.innerHTML = txt.replace(/s /g,"採掘 ").replace(/m /g,"虫網 ").replace(/t /g,"釣り ");
+	obj.innerHTML = txt;/*.replace(/s /g," Mining ").replace(/m /g," Insects ").replace(/t /g," Fishing ")*/;
 	if (m > 4) {
 		obj.style.height = "5em";
 		obj.style.overflow = "auto";
@@ -178,7 +179,8 @@ if (MST_Other.Cyougo[item_id]) {
 			break;
 		}
 	}
-	document.getElementById("cyougou").innerHTML = txt.replace(/\|[0-9A-F]{4}/g, function(s1){return " <a href=\"../sozai/sozai.htm?" + s1.substring(1) + "\">" + MST_Item[s1.substring(1)][0] + "</a> "}).replace(/K\d+\%/g, function(s1){return "個 (" + s1.substring(1) + ")"}).replace(/K/g,"個 ");
+	document.getElementById("cyougou").innerHTML = txt.replace(/\|[0-9A-F]{4}/g, function(s1){return " <a href=\"../sozai/sozai.htm?" + s1.substring(1) + "\">" + MST_Item[s1.substring(1)][0] + "</a> "});
+	//.replace(/K\d+\%/g, function(s1){return "個 (" + s1.substring(1) + ")"})/*.replace(/K/g,"個 ")*/;
 }
 if (MST_Quest.Lot[item_id]) { //くじ
 	for (var i = 0,list = MST_Quest.Lot[item_id].split(","),m = list.length,txt = ""; i < m; i++) {
@@ -206,7 +208,7 @@ if (MST_Other.Riyou[item_id]) {
 			break;
 		}
 	}
-	document.getElementById("riyou").innerHTML = txt.replace(/\|[0-9A-F]{4}/g, function(s1){return " <a href=\"../sozai/sozai.htm?" + s1.substring(1) + "\">" + MST_Item[s1.substring(1)][0] + "</a> "}).replace(/K\d+\%/g, function(s1){return "個 (" + s1.substring(1) + ")"}).replace(/K/g,"個 ").replace(/M/g,"調合して ");
+	document.getElementById("riyou").innerHTML = txt.replace(/\|[0-9A-F]{4}/g, function(s1){return " <a href=\"../sozai/sozai.htm?" + s1.substring(1) + "\">" + MST_Item[s1.substring(1)][0] + "</a> "}).replace(/K\d+\%/g, function(s1){return "個 (" + s1.substring(1) + ")"})/*.replace(/K/g,"個 ")*//*.replace(/M/g,"調合して ")*/;
 }
 if (MST_Quest.Riyou[item_id]) { //クエスト
 	for (var i = 0,list = MST_Quest.Riyou[item_id].split(","),m = list.length,txt = ""; i < m; i++) {
