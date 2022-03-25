@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=shift_JIS">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
 <style type="text/css">
 <!--
 html,body{ height: 100%;}
@@ -9,26 +9,26 @@ td{ white-space: nowrap; }
 tr{ vertical-align: top; }
 -->
 </style>
-<title>?H??</title>
+<title>食事</title>
 </head>
 <body>
-<table id="zk" border="1" width="800">
+<table id="zk" border="1" Width="800">
 <tr>
-<th style="width:310px"><select id="kisetu"><option value="5" selected="">???g??<option value="7">?????<option value="9">??B??</select>
-<th style="Width:125px">???????</th>
-<th><select id="hpz"><option value="" selected="">???<option value="?F+50">+50<option value="?F+40">+40<option value="?F+30">+30<option value="?F+20">+20<option value="?F+10">+10<option value="?|">-<option value="?F-10">-10<option value="?F-20">-20<option value="?F-30">-30<option value="?F-40">-40<option value="?F-50">-50</select></th>
-<th><select id="stz"><option value="" selected="">???<option value="?F+50">+50<option value="?F+25">+25<option value="?|">-<option value="?F-25">-25<option value="?F-50">-50</select></th>
-<th><select id="strz"><option value="" selected="">???<option value="?F+5">+5<option value="?F+3">+3<option value="?|">-<option value="?F-3">-3<option value="?F-5">-5</select></th>
-<th><select id="defz"><option value="" selected="">???<option value="?F+20">+20<option value="?F+10">+10<option value="?|">-<option value="?F-10">-10<option value="?F-20">-20</select></th>
-</th></tr>
+<th style="width:310px"><select id="kisetu"><option value="5" selected>温暖期</option><option value="7">寒冷期</option><option value="9">繁殖期</option></select>
+<th style="Width:125px">検索条件</th>
+<th><select id="hpz"><option value="" selected>なし</option><option value="：+50">+50</option><option value="：+40">+40</option><option value="：+30">+30</option><option value="：+20">+20</option><option value="：+10">+10</option><option value="－">-</option><option value="：-10">-10</option><option value="：-20">-20</option><option value="：-30">-30</option><option value="：-40">-40</option><option value="：-50">-50</option></select></th>
+<th><select id="stz"><option value="" selected>なし</option><option value="：+50">+50</option><option value="：+25">+25</option><option value="－">-</option><option value="：-25">-25</option><option value="：-50">-50</option></select></th>
+<th><select id="strz"><option value="" selected>なし</option><option value="：+5">+5</option><option value="：+3">+3</option><option value="－">-</option><option value="：-3">-3</option><option value="：-5">-5</option></select></th>
+<th><select id="defz"><option value="" selected>なし</option><option value="：+20">+20</option><option value="：+10">+10</option><option value="－">-</option><option value="：-10">-10</option><option value="：-20">-20</option></select></th>
+</tr>
 </table>
-<table id="syoku" border="1" cellspacing="0" cellpadding="2" width="800" style="table-layout: fixed;">
-<col span="1" width="40">
-<col span="2" width="130">
-<col span="1" width="120">
-<col span="4" width="80" align="center">
+<table id="syoku" border="1" cellspacing="0" cellpadding="2" Width="800" style="table-layout: fixed;">
+<col span=1 width=40>
+<col span=2 width=130>
+<col span=1 width=120>
+<col span=4 width=80 align="center">
 <thead><tr style="background-color:silver;">
- <th>?G??</th><th colspan="2">?H??</th><th>??????</th><th colspan="4">????</th>
+ <th>季節</th><th colspan="2">食材</th><th>料理名</th><th colspan="4">効果</th>
 </tr></thead><tbody>
 </tbody></table>
 </body>
@@ -36,11 +36,11 @@ tr{ vertical-align: top; }
 <!--
 /*@cc_on if (@_jscript_version < 9) {_d=document;eval('var document=_d');}@*/
 (function (){
-//?C?x???g?Z?b?g
+//イベントセット
 var addEvent = function (elm, type, func) {
-	//???
+	//追加
 	elm./*@if (@_jscript_version < 9) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ type,func,false);
-	//?A?????[?h???
+	//アンロードで削除
 	window./*@if (@_jscript_version < 9) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ "unload",
 		function(){
 			elm./*@if (@_jscript_version < 9) detachEvent ('on' + @else@*/ removeEventListener (/*@end@*/ type,func,false);
@@ -49,68 +49,68 @@ var addEvent = function (elm, type, func) {
 };
 
 var sokuzai = [
-["?W?????S?[?l?M","010D",13,"ST","",5,0,5,0,5,0],
-["?X???C?X?T?{?e??","010E",14,"ST","",0,0,10,0,-5,0],
-["???A?I?j?I??","010F",15,"ST","",-5,0,0,0,10,0],
-["?V???t???g?}?g","0110",0,"ST","",-15,0,20,0,5,0],
-["?I?j?}?c?^?P","0111",1,"ST","",30,0,-10,0,10,0],
-["?E?H?[?~????","0112",2,"HP","",5,0,0,0,5,0],
-["?~?b?N?X?r?[???Y","0113",3,"HP","",5,0,-5,0,10,0],
-["???p??","0114",4,"HP","",0,0,5,0,10,0],
-["??V??????","0115",5,"HP","",-5,0,20,0,5,0],
-["?N?","0116",6,"HP","",-5,0,30,0,10,0],
-["?Q???R?c??","1AA9",9,"HP","",20,0,20,0,15,0],
-["?z???C?g???o?[","0117",7,"ATK","",-5,0,0,0,5,0],
-["?|?|?m?^??","0118",8,"ATK","",-5,0,10,0,0,0],
-["?t???x?r???","0119",9,"ATK","",5,0,-10,0,10,0],
-["?K?u???u???[?X","011A",10,"ATK","",5,0,20,0,-10,0],
-["?????E?m?e?[??","011B",11,"ATK","",5,0,30,0,10,0],
-["?I???v?E?I","011C",12,"DEF","",0,0,5,0,-5,0],
-["?T?V?~?E?I","00EB",11,"DEF","",-5,0,0,0,10,0],
-["?X?l?[?N?T?[????","011D",13,"DEF","",10,0,-15,0,5,0],
-["?N?","00FD",13,"DEF","",-10,0,20,0,5,0],
-["?J?W?L?}?O??","00FA",10,"DEF","",25,0,-10,0,10,0],
-["???","011E",14,"ST","HP",5,5,-5,-5,5,-5],
-["?s????","0103",3,"ST","HP",0,5,5,5,0,0],
-["?X?p?C?X???[??","011F",15,"ST","HP",-10,-10,10,5,5,-10],
-["???g???{","0120",0,"ST","HP",5,5,5,10,5,5],
-["?h?X?w???N???X","0121",1,"ST","HP",10,5,-10,-10,15,10],
-["?y?b?p?[?o?O","1AA5",5,"ST","HP",5,5,0,-10,0,15],
-["?N???u?}???e?B?X","1AA7",7,"ST","HP",5,10,10,10,-15,-10],
-["???b?h?I?C??","0122",2,"ST","HP",-5,5,5,5,-5,5],
-["?p???[???[?h","0123",3,"ST","HP",15,-5,-5,-5,5,5],
-["?????W????","0124",4,"ST","HP",0,10,10,0,10,10],
-["?A?u???t?O","1AA6",6,"ST","HP",15,10,-5,-15,5,0],
-["?h???C?}?[?K????","0125",5,"DEF","",5,0,-5,0,0,0],
-["????o?^?[","0126",6,"DEF","",-15,0,5,0,10,0],
-["???C?????`?[?Y","0127",7,"DEF","",5,0,10,0,15,0],
-["?z?s??","0128",8,"ATK","",10,0,5,0,-5,0],
-["?u???X???C??","0129",9,"ATK","",5,0,-5,0,15,0],
-["??????","012A",10,"ATK","",5,0,0,0,20,0],
-["?L?m?R?????","1AA8",8,"ATK","",-15,0,15,0,15,0],
-["?????X?^?[?G?b?O","012B",11,"ATK","DEF",-5,10,5,5,10,5],
-["?????","1AAA",10,"ATK","DEF",10,15,10,10,-10,-15],
-["?q?????i?}?R","1AAB",11,"ATK","DEF",10,10,-10,-15,10,10],
-["?u?^??????","012C",12,"ST","ATK",-5,-5,-5,-5,-5,-5],
-["?S?[???h?G?L?X","1AAC",12,"ST","ATK",0,5,5,15,0,15],
-["?v???f?^?[?n?j?[","1AAD",13,"ST","ATK",5,15,0,5,5,15]];
+["ジャンゴーネギ","010D",13,"ST","",5,0,5,0,5,0],
+["スライスサボテン","010E",14,"ST","",0,0,10,0,-5,0],
+["レアオニオン","010F",15,"ST","",-5,0,0,0,10,0],
+["シモフリトマト","0110",0,"ST","",-15,0,20,0,5,0],
+["オニマツタケ","0111",1,"ST","",30,0,-10,0,10,0],
+["ウォーミル麦","0112",2,"HP","",5,0,0,0,5,0],
+["ミックスビーンズ","0113",3,"HP","",5,0,-5,0,10,0],
+["頑固パン","0114",4,"HP","",0,0,5,0,10,0],
+["銀シャリ草","0115",5,"HP","",-5,0,20,0,5,0],
+["古代豆","0116",6,"HP","",-5,0,30,0,10,0],
+["ゲンコツ米","1AA9",9,"HP","",20,0,20,0,15,0],
+["ホワイトレバー","0117",7,"ATK","",-5,0,0,0,5,0],
+["ポポノタン","0118",8,"ATK","",-5,0,10,0,0,0],
+["フルベビ漬け","0119",9,"ATK","",5,0,-10,0,10,0],
+["ガブリブロース","011A",10,"ATK","",5,0,20,0,-10,0],
+["リュウノテール","011B",11,"ATK","",5,0,30,0,10,0],
+["オンプウオ","011C",12,"DEF","",0,0,5,0,-5,0],
+["サシミウオ","00EB",11,"DEF","",-5,0,0,0,10,0],
+["スネークサーモン","011D",13,"DEF","",10,0,-15,0,5,0],
+["古代魚","00FD",13,"DEF","",-10,0,20,0,5,0],
+["カジキマグロ","00FA",10,"DEF","",25,0,-10,0,10,0],
+["米虫","011E",14,"ST","HP",5,5,-5,-5,5,-5],
+["不死虫","0103",3,"ST","HP",0,5,5,5,0,0],
+["スパイスワーム","011F",15,"ST","HP",-10,-10,10,5,5,-10],
+["蜜トンボ","0120",0,"ST","HP",5,5,5,10,5,5],
+["ドスヘラクレス","0121",1,"ST","HP",10,5,-10,-10,15,10],
+["ペッパーバグ","1AA5",5,"ST","HP",5,5,0,-10,0,15],
+["クラブマンティス","1AA7",7,"ST","HP",5,10,10,10,-15,-10],
+["レッドオイル","0122",2,"ST","HP",-5,5,5,5,-5,5],
+["パワーラード","0123",3,"ST","HP",15,-5,-5,-5,5,5],
+["長寿ジャム","0124",4,"ST","HP",0,10,10,0,10,10],
+["アブラフグ","1AA6",6,"ST","HP",15,10,-5,-15,5,0],
+["ドライマーガリン","0125",5,"DEF","",5,0,-5,0,0,0],
+["猛牛バター","0126",6,"DEF","",-15,0,5,0,10,0],
+["ロイヤルチーズ","0127",7,"DEF","",5,0,10,0,15,0],
+["ホピ酒","0128",8,"ATK","",10,0,5,0,-5,0],
+["ブレスワイン","0129",9,"ATK","",5,0,-5,0,15,0],
+["黄金芋酒","012A",10,"ATK","",5,0,0,0,20,0],
+["キノコ吟醸酒","1AA8",8,"ATK","",-15,0,15,0,15,0],
+["モンスターエッグ","012B",11,"ATK","DEF",-5,10,5,5,10,5],
+["まんまる卵","1AAA",10,"ATK","DEF",10,15,10,10,-10,-15],
+["子持ちナマコ","1AAB",11,"ATK","DEF",10,10,-10,-15,10,10],
+["ブタせんべい","012C",12,"ST","ATK",-5,-5,-5,-5,-5,-5],
+["ゴールドエキス","1AAC",12,"ST","ATK",0,5,5,15,0,15],
+["プレデターハニー","1AAD",13,"ST","ATK",5,15,0,5,5,15]];
 var mesi = [
-["?r?b?N???V?`???[",1],
-["?h?b?L???]?b?g",1],
-["?I?b?^?}?P?[?L",2],
-["?K?b?c?`???[?n??",2],
-["?????????T???_",1],
-["?h?N?h?N?h???A",-1.5],
-["?p?b?p???p?X?^",1.5],
-["?|?b?R???t???C",1],
-["?R???R???b?P",1],
-["?O???O???^??",1.5],
-["?z?N?z?N??",2],
-["?h?b?J???X?[?v",-1.5],
-["?W?????{?s?U",1.5],
-["?M???M???[????",1],
-["?q?[?q?[?J???[",1.5],
-["?A???A???]?[?X?C",1]];
+["ビックリシチュー",1],
+["ドッキリゾット",1],
+["オッタマケーキ",2],
+["ガッツチャーハン",2],
+["ランランサラダ",1],
+["ドクドクドリア",-1.5],
+["パッパラパスタ",1.5],
+["ポッコリフライ",1],
+["コロコロッケ",1],
+["グラグラタン",1.5],
+["ホクホク鍋",2],
+["ドッカンスープ",-1.5],
+["ジャンボピザ",1.5],
+["ギンギラーメン",1],
+["ヒーヒーカレー",1.5],
+["アンアンゾースイ",1]];
 
 var kisetu = document.getElementById("kisetu");
 var hpz = document.getElementById("hpz");
@@ -151,148 +151,148 @@ for (var i=0;i<sokuzaiMax;i++) {
 		insTR.appendChild(insTD.cloneNode(true));
 
 		if (mesi_p["HP"] > 25) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "???F+50";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：+50";
 			insTR.x="150";
 		} else if (mesi_p["HP"] > 20) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "???F+40";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：+40";
 			insTR.x="140";
 		} else if (mesi_p["HP"] > 15) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "???F+30";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：+30";
 			insTR.x="130";
 		} else if (mesi_p["HP"] > 10) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "???F+20";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：+20";
 			insTR.x="120";
 		} else if (mesi_p["HP"] > 5) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "???F+10";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：+10";
 			insTR.x="110";
 		} else if (mesi_p["HP"] < -25) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "???F-50";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：-50";
 			insTR.x="010";
 		} else if (mesi_p["HP"] < -20) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "???F-40";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：-40";
 			insTR.x="020";
 		} else if (mesi_p["HP"] < -15) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "???F-30";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：-30";
 			insTR.x="030";
 		} else if (mesi_p["HP"] < -10) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "???F-20";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：-20";
 			insTR.x="040";
 		} else if (mesi_p["HP"] < -5) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "???F-10";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：-10";
 			insTR.x="050";
 		} else {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?|";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "－";
 			insTR.x="100";
 			ck += 1;
 		}
 		insTR.appendChild(insTD.cloneNode(true));
 
 		if (mesi_p["ST"] > 25) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "????F+50";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：+50";
 			insTR.x+="150";
 		} else if (mesi_p["ST"] > 20) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "????F+50";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：+50";
 			insTR.x+="150";
 		} else if (mesi_p["ST"] > 15) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "????F+25";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：+25";
 			insTR.x+="125";
 		} else if (mesi_p["ST"] > 10) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "????F+25";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：+25";
 			insTR.x+="125";
 		} else if (mesi_p["ST"] > 5) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "????F+25";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：+25";
 			insTR.x+="125";
 		} else if (mesi_p["ST"] < -25) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "????F-50";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：-50";
 			insTR.x+="025";
 		} else if (mesi_p["ST"] < -20) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "????F-50";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：-50";
 			insTR.x+="025";
 		} else if (mesi_p["ST"] < -15) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "????F-25";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：-25";
 			insTR.x+="050";
 		} else if (mesi_p["ST"] < -10) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "????F-25";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：-25";
 			insTR.x+="050";
 		} else if (mesi_p["ST"] < -5) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "????F-25";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：-25";
 			insTR.x+="050";
 		} else {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?|";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "－";
 			insTR.x+="100";
 			ck += 1;
 		}
 		insTR.appendChild(insTD.cloneNode(true));
 
 		if (mesi_p["ATK"] > 25) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?U????F+5";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：+5";
 			insTR.x+="110";
 		} else if (mesi_p["ATK"] > 20) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?U????F+5";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：+5";
 			insTR.x+="110";
 		} else if (mesi_p["ATK"] > 15) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?U????F+3";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：+3";
 			insTR.x+="103";
 		} else if (mesi_p["ATK"] > 10) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?U????F+3";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：+3";
 			insTR.x+="103";
 		} else if (mesi_p["ATK"] > 5) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?U????F+3";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：+3";
 			insTR.x+="103";
 		} else if (mesi_p["ATK"] < -25) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?U????F-5";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：-5";
 			insTR.x+="003";
 		} else if (mesi_p["ATK"] < -20) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?U????F-5";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：-5";
 			insTR.x+="003";
 		} else if (mesi_p["ATK"] < -15) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?U????F-3";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：-3";
 			insTR.x+="003";
 		} else if (mesi_p["ATK"] < -10) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?U????F-3";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：-3";
 			insTR.x+="010";
 		} else if (mesi_p["ATK"] < -5) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?U????F-3";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：-3";
 			insTR.x+="010";
 		} else {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?|";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "－";
 			insTR.x+="100";
 			ck += 1;
 		}
 		insTR.appendChild(insTD.cloneNode(true));
 
 		if (mesi_p["DEF"] > 25) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?h???F+20";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：+20";
 			insTR.x+="120";
 		} else if (mesi_p["DEF"] > 20) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?h???F+20";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：+20";
 			insTR.x+="120";
 		} else if (mesi_p["DEF"] > 15) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?h???F+10";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：+10";
 			insTR.x+="110";
 		} else if (mesi_p["DEF"] > 10) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?h???F+10";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：+10";
 			insTR.x+="110";
 		} else if (mesi_p["DEF"] > 5) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?h???F+10";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：+10";
 			insTR.x+="110";
 		} else if (mesi_p["DEF"] < -25) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?h???F-20";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：-20";
 			insTR.x+="010";
 		} else if (mesi_p["DEF"] < -20) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?h???F-20";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：-20";
 			insTR.x+="010";
 		} else if (mesi_p["DEF"] < -15) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?h???F-10";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：-10";
 			insTR.x+="020";
 		} else if (mesi_p["DEF"] < -10) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?h???F-10";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：-10";
 			insTR.x+="020";
 		} else if (mesi_p["DEF"] < -5) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?h???F-10";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：-10";
 			insTR.x+="020";
 		} else {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "?|";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "－";
 			insTR.x+="100";
 			ck += 1;
 		}

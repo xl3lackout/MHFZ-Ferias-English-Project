@@ -1,4 +1,4 @@
-/*‹¤’Ê*/
+/*å…±é€š*/
 table {border-collapse:collapse;border:1px ridge #333333;}
 th,td {vertical-align:top;padding:2px;border:2px ridge #ffffff;}
 th {text-align:center;white-space:nowrap;font-weight:normal;background-color:silver;}
@@ -13,26 +13,26 @@ hr {clear:left;height:0;visibility:hidden}
 #tophosoku span.on {font-size:80%;background-color:#FFB400}
 #tophosoku span.kan {font-size:80%;background-color:#0080C0}
 #tophosoku span.han {font-size:80%;background-color:#00E100}
-/*•â‘«*/
+/*è£œè¶³*/
 #hosoku {clear:both;margin:5px 0 0 0;padding:0;}
 #hosoku span {margin:0;padding:0 1px;border:1px solid silver;}
 #hosoku span em {margin:0 2px;padding:0 2px;font-style:normal;background-color:silver;}
-/*ó‘ÔˆÙí*/
+/*çŠ¶æ…‹ç•°å¸¸*/
 #izyo {clear:both;margin:5px 5px 0 0;float:left;}
 #izyo col.c1 {width:2.5em;}
 #izyo col.c2 {width:3em;text-align:right;}
 #izyo col.c3 {width:4em;text-align:right;}
 #izyo col.c4 {width:5em;}
 #izyo col.c5 {}
-/*“{‚è*/
+/*æ€’ã‚Š*/
 #izyo td span {margin:0;padding:3px;border:1px solid gray;}
 #izyo td span.l {background-color:silver;}
-/*HP“{‚è*/
+/*HPæ€’ã‚Š*/
 #hpang {margin:5px 5px 0 0;float:left;}
 #hpang td {text-align:right}
-/*“ÁˆÙŒÂ‘Ì*/
+/*ç‰¹ç•°å€‹ä½“*/
 #hc {border-style:none;width:100%;}
-/*ŒƒŒÂ‘Ì*/
+/*æ¿€å€‹ä½“*/
 #geki table {float:left;width:50%;}
 /*HP*/
 #hp {margin:5px 0 0 0;}
@@ -42,18 +42,18 @@ hr {clear:left;height:0;visibility:hidden}
 #hp input {font-size:60%;}
 /*#hp:hover tr.h {display:table-row;}
 #hp:hover tr.h>td {display:table-cell;}*/
-/*“÷¿*/
+/*è‚‰è³ª*/
 #niku {margin:0 5px 0 0;float:left;}
 #niku col.c1 {width:3em;}
 #niku col.c2n {width:2.2em;text-align:right;}
-/*‚æ‚ë‚ß‚«*/
+/*ã‚ˆã‚ã‚ã*/
 #down1 col.c1 {width:2.5em;}
 #down col.c2n {width:3em;text-align:right;}
 #down1 col.c3 {width:23em;}
 #down div {margin:0 0 0 0;padding:0;}
 #down div span {margin:0;padding:0 1px;border:1px solid silver;}
 #down div span em {margin:0 2px;padding:0 2px;font-style:normal;background-color:silver;}
-/*UŒ‚*/
+/*æ”»æ’ƒ*/
 #kou {clear:both;margin-top:1em}
 
 .n {text-align:right}
@@ -74,7 +74,7 @@ hr {clear:left;height:0;visibility:hidden}
 #hc td:first-child+td+td+td+td+td+td,
 #geki td:first-child+td+td+td {text-align:right}
 
-/* Firefox—pƒnƒbƒN */
+/* Firefoxç”¨ãƒãƒƒã‚¯ */
 html:not([lang*=""]) table,
 html:not([lang*=""]) td,
 html:not([lang*=""]) th

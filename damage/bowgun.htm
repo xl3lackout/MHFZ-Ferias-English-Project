@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=shift_JIS">
-<title>?{?E?K???V?~?????[?^</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>ボウガンシミュレータ</title>
 <link rel="stylesheet" href="style.css" type="text/css">
 <style type="text/css">
 <!--
@@ -13,181 +13,181 @@ table.top td {color:blue;cursor:pointer;}
 </style>
 </head>
 <body>
-<table width="300" border="2" class="top"><tr>
- <td onclick="DamageForm.setWeapon('right');">???C?g?{?E?K??</td>
- <td onclick="DamageForm.setWeapon('heavy');">?w?r?B?{?E?K??</td>
+<table width=300 border=2 class=top><tr>
+ <td OnClick="DamageForm.setWeapon('right');">ライトボウガン</td>
+ <td OnClick="DamageForm.setWeapon('heavy');">ヘビィボウガン</td>
 </tr></table>
-<table width="750" border="2"><tr>
- <td class="t" style="width:5em;">?g?p????</td>
- <td colspan="5">
-	<select id="s_wp" onchange="DamageForm.cngWeapon();DamageForm.calc();">
-	<option value="" selected="">-
+<table width=750 border=2><tr>
+ <td class=t style="width:5em;">使用武器</td>
+ <td colspan=5>
+	<select id="s_wp" OnChange="DamageForm.cngWeapon();DamageForm.calc();">
+	<option value="" selected>-
 	</select>
   </td>
-  <td style="width:2.5em;" class="t">???</td>
+  <td style="width:2.5em;" class=t>種類</td>
   <td style="width:2.5em;" id="d_class">&nbsp;</td>
  </tr><tr>
-  <td style="width:5em;" class="t">LV5?U??</td>
+  <td style="width:5em;" class=t>LV5攻撃</td>
   <td style="width:2.5em;" id="d_att">&nbsp;</td>
-  <td style="width:2.5em;" class="t">??S</td>
+  <td style="width:2.5em;" class=t>会心</td>
   <td style="width:2.5em;" id="d_cri">&nbsp;</td>
-  <td style="width:2.5em;" class="t">???U</td>
+  <td style="width:2.5em;" class=t>装填</td>
   <td style="width:5em;" id="wpso">&nbsp;</td>
-  <td style="width:2.5em;" class="t">????</td>
+  <td style="width:2.5em;" class=t>反動</td>
   <td style="width:4em;" id="wphan">&nbsp;</td>
-  <td style="width:2.5em;" class="t">????</td>
-  <td id="d_spec">&nbsp;</td>
+  <td style="width:2.5em;" class=t>速射</td>
+  <td id=d_spec>&nbsp;</td>
 </tr></table>
-<table width="750" border="2"><tr>
- <td class="t" style="width:5em;">??????</td>
+<table width=750 border=2><tr>
+ <td class=t style="width:5em;">条件設定</td>
  <td style="width:9em;">
-	???U???x ?F <select id="souten" onchange="DamageForm.calc();">
-	<option value="3">+3
-	<option value="2">+2
-	<option value="1">+1
-	<option value="0" selected="">???
-	<option value="-1">-1
+	装填速度 ： <select id=souten OnChange="DamageForm.calc();">
+	<option value=3>+3
+	<option value=2>+2
+	<option value=1>+1
+	<option value=0 selected>なし
+	<option value=-1>-1
 	</select>
  </td><td style="width:9em;">
-	?????y?? ?F <select id="handou" onchange="DamageForm.calc();">
-	<option value="6">+3
-	<option value="4">+2
-	<option value="2">+1
-	<option value="0" selected="">???
+	反動軽減 ： <select id=handou OnChange="DamageForm.calc();">
+	<option value=6>+3
+	<option value=4>+2
+	<option value=2>+1
+	<option value=0 selected>なし
 	</select>
  </td><td>
-	?A?? ?F <select id="rensya" onchange="DamageForm.calc();">
-	<option value="0" selected="">???
-	<option value="1">????
+	連射 ： <select id=rensya OnChange="DamageForm.calc();">
+	<option value=0 selected>なし
+	<option value=1>発動
 	</select>
  </td>
 </tr></table>
-<table width="550" border="1" cellspacing="1" id="gun">
-<col class="dai"><col span="5" style="width:70px;">
-<tr><th>?e??</th><th>????l</th><th>?????l</th><th>?e??</th><th>????<br>????</th><th>????<br>????</th></tr>
-<tr><td>LV1 ???e</td><td id="k0r">5</td><td id="k0h">8</td><td id="d0t">&nbsp;</td><td id="d0r">&nbsp;</td><td id="d0h">&nbsp;</td></tr>
-<tr><td>LV2 ???e</td><td id="k1r">6</td><td id="k1h">9</td><td id="d1t">&nbsp;</td><td id="d1r">&nbsp;</td><td id="d1h">&nbsp;</td></tr>
-<tr><td>LV3 ???e</td><td id="k2r">7</td><td id="k2h">10</td><td id="d2t">&nbsp;</td><td id="d2r">&nbsp;</td><td id="d2h">&nbsp;</td></tr>
-<tr><td>LV1 ???e</td><td id="k3r">6</td><td id="k3h">10</td><td id="d3t">&nbsp;</td><td id="d3r">&nbsp;</td><td id="d3h">&nbsp;</td></tr>
-<tr><td>LV2 ???e</td><td id="k4r">7</td><td id="k4h">10</td><td id="d4t">&nbsp;</td><td id="d4r">&nbsp;</td><td id="d4h">&nbsp;</td></tr>
-<tr><td>LV3 ???e</td><td id="k5r">8</td><td id="k5h">11</td><td id="d5t">&nbsp;</td><td id="d5r">&nbsp;</td><td id="d5h">&nbsp;</td></tr>
-<tr><td>LV1 ?U?e</td><td id="k6r">5</td><td id="k6h">10</td><td id="d6t">&nbsp;</td><td id="d6r">&nbsp;</td><td id="d6h">&nbsp;</td></tr>
-<tr><td>LV2 ?U?e</td><td id="k7r">6</td><td id="k7h">10</td><td id="d7t">&nbsp;</td><td id="d7r">&nbsp;</td><td id="d7h">&nbsp;</td></tr>
-<tr><td>LV3 ?U?e</td><td id="k8r">7</td><td id="k8h">11</td><td id="d8t">&nbsp;</td><td id="d8r">&nbsp;</td><td id="d8h">&nbsp;</td></tr>
-<tr><td>LV1 ?O?b??e</td><td id="k9r">7</td><td id="k9h">11</td><td id="d9t">&nbsp;</td><td id="d9r">&nbsp;</td><td id="d9h">&nbsp;</td></tr>
-<tr><td>LV2 ?O?b??e</td><td id="k10r">8</td><td id="k10h">12</td><td id="d10t">&nbsp;</td><td id="d10r">&nbsp;</td><td id="d10h">&nbsp;</td></tr>
-<tr><td>LV3 ?O?b??e</td><td id="k11r">9</td><td id="k11h">13</td><td id="d11t">&nbsp;</td><td id="d11r">&nbsp;</td><td id="d11h">&nbsp;</td></tr>
-<tr><td>LV1 ?g?U?e</td><td id="k12r">8</td><td id="k12h">13</td><td id="d12t">&nbsp;</td><td id="d12r">&nbsp;</td><td id="d12h">&nbsp;</td></tr>
-<tr><td>LV2 ?g?U?e</td><td id="k13r">9</td><td id="k13h">14</td><td id="d13t">&nbsp;</td><td id="d13r">&nbsp;</td><td id="d13h">&nbsp;</td></tr>
-<tr><td>LV3 ?g?U?e</td><td id="k14r">10</td><td id="k14h">14</td><td id="d14t">&nbsp;</td><td id="d14r">&nbsp;</td><td id="d14h">&nbsp;</td></tr>
-<tr><td>LV1 ???e</td><td id="k15r">7</td><td id="k15h">11</td><td id="d15t">&nbsp;</td><td id="d15r">&nbsp;</td><td id="d15h">&nbsp;</td></tr>
-<tr><td>LV2 ???e</td><td id="k16r">9</td><td id="k16h">13</td><td id="d16t">&nbsp;</td><td id="d16r">&nbsp;</td><td id="d16h">&nbsp;</td></tr>
-<tr><td>LV1 ??e</td><td id="k17r">7</td><td id="k17h">11</td><td id="d17t">&nbsp;</td><td id="d17r">&nbsp;</td><td id="d17h">&nbsp;</td></tr>
-<tr><td>LV2 ??e</td><td id="k18r">9</td><td id="k18h">13</td><td id="d18t">&nbsp;</td><td id="d18r">&nbsp;</td><td id="d18h">&nbsp;</td></tr>
-<tr><td>LV1 ???e</td><td id="k19r">7</td><td id="k19h">11</td><td id="d19t">&nbsp;</td><td id="d19r">&nbsp;</td><td id="d19h">&nbsp;</td></tr>
-<tr><td>LV2 ???e</td><td id="k20r">9</td><td id="k20h">13</td><td id="d20t">&nbsp;</td><td id="d20r">&nbsp;</td><td id="d20h">&nbsp;</td></tr>
-<tr><td>LV1 ?????e</td><td id="k21r">7</td><td id="k21h">11</td><td id="d21t">&nbsp;</td><td id="d21r">&nbsp;</td><td id="d21h">&nbsp;</td></tr>
-<tr><td>LV2 ?????e</td><td id="k22r">9</td><td id="k22h">13</td><td id="d22t">&nbsp;</td><td id="d22r">&nbsp;</td><td id="d22h">&nbsp;</td></tr>
-<tr><td>????e</td><td id="k23r">6</td><td id="k23h">10</td><td id="d23t">&nbsp;</td><td id="d23r">&nbsp;</td><td id="d23h">&nbsp;</td></tr>
-<tr><td>????e</td><td id="k24r">6</td><td id="k24h">10</td><td id="d24t">&nbsp;</td><td id="d24r">&nbsp;</td><td id="d24h">&nbsp;</td></tr>
-<tr><td>?d???e</td><td id="k25r">6</td><td id="k25h">10</td><td id="d25t">&nbsp;</td><td id="d25r">&nbsp;</td><td id="d25h">&nbsp;</td></tr>
-<tr><td>?X???e</td><td id="k26r">6</td><td id="k26h">10</td><td id="d26t">&nbsp;</td><td id="d26r">&nbsp;</td><td id="d26h">&nbsp;</td></tr>
-<tr><td>????e</td><td id="k27r">9</td><td id="k27h">13</td><td id="d27t">&nbsp;</td><td id="d27r">&nbsp;</td><td id="d27h">&nbsp;</td></tr>
-<tr><td>??l?p?????e</td><td id="k28r">8</td><td id="k28h">11</td><td id="d28t">&nbsp;</td><td id="d28r">&nbsp;</td><td id="d28h">&nbsp;</td></tr>
-<tr><td>?y?C???g?e</td><td id="k29r">7</td><td id="k29h">11</td><td id="d29t">&nbsp;</td><td id="d29r">&nbsp;</td><td id="d29h">&nbsp;</td></tr>
-<tr><td>?S?l?e</td><td id="k30r">7</td><td id="k30h">11</td><td id="d30t">&nbsp;</td><td id="d30r">&nbsp;</td><td id="d30h">&nbsp;</td></tr>
-<tr><td>?d???e</td><td id="k31r">7</td><td id="k31h">11</td><td id="d31t">&nbsp;</td><td id="d31r">&nbsp;</td><td id="d31h">&nbsp;</td></tr>
-<tr><td>???_?e</td><td id="k32r">12</td><td id="k32h">15</td><td id="d32t">&nbsp;</td><td id="d32r">&nbsp;</td><td id="d32h">&nbsp;</td></tr>
-<tr><td>?X?_?e</td><td id="k33r">12</td><td id="k33h">15</td><td id="d33t">&nbsp;</td><td id="d33r">&nbsp;</td><td id="d33h">&nbsp;</td></tr>
-<tr><td>???_?e</td><td id="k34r">12</td><td id="k34h">15</td><td id="d34t">&nbsp;</td><td id="d34r">&nbsp;</td><td id="d34h">&nbsp;</td></tr>
-<tr><td>?r?M?e</td><td id="k35r">10</td><td id="k35h">15</td><td id="d35t">&nbsp;</td><td id="d35r">&nbsp;</td><td id="d35h">&nbsp;</td></tr>
-<tr><td>?????e</td><td id="k36r">12</td><td id="k36h">30</td><td id="d36t">&nbsp;</td><td id="d36r">&nbsp;</td><td id="d36h">&nbsp;</td></tr>
-<tr><td>???????e</td><td id="k37r">12</td><td id="k37h">30</td><td id="d37t">&nbsp;</td><td id="d37r">&nbsp;</td><td id="d37h">&nbsp;</td></tr>
+<table width=550 border=1 cellspacing=1 id=gun>
+<col class=dai><col span=5 style="width:70px;">
+<tr><th>弾名</th><th>ﾘﾛｰﾄﾞ値</th><th>反動値</th><th>弾数</th><th>補正後<br>ﾘﾛｰﾄﾞ</th><th>補正後<br>反動</th></tr>
+<tr><td>LV1 通常弾</td><td id=k0r>5</td><td id=k0h>8</td><td id=d0t>&nbsp;</td><td id=d0r>&nbsp;</td><td id=d0h>&nbsp;</td></tr>
+<tr><td>LV2 通常弾</td><td id=k1r>6</td><td id=k1h>9</td><td id=d1t>&nbsp;</td><td id=d1r>&nbsp;</td><td id=d1h>&nbsp;</td></tr>
+<tr><td>LV3 通常弾</td><td id=k2r>7</td><td id=k2h>10</td><td id=d2t>&nbsp;</td><td id=d2r>&nbsp;</td><td id=d2h>&nbsp;</td></tr>
+<tr><td>LV1 貫通弾</td><td id=k3r>6</td><td id=k3h>10</td><td id=d3t>&nbsp;</td><td id=d3r>&nbsp;</td><td id=d3h>&nbsp;</td></tr>
+<tr><td>LV2 貫通弾</td><td id=k4r>7</td><td id=k4h>10</td><td id=d4t>&nbsp;</td><td id=d4r>&nbsp;</td><td id=d4h>&nbsp;</td></tr>
+<tr><td>LV3 貫通弾</td><td id=k5r>8</td><td id=k5h>11</td><td id=d5t>&nbsp;</td><td id=d5r>&nbsp;</td><td id=d5h>&nbsp;</td></tr>
+<tr><td>LV1 散弾</td><td id=k6r>5</td><td id=k6h>10</td><td id=d6t>&nbsp;</td><td id=d6r>&nbsp;</td><td id=d6h>&nbsp;</td></tr>
+<tr><td>LV2 散弾</td><td id=k7r>6</td><td id=k7h>10</td><td id=d7t>&nbsp;</td><td id=d7r>&nbsp;</td><td id=d7h>&nbsp;</td></tr>
+<tr><td>LV3 散弾</td><td id=k8r>7</td><td id=k8h>11</td><td id=d8t>&nbsp;</td><td id=d8r>&nbsp;</td><td id=d8h>&nbsp;</td></tr>
+<tr><td>LV1 徹甲榴弾</td><td id=k9r>7</td><td id=k9h>11</td><td id=d9t>&nbsp;</td><td id=d9r>&nbsp;</td><td id=d9h>&nbsp;</td></tr>
+<tr><td>LV2 徹甲榴弾</td><td id=k10r>8</td><td id=k10h>12</td><td id=d10t>&nbsp;</td><td id=d10r>&nbsp;</td><td id=d10h>&nbsp;</td></tr>
+<tr><td>LV3 徹甲榴弾</td><td id=k11r>9</td><td id=k11h>13</td><td id=d11t>&nbsp;</td><td id=d11r>&nbsp;</td><td id=d11h>&nbsp;</td></tr>
+<tr><td>LV1 拡散弾</td><td id=k12r>8</td><td id=k12h>13</td><td id=d12t>&nbsp;</td><td id=d12r>&nbsp;</td><td id=d12h>&nbsp;</td></tr>
+<tr><td>LV2 拡散弾</td><td id=k13r>9</td><td id=k13h>14</td><td id=d13t>&nbsp;</td><td id=d13r>&nbsp;</td><td id=d13h>&nbsp;</td></tr>
+<tr><td>LV3 拡散弾</td><td id=k14r>10</td><td id=k14h>14</td><td id=d14t>&nbsp;</td><td id=d14r>&nbsp;</td><td id=d14h>&nbsp;</td></tr>
+<tr><td>LV1 回復弾</td><td id=k15r>7</td><td id=k15h>11</td><td id=d15t>&nbsp;</td><td id=d15r>&nbsp;</td><td id=d15h>&nbsp;</td></tr>
+<tr><td>LV2 回復弾</td><td id=k16r>9</td><td id=k16h>13</td><td id=d16t>&nbsp;</td><td id=d16r>&nbsp;</td><td id=d16h>&nbsp;</td></tr>
+<tr><td>LV1 毒弾</td><td id=k17r>7</td><td id=k17h>11</td><td id=d17t>&nbsp;</td><td id=d17r>&nbsp;</td><td id=d17h>&nbsp;</td></tr>
+<tr><td>LV2 毒弾</td><td id=k18r>9</td><td id=k18h>13</td><td id=d18t>&nbsp;</td><td id=d18r>&nbsp;</td><td id=d18h>&nbsp;</td></tr>
+<tr><td>LV1 麻痺弾</td><td id=k19r>7</td><td id=k19h>11</td><td id=d19t>&nbsp;</td><td id=d19r>&nbsp;</td><td id=d19h>&nbsp;</td></tr>
+<tr><td>LV2 麻痺弾</td><td id=k20r>9</td><td id=k20h>13</td><td id=d20t>&nbsp;</td><td id=d20r>&nbsp;</td><td id=d20h>&nbsp;</td></tr>
+<tr><td>LV1 睡眠弾</td><td id=k21r>7</td><td id=k21h>11</td><td id=d21t>&nbsp;</td><td id=d21r>&nbsp;</td><td id=d21h>&nbsp;</td></tr>
+<tr><td>LV2 睡眠弾</td><td id=k22r>9</td><td id=k22h>13</td><td id=d22t>&nbsp;</td><td id=d22r>&nbsp;</td><td id=d22h>&nbsp;</td></tr>
+<tr><td>火炎弾</td><td id=k23r>6</td><td id=k23h>10</td><td id=d23t>&nbsp;</td><td id=d23r>&nbsp;</td><td id=d23h>&nbsp;</td></tr>
+<tr><td>水冷弾</td><td id=k24r>6</td><td id=k24h>10</td><td id=d24t>&nbsp;</td><td id=d24r>&nbsp;</td><td id=d24h>&nbsp;</td></tr>
+<tr><td>電撃弾</td><td id=k25r>6</td><td id=k25h>10</td><td id=d25t>&nbsp;</td><td id=d25r>&nbsp;</td><td id=d25h>&nbsp;</td></tr>
+<tr><td>氷結弾</td><td id=k26r>6</td><td id=k26h>10</td><td id=d26t>&nbsp;</td><td id=d26r>&nbsp;</td><td id=d26h>&nbsp;</td></tr>
+<tr><td>滅龍弾</td><td id=k27r>9</td><td id=k27h>13</td><td id=d27t>&nbsp;</td><td id=d27r>&nbsp;</td><td id=d27h>&nbsp;</td></tr>
+<tr><td>捕獲用麻酔弾</td><td id=k28r>8</td><td id=k28h>11</td><td id=d28t>&nbsp;</td><td id=d28r>&nbsp;</td><td id=d28h>&nbsp;</td></tr>
+<tr><td>ペイント弾</td><td id=k29r>7</td><td id=k29h>11</td><td id=d29t>&nbsp;</td><td id=d29r>&nbsp;</td><td id=d29h>&nbsp;</td></tr>
+<tr><td>鬼人弾</td><td id=k30r>7</td><td id=k30h>11</td><td id=d30t>&nbsp;</td><td id=d30r>&nbsp;</td><td id=d30h>&nbsp;</td></tr>
+<tr><td>硬化弾</td><td id=k31r>7</td><td id=k31h>11</td><td id=d31t>&nbsp;</td><td id=d31r>&nbsp;</td><td id=d31h>&nbsp;</td></tr>
+<tr><td>強酸弾</td><td id=k32r>12</td><td id=k32h>15</td><td id=d32t>&nbsp;</td><td id=d32r>&nbsp;</td><td id=d32h>&nbsp;</td></tr>
+<tr><td>氷酸弾</td><td id=k33r>12</td><td id=k33h>15</td><td id=d33t>&nbsp;</td><td id=d33r>&nbsp;</td><td id=d33h>&nbsp;</td></tr>
+<tr><td>龍酸弾</td><td id=k34r>12</td><td id=k34h>15</td><td id=d34t>&nbsp;</td><td id=d34r>&nbsp;</td><td id=d34h>&nbsp;</td></tr>
+<tr><td>排熱弾</td><td id=k35r>10</td><td id=k35h>15</td><td id=d35t>&nbsp;</td><td id=d35r>&nbsp;</td><td id=d35h>&nbsp;</td></tr>
+<tr><td>爆撃弾</td><td id=k36r>12</td><td id=k36h>30</td><td id=d36t>&nbsp;</td><td id=d36r>&nbsp;</td><td id=d36h>&nbsp;</td></tr>
+<tr><td>龍爆撃弾</td><td id=k37r>12</td><td id=k37h>30</td><td id=d37t>&nbsp;</td><td id=d37r>&nbsp;</td><td id=d37h>&nbsp;</td></tr>
 </table>
 <p>
-???@?e??????[?h???x
-<table border="1" cellspacing="1" cellpadding="1" style="font-size:80%;float:left;text-align:center;">
-<caption>???[?V????</caption>
-<tr><th style="width:7em;">?????[?h???x?l</th><th style="width:6em;">???[?V????</th></tr>
-<tr><td>?S???</td><td>?????i62?j</td></tr>
-<tr><td>?T?`?V</td><td>????i78?j</td></tr>
-<tr><td>?W???</td><td>?x???i103?j</td></tr>
+●　弾のリロード速度
+<table border=1 cellspacing=1 cellpadding=1 style="font-size:80%;float:left;text-align:center;">
+<caption>モーション</caption>
+<tr><th style="width:7em;">リロード速度値</th><th style="width:6em;">モーション</th></tr>
+<tr><td>４以下</td><td>速い（62）</td></tr>
+<tr><td>５～７</td><td>普通（78）</td></tr>
+<tr><td>８以上</td><td>遅い（103）</td></tr>
 </table>
-<table border="1" cellspacing="1" cellpadding="1" style="font-size:80%;float:left;text-align:center;">
-<caption>?{?E?K????????[?h?C???l</caption>
-<tr><th style="width:7em;">?????[?h</th><th style="width:5em;">?C???l</th></tr>
-<tr><td>?x??</td><td>0</td></tr>
-<tr><td>???x??</td><td>1</td></tr>
-<tr><td>????</td><td>2</td></tr>
-<tr><td>??�L??</td><td>3</td></tr>
-<tr><td>????</td><td>4</td></tr>
+<table border=1 cellspacing=1 cellpadding=1 style="font-size:80%;float:left;text-align:center;">
+<caption>ボウガンのリロード修正値</caption>
+<tr><th style="width:7em;">リロード</th><th style="width:5em;">修正値</th></tr>
+<tr><td>遅い</td><td>0</td></tr>
+<tr><td>やや遅い</td><td>1</td></tr>
+<tr><td>普通</td><td>2</td></tr>
+<tr><td>やや速い</td><td>3</td></tr>
+<tr><td>速い</td><td>4</td></tr>
 </table>
-<table border="1" cellspacing="1" cellpadding="1" style="font-size:80%;text-align:center;">
-<caption>?X?L??????C???l</caption>
-<tr><th style="width:7em;">?X?L??</th><th style="width:5em;">?C???l</th></tr>
-<tr><td>???U???x-2</td><td>-3</td></tr>
-<tr><td>???U???x-1</td><td>-1</td></tr>
-<tr><td>?X?L?????</td><td>0</td></tr>
-<tr><td>???U???x+1</td><td>1</td></tr>
-<tr><td>???U???x+2</td><td>2</td></tr>
-<tr><td>???U???x+3</td><td>3</td></tr>
+<table border=1 cellspacing=1 cellpadding=1 style="font-size:80%;text-align:center;">
+<caption>スキルによる修正値</caption>
+<tr><th style="width:7em;">スキル</th><th style="width:5em;">修正値</th></tr>
+<tr><td>装填速度-2</td><td>-3</td></tr>
+<tr><td>装填速度-1</td><td>-1</td></tr>
+<tr><td>スキルなし</td><td>0</td></tr>
+<tr><td>装填速度+1</td><td>1</td></tr>
+<tr><td>装填速度+2</td><td>2</td></tr>
+<tr><td>装填速度+3</td><td>3</td></tr>
 </table>
 <pre>
-?????[?h?????x??v?Z??
+リロードする速度の計算式
 
-?????[?h???x?l ?? ?e??????[?h?l ?| ?i?{?E?K????????[?h?C???l ?{ ???U???x?X?L??????C???l?j
+リロード速度値 ＝ 弾のリロード値 － （ボウガンのリロード修正値 ＋ 装填速度スキルによる修正値）
 
-???[?V???????? ?i?j ?????l??t???[?????i30?t???[?????P?b?j
+モーション欄の （） の中の値はフレーム数（30フレーム＝１秒）
 </pre>
 <hr style="height:1px">
 <p>
-???@??????????
-<table border="1" cellspacing="1" cellpadding="1" style="font-size:80%;float:left;text-align:center;">
-<caption>???[?V????</caption>
-<tr><th style="width:7em;">????????l</th><th style="width:6em;">???[?V????</th></tr>
-<tr><td>?O?`?W</td><td>???????i26?j</td></tr>
-<tr><td>?X?`?P?O</td><td>???????i56?j</td></tr>
-<tr><td>?P?P?`?P?S</td><td>??????i72?j</td></tr>
+●　発射時の反動
+<table border=1 cellspacing=1 cellpadding=1 style="font-size:80%;float:left;text-align:center;">
+<caption>モーション</caption>
+<tr><th style="width:7em;">発射反動値</th><th style="width:6em;">モーション</th></tr>
+<tr><td>０～８</td><td>反動小（26）</td></tr>
+<tr><td>９～１０</td><td>反動中（56）</td></tr>
+<tr><td>１１～１４</td><td>反動大（72）</td></tr>
 </table>
-<table border="1" cellspacing="1" cellpadding="1" style="font-size:80%;float:left;text-align:center;">
-<caption>?{?E?K????????C???l</caption>
-<tr><th style="width:7em;">????</th><th style="width:5em;">?C???l</th></tr>
-<tr><td>??</td><td>2</td></tr>
-<tr><td>???</td><td>3</td></tr>
-<tr><td>??</td><td>4</td></tr>
+<table border=1 cellspacing=1 cellpadding=1 style="font-size:80%;float:left;text-align:center;">
+<caption>ボウガンの反動修正値</caption>
+<tr><th style="width:7em;">反動</th><th style="width:5em;">修正値</th></tr>
+<tr><td>中</td><td>2</td></tr>
+<tr><td>やや小</td><td>3</td></tr>
+<tr><td>小</td><td>4</td></tr>
 </table>
-<table border="1" cellspacing="1" cellpadding="1" style="font-size:80%;text-align:center;">
-<caption>?X?L??????C???l</caption>
-<tr><th style="width:7em;">?X?L??</th><th style="width:5em;">?C???l</th></tr>
-<tr><td>?X?L?????</td><td>0</td></tr>
-<tr><td>?????y??+1</td><td>2</td></tr>
-<tr><td>?????y??+2</td><td>4</td></tr>
+<table border=1 cellspacing=1 cellpadding=1 style="font-size:80%;text-align:center;">
+<caption>スキルによる修正値</caption>
+<tr><th style="width:7em;">スキル</th><th style="width:5em;">修正値</th></tr>
+<tr><td>スキルなし</td><td>0</td></tr>
+<tr><td>反動軽減+1</td><td>2</td></tr>
+<tr><td>反動軽減+2</td><td>4</td></tr>
 </table>
 <pre>
-????????????????v?Z??
+発射した時の反動の計算式
 
-?????l ?? ?e??????l ?| ?i?{?E?K????????C???l ?{ ?????y???X?L??????C???l?j
+反動値 ＝ 弾の反動値 － （ボウガンの反動修正値 ＋ 反動軽減スキルによる修正値）
 
-???[?V???????? ?i?j ?????l??t???[?????i30?t???[?????P?b?j
+モーション欄の （） の中の値はフレーム数（30フレーム＝１秒）
 
-???A??X?L?????????????????A?e??????l????????????l????
+※連射スキルが発動している場合、弾の反動値がそのまま反動値となる
 </pre>
 <script type="text/javascript">
 <!--
 /*@cc_on if (@_jscript_version < 9) {_d=document;eval('var document=_d');}@*/
 var DamageForm = (function (){
 var I_aNAME = 0,I_aAT = 1,I_aZOKU = 2,I_aZOKUAT = 3,I_aZYOU = 4,I_aZYOUAT = 5,I_aCRI = 6,I_aRARE = 7,I_aGR = 8,I_aSLOT = 9,I_aDEF = 10,I_aHR = 11,I_aCRE = 12,I_aCLASS = 13,I_aSINKAGR = 14,I_aDOC = 15,I_aGAUGE = 16,I_aREACH = 17,I_aKYOKUSYA = 5,I_aYA = 16,I_aBIN = 17,I_aSPEED = 4,I_aSOKUSYA = 16,I_aKICK = 17,I_aRELO = 18,I_aGUN = 19;
-var RELOADNAME = ["?x??","???x??","????","??�L??","????"],
-	KICKNAME = ["???","??","??","???","??"],
-	SPEEDNAME = ["?x??","???x??","??�L??","????"],
-	CLASSTYPE = {"":" ",A:"?r?o",B:"?e??",C:"?g?b",D:"????",E:"???L",F:"?i??",G:"?V??",H:"?e??",I:"G?e",J:"???",K:"???f",L:"?f??",M:"?f?Z",N:"?V?L",
+var RELOADNAME = ["遅い","やや遅い","普通","やや速い","速い"],
+	KICKNAME = ["最大","大","中","やや小","小"],
+	SPEEDNAME = ["遅い","やや遅い","やや速い","速い"],
+	CLASSTYPE = {"":" ",A:"ＳＰ",B:"親方",C:"ＨＣ",D:"剛種",E:"剛猫",F:"進化",G:"天嵐",H:"覇種",I:"G覇",J:"烈種",K:"準Ｇ",L:"Ｇ級",M:"Ｇ技",N:"天廊",
 					SP:"A",Sinka:"F",HC:"C",Neko:"E",Gosyu:"DEGHIJ",Tenran:"GHIJ",GClass:"KLM",Resyu:"J"},
 	MST_Equip = {},WP_Rui = 0;
 var global = {
-//------------------------------------??????----------
+//------------------------------------初期化----------
 init : function(){
 }
-//------------------------------------?f?[?^?Z?b?g----------
+//------------------------------------データセット----------
 ,setEquip : function (name,data){
 if (name === "right" || name === "heavy") MST_Equip[name]=data;
 }
@@ -195,21 +195,21 @@ if (name === "right" || name === "heavy") MST_Equip[name]=data;
 }
 ,setSozai : function (data){
 }
-//------------------------------------????Z?b?g----------
+//------------------------------------武器セット----------
 ,setWeapon : function(id){
 var s_wp = document.getElementById("s_wp"),c = 1,eqlist = MST_Equip[id];
 s_wp.length = 1;
-s_wp.options[0].text = "?|" + (id === "right" ? "???C?g?{?E?K??" : "?w?r?B?{?E?K??") + "?|";
+s_wp.options[0].text = "－" + (id === "right" ? "ライトボウガン" : "ヘビィボウガン") + "－";
 WP_Rui = id;
 if (window.opera){
 	var wkList = [],i=0;
 	var Fulltohalf = (function (){
-		var han = "0123456789.,-+ABCDEFGHIJKLMNOPQRSTUVWXYZ??????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????��???????????????????????��";
-		var zen = "?O?P?Q?R?S?T?U?V?W?X?D?C?|?{?`?a?b?c?d?e?i?g?h?i?j?k?l?m?n?o?p?q?r?s?t?u?v?w?x?y?A?C?E?G?I?J?L?N?P?R?T?V?X?Z?\?^?`?c?e?g?i?j?k?l?m?n?q?t?w?z?}?~?????????????????????????????????????????????????????????????????????????????????????????????@???B???D???F???H???b???�d???????????????????????????A???��????????K?M?O?Q?S?U?W?Y?[?]?_?W?d?f?h?o?r?u?x?{?p?s?v?y?|??";
+		var han = "0123456789.,-+ABCDEFGHIJKLMNOPQRSTUVWXYZｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｧｧｨｨｩｩｪｪｫｫｯｯｬｬｭｭｮｮｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾊﾋﾌﾍﾎﾊﾋﾌﾍﾎｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾊﾋﾌﾍﾎﾊﾋﾌﾍﾎｳ";
+		var zen = "０１２３４５６７８９．，－＋ＡＢＣＤＥＦＪＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんぁァぃィぅゥぇェぉォっッゃャゅュょョがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽガギグゲゴザジズゼゾダジヅデドバビブベボパピプペポヴ";
 		return function (strVal) {
 			for (var i=0,str = "",m=strVal.length,c = "",n=0; i<m; i++){
 				c = strVal.charAt(i),n = zen.indexOf(c,0);
-				str += (n >= 0) ? han.charAt(n) : "?" + c;
+				str += (n >= 0) ? han.charAt(n) : "ﾞ" + c;
 			}
 			return str;
 		}
@@ -229,39 +229,39 @@ if (window.opera){
 	}
 }
 }
-//------------------------------------?????X----------
+//------------------------------------武器変更----------
 ,cngWeapon : function (){
 var eq = MST_Equip[WP_Rui][document.getElementById("s_wp").value].split(","),Ma = Math.abs;
 
-//?U??
+//攻撃
 document.getElementById("d_att").firstChild.nodeValue = Math.round(Number(eq[I_aAT]) * 12 / 10);
-//???U
+//装填
 document.getElementById("wpso").firstChild.nodeValue = eq[I_aRELO] + ":" + RELOADNAME[eq[I_aRELO]];
-//????
+//反動
 document.getElementById("wphan").firstChild.nodeValue = eq[I_aKICK] + ":" + KICKNAME[eq[I_aKICK]];
-//?e
+//弾
 for (i=0; i <= 31; i++) {
 	document.getElementById("d"+i+"t").innerHTML = eq[I_aGUN+i] > 0 ? eq[I_aGUN+i] : eq[I_aGUN+i] < 0 ? "<span style='color:red;'>"+ Ma(eq[I_aGUN+i]) +"</span>" : "<br>";
 }
-//??S
+//会心
 document.getElementById("d_cri").firstChild.nodeValue = eq[I_aCRI];
-//?X?y?b?N
+//スペック
 document.getElementById("d_spec").firstChild.nodeValue = eq[I_aSOKUSYA];
-//???
+//種類
 document.getElementById("d_class").firstChild.nodeValue = CLASSTYPE[eq[I_aCLASS]];
 }
-//------------------------------------?v?Z----------
+//------------------------------------計算----------
 ,calc : function (){
 var rensya = document.getElementById("rensya").value,souten = document.getElementById("souten").value,handou = document.getElementById("handou").value,wk=0;
 var eq = MST_Equip[WP_Rui][document.getElementById("s_wp").value].split(",");
 for (var i=0;i<= 31;i++) {
 	if (eq[I_aGUN+i] !== "0") {
-		//?????[?h
+		//リロード
 		wk = document.getElementById("k"+i+"r").firstChild.nodeValue - eq[I_aRELO] - souten;
-		document.getElementById("d"+i+"r").innerHTML = wk <= 4 ? "<span style='color:blue'>" + wk + ":????</span>" : wk >= 8 ? "<span style='color:red'>" + wk + ":?x??</span>" : wk + ":????";
-		//????
+		document.getElementById("d"+i+"r").innerHTML = wk <= 4 ? "<span style='color:blue'>" + wk + ":速い</span>" : wk >= 8 ? "<span style='color:red'>" + wk + ":遅い</span>" : wk + ":普通";
+		//反動
 		wk = rensya === "0" ? document.getElementById("k"+i+"h").firstChild.nodeValue - eq[I_aKICK] - handou : document.getElementById("k"+i+"h").firstChild.nodeValue;
-		document.getElementById("d"+i+"h").innerHTML = wk <= 8 ? "<span style='color:blue'>" + wk + ":??</span>" : wk >= 11 ? "<span style='color:red'>" + wk + ":??</span>" : wk + ":??";
+		document.getElementById("d"+i+"h").innerHTML = wk <= 8 ? "<span style='color:blue'>" + wk + ":小</span>" : wk >= 11 ? "<span style='color:red'>" + wk + ":大</span>" : wk + ":中";
 		document.getElementById("d"+i+"r").parentNode.style.display = "";
 	} else {
 		document.getElementById("d"+i+"r").firstChild.nodeValue= document.getElementById("d"+i+"h").firstChild.nodeValue = "";
@@ -273,46 +273,46 @@ for (var i=32;i<= 37;i++) {
 		document.getElementById("d"+i+"r").parentNode.style.display = "none";
 }
 if (CLASSTYPE.Gosyu.indexOf(eq[I_aCLASS]) >= 0){
-	if (!eq[I_aSOKUSYA]){ //????w???B
-		i=35; //?r?M?e
-		//?????[?h
+	if (!eq[I_aSOKUSYA]){ //剛種ヘヴィ
+		i=35; //排熱弾
+		//リロード
 		wk = document.getElementById("k"+i+"r").firstChild.nodeValue - eq[I_aRELO];
-		document.getElementById("d"+i+"r").innerHTML = wk <= 4 ? "<span style='color:blue'>" + wk + ":????</span>" : wk >= 8 ? "<span style='color:red'>" + wk + ":?x??</span>" : wk + ":????";
-		//????
+		document.getElementById("d"+i+"r").innerHTML = wk <= 4 ? "<span style='color:blue'>" + wk + ":速い</span>" : wk >= 8 ? "<span style='color:red'>" + wk + ":遅い</span>" : wk + ":普通";
+		//反動
 		wk = document.getElementById("k"+i+"h").firstChild.nodeValue - eq[I_aKICK];
-		document.getElementById("d"+i+"h").innerHTML = wk <= 8 ? "<span style='color:blue'>" + wk + ":??</span>" : wk >= 11 ? "<span style='color:red'>" + wk + ":??</span>" : wk + ":??";
+		document.getElementById("d"+i+"h").innerHTML = wk <= 8 ? "<span style='color:blue'>" + wk + ":小</span>" : wk >= 11 ? "<span style='color:red'>" + wk + ":大</span>" : wk + ":中";
 		document.getElementById("d"+i+"r").parentNode.style.display = "";
 	}
 }
 if (eq[I_aCLASS] === CLASSTYPE.Sinka){
-	if (eq[I_aNAME].indexOf("?X?y???z") > 0){
-		i = 33; //?X?_?e
-	} else if (eq[I_aNAME].indexOf("?W?y???z")+eq[I_aNAME].indexOf("?W?y??R?z") > 0){
-		i = 36; //???_?e
+	if (eq[I_aNAME].indexOf("氷【絢爛】") > 0){
+		i = 33; //氷酸弾
+	} else if (eq[I_aNAME].indexOf("弩【絢爛】")+eq[I_aNAME].indexOf("弩【煌然】") > 0){
+		i = 36; //龍酸弾
 	} else {
-		i = 32; //???_?e
+		i = 32; //強酸弾
 	}
-		//?????[?h
+		//リロード
 		wk = document.getElementById("k"+i+"r").firstChild.nodeValue - eq[I_aRELO] - souten;
-		document.getElementById("d"+i+"r").innerHTML = wk <= 4 ? "<span style='color:blue'>" + wk + ":????</span>" : wk >= 8 ? "<span style='color:red'>" + wk + ":?x??</span>" : wk + ":????";
-		//????
+		document.getElementById("d"+i+"r").innerHTML = wk <= 4 ? "<span style='color:blue'>" + wk + ":速い</span>" : wk >= 8 ? "<span style='color:red'>" + wk + ":遅い</span>" : wk + ":普通";
+		//反動
 		wk = rensya === "0" ? document.getElementById("k"+i+"h").firstChild.nodeValue - eq[I_aKICK] - handou : document.getElementById("k"+i+"h").firstChild.nodeValue;
-		document.getElementById("d"+i+"h").innerHTML = wk <= 8 ? "<span style='color:blue'>" + wk + ":??</span>" : wk >= 11 ? "<span style='color:red'>" + wk + ":??</span>" : wk + ":??";
+		document.getElementById("d"+i+"h").innerHTML = wk <= 8 ? "<span style='color:blue'>" + wk + ":小</span>" : wk >= 11 ? "<span style='color:red'>" + wk + ":大</span>" : wk + ":中";
 		document.getElementById("d"+i+"r").parentNode.style.display = "";
-	if (eq[I_aNAME].indexOf("?W?y??R?z") > 0){
-		i = 32; //???_?e
-		//?????[?h
+	if (eq[I_aNAME].indexOf("弩【煌然】") > 0){
+		i = 32; //強酸弾
+		//リロード
 		wk = document.getElementById("k"+i+"r").firstChild.nodeValue - eq[I_aRELO] - souten;
-		document.getElementById("d"+i+"r").innerHTML = wk <= 4 ? "<span style='color:blue'>" + wk + ":????</span>" : wk >= 8 ? "<span style='color:red'>" + wk + ":?x??</span>" : wk + ":????";
-		//????
+		document.getElementById("d"+i+"r").innerHTML = wk <= 4 ? "<span style='color:blue'>" + wk + ":速い</span>" : wk >= 8 ? "<span style='color:red'>" + wk + ":遅い</span>" : wk + ":普通";
+		//反動
 		wk = rensya === "0" ? document.getElementById("k"+i+"h").firstChild.nodeValue - eq[I_aKICK] - handou : document.getElementById("k"+i+"h").firstChild.nodeValue;
-		document.getElementById("d"+i+"h").innerHTML = wk <= 8 ? "<span style='color:blue'>" + wk + ":??</span>" : wk >= 11 ? "<span style='color:red'>" + wk + ":??</span>" : wk + ":??";
+		document.getElementById("d"+i+"h").innerHTML = wk <= 8 ? "<span style='color:blue'>" + wk + ":小</span>" : wk >= 11 ? "<span style='color:red'>" + wk + ":大</span>" : wk + ":中";
 		document.getElementById("d"+i+"r").parentNode.style.display = "";
 	}
 }
 }
 
-}//?O???[?o??
+}//グローバル
 return global;
 })();
 

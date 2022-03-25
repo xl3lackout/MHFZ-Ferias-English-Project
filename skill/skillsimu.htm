@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=shift_JIS">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
 <style type="text/css">
 <!--
 * {margin:0; padding:0;}
@@ -19,7 +19,7 @@ table {clear:both;}
 .al {text-align:left;}
 .ar {text-align:right;}
 .ac {text-align:center;}
-.fs {font-size:80%;} /*?????????*/
+.fs {font-size:80%;} /*小さめ文字*/
 .box {display: inline-block;vertical-align: middle; border:1px solid silver;height:1em;padding:0.1em 0 0.1em 0;}
 .box {margin-top:0.1em;}
 
@@ -30,92 +30,92 @@ table {clear:both;}
 
 img {width:130px; height:120px;}
 
-#f_bougu .name {width:140px;} /*?h??Z???N?g*/
-#f_bougu .sl {width:5.5em;} /*?X???b?g*/
-#f_bougu .sn {font-size: 0.7em;width:4.5em;overflow:hidden;} /*?X?L????*/
-#f_bougu .sp {font-size: 0.7em;width:1.7em;text-align: right;} /*?|?C???g*/
-#f_bougu .pt {font-size: 0.8em;width:1.7em;text-align: right;} /*?h??*/
-#f_bougu .sn2 {font-size: 0.8em;width:5.2em;} /*?X?L????*/
+#f_bougu .name {width:140px;} /*防具セレクト*/
+#f_bougu .sl {width:5.5em;} /*スロット*/
+#f_bougu .sn {font-size: 0.7em;width:4.5em;overflow:hidden;} /*スキル名*/
+#f_bougu .sp {font-size: 0.7em;width:1.7em;text-align: right;} /*ポイント*/
+#f_bougu .pt {font-size: 0.8em;width:1.7em;text-align: right;} /*防御*/
+#f_bougu .sn2 {font-size: 0.8em;width:5.2em;} /*スキル名*/
 
 .cb{ color: blue; cursor:pointer; }
-.r {color:red;} /*?L?[???????????*/
+.r {color:red;} /*キーとかとにかく赤*/
 
 ul {list-style-type:none;}
 #sub_Win {padding-left:0.2em;}
 #sub_WinBody dd {margin-left:0.5em;}
 #def_Box {margin-left:15px; border:1px solid silver;padding:0.1em 1em 0.5em 1em ;}
 
-#b_bukiLv {font-family:'?l?r ?S?V?b?N'}
+#b_bukiLv {font-family:'ＭＳ ゴシック'}
 #b_cuffLv,#b_cuffS3,#b_gousyuB,#d_MF,#d_MB,#d_FF,#d_FB,#c_fueDEF_G,#sub_Win,#b_headT1,#b_headT2,#b_headT3,#b_bodyT1,#b_bodyT2,#b_bodyT3,#b_armT1,#b_armT2,#b_armT3,#b_wstT1,#b_wstT2,#b_wstT3,#b_legT1,#b_legT2,#b_legT3 {display:none}
 -->
 </style>
-<title>?X?L???V?~?????[?^</title>
+<title>スキルシミュレータ</title>
 </head>
 <body>
 <div id="f_top">
 <ul style="width:53.5em;">
 <li><select id="c_sex">
-	<option value="0" selected="">????w??@
-	<option value="1">?j
-	<option value="2">??
-	</select>?@
-	?V???[?Y<input id="c_series" type="button" value="-" style="width:10em"><input id="c_input" type="button" value="??" style="width:1.5em;">
-	?X?L???@<input id="c_skill1" type="button" value="-" style="width:6em">
-	?A<input id="c_skill2" type="button" value="-" style="width:6em">
-	?B<input id="c_skill3" type="button" value="-" style="width:6em">
+	<option value="0" selected>性別指定　
+	<option value="1">男
+	<option value="2">女
+	</select>　
+	シリーズ<input id="c_series" type="button" value="-" style="width:10em"><input id="c_input" type="button" value="入" style="width:1.5em;">
+	スキル①<input id="c_skill1" type="button" value="-" style="width:6em">
+	②<input id="c_skill2" type="button" value="-" style="width:6em">
+	③<input id="c_skill3" type="button" value="-" style="width:6em">
 	<select id="c_andor">
-		<option value="and" selected="">?S??
-		<option value="or">??
-	</select><label for="c_minus"><input type="checkbox" name="c_minus" id="c_minus" value="-" class="chk"><small>?????</small></label>
+		<option value="and" selected>全て
+		<option value="or">一部
+	</select><label for="c_minus"><input type="checkbox" name="c_minus" id="c_minus" value="-" class=chk><small>ﾏｲﾅｽ含む</small></label>
 	<select id="c_teni">
-	<option value="">?H??
-	<option value="1">???g?g??
-	<option value="8">?M?]????
-	<option value="10">?I??????
-	<option value="12">????????
-	<option value="13">?Z??????
-	<option value="15">?X?E????
-	<option value="17">???????
-	<option value="20">????????
-	<option value="24">??k????
-	<option value="26">??????
-	<option value="28">???????
-	<option value="30">?????????
-	<option value="32">?z??????
-	<option value="34">????????
-	<option value="35">?x??????
-	<option value="36">?e????p????
-	<option value="38">?K?[?h???\????
-	<option value="40">?K????????
-	<option value="42">???????
-	<option value="44">???????
-	<option value="47">?I??????
-	<option value="48">???C????????
-	<option value="49">????????
-	<option value="50">??????
-	<option value="51">????????
-	<option value="52">??i????
+	<option value="">辿異
+	<option value="1">ｽｷﾙ枠拡張
+	<option value="8">閃転強化
+	<option value="10">巧撃強化
+	<option value="12">属撃強化
+	<option value="13">纏雷強化
+	<option value="15">氷界強化
+	<option value="17">耳栓強化
+	<option value="20">風圧強化
+	<option value="24">耐震強化
+	<option value="26">耐毒強化
+	<option value="28">耐麻痺強化
+	<option value="30">耐睡眠強化
+	<option value="32">吸血強化
+	<option value="34">劇物強化
+	<option value="35">支援強化
+	<option value="36">弾丸節約術強化
+	<option value="38">ガード性能強化
+	<option value="40">適応撃強化
+	<option value="42">鼓舞強化
+	<option value="44">反射強化
+	<option value="47">巧流強化
+	<option value="48">血気活性強化
+	<option value="49">雌伏強化
+	<option value="50">喝強化
+	<option value="51">幕無強化
+	<option value="52">猛進強化
 	</select>
-	<label for="c_upg"><input type="checkbox" name="c_upg" id="c_upg" value="1" class="chk" checked=""><small>?????O????</small></label>
+	<label for="c_upg"><input type="checkbox" name="c_upg" id="c_upg" value="1" class=chk checked><small>強化前除く</small></label>
 <li style="clear:left;"><select id="c_type">
-	<option value="3" selected="">?^?C?v?w??
-	<option value="0">???p
-	<option value="1">???m
-	<option value="2">?K???i?[
-	</select>?@<select id="c_rui">
-	<option value="-" selected="">?h????
-	<option value="">???
-	<option value="EF">HC/???
-	<option value="BCD">??/?V/?e
-	<option value="GHM">G?e/??/?n
-	<option value="IJ">?f??
-	<option value="N">?V?L
-	<option value="O">?J?I
-	<option value="PQ">?H??
-	</select>?@<span class="fs">
-	(<input type="button" id="c_rep1" class="chkB" value="???"><input type="button" id="c_rep2" class="chkB" value="??c"><input type="button" id="c_repm" class="chkB" value=" ?? "><input type="button" id="c_reps" class="chkB" value="??q??"><input type="button" id="c_repu" class="chkB" value="?}????"><input type="button" id="c_rept" class="chkB" value="?????"><input type="button" id="c_repc" class="chkB" value="????"><input type="button" id="c_repi" class="chkB" value="???V"><input type="button" id="c_repe" class="chkB" value="?????"><input type="button" id="c_rep3" class="chkB" value="??"><input type="button" id="c_repg" class="chkB" value="????"><input type="button" id="c_repk" class="chkB" value="???"><input type="button" id="c_repp" class="chkB" value="???"><input type="button" id="c_rep5" class="chkB" value="???T">)
-	?<select id="c_rare">
-	<option value="99" selected="">-
+	<option value="3" selected>タイプ指定
+	<option value="0">共用
+	<option value="1">剣士
+	<option value="2">ガンナー
+	</select>　<select id="c_rui">
+	<option value="-" selected>防具種類
+	<option value="">通常
+	<option value="EF">HC/狩護
+	<option value="BCD">剛/天/覇
+	<option value="GHM">G覇/烈/始
+	<option value="IJ">Ｇ級
+	<option value="N">天廊
+	<option value="O">遷悠
+	<option value="PQ">辿異
+	</select>　<span class=fs>
+	(<input type="button" id="c_rep1" class=chkB value="一般"><input type="button" id="c_rep2" class=chkB value="猟団"><input type="button" id="c_repm" class=chkB value=" 祭 "><input type="button" id="c_reps" class=chkB value="狩衛戦"><input type="button" id="c_repu" class=chkB value="迎撃戦"><input type="button" id="c_rept" class=chkB value="狩煉道"><input type="button" id="c_repc" class=chkB value="ﾊﾟﾛｰﾈ"><input type="button" id="c_repi" class=chkB value="韋駄天"><input type="button" id="c_repe" class=chkB value="ｲﾍﾞﾝﾄ"><input type="button" id="c_rep3" class=chkB value="ｶﾌｪ"><input type="button" id="c_repg" class=chkB value="ｶﾞﾁｬ"><input type="button" id="c_repk" class=chkB value="ｷｯﾄ"><input type="button" id="c_repp" class=chkB value="ﾊﾟｯｹ"><input type="button" id="c_rep5" class=chkB value="特典">)
+	ﾚｱ<select id="c_rare">
+	<option value="99" selected>-
 	<option value="11">11
 	<option value="10">10
 	<option value="9">9
@@ -127,9 +127,9 @@ ul {list-style-type:none;}
 	<option value="3">3
 	<option value="2">2
 	<option value="1">1
-	</select><small>???</small>
-	??<select id="c_hr">
-	<option value="5000" selected="">-
+	</select><small>以下</small>
+	ﾗﾝｸ<select id="c_hr">
+	<option value="5000" selected>-
 	<option value="3001">SGR1
 	<option value="2002">GR1
 	<option value="1300">SR300
@@ -151,108 +151,108 @@ ul {list-style-type:none;}
 	<option value="8">HR8
 	<option value="5">HR5
 	<option value="3">HR3
-	</select><small>???</small>
-	???<select id="c_slot">
-	<option value="0" selected="">0
+	</select><small>以下</small>
+	ｽﾛｯﾄ<select id="c_slot">
+	<option value="0" selected>0
 	<option value="1">1
 	<option value="2">2
 	<option value="3">3
-	</select><small>???</small></span>
-	<label for="c_color"><input type="checkbox" name="c_color" id="c_color" value="1" class="chk"><small>?F?????</small></label>
-	<input id="search_B" type="button" value=" ???@?? ">
-</li></li></ul>
+	</select><small>以上</small></span>
+	<label for="c_color"><input type="checkbox" name="c_color" id="c_color" value="1" class=chk><small>色違い含む</small></label>
+	<input id="search_B" type="button" value=" 検　索 ">
+</ul>
 </div>
 <hr style="clear:both;">
 <div id="f_search">
-<div style="width:200px;" class="ac">|???|?@???@??@|???|</div>
-<input type="checkbox" name="s_headCK" id="s_headCK" value="1" checked=""><input type="text" id="s_headZK" size="25" readonly="" value=""><br>
-<div style="width:217px;"><div class="td">??<br><span id="s_headYA" class="cb">??</span></div>
-<select id="s_head" size="6"></select></div>
-<input type="checkbox" name="s_bodyCK" id="s_bodyCK" value="1" checked=""><input type="text" id="s_bodyZK" size="25" readonly="" value=""><br>
-<div style="width:217px;"><div class="td">??<br><span id="s_bodyYA" class="cb">??</span></div>
-<select id="s_body" size="6"></select></div>
-<input type="checkbox" name="s_armCK" id="s_armCK" value="1" checked=""><input type="text" id="s_armZK" size="25" readonly="" value=""><br>
-<div style="width:217px;"><div class="td">?r<br><span id="s_armYA" class="cb">??</span></div>
-<select id="s_arm" size="6"></select></div>
-<input type="checkbox" name="s_wstCK" id="s_wstCK" value="1" checked=""><input type="text" id="s_wstZK" size="25" readonly="" value=""><br>
-<div style="width:217px;"><div class="td">??<br><span id="s_wstYA" class="cb">??</span></div>
-<select id="s_wst" size="6"></select></div>
-<input type="checkbox" name="s_legCK" id="s_legCK" value="1" checked=""><input type="text" id="s_legZK" size="25" readonly="" value=""><br>
-<div style="width:217px;"><div class="td">?r<br><span id="s_legYA" class="cb">??</span></div>
-<select id="s_leg" size="6"></select></div>
-<input type="checkbox" name="s_decoCK" id="s_decoCK" value="1" checked=""><input type="text" id="s_decoZK" size="25" readonly="" value=""><br>
-<div style="width:217px;"><div class="td">??<br><span id="s_decoYA" class="cb">??</span></div>
-<select id="s_deco" size="5"></select></div><!--<input type="checkbox" name="s_cuffCK" id="s_cuffCK" value="1" checked><input type=text id="s_cuffZK" size=25 readonly value=""><br>-->
-<div style="width:217px;"><div class="td">?J<br>?t<br><span id="s_cuffYA" class="cb">??</span></div>
-<select id="s_cuff" size="4"></select></div>
+<div style="width:200px;" class="ac">|ｽｷﾙ|　名　称　|ｽﾛｯﾄ|</div>
+<input type="checkbox" name="s_headCK" id="s_headCK" value="1" checked><input type=text id="s_headZK" size=25 readonly value=""><br>
+<div style="width:217px;"><div class="td">頭<br><span id="s_headYA" class="cb">←</span></div>
+<select id="s_head" size=6></select></div>
+<input type="checkbox" name="s_bodyCK" id="s_bodyCK" value="1" checked><input type=text id="s_bodyZK" size=25 readonly value=""><br>
+<div style="width:217px;"><div class="td">胴<br><span id="s_bodyYA" class="cb">←</span></div>
+<select id="s_body" size=6></select></div>
+<input type="checkbox" name="s_armCK" id="s_armCK" value="1" checked><input type=text id="s_armZK" size=25 readonly value=""><br>
+<div style="width:217px;"><div class="td">腕<br><span id="s_armYA" class="cb">←</span></div>
+<select id="s_arm" size=6></select></div>
+<input type="checkbox" name="s_wstCK" id="s_wstCK" value="1" checked><input type=text id="s_wstZK" size=25 readonly value=""><br>
+<div style="width:217px;"><div class="td">腰<br><span id="s_wstYA" class="cb">←</span></div>
+<select id="s_wst" size=6></select></div>
+<input type="checkbox" name="s_legCK" id="s_legCK" value="1" checked><input type=text id="s_legZK" size=25 readonly value=""><br>
+<div style="width:217px;"><div class="td">脚<br><span id="s_legYA" class="cb">←</span></div>
+<select id="s_leg" size=6></select></div>
+<input type="checkbox" name="s_decoCK" id="s_decoCK" value="1" checked><input type=text id="s_decoZK" size=25 readonly value=""><br>
+<div style="width:217px;"><div class="td">珠<br><span id="s_decoYA" class="cb">←</span></div>
+<select id="s_deco" size=5></select></div><!--<input type="checkbox" name="s_cuffCK" id="s_cuffCK" value="1" checked><input type=text id="s_cuffZK" size=25 readonly value=""><br>-->
+<div style="width:217px;"><div class="td">カ<br>フ<br><span id="s_cuffYA" class="cb">←</span></div>
+<select id="s_cuff" size=4></select></div>
 <span class="fs">
-?_?u???N???b?N ?? ?? ??Z?b?g
+ダブルクリック か ← でセット
 </span>
 </div>
 <div id="f_bougu">
 <form name="f3" id="f3" method="POST" action="download.cgi">
-<div style="width:830px;"><div style="width:160px;" class="td ac">????</div><div style="width:35px" class="td">LV</div>?@?X???b?g</div>
+<div style="width:830px;"><div style="width:160px;" class="td ac">名称</div><div style="width:35px" class="td">LV</div>　スロット</div>
 <div style="width:830px;">
-<div>?? <input id="b_bukiDel" type="button" value="X" disabled=""><select name="b_buki" id="b_buki" class="name"><option value="0000,1,O,O,O" selected="">?Z?b?g</select>
-<select id="b_bukiLv"><option value="1" selected="">??<option value="2">SP<option value="3">?V</select>
- <input id="b_bukiS1" type="button" class="sl" value="??"><input id="b_bukiS2" type="button" class="sl" value="??"><input id="b_bukiS3" type="button" class="sl" value="??">
- ?J?t <input id="b_cuffDel" type="button" value="X" disabled=""><select name="b_cuff" id="b_cuff"><option value="0000,1,O,O," selected="">?Z?b?g</select>
-<select id="b_cuffLv"><option value="1" selected="">1</select>
- <input id="b_cuffS1" type="button" class="sl" value="??"><input id="b_cuffS2" type="button" class="sl" value="??"><input id="b_cuffS3" type="button" class="sl" value="-">
- <small>?\??????</small><select id="c_cuff_lm">
+<div>武 <input id="b_bukiDel" type="button" value="X" disabled><select name="b_buki" id="b_buki" class="name"><option value="0000,1,O,O,O" selected>セット</select>
+<select id="b_bukiLv"><option value="1" selected>通<option value="2">SP<option value="3">天</select>
+ <input id="b_bukiS1" type="button" class=sl value="○"><input id="b_bukiS2" type="button" class=sl value="○"><input id="b_bukiS3" type="button" class=sl value="○">
+ カフ <input id="b_cuffDel" type="button" value="X" disabled><select name="b_cuff" id="b_cuff"><option value="0000,1,O,O," selected>セット</select>
+<select id="b_cuffLv"><option value="1" selected>1</select>
+ <input id="b_cuffS1" type="button" class=sl value="○"><input id="b_cuffS2" type="button" class=sl value="○"><input id="b_cuffS3" type="button" class=sl value="-">
+ <small>表示制限</small><select id="c_cuff_lm">
  <option value="1">+1
  <option value="2">+2
- <option value="3" selected="">+3
+ <option value="3" selected>+3
  <option value="4">+4
  <option value="5">+5
  <option value="6">+6
  <option value="7">+7
- </select><small>???</small>
+ </select><small>以上</small>
 </div>
-<div>?? <input id="b_headDel" type="button" value="X" disabled=""><select name="b_head" id="b_head" class="name"><option value="0000,1,O,O,O" selected="">??????</select>
-<select id="b_headLv"><option value="1" selected="">1</select>
- <input id="b_headS1" type="button" class="sl" value="??"><input id="b_headS2" type="button" class="sl" value="??"><input id="b_headS3" type="button" class="sl" value="??">
- <input id="b_headT1" type="button" class="sl" value="??"><input id="b_headT2" type="button" class="sl" value="??"><input id="b_headT3" type="button" class="sl" value="??">
+<div>頭 <input id="b_headDel" type="button" value="X" disabled><select name="b_head" id="b_head" class="name"><option value="0000,1,O,O,O" selected>仮装備</select>
+<select id="b_headLv"><option value="1" selected>1</select>
+ <input id="b_headS1" type="button" class=sl value="○"><input id="b_headS2" type="button" class=sl value="○"><input id="b_headS3" type="button" class=sl value="○">
+ <input id="b_headT1" type="button" class=sl value="○"><input id="b_headT2" type="button" class=sl value="○"><input id="b_headT3" type="button" class=sl value="○">
  <span id="b_headSn1" class="box sn">&nbsp;</span><span id="b_headSp1" class="box sp">0</span>
  <span id="b_headSn2" class="box sn">&nbsp;</span><span id="b_headSp2" class="box sp">0</span>
  <span id="b_headSn3" class="box sn">&nbsp;</span><span id="b_headSp3" class="box sp">0</span>
  <span id="b_headSn4" class="box sn">&nbsp;</span><span id="b_headSp4" class="box sp">0</span>
  <span id="b_headSn5" class="box sn">&nbsp;</span><span id="b_headSp5" class="box sp">0</span>
 </div>
-<div>?? <input id="b_bodyDel" type="button" value="X" disabled=""><select name="b_body" id="b_body" class="name"><option value="0000,1,O,O,O" selected="">??????</select>
-<select id="b_bodyLv"><option value="1" selected="">1</select>
- <input id="b_bodyS1" type="button" class="sl" value="??"><input id="b_bodyS2" type="button" class="sl" value="??"><input id="b_bodyS3" type="button" class="sl" value="??">
- <input id="b_bodyT1" type="button" class="sl" value="??"><input id="b_bodyT2" type="button" class="sl" value="??"><input id="b_bodyT3" type="button" class="sl" value="??">
+<div>胴 <input id="b_bodyDel" type="button" value="X" disabled><select name="b_body" id="b_body" class="name"><option value="0000,1,O,O,O" selected>仮装備</select>
+<select id="b_bodyLv"><option value="1" selected>1</select>
+ <input id="b_bodyS1" type="button" class=sl value="○"><input id="b_bodyS2" type="button" class=sl value="○"><input id="b_bodyS3" type="button" class=sl value="○">
+ <input id="b_bodyT1" type="button" class=sl value="○"><input id="b_bodyT2" type="button" class=sl value="○"><input id="b_bodyT3" type="button" class=sl value="○">
  <span id="b_bodySn1" class="box sn">&nbsp;</span><span id="b_bodySp1" class="box sp">0</span>
  <span id="b_bodySn2" class="box sn">&nbsp;</span><span id="b_bodySp2" class="box sp">0</span>
  <span id="b_bodySn3" class="box sn">&nbsp;</span><span id="b_bodySp3" class="box sp">0</span>
  <span id="b_bodySn4" class="box sn">&nbsp;</span><span id="b_bodySp4" class="box sp">0</span>
  <span id="b_bodySn5" class="box sn">&nbsp;</span><span id="b_bodySp5" class="box sp">0</span>
 </div>
-<div>?r <input id="b_armDel" type="button" value="X" disabled=""><select name="b_arm" id="b_arm" class="name"><option value="0000,1,O,O,O" selected="">??????</select>
-<select id="b_armLv"><option value="1" selected="">1</select>
- <input id="b_armS1" type="button" class="sl" value="??"><input id="b_armS2" type="button" class="sl" value="??"><input id="b_armS3" type="button" class="sl" value="??">
- <input id="b_armT1" type="button" class="sl" value="??"><input id="b_armT2" type="button" class="sl" value="??"><input id="b_armT3" type="button" class="sl" value="??">
+<div>腕 <input id="b_armDel" type="button" value="X" disabled><select name="b_arm" id="b_arm" class="name"><option value="0000,1,O,O,O" selected>仮装備</select>
+<select id="b_armLv"><option value="1" selected>1</select>
+ <input id="b_armS1" type="button" class=sl value="○"><input id="b_armS2" type="button" class=sl value="○"><input id="b_armS3" type="button" class=sl value="○">
+ <input id="b_armT1" type="button" class=sl value="○"><input id="b_armT2" type="button" class=sl value="○"><input id="b_armT3" type="button" class=sl value="○">
  <span id="b_armSn1" class="box sn">&nbsp;</span><span id="b_armSp1" class="box sp">0</span>
  <span id="b_armSn2" class="box sn">&nbsp;</span><span id="b_armSp2" class="box sp">0</span>
  <span id="b_armSn3" class="box sn">&nbsp;</span><span id="b_armSp3" class="box sp">0</span>
  <span id="b_armSn4" class="box sn">&nbsp;</span><span id="b_armSp4" class="box sp">0</span>
  <span id="b_armSn5" class="box sn">&nbsp;</span><span id="b_armSp5" class="box sp">0</span>
 </div>
-<div>?? <input id="b_wstDel" type="button" value="X" disabled=""><select name="b_wst" id="b_wst" class="name"><option value="0000,1,O,O,O" selected="">??????</select>
-<select id="b_wstLv"><option value="1" selected="">1</select>
- <input id="b_wstS1" type="button" class="sl" value="??"><input id="b_wstS2" type="button" class="sl" value="??"><input id="b_wstS3" type="button" class="sl" value="??">
- <input id="b_wstT1" type="button" class="sl" value="??"><input id="b_wstT2" type="button" class="sl" value="??"><input id="b_wstT3" type="button" class="sl" value="??">
+<div>腰 <input id="b_wstDel" type="button" value="X" disabled><select name="b_wst" id="b_wst" class="name"><option value="0000,1,O,O,O" selected>仮装備</select>
+<select id="b_wstLv"><option value="1" selected>1</select>
+ <input id="b_wstS1" type="button" class=sl value="○"><input id="b_wstS2" type="button" class=sl value="○"><input id="b_wstS3" type="button" class=sl value="○">
+ <input id="b_wstT1" type="button" class=sl value="○"><input id="b_wstT2" type="button" class=sl value="○"><input id="b_wstT3" type="button" class=sl value="○">
  <span id="b_wstSn1" class="box sn">&nbsp;</span><span id="b_wstSp1" class="box sp">0</span>
  <span id="b_wstSn2" class="box sn">&nbsp;</span><span id="b_wstSp2" class="box sp">0</span>
  <span id="b_wstSn3" class="box sn">&nbsp;</span><span id="b_wstSp3" class="box sp">0</span>
  <span id="b_wstSn4" class="box sn">&nbsp;</span><span id="b_wstSp4" class="box sp">0</span>
  <span id="b_wstSn5" class="box sn">&nbsp;</span><span id="b_wstSp5" class="box sp">0</span>
 </div>
-<div>?r <input id="b_legDel" type="button" value="X" disabled=""><select name="b_leg" id="b_leg" class="name"><option value="0000,1,O,O,O" selected="">??????</select>
-<select id="b_legLv"><option value="1" selected="">1</select>
- <input id="b_legS1" type="button" class="sl" value="??"><input id="b_legS2" type="button" class="sl" value="??"><input id="b_legS3" type="button" class="sl" value="??">
- <input id="b_legT1" type="button" class="sl" value="??"><input id="b_legT2" type="button" class="sl" value="??"><input id="b_legT3" type="button" class="sl" value="??">
+<div>脚 <input id="b_legDel" type="button" value="X" disabled><select name="b_leg" id="b_leg" class="name"><option value="0000,1,O,O,O" selected>仮装備</select>
+<select id="b_legLv"><option value="1" selected>1</select>
+ <input id="b_legS1" type="button" class=sl value="○"><input id="b_legS2" type="button" class=sl value="○"><input id="b_legS3" type="button" class=sl value="○">
+ <input id="b_legT1" type="button" class=sl value="○"><input id="b_legT2" type="button" class=sl value="○"><input id="b_legT3" type="button" class=sl value="○">
  <span id="b_legSn1" class="box sn">&nbsp;</span><span id="b_legSp1" class="box sp">0</span>
  <span id="b_legSn2" class="box sn">&nbsp;</span><span id="b_legSp2" class="box sp">0</span>
  <span id="b_legSn3" class="box sn">&nbsp;</span><span id="b_legSp3" class="box sp">0</span>
@@ -261,174 +261,174 @@ ul {list-style-type:none;}
 </div>
 <div style="width:830px;">
 <div class="td">
-?@?@?@?@?@?? + ?? + ?r + ?? + ??<br>
-?h???F<span id="b_headDef" class="box pt">0</span>+<span id="b_bodyDef" class="box pt">0</span>+<span id="b_armDef" class="box pt">0</span>+<span id="b_wstDef" class="box pt">0</span>+<span id="b_legDef" class="box pt">0</span> ??<span id="b_Def_Sum" class="box pt" style="width:2.5em">1</span><br>
-?��???F<span id="b_headFp" class="box pt">0</span>+<span id="b_bodyFp" class="box pt">0</span>+<span id="b_armFp" class="box pt">0</span>+<span id="b_wstFp" class="box pt">0</span>+<span id="b_legFp" class="box pt">0</span> ??<span id="b_Fp_Sum" class="box pt" style="width:2.5em">0</span><br>
-??????F<span id="b_headWp" class="box pt">0</span>+<span id="b_bodyWp" class="box pt">0</span>+<span id="b_armWp" class="box pt">0</span>+<span id="b_wstWp" class="box pt">0</span>+<span id="b_legWp" class="box pt">0</span> ??<span id="b_Wp_Sum" class="box pt" style="width:2.5em">0</span><br>
-??????F<span id="b_headTp" class="box pt">0</span>+<span id="b_bodyTp" class="box pt">0</span>+<span id="b_armTp" class="box pt">0</span>+<span id="b_wstTp" class="box pt">0</span>+<span id="b_legTp" class="box pt">0</span> ??<span id="b_Tp_Sum" class="box pt" style="width:2.5em">0</span><br>
-??????F<span id="b_headDp" class="box pt">0</span>+<span id="b_bodyDp" class="box pt">0</span>+<span id="b_armDp" class="box pt">0</span>+<span id="b_wstDp" class="box pt">0</span>+<span id="b_legDp" class="box pt">0</span> ??<span id="b_Dp_Sum" class="box pt" style="width:2.5em">0</span><br>
-?X????F<span id="b_headIp" class="box pt">0</span>+<span id="b_bodyIp" class="box pt">0</span>+<span id="b_armIp" class="box pt">0</span>+<span id="b_wstIp" class="box pt">0</span>+<span id="b_legIp" class="box pt">0</span> ??<span id="b_Ip_Sum" class="box pt" style="width:2.5em">0</span><br>
-<input type="button" value="??" id="b_defimg">
-?@<input type="button" value="??UP" id="b_gousyuB">
+　　　　　頭 + 胴 + 腕 + 腰 + 足<br>
+防御力：<span id="b_headDef" class="box pt">0</span>+<span id="b_bodyDef" class="box pt">0</span>+<span id="b_armDef" class="box pt">0</span>+<span id="b_wstDef" class="box pt">0</span>+<span id="b_legDef" class="box pt">0</span> →<span id="b_Def_Sum" class="box pt" style="width:2.5em">1</span><br>
+火耐性：<span id="b_headFp" class="box pt">0</span>+<span id="b_bodyFp" class="box pt">0</span>+<span id="b_armFp" class="box pt">0</span>+<span id="b_wstFp" class="box pt">0</span>+<span id="b_legFp" class="box pt">0</span> →<span id="b_Fp_Sum" class="box pt" style="width:2.5em">0</span><br>
+水耐性：<span id="b_headWp" class="box pt">0</span>+<span id="b_bodyWp" class="box pt">0</span>+<span id="b_armWp" class="box pt">0</span>+<span id="b_wstWp" class="box pt">0</span>+<span id="b_legWp" class="box pt">0</span> →<span id="b_Wp_Sum" class="box pt" style="width:2.5em">0</span><br>
+雷耐性：<span id="b_headTp" class="box pt">0</span>+<span id="b_bodyTp" class="box pt">0</span>+<span id="b_armTp" class="box pt">0</span>+<span id="b_wstTp" class="box pt">0</span>+<span id="b_legTp" class="box pt">0</span> →<span id="b_Tp_Sum" class="box pt" style="width:2.5em">0</span><br>
+龍耐性：<span id="b_headDp" class="box pt">0</span>+<span id="b_bodyDp" class="box pt">0</span>+<span id="b_armDp" class="box pt">0</span>+<span id="b_wstDp" class="box pt">0</span>+<span id="b_legDp" class="box pt">0</span> →<span id="b_Dp_Sum" class="box pt" style="width:2.5em">0</span><br>
+氷耐性：<span id="b_headIp" class="box pt">0</span>+<span id="b_bodyIp" class="box pt">0</span>+<span id="b_armIp" class="box pt">0</span>+<span id="b_wstIp" class="box pt">0</span>+<span id="b_legIp" class="box pt">0</span> →<span id="b_Ip_Sum" class="box pt" style="width:2.5em">0</span><br>
+<input type="button" value="画像" id="b_defimg">
+　<input type="button" value="ﾗﾝｸUP" id="b_gousyuB">
 </div>
-<div class="td ac" style="width:125px;margin-left:5px;">?X?L???|?C???g<div id="b_skillP" class="b fs al" style="width:120px; height:150px; overflow:auto;"><br></div></div>
-<div class="td ac" style="width:140px;">?????X?L??<div id="b_skillT" class="b fs al" style="width:135px; height:150px; overflow:auto;"><br></div></div>
+<div class="td ac" style="width:125px;margin-left:5px;">スキルポイント<div id="b_skillP" class="b fs al" style="width:120px; height:150px; overflow:auto;"><br></div></div>
+<div class="td ac" style="width:140px;">発動スキル<div id="b_skillT" class="b fs al" style="width:135px; height:150px; overflow:auto;"><br></div></div>
 <div class="td"><br><input name="b_skill" id="b_skill" type="hidden" value="">
 	<div id="b_effectT" class="b fs al" style="width:265px; height:5.5em; overflow:auto;"><br></div>
-	<a href="..\koneta\skill.htm" target="_blank">?X?L?????</a>?^<a href="..\koneta\skillno.htm" target="_blank">????</a><br>
-	?}?C?Z?b?g<br>
-	<input type="file" name="b_upfile" size="10" id="b_read"><br>
-	<input type="submit" value="?@?@?? ???@?@" id="b_save" style="margin-right:1em;"><input type="button" value="?e?L?X?g?\??" id="b_text"></div>
+	<a href="../koneta/skill.htm" target="_blank">スキル説明</a>／<a href="../koneta/skillno.htm" target="_blank">順位</a><br>
+	マイセット<br>
+	<input type="file" name="b_upfile" size=10 id="b_read"><br>
+	<input type="submit" value="　　保 存　　" id="b_save" style="margin-right:1em;"><input type="button" value="テキスト表示" id="b_text"></div>
 <hr style="clear:both;">
 <div class="td">
-????:<span id="d_mei">&nbsp;</span><br>
-?��??<span id="d_Fp" class="box pt">0</span> <span id="d_sn1" class="box sn2">&nbsp;</span><span id="d_sp1" class="box pt">0</span> <span id="d_type" class="box sn2">&nbsp;</span><br>
-?????<span id="d_Wp" class="box pt">0</span> <span id="d_sn2" class="box sn2">&nbsp;</span><span id="d_sp2" class="box pt">0</span> <span id="d_sex" class="box sn2">&nbsp;</span><br>
-?????<span id="d_Tp" class="box pt">0</span> <span id="d_sn3" class="box sn2">&nbsp;</span><span id="d_sp3" class="box pt">0</span> <span id="d_rep1" class="box sn2">&nbsp;</span><br>
-?????<span id="d_Dp" class="box pt">0</span> <span id="d_sn4" class="box sn2">&nbsp;</span><span id="d_sp4" class="box pt">0</span> <span id="d_rep2" class="box sn2">&nbsp;</span><br>
-?X???<span id="d_Ip" class="box pt">0</span> <span id="d_sn5" class="box sn2">&nbsp;</span><span id="d_sp5" class="box pt">0</span> <span id="d_rui" class="box sn2">&nbsp;</span><br>
+名称:<span id="d_mei">&nbsp;</span><br>
+火耐性<span id="d_Fp" class="box pt">0</span> <span id="d_sn1" class="box sn2">&nbsp;</span><span id="d_sp1" class="box pt">0</span> <span id="d_type" class="box sn2">&nbsp;</span><br>
+水耐性<span id="d_Wp" class="box pt">0</span> <span id="d_sn2" class="box sn2">&nbsp;</span><span id="d_sp2" class="box pt">0</span> <span id="d_sex" class="box sn2">&nbsp;</span><br>
+雷耐性<span id="d_Tp" class="box pt">0</span> <span id="d_sn3" class="box sn2">&nbsp;</span><span id="d_sp3" class="box pt">0</span> <span id="d_rep1" class="box sn2">&nbsp;</span><br>
+龍耐性<span id="d_Dp" class="box pt">0</span> <span id="d_sn4" class="box sn2">&nbsp;</span><span id="d_sp4" class="box pt">0</span> <span id="d_rep2" class="box sn2">&nbsp;</span><br>
+氷耐性<span id="d_Ip" class="box pt">0</span> <span id="d_sn5" class="box sn2">&nbsp;</span><span id="d_sp5" class="box pt">0</span> <span id="d_rui" class="box sn2">&nbsp;</span><br>
 </div>
-<img alt="" src="..\img\w.jpg" id="d_MF" style="margin-left:5px">
-<img alt="" src="..\img\w.jpg" id="d_MB">
-<img alt="" src="..\img\w.jpg" id="d_FF">
-<img alt="" src="..\img\w.jpg" id="d_FB">
+<img alt="" src="../img/w.jpg" id="d_MF" style="margin-left:5px">
+<img alt="" src="../img/w.jpg" id="d_MB">
+<img alt="" src="../img/w.jpg" id="d_FF">
+<img alt="" src="../img/w.jpg" id="d_FB">
 <div id="def_Box" class="td">
-<label for="c_gohu"><input type="checkbox" name="c_gohu" id="c_gohu" value="16">?????[+16]</label>
-<label for="c_tume"><input type="checkbox" name="c_tume" id="c_tume" value="24">?????[+24]</label>
-<label for="c_soko"><input type="checkbox" name="c_soko" id="c_soko" value="1">?m??</label>
-<label for="c_kizuna"><input type="checkbox" name="c_kizuna" id="c_kizuna" value="1">?J<small>??</small>[+40]</label>
+<label for="c_gohu"><input type=checkbox name="c_gohu" id="c_gohu" value=16>守りの護符[+16]</label>
+<label for="c_tume"><input type=checkbox name="c_tume" id="c_tume" value=24>守りの爪[+24]</label>
+<label for="c_soko"><input type=checkbox name="c_soko" id="c_soko" value=1>瀕死</label>
+<label for="c_kizuna"><input type=checkbox name="c_kizuna" id="c_kizuna" value=1>絆<small>女</small>[+40]</label>
 <select id="c_katsu">
-<option value="0" selected="">??
-<option value="50">????[+50]
-<option value="100">????[+100]
+<option value=0 selected>喝
+<option value=50>自喝[+50]
+<option value=100>他喝[+100]
 </select>
 <br><select id="c_mesi">
-<option value="0" selected="">???S??
-<option value="10">?H?????@ |+10
-<option value="20">?H????@ |+20
-<option value="6">?d???e/??|+6
-<option value="10">?d????G?@|+10
+<option value=0 selected>死亡迄
+<option value=10>食事小　 |+10
+<option value=20>食事大　 |+20
+<option value=6 >硬化弾/薬|+6
+<option value=10>硬化薬G　|+10
 </select>
 <select id="c_sr">
-<option value="0" selected="">SR
-<option value="S9520">SR4???
-<option value="S9018">SR10???
-<option value="S8016">SR16???
-<option value="S7014">SR30???
-<option value="S6012">SR40???
-<option value="S5010">SR50???
-<option value="S4008">SR70???
-<option value="S3006">SR80???
-<option value="S2004">SR90???
-<option value="S1002">SR99???
-<option value="B10">?h??+10
-<option value="B15">?h??+15
-<option value="B20">?h??+20
-<option value="B25">?h??+25
-<option value="B30">?h??+30
-<option value="B35">?h??+35
-<option value="B40">?h??+40
-<option value="B45">?h??+45
-<option value="B50">?h??+50
-<option value="B55">?h??+55
-<option value="B60">?h??+60
-<option value="B70">?h??+70
-<option value="B100">?h??+100
-<option value="B110">?h??+110
-<option value="F5">?��??+5
-<option value="W5">?????+5
-<option value="T5">?????+5
-<option value="I5">?X???+5
-<option value="D5">?????+5
-<option value="A2">?S???+2
+<option value=0 selected>SR
+<option value=S9520>SR4以下
+<option value=S9018>SR10以下
+<option value=S8016>SR16以下
+<option value=S7014>SR30以下
+<option value=S6012>SR40以下
+<option value=S5010>SR50以下
+<option value=S4008>SR70以下
+<option value=S3006>SR80以下
+<option value=S2004>SR90以下
+<option value=S1002>SR99以下
+<option value=B10>防御+10
+<option value=B15>防御+15
+<option value=B20>防御+20
+<option value=B25>防御+25
+<option value=B30>防御+30
+<option value=B35>防御+35
+<option value=B40>防御+40
+<option value=B45>防御+45
+<option value=B50>防御+50
+<option value=B55>防御+55
+<option value=B60>防御+60
+<option value=B70>防御+70
+<option value=B100>防御+100
+<option value=B110>防御+110
+<option value=F5>火耐性+5
+<option value=W5>水耐性+5
+<option value=T5>雷耐性+5
+<option value=I5>氷耐性+5
+<option value=D5>龍耐性+5
+<option value=A2>全耐性+2
 </select>
-?????F<input type="number" name="c_buki" id="c_buki" value="0" size="3" maxlength="3">
+武器他：<input type=number name="c_buki" id="c_buki" value=0 size=3 maxlength=3>
 <select id="c_shien">
-<option value="0" selected="">?x??
-<option value="50">?x??[+50]
+<option value=0 selected>支援
+<option value=50>支援[+50]
 </select>
 <br><select id="c_tane">
-<option value="0" selected="">????
-<option value="40">?E????/?J|+40
-<option value="50">?E????? |+50
+<option value=0 selected>時限
+<option value=40>忍耐の種/笛|+40
+<option value=50>忍耐の丸薬 |+50
 </select>
 <select id="c_drink">
-<option value="0" selected="">?h?????N
-<option value="F50">?��??+50
-<option value="W50">?????+50
-<option value="T50">?????+50
-<option value="I50">?X???+50
-<option value="D50">?????+50
+<option value=0 selected>ドリンク
+<option value=F50>火耐性+50
+<option value=W50>水耐性+50
+<option value=T50>雷耐性+50
+<option value=I50>氷耐性+50
+<option value=D50>龍耐性+50
 </select>
 <select id="c_fueDEF">
-<option value="100" selected="">?h?????
-<option value="115">?h???@|1.15?{
-<option value="120">?h???|1.2?{
-<option value="120">?h??@|1.2?{
-<option value="130">?h???|1.3?{
+<option value=100 selected>防御旋律
+<option value=115>防小　|1.15倍
+<option value=120>防追小|1.2倍
+<option value=120>防大　|1.2倍
+<option value=130>防追大|1.3倍
 </select>
 <select id="c_fueDEF_G">
-<option value="0" selected="">?h?????
-<option value="120">?h???@|+120
-<option value="160">?h???|+160
-<option value="160">?h??@|+160
-<option value="240">?h???|+240
+<option value=0 selected>防御旋律
+<option value=120>防小　|+120
+<option value=160>防追小|+160
+<option value=160>防大　|+160
+<option value=240>防追大|+240
 </select>
 <select id="c_fueTAI">
-<option value="0" selected="">???????
-<option value="F10">?��???????y???z[+10]
-<option value="F15">?��????????????[+15]
-<option value="F15">?��???????y??z[+15]
-<option value="F20">?��??????????[+20] 
-<option value="W10">??????????y???z[+10]
-<option value="W15">???????????????[+15]
-<option value="W15">??????????y??z[+15]
-<option value="W20">?????????????[+20] 
-<option value="T10">??????????y???z[+10]
-<option value="T15">???????????????[+15]
-<option value="T15">??????????y??z[+15]
-<option value="T20">?????????????[+20] 
-<option value="I10">?X????????y???z[+10]
-<option value="I15">?X?????????????[+15]
-<option value="I15">?X????????y??z[+15]
-<option value="I20">?X???????????[+20] 
-<option value="D10">??????????y???z[+10]
-<option value="D15">???????????????[+15]
-<option value="D15">??????????y??z[+15]
-<option value="D20">?????????????[+20] 
+<option value=0 selected>耐性旋律
+<option value=F10>火耐性強化【小】[+10]
+<option value=F15>火耐性強化小強化[+15]
+<option value=F15>火耐性強化【大】[+15]
+<option value=F20>火耐性強化大強化[+20] 
+<option value=W10>水耐性強化【小】[+10]
+<option value=W15>水耐性強化小強化[+15]
+<option value=W15>水耐性強化【大】[+15]
+<option value=W20>水耐性強化大強化[+20] 
+<option value=T10>雷耐性強化【小】[+10]
+<option value=T15>雷耐性強化小強化[+15]
+<option value=T15>雷耐性強化【大】[+15]
+<option value=T20>雷耐性強化大強化[+20] 
+<option value=I10>氷耐性強化【小】[+10]
+<option value=I15>氷耐性強化小強化[+15]
+<option value=I15>氷耐性強化【大】[+15]
+<option value=I20>氷耐性強化大強化[+20] 
+<option value=D10>龍耐性強化【小】[+10]
+<option value=D15>龍耐性強化小強化[+15]
+<option value=D15>龍耐性強化【大】[+15]
+<option value=D20>龍耐性強化大強化[+20] 
 </select>
 <br><select id="c_G_Fit">
-<option value="1" selected="">?f???K???h??
-<option value="1">???x???P
-<option value="2">???x???Q
-<option value="3">???x???R
-<option value="4">???x???S
-<option value="5">???x???T
-<option value="6">???x???U
-<option value="7">???x???V
-</select><small>?P?????????(?f???K???h???x???|?h??f?q)?~20</small>
+<option value=1 selected>Ｇ級適正防具
+<option value=1>レベル１
+<option value=2>レベル２
+<option value=3>レベル３
+<option value=4>レベル４
+<option value=5>レベル５
+<option value=6>レベル６
+<option value=7>レベル７
+</select><small>１部位当たり(Ｇ級適正防具レベル－防具ＧＲ)×20</small>
 <br><select id="c_G_Que">
-<option value="0" selected="">?f???N?G?X?g
-<option value="0">???P
-<option value="1">???Q
-<option value="2">???R
-<option value="3">???S
-<option value="4">???T
-<option value="5">???U
-<option value="6">???V
-</select><small>(?f???N?G?X?g?????x??-1)?~-150</small>
+<option value=0 selected>Ｇ級クエスト
+<option value=0>★１
+<option value=1>★２
+<option value=2>★３
+<option value=3>★４
+<option value=4>★５
+<option value=5>★６
+<option value=6>★７
+</select><small>(Ｇ級クエスト★レベル-1)×-150</small>
 </div>
-<div style="clear:both;">???<span id="d_doc" class="box fs" style="width:40em;vertical-align:top;">&nbsp;</span></div>
-<table border="1" cellspacing="0" style="clear:both;">
+<div style="clear:both;">説明<span id="d_doc" class="box fs" style="width:40em;vertical-align:top;">&nbsp;</span></div>
+<table border=1 cellspacing=0 style="clear:both;">
 <col span="1" style="width:160px"><col span="7" style="width:140px">
 <tr class="ac"><td id="d_lv1">LV1</td><td id="d_lv2">LV2</td><td id="d_lv3">LV3</td><td id="d_lv4">LV4</td><td id="d_lv5">LV5</td><td id="d_lv6">LV6</td><td id="d_lv7">LV7</td></tr>
-<tr class="ac"><td id="d_def1">000?F0</td><td id="d_def2">000?F0</td><td id="d_def3">000?F0</td><td id="d_def4">000?F0</td><td id="d_def5">000?F0</td><td id="d_def6">000?F0</td><td id="d_def7">000?F0</td></tr>
-<tr class="ar"><td id="d_zeny1">??</td><td id="d_zeny2">??</td><td id="d_zeny3">??</td><td id="d_zeny4">??</td><td id="d_zeny5">??</td><td id="d_zeny6">??</td><td id="d_zeny7">??</td></tr>
+<tr class="ac"><td id="d_def1">000：0</td><td id="d_def2">000：0</td><td id="d_def3">000：0</td><td id="d_def4">000：0</td><td id="d_def5">000：0</td><td id="d_def6">000：0</td><td id="d_def7">000：0</td></tr>
+<tr class="ar"><td id="d_zeny1">ｚ</td><td id="d_zeny2">ｚ</td><td id="d_zeny3">ｚ</td><td id="d_zeny4">ｚ</td><td id="d_zeny5">ｚ</td><td id="d_zeny6">ｚ</td><td id="d_zeny7">ｚ</td></tr>
 <tr style="height:80px; font-size:80%;"><td id="d_sozai1">&nbsp;</td><td id="d_sozai2">&nbsp;</td><td id="d_sozai3">&nbsp;</td><td id="d_sozai4">&nbsp;</td><td id="d_sozai5">&nbsp;</td><td id="d_sozai6">&nbsp;</td><td id="d_sozai7">&nbsp;</td></tr>
 </table>
 <div class="td" style="width:120px;">
-<div class="b ac">?w??LV?^???<br>??????</div>
-<div class="td b">??p</div><div id="d_zenyA" class="b ar">??</div>
+<div class="b ac">指定LV／最大<br>まで強化</div>
+<div class="td b">費用</div><div id="d_zenyA" class="b ar">ｚ</div>
 <div>Version:<span id="version">20190429</span></div>
 </div>
 <div id="d_sozaiA" class="td b fs" style="width:600px; height:120px; white-space: normal; overflow:auto; word-break:break-all;"><br></div>
@@ -443,13 +443,13 @@ ul {list-style-type:none;}
 </form>
 </div>
 <div id="sub_Win" style="position:absolute; width:50%; height:60%; border:solid 2px black; background-color:snow;">
-<input type="button" value="?????" id="sub_WinClose_B">?@?@?@?@<input type="button" value="???O??" id="sub_WinRemove_B">?@?@?@?@<input type="button" value="??????O??" id="sub_WinClear_B">
+<input type="button" value="閉じる" id="sub_WinClose_B">　　　　<input type="button" value="取り外し" id="sub_WinRemove_B">　　　　<input type="button" value="部位分外し" id="sub_WinClear_B">
 <hr>
 <dl id="sub_WinBody" style="height:99%; overflow:scroll; white-space:normal;"></dl>
 </div>
-<div id="loading" style="position:absolute; top:10em; left:20em;width:20em; height:10em; border:solid 2px black; background-color:snow; text-align:center; vertical-align:middle; display:table-cell;">?f?[?^???[?h??<div>
-</div></div></div></body>
-<script type="text/javascript" src="..\sozai\item.js"></script>
+<div id="loading" style="position:absolute; top:10em; left:20em;width:20em; height:10em; border:solid 2px black; background-color:snow; text-align:center; vertical-align:middle; display:table-cell;">データロード中<div>
+</body>
+<script type="text/javascript" src="../sozai/item.js"></script>
 <script type="text/javascript" src="SkillForm.js"></script>
 <script type="text/javascript" src="global.js"></script>
 <script type="text/javascript" src="equip.js"></script>
@@ -460,7 +460,7 @@ ul {list-style-type:none;}
 //	alert( new Date() - toDay);
 if (navigator.userAgent.indexOf("Opera") !== -1) {
 	if (navigator.userAgent.split("Version/")[1] > "11.55") {
-		if (confirm("????o?[?W??????Opera???????????B????y?[?W?????????H")) history.back();
+		if (confirm("このバージョンのOperaでは動作しません。元のページに戻りますか？")) history.back();
 	}
 }
 var TimeId = setTimeout(function (){

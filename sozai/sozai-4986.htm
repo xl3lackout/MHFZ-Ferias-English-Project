@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=shift_JIS">
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<style type="text/css">
+<!--
+table {border-collapse:collapse;}
+th {text-align:center;font-weight:normal;background-color:silver;}
+th,td {vertical-align:top;white-space:nowrap;padding:2px;border:2px ridge #ffffff;}
+
+#d_mei {margin-right:3em;cursor:auto;}
+span {cursor:pointer;}
+span.h {color:crimson;} /*昼*/
+span.y {color:blue;} /*夜*/
+
+a.g {background-color:gainsboro;} /*クエスト期間外*/
+a.e {background-color:cornsilk;} /*EX*/
+a.r {background-color:honeydew;} /*猟団*/
+#que_kai em,#que_zyoui em,#que_sugo em,#que_g em {font-style: normal;color:fuchsia;} /*確定報酬*/
+th,td {font-size:95%;}
+.l {vertical-align:middle;text-align:center;background-color:silver;}
+
+/* Firefox用ハック */
+html:not([lang*=""]) table,
+html:not([lang*=""]) td,
+html:not([lang*=""]) th
+{
+	border-collapse: separate;
+	border-spacing: 0;
+	margin:0;padding:0;
+}
+-->
+</style>
+<title>素材検索</title>
+</head>
+<body>
+<div>
+<span id="d_mei">&nbsp;</span>
+<input type="button" name="b_back" id="b_back" value="戻る">
+</div>
+<table><tr>
+<td class="l">レア</td><td id="d_rea">&nbsp;</td>
+<td class="l">売値</td><td id="d_buy">&nbsp;</td>
+<td class="l">ポーチ</td><td id="d_stock">&nbsp;</td>
+<td class="l" id="d_hrmei">HR</td><td id="d_hr">&nbsp;</td>
+<td class="l">説明</td><td id="d_setu">&nbsp;</td>
+</tr></table>
+<table style="margin-bottom:1em;">
+<tr><td class="l" colspan=4>入手</td><td class="l">昼夜をクリックでMAP表示</td></tr>
+<tr><td rowspan=12 class="l" style="width:4em;">採取</td>
+	<td class="l" rowspan=3 style="width:2em;">下位</td>
+	<td class="l" style="width:3em;">温暖期</td><td><div id="sai_kaion" style="width:23em"><br></div></td>
+	<td rowspan=12 style="width:250px; text-align:center;vertical-align:middle;font-size:80%;">白：採取 赤：採掘<br>黄：虫網 青：釣り<br><a href="" id="sai_link" style="display:none;"><img src="../img/w.jpg" id="sai_map"></a></td></tr>
+<tr><td class="l">寒冷期</td><td><div id="sai_kaikan" style="width:23em"><br></div></td></tr>
+<tr><td class="l">繁殖期</td><td><div id="sai_kaihan" style="width:23em"><br></div></td></tr>
+<tr><td class="l" rowspan=3>上位</td>
+	<td class="l">温暖期</td><td><div id="sai_zyouion" style="width:23em"><br></div></td></tr>
+<tr><td class="l">寒冷期</td><td><div id="sai_zyouikan" style="width:23em"><br></div></td></tr>
+<tr><td class="l">繁殖期</td><td><div id="sai_zyouihan" style="width:23em"><br></div></td></tr>
+<tr><td class="l" rowspan=3>凄腕</td>
+	<td class="l">温暖期</td><td><div id="sai_sugoon" style="width:23em"><br></div></td></tr>
+<tr><td class="l">寒冷期</td><td><div id="sai_sugokan" style="width:23em"><br></div></td></tr>
+<tr><td class="l">繁殖期</td><td><div id="sai_sugohan" style="width:23em"><br></div></td></tr>
+<tr><td class="l" rowspan=3>Ｇ級</td>
+	<td class="l">温暖期</td><td><div id="sai_gon" style="width:23em"><br></div></td></tr>
+<tr><td class="l">寒冷期</td><td><div id="sai_gkan" style="width:23em"><br></div></td></tr>
+<tr><td class="l">繁殖期</td><td><div id="sai_ghan" style="width:23em"><br></div></td></tr>
+<tr><td rowspan=4 class="l">クエスト<br>報酬</td>
+	<td class="l">下位</td><td colspan=3 id="que_kai"><br></td></tr>
+<tr><td class="l">上位</td><td colspan=3 id="que_zyoui"><br></td></tr>
+<tr><td class="l">凄腕</td><td colspan=3 id="que_sugo"><br></td></tr>
+<tr><td class="l">Ｇ級</td><td colspan=3 id="que_g"><br></td></tr>
+<tr><td rowspan=4 class="l"><small>モンスター</small><br>剥取<br>捕獲</td>
+	<td class="l">下位</td><td colspan=3 id="mos_kai"><br></td></tr>
+<tr><td class="l">上位</td><td colspan=3 id="mos_zyoui"><br></td></tr>
+<tr><td class="l">凄腕</td><td colspan=3 id="mos_sugo"><br></td></tr>
+<tr><td class="l">Ｇ級</td><td colspan=3 id="mos_g"><br></td></tr>
+<tr><td colspan=2 class="l">店売り</td><td colspan=3 id="shop"><br></td></tr>
+<tr><td colspan=2 class="l">調合その他</td><td colspan=3 id="cyougou"><br></td></tr>
+</table>
+<div style="font-size:80%;"><input name="b_yt" id="b_yt" type="button" value="用途表示">←武器・防具への用途が知りたい場合はクリック</div>
+<table>
+ <tr><th colspan=3>用途</th></tr>
+ <tr><td style="padding:0; vertical-align:top;" id="tblBuki">
+		<table><tr>
+		<th style="width:7em;">武器種類</th><th style="width:10em;">武器名</th><th style="width:2.5em;">製作</th><th style="width:2em;">数</th>
+		</tr></table></td>
+	<td style="padding:0; vertical-align:top;" id="tblBougu">
+		<table><tr>
+		<th style="width:4em;">部位</th><th style="width:10em;">防具名</th><th style="width:1.5em;">LV</th><th style="width:2em;">数</th>
+		</tr></table></td>
+	<td style="padding:0; vertical-align:top;" id="tblDec">
+		<table><tr>
+		<th style="width:4em;">装飾品</th><th style="width:10em;">装飾名</th><th style="width:2em;">数</th>
+		</tr></table></td>
+ </tr>
+ <tr><td colspan=3 class="l">その他の用途</td></tr>
+ <tr><td colspan=3 id="riyou"><br></td></tr>
+</table>
+<div id="loading" style="position:absolute; top:10em; left:20em;width:20em; height:10em; border:solid 2px black; background-color:snow; text-align:center; vertical-align:middle; display:table-cell;">データロード中<div>
+<script type="text/javascript" src="item.js"></script>
+<script type="text/javascript" src="bougu_sozai.js"></script>
+<script type="text/javascript" src="buki_sozai.js"></script>
+<script type="text/javascript" src="que_sozai.js"></script>
+<script type="text/javascript" src="sai_sozai.js"></script>
+<script type="text/javascript" src="mos_sozai.js"></script>
+<script type="text/javascript" src="other_sozai.js"></script>
+<script type="text/javascript" src="SozaiForm.js"></script>
+</body>
+</html>

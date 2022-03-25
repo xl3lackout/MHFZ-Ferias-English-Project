@@ -1,9 +1,9 @@
 var onoff = false;
-//イベントセット
+//繧､繝吶Φ繝医そ繝�繝�
 var addEvent = function (elm, type, func) {
-	//追加
+	//霑ｽ蜉
 	elm./*@cc_on @if (true) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ type,func,false);
-	//アンロードで削除
+	//繧｢繝ｳ繝ｭ繝ｼ繝峨〒蜑企勁
 	window./*@cc_on @if (true) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ "unload",
 		function(){
 			elm./*@cc_on @if (true) detachEvent ('on' + @else@*/ removeEventListener (/*@end@*/ type,func,false);

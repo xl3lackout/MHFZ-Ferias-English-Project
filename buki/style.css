@@ -1,18 +1,18 @@
-/*‹¤’Ê*/
+/*â€¹Â¤â€™ÃŠ*/
 th {text-align:center;white-space:nowrap;font-weight:normal;background-color:silver;}
 th,td {vertical-align:top;white-space:nowrap;padding:2px;}
 thead {height:2.4em;}
 html,body {height:100%; overflow:hidden;}
 body {margin:5px; padding:0;}
 table {table-layout:fixed;margin-bottom:60em;}
-td {border-color:#c0c0c0;} /*FF,Opera‚ÌŒrü‘Î‰*/
+td {border-color:#c0c0c0;} /*FF,Operaâ€šÃŒÅ’rÂÃ¼â€˜Ãâ€°Å¾*/
 
 #tree {height:99%;width:20%;overflow:scroll;float:left;white-space:nowrap;line-height:100%;}
 #tree small {font-size:60%;}
-#tree em {display: inline;font-style: normal;color:darkred;font-size:60%} /*•â‘«*/
+#tree em {display: inline;font-style: normal;color:darkred;font-size:60%} /*â€¢Ã¢â€˜Â«*/
 #tree a {text-decoration:none;}
 #tree a:link,#tree a:visited {color:blue;}
-#tree a.new:link,#tree a.new:visited,td.new:first-line {color:crimson;} /*V•Ší*/
+#tree a.new:link,#tree a.new:visited,td.new:first-line {color:crimson;} /*ÂVâ€¢ÂÅ Ã­*/
 #tree a:hover {color:red;}
 #tree a:active {color:black;}
 #tree span,#top small span {padding:2px;color:blue;cursor:pointer;}
@@ -24,16 +24,16 @@ td {border-color:#c0c0c0;} /*FF,Opera‚ÌŒrü‘Î‰*/
 #data {height:99%;width:79%;overflow: scroll;}
 
 input {font-size:60%;padding-right:2px;padding-left:2px;}
-.k {color:red;} /*ƒL[‘fŞ*/
-#data p {font-size:80%;color:red;margin-bottom:0;} /*„í•Ší*/
-#data td div {font-size:60%;margin-left:0.5em;} /*‹­‰»Œ³æ*/
+.k {color:red;} /*Æ’LÂ[â€˜fÂÃ*/
+#data p {font-size:80%;color:red;margin-bottom:0;} /*Ââ€Å½Ã­â€¢ÂÅ Ã­*/
+#data td div {font-size:60%;margin-left:0.5em;} /*â€¹Â­â€°Â»Å’Â³ÂÃ¦*/
 #data td div a {display:block;text-decoration: none;}
 #data td div a:link,#data td div A:visited {color:blue;}
 #data td div a:hover {color:red;}
 #data td div a:active {color:black;}
 b {font-size:80%;font-weight:normal;color:Navy;display:block;text-align:center;} /*GR*/
-s {color:red;text-decoration:none;} /*ƒ}ƒCƒiƒX‰ïS,à–¾—“*/
-#data q {color:red;font-size:73%;clear:left;display:block;quotes: "" ""} /*’HˆÙ*/
+s {color:red;text-decoration:none;} /*Æ’}Æ’CÆ’iÆ’Xâ€°Ã¯ÂS,ÂÃ â€“Â¾â€”â€œ*/
+#data q {color:red;font-size:73%;clear:left;display:block;quotes: "" ""} /*â€™HË†Ã™*/
 #ken {width:64.0em;}
 #yumi {width:65.5em;}
 #gun {width:77.0em;}
@@ -57,29 +57,29 @@ s {color:red;text-decoration:none;} /*ƒ}ƒCƒiƒX‰ïS,à–¾—“*/
 #cSz {width:9.3em}
 #cDc {width:13.5em;}
 
-#ken td:first-child+td+td+td+td,	/*Œ•m‚Ì5—ñ–ÚƒXƒƒbƒg*/
-#yumi td:first-child+td+td+td+td+td,/*‹|‚Ì6—ñ–ÚƒXƒƒbƒg*/
-#gun td:first-child+td+td+td,		/*ƒKƒ“‚Ì4—ñ–Ú”½“®*/
-#gun td:first-child+td+td+td+td+td	/*ƒKƒ“‚Ì6—ñ–ÚƒXƒƒbƒg*/
+#ken td:first-child+td+td+td+td,	/*Å’â€¢Å½mâ€šÃŒ5â€”Ã±â€“ÃšÆ’XÆ’ÂÆ’bÆ’g*/
+#yumi td:first-child+td+td+td+td+td,/*â€¹|â€šÃŒ6â€”Ã±â€“ÃšÆ’XÆ’ÂÆ’bÆ’g*/
+#gun td:first-child+td+td+td,		/*Æ’KÆ’â€œâ€šÃŒ4â€”Ã±â€“Ãšâ€Â½â€œÂ®*/
+#gun td:first-child+td+td+td+td+td	/*Æ’KÆ’â€œâ€šÃŒ6â€”Ã±â€“ÃšÆ’XÆ’ÂÆ’bÆ’g*/
 										{text-align:center;}
 
-#ken td:first-child+td+td+td+td+td,	/*Œ•m‚Ì6—ñ–ÚHR*/
-#ken td:first-child+td+td+td+td+td+td,	/*Œ•m‚Ì7—ñ–Úƒ[ƒj[*/
-#yumi td:first-child+td+td+td+td+td+td,	/*‹|‚Ì7—ñ–ÚHR*/
-#yumi td:first-child+td+td+td+td+td+td+td,	/*‹|‚Ì8—ñ–Úƒ[ƒj[*/
-#gun td:first-child+td+td+td+td+td+td,	/*ƒKƒ“‚Ì7—ñ–ÚHR*/
-#gun td:first-child+td+td+td+td+td+td+td	/*ƒKƒ“‚Ì8—ñ–Úƒ[ƒj[*/
+#ken td:first-child+td+td+td+td+td,	/*Å’â€¢Å½mâ€šÃŒ6â€”Ã±â€“ÃšHR*/
+#ken td:first-child+td+td+td+td+td+td,	/*Å’â€¢Å½mâ€šÃŒ7â€”Ã±â€“ÃšÆ’[Æ’jÂ[*/
+#yumi td:first-child+td+td+td+td+td+td,	/*â€¹|â€šÃŒ7â€”Ã±â€“ÃšHR*/
+#yumi td:first-child+td+td+td+td+td+td+td,	/*â€¹|â€šÃŒ8â€”Ã±â€“ÃšÆ’[Æ’jÂ[*/
+#gun td:first-child+td+td+td+td+td+td,	/*Æ’KÆ’â€œâ€šÃŒ7â€”Ã±â€“ÃšHR*/
+#gun td:first-child+td+td+td+td+td+td+td	/*Æ’KÆ’â€œâ€šÃŒ8â€”Ã±â€“ÃšÆ’[Æ’jÂ[*/
 										{text-align:right;}
-#ken td:first-child+td+td+td+td+td:first-line,	/*Œ•m‚Ì6—ñ–ÚHR*/
-#yumi td:first-child+td+td+td+td+td+td:first-line,	/*‹|‚Ì7—ñ–ÚHR*/
-#gun td:first-child+td+td+td+td+td+td:first-line	/*ƒKƒ“‚Ì7—ñ–ÚHR*/
+#ken td:first-child+td+td+td+td+td:first-line,	/*Å’â€¢Å½mâ€šÃŒ6â€”Ã±â€“ÃšHR*/
+#yumi td:first-child+td+td+td+td+td+td:first-line,	/*â€¹|â€šÃŒ7â€”Ã±â€“ÃšHR*/
+#gun td:first-child+td+td+td+td+td+td:first-line	/*Æ’KÆ’â€œâ€šÃŒ7â€”Ã±â€“ÃšHR*/
 										 {font-size:80%;} 
-/*“V˜L*/
+/*â€œVËœL*/
 #tenrou p {margin:0;padding:0px;border-bottom:thin solid black;}
 #tenrou b {display:inline;}
 #tenrou .l {border-left:thin none black}
 
-/*ƒQ[ƒW—p*/
+/*Æ’QÂ[Æ’Wâ€”p*/
 #ken ul {margin:0;padding:1px 0;height:10px;font-size:1px;width:101px;list-style-type:none;background-color:slategray;}
 #ken li {float:left;height:10px;}
 #ken .r {background-color:red;}
@@ -161,12 +161,12 @@ s {color:red;text-decoration:none;} /*ƒ}ƒCƒiƒX‰ïS,à–¾—“*/
 #ken .s87 {width:87px}
 #ken .s90 {width:90px}
 #ken .s100 {width:100px}
-/*ƒKƒ“*/
+/*Æ’KÆ’â€œ*/
 #gun ul {margin:0;padding:0;list-style-type:none;width:17.5em}
 #gun li {float:left;margin-right:0.2em;}
-u {color:red;text-decoration:none;} /*ƒ}ƒCƒiƒX’e*/
-i {font-style:normal;color:blue;clear:left;display:block;} /*ƒrƒ“‘¬Ë*/
-/*“J*/
+u {color:red;text-decoration:none;} /*Æ’}Æ’CÆ’iÆ’Xâ€™e*/
+i {font-style:normal;color:blue;clear:left;display:block;} /*Æ’rÆ’â€œâ€˜Â¬Å½Ã‹*/
+/*â€œJ*/
 #ken .f {background-color:silver;}
 #ken .fr {color:red;}
 #ken .fb {color:blue;}

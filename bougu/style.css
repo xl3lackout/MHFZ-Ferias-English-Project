@@ -1,11 +1,11 @@
-/*‹¤’Ê*/
+/*å…±é€š*/
 th {text-align:center;white-space:nowrap;font-weight:normal;background-color:silver;}
 th,td {vertical-align:top;white-space:nowrap;padding:2px;}
 thead {height:2.4em;}
-/*html,body {height:100%; overflow:hidden;} ƒcƒŠ[‚Æ‹¤’Ê‚È‚Ì‚ÅƒRƒƒ“ƒg*/
+/*html,body {height:100%; overflow:hidden;} ãƒ„ãƒªãƒ¼ã¨å…±é€šãªã®ã§ã‚³ãƒ¡ãƒ³ãƒˆ*/
 body {margin:5px; padding:0;}
 table {table-layout:fixed;margin-bottom:60em;}
-td {border-color:#c0c0c0;} /*FF,Opera‚ÌŒrü‘Î‰*/
+td {border-color:#c0c0c0;} /*FF,Operaã®ç½«ç·šå¯¾å¿œ*/
 
 #tree {height:99%;width:20%;overflow:scroll;float:left;white-space:nowrap;line-height:100%;}
 #tree small {font-size:60%;}
@@ -15,29 +15,29 @@ td {border-color:#c0c0c0;} /*FF,Opera‚ÌŒrü‘Î‰*/
 #tree a:active {color:black;}
 #tree span {padding:2px;color:blue;cursor:pointer;}
 #t2L,#t3L,#t4L,#t5L,#t6L,#t7L,#t8L,#t9L,#t10L,#t11L,#t12L,#t13L,#t14L,#t15L {display:none;}
-#tree strong,td.new:first-line {font-weight:normal;color:crimson;} /*V–h‹ï*/
-#tree em {font-style: normal;color:darkred;font-size:80%} /*•â‘«*/
+#tree strong,td.new:first-line {font-weight:normal;color:crimson;} /*æ–°é˜²å…·*/
+#tree em {font-style: normal;color:darkred;font-size:80%} /*è£œè¶³*/
 
 #bar {height:99%;width:3px;float:left;}
 #line {height:99%;width:3px;cursor:e-resize;background-color:gray;}
 #data {height:99%;width:78%;overflow: scroll;}
 
 input {font-size:60%;padding-right:2px;padding-left:2px;}
-.k {color:red;} /*ƒL[‘fŞ*/
-table p {font-size:80%;color:red;} /*„í•Ší*/
-td div {font-size:60%;margin-left:0.5em;} /*‹­‰»Œ³æ*/
+.k {color:red;} /*ã‚­ãƒ¼ç´ æ*/
+table p {font-size:80%;color:red;} /*å‰›ç¨®æ­¦å™¨*/
+td div {font-size:60%;margin-left:0.5em;} /*å¼·åŒ–å…ƒå…ˆ*/
 td div a {display:block;text-decoration: none;}
 td div a:link,td div A:visited {color:blue;}
 td div a:hover {color:red;}
 td div a:active {color:black;}
 b {font-size:80%;font-weight:normal;color:Navy;display:block;text-align:center;} /*GR*/
-s {font-size:80%;color:red;text-decoration:none;} /*à–¾—“*/
+s {font-size:80%;color:red;text-decoration:none;} /*èª¬æ˜æ¬„*/
 
-#b {width:84.0em} /*–h‹ï*/
-#c {width:57.0em} /*‘•ü•i*/
-#s {width:46.0em} /*ƒVƒWƒ‹*/
+#b {width:84.0em} /*é˜²å…·*/
+#c {width:57.0em} /*è£…é£¾å“*/
+#s {width:46.0em} /*ã‚·ã‚¸ãƒ«*/
 
-#b ul,#c ul,#s ul {margin:0;padding:1px 0;list-style-type:none;} /*ƒXƒLƒ‹*/
+#b ul,#c ul,#s ul {margin:0;padding:1px 0;list-style-type:none;} /*ã‚¹ã‚­ãƒ«*/
 #b em,#c em,#s em {font-style:normal;display:block;float:left}
 
 #b col#cN {width:10em;}
@@ -63,18 +63,18 @@ col#cHr {width:3em;text-align:right;}
 
 #s i {font-style:normal;font-size:80%;}
 
-#c td:first-child+td+td+td /*‘•ü•i‚Ì3—ñ–ÚƒXƒƒbƒg*/
+#c td:first-child+td+td+td /*è£…é£¾å“ã®3åˆ—ç›®ã‚¹ãƒ­ãƒƒãƒˆ*/
 	{text-align:center;}
-#b td:first-child+td+td+td+td+td, /*–h‹ï‚Ì5—ñ–Ú–hŒä*/
-#b td:first-child+td+td+td+td+td+td+td, /*–h‹ï‚Ì7—ñ–Ú‰¿Ši*/
-#b td:first-child+td+td+td+td+td+td, /*–h‹ï‚Ì6—ñ–ÚHR*/
-#b td:first-child+td+td+td+td, /*–h‹ï‚Ì4—ñ–ÚƒXƒLƒ‹*/
-#c td:first-child+td+td+td+td, /*‘•ü•i‚Ì4—ñ–ÚƒXƒLƒ‹*/
-#c td:first-child+td+td+td+td+td, /*‘•ü•i‚Ì5—ñ–ÚHR*/
-#c td:first-child+td+td+td+td+td+td, /*‘•ü•i‚Ì6—ñ–Ú‰¿Ši*/
-#s td:first-child+td, /*ƒVƒWƒ‹‚Ì1—ñ–ÚƒXƒLƒ‹*/
-#s td:first-child+td+td, /*ƒVƒWƒ‹‚Ì2—ñ–ÚŠm—¦*/
-#s td:first-child+td+td+td+td, /*ƒVƒWƒ‹‚Ì4—ñ–ÚGz*/
-#s td:first-child+td+td+td+td+td, /*ƒVƒWƒ‹‚Ì5—ñ–Ú‘fŞ*/
-#s td:first-child+td+td+td+td+td+td /*ƒVƒWƒ‹‚Ì6—ñ–Ú‘fŞ*/
+#b td:first-child+td+td+td+td+td, /*é˜²å…·ã®5åˆ—ç›®é˜²å¾¡*/
+#b td:first-child+td+td+td+td+td+td+td, /*é˜²å…·ã®7åˆ—ç›®ä¾¡æ ¼*/
+#b td:first-child+td+td+td+td+td+td, /*é˜²å…·ã®6åˆ—ç›®HR*/
+#b td:first-child+td+td+td+td, /*é˜²å…·ã®4åˆ—ç›®ã‚¹ã‚­ãƒ«*/
+#c td:first-child+td+td+td+td, /*è£…é£¾å“ã®4åˆ—ç›®ã‚¹ã‚­ãƒ«*/
+#c td:first-child+td+td+td+td+td, /*è£…é£¾å“ã®5åˆ—ç›®HR*/
+#c td:first-child+td+td+td+td+td+td, /*è£…é£¾å“ã®6åˆ—ç›®ä¾¡æ ¼*/
+#s td:first-child+td, /*ã‚·ã‚¸ãƒ«ã®1åˆ—ç›®ã‚¹ã‚­ãƒ«*/
+#s td:first-child+td+td, /*ã‚·ã‚¸ãƒ«ã®2åˆ—ç›®ç¢ºç‡*/
+#s td:first-child+td+td+td+td, /*ã‚·ã‚¸ãƒ«ã®4åˆ—ç›®Gz*/
+#s td:first-child+td+td+td+td+td, /*ã‚·ã‚¸ãƒ«ã®5åˆ—ç›®ç´ æ*/
+#s td:first-child+td+td+td+td+td+td /*ã‚·ã‚¸ãƒ«ã®6åˆ—ç›®ç´ æ*/
 	{text-align:right;}

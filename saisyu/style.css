@@ -1,4 +1,4 @@
-/*‹¤’Ê*/
+/*å…±é€š*/
 table {border-collapse:collapse;table-layout:fixed;}
 th {text-align:center;white-space:nowrap;font-weight:normal;background-color:silver;}
 th,td {white-space:nowrap;padding:2px;border:2px ridge #ffffff;}
@@ -18,8 +18,8 @@ col#c8n {width:2em;text-align:right;}
 col#c9 {width:8.5em;}
 col#c10n {width:2em;text-align:right;}
 
-span.b {color:blue;} /*Š¦—â*/
-span.r {color:red;} /*‰Š“V*/
+span.b {color:blue;} /*å¯’å†·*/
+span.r {color:red;} /*ç‚å¤©*/
 .c {text-align:center;}
 .y {background-color:silver;}
 a:hover {background-color:lightgrey;}
@@ -43,7 +43,7 @@ table tr>td.c:first-child+td+td+td+td+td,
 table tr>td.c:first-child+td+td+td+td+td+td+td,
 table tr>td.c:first-child+td+td+td+td+td+td+td+td+td {text-align:right;}
 
-/* Firefox—pƒnƒbƒN */
+/* Firefoxç”¨ãƒãƒƒã‚¯ */
 html:not([lang*=""]) table,
 html:not([lang*=""]) td,
 html:not([lang*=""]) th

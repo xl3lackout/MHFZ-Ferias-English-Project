@@ -1,17 +1,17 @@
 (function(document){
 /*@cc_on if (@_jscript_version < 9) {_d=document;eval('var document=_d');}@*/
-//ƒCƒxƒ“ƒgƒZƒbƒg
+//ã‚¤ãƒ™ãƒ³ãƒˆã‚»ãƒƒãƒˆ
 var addEvent = function (elm, type, func) {
-	//’Ç‰Á
+	//è¿½åŠ 
 	elm./*@cc_on @if (@_jscript_version < 9) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ type,func,false);
-	//ƒAƒ“ƒ[ƒh‚Åíœ
+	//ã‚¢ãƒ³ãƒ­ãƒ¼ãƒ‰ã§å‰Šé™¤
 	window./*@cc_on @if (@_jscript_version < 9) attachEvent ('on' + @else@*/ addEventListener (/*@end@*/ "unload",
 		function(){
 			elm./*@cc_on @if (@_jscript_version < 9) detachEvent ('on' + @else@*/ removeEventListener (/*@end@*/ type,func,false);
 		}
 		,false);
 };
-//ü‰Â•Ï
+//ç·šå¯å¤‰
 	var IsMouseDown = false;
 	addEvent(document.getElementById("line"),"mousedown",
 	function (evt) {
@@ -55,9 +55,9 @@ var addEvent = function (elm, type, func) {
 		}
 	});
 
-//ƒcƒŠ[
-var LIST_ID = "",LIST_TYPE = true,  //true=ƒVƒŠ[ƒY,false=•”ˆÊ
-	CK_NEKO = location.pathname.indexOf("_partnya") !== -1,
+//ãƒ„ãƒªãƒ¼
+var LIST_ID = "",LIST_TYPE = true,  //true=ã‚·ãƒªãƒ¼ã‚º,false=éƒ¨ä½
+	CK_NEKO = location.pathname.indexOf("partnya") !== -1,
 	MST_Item = setItem(),MST_Equip = SkillForm.MST_Equip;
 setItem = SkillForm = null;
 addEvent(document.getElementById("tree"),"click",
@@ -76,24 +76,24 @@ function (evt) {
 	} else if (!CK_NEKO && t.tagName === "A"){
 
 		var id_list = t.parentNode.getElementsByTagName("a");
-		//‚¢‚Ü•\Ž¦‚³‚ê‚Ä‚¢‚é‚à‚Ì‚Æ“¯‚¶‚©
+		//ã„ã¾è¡¨ç¤ºã•ã‚Œã¦ã„ã‚‹ã‚‚ã®ã¨åŒã˜ã‹
 		if (LIST_ID === id_list[0].href.substring(1)) {
 			return;
 		} else {
 			LIST_ID = id_list[0].href.substring(1);
 		}
-//ƒXƒLƒ‹ƒVƒ~ƒ…‚©‚çcpy
+//ã‚¹ã‚­ãƒ«ã‚·ãƒŸãƒ¥ã‹ã‚‰cpy
 var I_bNAME = 0,I_bSEX = 1,I_bTYPE = 2,I_bRARE = 3,I_bGR = 4,I_bF = 5,I_bW = 6,I_bT = 7,I_bD = 8,I_bI = 9,I_bSN1 = 10,I_bSP1 = 11,I_bSN2 = 12,I_bSP2 = 13,I_bSN3 = 14,I_bSP3 = 15,I_bSN4 = 16,I_bSP4 = 17,I_bSN5 = 18,I_bSP5 = 19,I_bUPGBACK = 20,I_bRECIPE1 = 21,I_bHR1 = 22,I_bLVUPPTN = 23,I_bLVMAX = 24,I_bZENY = 25,I_bDEF = 26,I_bSLOT1 = 27,I_bSLOT7 = 28,I_bZENYPTN = 29,I_bDEFPTN = 30,I_bSLOTPTN = 31,I_bUPGCNT = 32,I_bCRE = 33,I_bDEC = 34,I_bCLASS = 35,I_bTrSLOT = 36,I_bTeni = 37,I_bDOC = 38,I_bIMG = 39;
 var getSozai = function (eq){
 	if (eq[I_bLVUPPTN]) {
 		var list = MST_Equip.sozai[parseInt(eq[I_bLVUPPTN],16)].split(",");
-		//¶ŽY‚Ìê‡‚Ì‘fÞ‚ð•ÏX
+		//ç”Ÿç”£ã®å ´åˆã®ç´ æã‚’å¤‰æ›´
 		if (eq[I_bRECIPE1]) list[0] = eq[I_bRECIPE1];
-		//HR’²®
+		//HRèª¿æ•´
 		list[7+0] = eq[I_bHR1];
-		for (var i = 0;i < 6 && +list[7+i+1] < +list[7+i]; list[7+i+1] = list[7+i],i++); //1‚Âæ‚ª¬‚³‚¢ê‡“ü‚ê‘Ö‚¦
+		for (var i = 0;i < 6 && +list[7+i+1] < +list[7+i]; list[7+i+1] = list[7+i],i++); //1ã¤å…ˆãŒå°ã•ã„å ´åˆå…¥ã‚Œæ›¿ãˆ
 		return list;
-	} else { //‘•ü•i
+	} else { //è£…é£¾å“
 		return [eq[I_bRECIPE1],"","","","","","",eq[I_bHR1],"","","","","",""];
 	}
 };
@@ -113,10 +113,10 @@ var getZeny = function (eq){
 				list[i] = (zeny * ptn[i] / 100|0) - 1;
 			}
 		}
-		//¶ŽY‚Ìê‡‚Ì”¼Šz‚É
-		if (eq[I_bRECIPE1] && eq[I_bRECIPE1].indexOf("“X”„‚è") === -1) list[0] = zeny / 2|0;
+		//ç”Ÿç”£ã®å ´åˆã®åŠé¡ã«
+		if (eq[I_bRECIPE1] && eq[I_bRECIPE1].indexOf("åº—å£²ã‚Š") === -1) list[0] = zeny / 2|0;
 		return list;
-	} else { //‘•ü•i
+	} else { //è£…é£¾å“
 		return [eq[I_bZENY],"","","","","",""];
 	}
 };
@@ -137,7 +137,7 @@ var getDef = function (eq){
 			list[i] = def;
 		}
 		return list;
-	} else { //‘•ü•i
+	} else { //è£…é£¾å“
 		return ["","","","","","",""];
 	}
 };
@@ -149,7 +149,7 @@ var getSlot = function (eq){
 			if (list[i] >= slotmax) list[i] = slotmax;
 		}
 		return list;
-	} else { //‘•ü•i
+	} else { //è£…é£¾å“
 		return [eq[I_bSLOT7],"","","","","",""];
 	}
 };
@@ -168,21 +168,21 @@ var sozaiHtml = function (recipe) {
 			t[cnt++] = w;
 		}
 	}
-	return t.join(","); //ƒRƒR‚¾‚¯ˆá‚¤
+	return t.join(","); //ã‚³ã‚³ã ã‘é•ã†
 };
-//copy‚±‚±‚Ü‚Å
-		var BUINAME = ["“ª","“·","˜r","˜","‹r"],
-			SEXNAME = ["","’j«","—«"],
-			TYPENAME = ["","Œ•Žm","ƒKƒ“"],
-			CLASSTYPE = {"":" ",A:"‚r‚o",B:"<p>„Ží–h‹ï</p>",C:"<p>“V—’–h‹ï</p>",D:"<p>”eŽí–h‹ï</p>",E:"<p>HC–h‹ï</p>",F:"<p>ŽëŒì–h‹ï</p>",G:"<p>‚f‹‰”eŽí–h‹ï</p>",H:"<p>—óŽí–h‹ï</p>",I:"<p>G‹‰–h‹ï</p>",J:"<p>G‹‰ŽëŒì–h‹ï</p>",K:"<p>”é“`–h‹ï</p>",L:"<p>G‹‰”é“`–h‹ï</p>",M:"<p>ŽnŽí–h‹ï</p>",N:"<p>“V˜L–h‹ï</p>",O:"<p>‘J—I–h‹ï</p>",P:"<p>’HˆÙ–h‹ï</p>",Q:"<p>’HˆÙŽëŒì–h‹ï</p>"},
-			SKILLNAME = [,"Žóg","‰^‹C","‰^”À","Ž©“®–hŒä","ƒK[ƒh«”\","‰ñ•œ","‰ñ•œ‘¬“x","ŠgŽU’e’Ç‰Á","R”»","—‹‘Ï«","ŠÑ’Ê’e‹­‰»","ŠÑ’Ê’e’Ç‰Á","‹Câ","‹C‚Ü‚®‚ê","Ža‚ê–¡","H‚¢‚µ‚ñ–V","‹C”z","’Bl","Lˆæ‰ñ•œ","Lˆæ‰ð“Å","UŒ‚","ÌŽæ","ŽU’e‹­‰»","ŽU’e’Ç‰Á","‡–°","‘S‘Ï«‚t‚o","ç—¢Šá","‘•“U","‘ÏŠ¦","‘Ï‹","‘Ì—Í"," ","ŽíLˆæ‰»","’e’²‡","’n}","’®Šo•ÛŒì","’²‡¬Œ÷—¦","’Êí’e‹­‰»","’Êí’e’Ç‰Á","’Þ‚è","------","------","------","“Š±","Œ¤‚¬Žt","“Å","“ÁŽêUŒ‚","“÷","“‚Ý–³Œø","”š’e‹­‰»","‚Í‚ç‚Ö‚è","”½“®","‰Î‘Ï«","•—ˆ³","“J","–hŒä","–ƒáƒ","…‘Ï«","—´‘Ï«","žÖ’e’Ç‰Á","˜B‹àp","˜AŽË","‚‘¬ŽûW","‰ñ”ð«”\","’ê—Í","Œø‰ÊŽ‘±","ƒXƒ^ƒ~ƒi","‘•“U”","¸–§ŽËŒ‚","ƒ‚ƒ“ƒXƒ^[","HŽ–","”‚¬Žæ‚è","’nŒ`","’EL","‘Ïá","•X‘Ï«","‘Ïk","Lˆæ","º‘Ñ","“÷Ä‚«","–CpŽt","------","------","------","“J‚«–¼l","------","------","------","------","‚Æ‚ñ‚¸‚ç","‘Ìp","‹­Œ¨","------","‚Ð‚ç‚ß‚«","Žó‚¯g","------","------","------","------","ãJ","------","ª«","------","ˆ³—Í","•ßŠlãŽè","------","------","“Å•r’Ç‰Á","–ƒáƒ•r’Ç‰Á","‡–°•r’Ç‰Á","‰Î‘®«UŒ‚","…‘®«UŒ‚","—‹‘®«UŒ‚","•X‘®«UŒ‚","—´‘®«UŒ‚","’fH","----","”šŒ‚Œ•","‹­Œ‚Œ•","–Ò“ÅŒ•","–ƒáƒŒ•","‡–°Œ•","‰Î‰ŠŒ•","…ŒƒŒ•","—‹_Œ•","•XŒ‹Œ•","—´‰¤Œ•","—­‚ß’Zk","•ÐŽèŒ•‹Z","‘oŒ•‹Z","‘åŒ•‹Z","‘¾“‹Z","’È‹Z","Žë—Â“J‹Z","‘„‹Z","e‘„‹Z","de‹Z","Œye‹Z","‹|‹Z","‚‘¬Ý’u","•ŠíŽJ‚«","‘®«UŒ‚","‹C—Í‰ñ•œ","ƒiƒCƒtŽg‚¢","‚¢‚½‚í‚è","‘Î–hŒäDOWN","Œ•p","‘Ïó‘ÔˆÙí","‘ÏŒ","Œ‹»‘Ï«","Ž¥—Í‘Ï«","Œx‰ú","‹~‰‡","Kã‚ª‚è","ˆê•C˜T","ŽOŠE‚ÌŒì‚è","”½ŽË","‘ãž","“ ","‘¬ŽË","„Œ‚","ŒÛ•‘","‰¶’ž","¶–½—Í","“{","“S˜r","ƒuƒŠ[ƒ_[","‘Š“¢‚¿","ˆê‘M","‹t‹«","ŽËŽè","‘•’…","’ÉŒ‚","’²‡Žt","Žël","îŽË","˜AŒ‚(íœ)","‰ñ”ð‹——£","—­‚ßˆÐ—Í","’eŠÛß–ñp","ˆÚ“®‘¬“x","Š…","‹zŒŒ","“K‰žŒ‚","•ƒm–½–¬","–ò‘Šw","ú—´žž‹Z","ø“®","‰Š’ž","Œ€•¨‚ÌS“¾","â‘Î–hŒä","•½íS","ÌW‚Ì‹É‚Ý","I—¬","Žx‰‡","‰¸ŽË","‘®Œ‚","“¬”e","ŒŒ‹CŠˆ«","Œ•_","“Z—‹","•ÏŒ‚","”²”[p","”š”j‘Ï«","‘M“]","•s‘Þ","IŒ‚","“€Œ‹‘Ï«","•XŠE‘n¶","æÒŒ‚","Œ••€‹Z","—vÇ","‘_Œ‚","Ž“•š","’´‰ñ”ð","–Òi","˜r—˜‚«","–‹–³","ˆê“_“Ë”j","‰öŠï","‹óŒ„","Žè—û","Ž‚Žq•±v","Ž¥Ža’È‹Z"],
-			TENINAME = ["‚È‚µ","ƒXƒLƒ‹˜gŠg’£+1","ƒXƒLƒ‹˜gŠg’£+2","ƒXƒLƒ‹˜gŠg’£+3","ƒXƒLƒ‹˜gŠg’£+4","ƒXƒLƒ‹˜gŠg’£+5","ƒXƒLƒ‹˜gŠg’£+6","ƒXƒLƒ‹˜gŠg’£+7","‘M“]‹­‰»+1","‘M“]‹­‰»+2","IŒ‚‹­‰»+1","IŒ‚‹­‰»+2","‘®Œ‚‹­‰»","“Z—‹‹­‰»+1","“Z—‹‹­‰»+2","•XŠE‘n¶‹­‰»","•XŠE‘n¶‹­‰»","Ž¨ð‹­‰»+1","Ž¨ð‹­‰»+2","Ž¨ð‹­‰»+3","•—ˆ³‹­‰»+1","•—ˆ³‹­‰»+2","•—ˆ³‹­‰»+3","•—ˆ³‹­‰»+4","‘Ïk‹­‰»+1","‘Ïk‹­‰»+2","‘Ï“Å‹­‰»+1","‘Ï“Å‹­‰»+2","‘Ï–ƒáƒ‹­‰»+1","‘Ï–ƒáƒ‹­‰»+2","‘Ï‡–°‹­‰»+1","‘Ï‡–°‹­‰»+2","‹zŒŒ‹­‰»+1","‹zŒŒ‹­‰»+2","Œ€•¨‹­‰»","Žx‰‡‹­‰»","’eŠÛß–ñp‹­‰»+1","’eŠÛß–ñp‹­‰»+2","ƒK[ƒh«”\‹­‰»+1","ƒK[ƒh«”\‹­‰»+2","“K‰žŒ‚‹­‰»+1","“K‰žŒ‚‹­‰»+2","ŒÛ•‘‹­‰»+1","ŒÛ•‘‹­‰»+2","”½ŽË‹­‰»+1","”½ŽË‹­‰»+2","”½ŽË‹­‰»+3","I—¬‹­‰»","ŒŒ‹CŠˆ«‹­‰»","Ž“•š‹­‰»","Š…‹­‰»","–‹–³‹­‰»","–Òi‹­‰»"],
-			MAKENAME = {"":"",1:"",2:"—Â’c",3:"ƒJƒtƒF",4:"‰Û‹à",5:"“Á“T","-":"",e:"ƒCƒx",es:"ƒCƒx/Žë‰qí",s:"Žë‰qí",t:"Žë—ù“¹",u:"Œ}Œ‚í",m:"ŽëlÕ",c:"ÊßÛ°È",g:"ƒKƒ`ƒƒ",k:"ƒLƒbƒg",i:"èè‘Ê“V",p:"ƒpƒbƒP"},
+//copyã“ã“ã¾ã§
+		var BUINAME = ["é ­","èƒ´","è…•","è…°","è„š"],
+			SEXNAME = ["","ç”·æ€§","å¥³æ€§"],
+			TYPENAME = ["","å‰£å£«","ã‚¬ãƒ³"],
+			CLASSTYPE = {"":" ",A:"ï¼³ï¼°",B:"<p>å‰›ç¨®é˜²å…·</p>",C:"<p>å¤©åµé˜²å…·</p>",D:"<p>è¦‡ç¨®é˜²å…·</p>",E:"<p>HCé˜²å…·</p>",F:"<p>ç‹©è­·é˜²å…·</p>",G:"<p>ï¼§ç´šè¦‡ç¨®é˜²å…·</p>",H:"<p>çƒˆç¨®é˜²å…·</p>",I:"<p>Gç´šé˜²å…·</p>",J:"<p>Gç´šç‹©è­·é˜²å…·</p>",K:"<p>ç§˜ä¼é˜²å…·</p>",L:"<p>Gç´šç§˜ä¼é˜²å…·</p>",M:"<p>å§‹ç¨®é˜²å…·</p>",N:"<p>å¤©å»Šé˜²å…·</p>",O:"<p>é·æ‚ é˜²å…·</p>",P:"<p>è¾¿ç•°é˜²å…·</p>",Q:"<p>è¾¿ç•°ç‹©è­·é˜²å…·</p>"},
+			SKILLNAME = [,"å—èº«","é‹æ°—","é‹æ¬","è‡ªå‹•é˜²å¾¡","ã‚¬ãƒ¼ãƒ‰æ€§èƒ½","å›žå¾©","å›žå¾©é€Ÿåº¦","æ‹¡æ•£å¼¾è¿½åŠ ","å¯©åˆ¤","é›·è€æ€§","è²«é€šå¼¾å¼·åŒ–","è²«é€šå¼¾è¿½åŠ ","æ°—çµ¶","æ°—ã¾ãã‚Œ","æ–¬ã‚Œå‘³","é£Ÿã„ã—ã‚“åŠ","æ°—é…","é”äºº","åºƒåŸŸå›žå¾©","åºƒåŸŸè§£æ¯’","æ”»æ’ƒ","æŽ¡å–","æ•£å¼¾å¼·åŒ–","æ•£å¼¾è¿½åŠ ","ç¡çœ ","å…¨è€æ€§ï¼µï¼°","åƒé‡Œçœ¼","è£…å¡«","è€å¯’","è€æš‘","ä½“åŠ›","åŒ ","ç¨®åºƒåŸŸåŒ–","å¼¾èª¿åˆ","åœ°å›³","è´è¦šä¿è­·","èª¿åˆæˆåŠŸçŽ‡","é€šå¸¸å¼¾å¼·åŒ–","é€šå¸¸å¼¾è¿½åŠ ","é‡£ã‚Š","------","------","------","æŠ•æ“²","ç ”ãŽå¸«","æ¯’","ç‰¹æ®Šæ”»æ’ƒ","è‚‰","ç›—ã¿ç„¡åŠ¹","çˆ†å¼¾å¼·åŒ–","ã¯ã‚‰ã¸ã‚Š","åå‹•","ç«è€æ€§","é¢¨åœ§","ç¬›","é˜²å¾¡","éº»ç—º","æ°´è€æ€§","é¾è€æ€§","æ¦´å¼¾è¿½åŠ ","éŒ¬é‡‘è¡“","é€£å°„","é«˜é€ŸåŽé›†","å›žé¿æ€§èƒ½","åº•åŠ›","åŠ¹æžœæŒç¶š","ã‚¹ã‚¿ãƒŸãƒŠ","è£…å¡«æ•°","ç²¾å¯†å°„æ’ƒ","ãƒ¢ãƒ³ã‚¹ã‚¿ãƒ¼","é£Ÿäº‹","å‰¥ãŽå–ã‚Š","åœ°å½¢","è„±è‡­","è€é›ª","æ°·è€æ€§","è€éœ‡","åºƒåŸŸ","å£°å¸¯","è‚‰ç„¼ã","ç ²è¡“å¸«","------","------","------","ç¬›å¹ãåäºº","------","------","------","------","ã¨ã‚“ãšã‚‰","ä½“è¡“","å¼·è‚©","------","ã²ã‚‰ã‚ã","å—ã‘èº«","------","------","------","------","çµ†","------","æ ¹æ€§","------","åœ§åŠ›","æ•ç²ä¸Šæ‰‹","------","------","æ¯’ç“¶è¿½åŠ ","éº»ç—ºç“¶è¿½åŠ ","ç¡çœ ç“¶è¿½åŠ ","ç«å±žæ€§æ”»æ’ƒ","æ°´å±žæ€§æ”»æ’ƒ","é›·å±žæ€§æ”»æ’ƒ","æ°·å±žæ€§æ”»æ’ƒ","é¾å±žæ€§æ”»æ’ƒ","æ–­é£Ÿ","----","çˆ†æ’ƒå‰£","å¼·æ’ƒå‰£","çŒ›æ¯’å‰£","éº»ç—ºå‰£","ç¡çœ å‰£","ç«ç‚Žå‰£","æ°´æ¿€å‰£","é›·ç¥žå‰£","æ°·çµå‰£","é¾çŽ‹å‰£","æºœã‚çŸ­ç¸®","ç‰‡æ‰‹å‰£æŠ€","åŒå‰£æŠ€","å¤§å‰£æŠ€","å¤ªåˆ€æŠ€","éŽšæŠ€","ç‹©çŒŸç¬›æŠ€","æ§æŠ€","éŠƒæ§æŠ€","é‡éŠƒæŠ€","è»½éŠƒæŠ€","å¼“æŠ€","é«˜é€Ÿè¨­ç½®","æ­¦å™¨æŒã","å±žæ€§æ”»æ’ƒ","æ°—åŠ›å›žå¾©","ãƒŠã‚¤ãƒ•ä½¿ã„","ã„ãŸã‚ã‚Š","å¯¾é˜²å¾¡DOWN","å‰£è¡“","è€çŠ¶æ…‹ç•°å¸¸","è€é…”","çµæ™¶è€æ€§","ç£åŠ›è€æ€§","è­¦æˆ’","æ•‘æ´","å°»ä¸ŠãŒã‚Š","ä¸€åŒ¹ç‹¼","ä¸‰ç•Œã®è­·ã‚Š","åå°„","ä»£å„Ÿ","åˆ€åŒ ","é€Ÿå°„","å‰›æ’ƒ","é¼“èˆž","æ©å¯µ","ç”Ÿå‘½åŠ›","æ€’","é‰„è…•","ãƒ–ãƒªãƒ¼ãƒ€ãƒ¼","ç›¸è¨Žã¡","ä¸€é–ƒ","é€†å¢ƒ","å°„æ‰‹","è£…ç€","ç—›æ’ƒ","èª¿åˆå¸«","ç‹©äºº","æ‰‡å°„","é€£æ’ƒ(å‰Šé™¤)","å›žé¿è·é›¢","æºœã‚å¨åŠ›","å¼¾ä¸¸ç¯€ç´„è¡“","ç§»å‹•é€Ÿåº¦","å–","å¸è¡€","é©å¿œæ’ƒ","é»’ãƒŽå‘½è„ˆ","è–¬è‰å­¦","ç©¿é¾æ£æŠ€","ç…½å‹•","ç‚Žå¯µ","åŠ‡ç‰©ã®å¿ƒå¾—","çµ¶å¯¾é˜²å¾¡","å¹³å¸¸å¿ƒ","æŽ¡é›†ã®æ¥µã¿","å·§æµ","æ”¯æ´","ç©å°„","å±žæ’ƒ","é—˜è¦‡","è¡€æ°—æ´»æ€§","å‰£ç¥ž","çºé›·","å¤‰æ’ƒ","æŠœç´è¡“","çˆ†ç ´è€æ€§","é–ƒè»¢","ä¸é€€","å·§æ’ƒ","å‡çµè€æ€§","æ°·ç•Œå‰µç”Ÿ","è´…æ’ƒ","å‰£æ–§æŠ€","è¦å¡ž","ç‹™æ’ƒ","é›Œä¼","è¶…å›žé¿","çŒ›é€²","è…•åˆ©ã","å¹•ç„¡","ä¸€ç‚¹çªç ´","æ€ªå¥‡","ç©ºéš™","æ‰‹ç·´","ç…å­å¥®è¿…","ç£æ–¬éŽšæŠ€"],
+			TENINAME = ["ãªã—","ã‚¹ã‚­ãƒ«æž æ‹¡å¼µ+1","ã‚¹ã‚­ãƒ«æž æ‹¡å¼µ+2","ã‚¹ã‚­ãƒ«æž æ‹¡å¼µ+3","ã‚¹ã‚­ãƒ«æž æ‹¡å¼µ+4","ã‚¹ã‚­ãƒ«æž æ‹¡å¼µ+5","ã‚¹ã‚­ãƒ«æž æ‹¡å¼µ+6","ã‚¹ã‚­ãƒ«æž æ‹¡å¼µ+7","é–ƒè»¢å¼·åŒ–+1","é–ƒè»¢å¼·åŒ–+2","å·§æ’ƒå¼·åŒ–+1","å·§æ’ƒå¼·åŒ–+2","å±žæ’ƒå¼·åŒ–","çºé›·å¼·åŒ–+1","çºé›·å¼·åŒ–+2","æ°·ç•Œå‰µç”Ÿå¼·åŒ–","æ°·ç•Œå‰µç”Ÿå¼·åŒ–","è€³æ “å¼·åŒ–+1","è€³æ “å¼·åŒ–+2","è€³æ “å¼·åŒ–+3","é¢¨åœ§å¼·åŒ–+1","é¢¨åœ§å¼·åŒ–+2","é¢¨åœ§å¼·åŒ–+3","é¢¨åœ§å¼·åŒ–+4","è€éœ‡å¼·åŒ–+1","è€éœ‡å¼·åŒ–+2","è€æ¯’å¼·åŒ–+1","è€æ¯’å¼·åŒ–+2","è€éº»ç—ºå¼·åŒ–+1","è€éº»ç—ºå¼·åŒ–+2","è€ç¡çœ å¼·åŒ–+1","è€ç¡çœ å¼·åŒ–+2","å¸è¡€å¼·åŒ–+1","å¸è¡€å¼·åŒ–+2","åŠ‡ç‰©å¼·åŒ–","æ”¯æ´å¼·åŒ–","å¼¾ä¸¸ç¯€ç´„è¡“å¼·åŒ–+1","å¼¾ä¸¸ç¯€ç´„è¡“å¼·åŒ–+2","ã‚¬ãƒ¼ãƒ‰æ€§èƒ½å¼·åŒ–+1","ã‚¬ãƒ¼ãƒ‰æ€§èƒ½å¼·åŒ–+2","é©å¿œæ’ƒå¼·åŒ–+1","é©å¿œæ’ƒå¼·åŒ–+2","é¼“èˆžå¼·åŒ–+1","é¼“èˆžå¼·åŒ–+2","åå°„å¼·åŒ–+1","åå°„å¼·åŒ–+2","åå°„å¼·åŒ–+3","å·§æµå¼·åŒ–","è¡€æ°—æ´»æ€§å¼·åŒ–","é›Œä¼å¼·åŒ–","å–å¼·åŒ–","å¹•ç„¡å¼·åŒ–","çŒ›é€²å¼·åŒ–"],
+			MAKENAME = {"":"",1:"",2:"çŒŸå›£",3:"ã‚«ãƒ•ã‚§",4:"èª²é‡‘",5:"ç‰¹å…¸","-":"",e:"ã‚¤ãƒ™",es:"ã‚¤ãƒ™/ç‹©è¡›æˆ¦",s:"ç‹©è¡›æˆ¦",t:"ç‹©ç…‰é“",u:"è¿Žæ’ƒæˆ¦",m:"ç‹©äººç¥­",c:"ï¾Šï¾Ÿï¾›ï½°ï¾ˆ",g:"ã‚¬ãƒãƒ£",k:"ã‚­ãƒƒãƒˆ",i:"éŸ‹é§„å¤©",p:"ãƒ‘ãƒƒã‚±"},
 			len = id_list[0].href.length,upglist = [[],[],[],[],[]],
 			tB=document.getElementsByTagName("tbody")[0],tBCre = document.createElement("tbody"),insHeader = document.createElement("th");
 		insHeader.style.height = "1em";
 		insHeader.appendChild(document.createElement("br"));
-		if (!LIST_TYPE) {	//•”ˆÊ•Ê
+		if (!LIST_TYPE) {	//éƒ¨ä½åˆ¥
 			var tBCreB = [document.createDocumentFragment(),document.createDocumentFragment(),document.createDocumentFragment(),document.createDocumentFragment(),document.createDocumentFragment()];
 		}
 		for (var i = 0,m = id_list.length,name = "",eq = "",l = 0;i < m;i++) {
@@ -199,7 +199,7 @@ var sozaiHtml = function (recipe) {
 			if (eq[I_bUPGBACK]) upglist[l][upglist[l].length] = eq[I_bUPGBACK].substring(0,4) + eqid + eq[I_bUPGBACK].charAt(4);
 		}
 		for (var i = 0,m = id_list.length,name = "",eq = "",l = 0,t = "";i < m;i++) {
-			if (LIST_TYPE && id_list[i].previousSibling.nodeValue.lastIndexOf("(") >= 0) {	//•”ˆÊ•Ê‚Ìê‡‚Í‚È‚µ
+			if (LIST_TYPE && id_list[i].previousSibling.nodeValue.lastIndexOf("(") >= 0) {	//éƒ¨ä½åˆ¥ã®å ´åˆã¯ãªã—
 				tBCre.appendChild(document.createElement("tr").appendChild(insHeader.cloneNode(true)));
 			}
 			var buiid = id_list[i].href.charAt(len-5),eqid = id_list[i].href.substring(len-4),insTR = document.createElement("tr"),insTD = document.createElement("td");
@@ -213,36 +213,36 @@ var sozaiHtml = function (recipe) {
 			}
 			eq = MST_Equip[name][eqid];
 //			if (typeof(eq) === "string") eq = MST_Equip[name][eqid] = MST_Equip[name][eqid].split(",");
-			//Ú×
+			//è©³ç´°
 			insTR.id = buiid + eqid;
-			//–¼‘O
+			//åå‰
 			t = "<div>" + BUINAME[l] + "</div>" + eq[I_bNAME] + "<div>";
-			//‹­‰»Œ³‘–¸
+			//å¼·åŒ–å…ƒèµ°æŸ»
 			if (eq[I_bUPGBACK]) {
 				var IDu = eq[I_bUPGBACK].substring(0,4),Txtu = MST_Equip[name][IDu];
 //				if (typeof(Txtu) === "string") Txtu = MST_Equip[name][IDu] = MST_Equip[name][IDu].split(",");
 				
-				t += "<a href=\"#" + buiid + IDu + "\">@" + 
-					 Txtu[I_bNAME] + "Lv" + eq[I_bUPGBACK].charAt(4) + "©</a>";
+				t += "<a href=\"#" + buiid + IDu + "\">ã€€" + 
+					 Txtu[I_bNAME] + "Lv" + eq[I_bUPGBACK].charAt(4) + "â†</a>";
 
 //				upglist[l][upglist[l].length] = IDu + eqid + eq[I_bUPGBACK].charAt(4);
 			}
-			//‹­‰»æ‘–¸
+			//å¼·åŒ–å…ˆèµ°æŸ»
 			for (var k = upglist[l].length-1,ck = false;k >= 0; k--){
 				if (upglist[l][k].substring(0,4) === eqid) {
-					t += "<a href=\"#" + buiid + upglist[l][k].substring(4,8) + "\">¨" + MST_Equip[name][upglist[l][k].substring(4,8)][I_bNAME] + "</a>";
+					t += "<a href=\"#" + buiid + upglist[l][k].substring(4,8) + "\">â†’" + MST_Equip[name][upglist[l][k].substring(4,8)][I_bNAME] + "</a>";
 					ck = upglist[l][k].charAt(8);
 				}
 			}
-			if (ck) t += "iLv" + ck + "ˆÈãj";
-			//¸˜Bæ–¼Ì
-			if (eq[I_bDEC]) t += "<a href=\"deco.htm#l" + eq[I_bDEC] + "\">¨" + MST_Equip["deco"][eq[I_bDEC]].split(",")[0] + "</a>Lv7‚æ‚è¸˜B";
+			if (ck) t += "ï¼ˆLv" + ck + "ä»¥ä¸Šï¼‰";
+			//ç²¾éŒ¬å…ˆåç§°
+			if (eq[I_bDEC]) t += "<a href=\"deco.htm#l" + eq[I_bDEC] + "\">â†’" + MST_Equip["deco"][eq[I_bDEC]].split(",")[0] + "</a>Lv7ã‚ˆã‚Šç²¾éŒ¬";
 			t += "</div>";
 			t += CLASSTYPE[eq[I_bCLASS]];
 			
 			insTD.innerHTML = t;
 			insTR.appendChild(insTD.cloneNode(true));
-			//Ží—Þ
+			//ç¨®é¡ž
 			t = SEXNAME[eq[I_bSEX]];
 			t += (t && eq[I_bTYPE] !== "0" ? "<br>" : "") + TYPENAME[eq[I_bTYPE]];
 			t += (t && eq[I_bCRE].charAt(0) !== "1" ? "<br>" : "") + MAKENAME[eq[I_bCRE].charAt(0)];
@@ -250,17 +250,17 @@ var sozaiHtml = function (recipe) {
 			if (eq[I_bGR]) t += (!t ? "" : "<br>") + "<b>GR" + eq[I_bGR] + "</b>";
 			insTD.innerHTML = !t ? "<br>" : t;
 			insTR.appendChild(insTD.cloneNode(true));
-			//ƒŒƒA
+			//ãƒ¬ã‚¢
 			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = eq[I_bRARE];
 			insTR.appendChild(insTD.cloneNode(true));
-			//‘Ï«
-			insTD.innerHTML = "‰Î:" + eq[I_bF] + "<br>"
-							+ "…:" + eq[I_bW] + "<br>"
-							+ "—‹:" + eq[I_bT] + "<br>"
-							+ "•X:" + eq[I_bI] + "<br>"
-							+ "—´:" + eq[I_bD];
+			//è€æ€§
+			insTD.innerHTML = "ç«:" + eq[I_bF] + "<br>"
+							+ "æ°´:" + eq[I_bW] + "<br>"
+							+ "é›·:" + eq[I_bT] + "<br>"
+							+ "æ°·:" + eq[I_bI] + "<br>"
+							+ "é¾:" + eq[I_bD];
 			insTR.appendChild(insTD.cloneNode(true));
-			//ƒXƒLƒ‹
+			//ã‚¹ã‚­ãƒ«
 			if (eq[I_bSP1]) {
 				t = "<ul><li><em>" + SKILLNAME[eq[I_bSN1]] + "</em>" + eq[I_bSP1];
 				if (eq[I_bSP2]) {
@@ -276,7 +276,7 @@ var sozaiHtml = function (recipe) {
 					}
 				}
 				if (eq[I_bCLASS] === "P") {
-					t += "<ul><li><em><s>u" + TENINAME[eq[I_bTeni]] + "v</s></em>";
+					t += "<ul><li><em><s>ã€Œ" + TENINAME[eq[I_bTeni]] + "ã€</s></em>";
 				}
 				insTD.innerHTML = t + "</ul>";
 			} else {
@@ -286,7 +286,7 @@ var sozaiHtml = function (recipe) {
 
 			var tdef = "",thr = "",bkhr = "",tzeny = "",treci = "", reci_data = getSozai(eq), zeny_data = getZeny(eq), def_data = getDef(eq), slot_data = getSlot(eq);
 			for (var j = 0; j < eq[I_bLVMAX]; j++){
-				//–hŒäƒXƒ
+				//é˜²å¾¡ã‚¹ãƒ­
 				tdef += def_data[j]+"/"+slot_data[j] + "<br>";
 				//HR
 				if (reci_data[7+j] === bkhr) {
@@ -303,19 +303,19 @@ var sozaiHtml = function (recipe) {
 					}
 					bkhr = reci_data[7+j];
 				}
-				//ƒ[ƒj[
+				//ã‚¼ãƒ‹ãƒ¼
 				tzeny += zeny_data[j] + "<br>";
-				//‘fÞ
+				//ç´ æ
 				if (j === 0 && eq[I_bRECIPE1]) {
-					treci += "¶ŽY:"
+					treci += "ç”Ÿç”£:"
 				}
 				treci += sozaiHtml(reci_data[j]) + "<br>";
-				//‹­‰»Œ³‚ª‚ ‚é‚Ì‚É¶ŽY‘fÞ‚à‚ ‚é
+				//å¼·åŒ–å…ƒãŒã‚ã‚‹ã®ã«ç”Ÿç”£ç´ æã‚‚ã‚ã‚‹
 				if (j === 0 && eq[I_bUPGBACK] && eq[I_bRECIPE1]) {
 					tdef = "<br>" + tdef;
 					thr  = "<br>" + thr;
 					tzeny   = "<br>" + tzeny;
-					treci += "‹­‰»:" + sozaiHtml(MST_Equip.sozai[parseInt(eq[I_bLVUPPTN],16)].split(",")[0]) + "<br>";
+					treci += "å¼·åŒ–:" + sozaiHtml(MST_Equip.sozai[parseInt(eq[I_bLVUPPTN],16)].split(",")[0]) + "<br>";
 				}
 			}
 			insTD.innerHTML = tdef;
@@ -330,10 +330,10 @@ var sozaiHtml = function (recipe) {
 			insTR.appendChild(insTD.cloneNode(true));
 
 			if (LIST_TYPE) {
-				//ƒVƒŠ[ƒY•Ê
+				//ã‚·ãƒªãƒ¼ã‚ºåˆ¥
 				tBCre.appendChild(insTR.cloneNode(true));
 			 } else {
-				//•”ˆÊ•Ê
+				//éƒ¨ä½åˆ¥
 				tBCreB[l].appendChild(insTR.cloneNode(true));
 			}
 		}
@@ -341,9 +341,9 @@ var sozaiHtml = function (recipe) {
 //		tB.parentNode.replaceChild( insBODY,tB );
 //		var wTR = tBCre.getElementsByTagName("tr");
 //		for (var j = 0,m = wTR.length;j < m;insBODY.appendChild(wTR[j++].cloneNode(true)));
-		if (!LIST_TYPE) {	//•”ˆÊ•Ê
+		if (!LIST_TYPE) {	//éƒ¨ä½åˆ¥
 			for (var l = 0;l < 5;l++) {
-				insHeader./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = BUINAME[l] + "‘•”õ";
+				insHeader./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = BUINAME[l] + "è£…å‚™";
 				tBCre.appendChild(document.createElement("tr").appendChild(insHeader.cloneNode(true)));
 				tBCre.appendChild(tBCreB[l]);
 			}
@@ -352,7 +352,7 @@ var sozaiHtml = function (recipe) {
 //		location.hash = t.href.substring(t.href.length-6,t.href.length);
 	}
 });
-//ƒAƒ“ƒ[ƒh‘Þ”ð
+//ã‚¢ãƒ³ãƒ­ãƒ¼ãƒ‰é€€é¿
 addEvent(window,"unload",function () {
 	var cre = document.getElementById("tree").getElementsByTagName("span"),
 		dispflg = "";
@@ -364,11 +364,11 @@ addEvent(window,"unload",function () {
 	}
 	document.cookie = "bougu=" + [location.pathname+location.hash,dispflg,document.getElementById("tree").scrollTop,document.getElementById("data").scrollTop].join("!");
 });
-//ƒIƒ“ƒ[ƒh
+//ã‚ªãƒ³ãƒ­ãƒ¼ãƒ‰
 var t = document.cookie;
 if (t.indexOf("bougu=" + location.pathname+location.hash) !== -1) {
 	t = t.split("bougu=")[1].split("!");
-	//ì¬Ží•Ê
+	//ä½œæˆç¨®åˆ¥
 	if (t[1] !== "") {
 		/*@if (@_jscript_version < 9) 
 		document.getElementById("t"+t[1]).fireEvent( "onclick" );
@@ -378,7 +378,7 @@ if (t.indexOf("bougu=" + location.pathname+location.hash) !== -1) {
 		document.getElementById("t"+t[1]).dispatchEvent(evt);
 		/*@end@*/
 		if (location.hash.length > 0) {
-			//ƒf[ƒ^•”¶¬
+			//ãƒ‡ãƒ¼ã‚¿éƒ¨ç”Ÿæˆ
 			var treehref = document.getElementById("t"+t[1]+"L").getElementsByTagName("a");
 			for (var j=0,l=treehref.length; j<l; j++){
 				if (treehref[j].href.lastIndexOf(location.hash) !== -1) {
@@ -405,7 +405,7 @@ if (t.indexOf("bougu=" + location.pathname+location.hash) !== -1) {
 	var creB = document.getElementById("tree").getElementsByTagName("div");
 	for (var i=0,m=creB.length; i<m; i++){
 		if (creB[i].innerHTML.indexOf(location.hash) !== -1) {
-			//ì¬Ží•Ê
+			//ä½œæˆç¨®åˆ¥
 			var treeid = creB[i].id.substring(0,creB[i].id.length-1);
 			/*@if (@_jscript_version < 9) 
 			document.getElementById(treeid).fireEvent( "onclick" );
@@ -420,7 +420,7 @@ if (t.indexOf("bougu=" + location.pathname+location.hash) !== -1) {
 				if (treehref[j].href.lastIndexOf(location.hash) !== -1) {
 					treehref[j].focus();
 //					setTimeout(function (){
-						//ƒf[ƒ^•”¶¬
+						//ãƒ‡ãƒ¼ã‚¿éƒ¨ç”Ÿæˆ
 						/*@if (@_jscript_version < 9) 
 						treehref[j].fireEvent( "onclick" );
 						@else@*/

@@ -1,19 +1,19 @@
-/*‹¤’Ê*/
+/*å…±é€š*/
 table {border-collapse:collapse;table-layout:fixed;}
 th {text-align:center;font-weight:normal;background-color:silver;}
 th,td {vertical-align:top;white-space:nowrap;padding:2px;border:2px ridge #ffffff;}
-b {font-family: "‚l‚r ƒSƒVƒbƒN",sans-serif; border-right:2px ridge #ffffff;margin-right:2px;font-weight:normal;}
+b {font-family: "ï¼­ï¼³ ã‚´ã‚·ãƒƒã‚¯",sans-serif; border-right:2px ridge #ffffff;margin-right:2px;font-weight:normal;}
 
 body {width:65em}
-.g{background-color:gainsboro;} /*ŠúŠÔŠO*/
+.g{background-color:gainsboro;} /*æœŸé–“å¤–*/
 .e{background-color:cornsilk;} /*EX*/
-.r{background-color:honeydew;} /*—Â’c*/
-.h{background-color:gray;} /*”p~*/
-i {font-style:normal;display:block;font-size:80%;} /*ŠúŠÔ*/
+.r{background-color:honeydew;} /*çŒŸå›£*/
+.h{background-color:gray;} /*å»ƒæ­¢*/
+i {font-style:normal;display:block;font-size:80%;} /*æœŸé–“*/
 
-/*ˆê——*/
+/*ä¸€è¦§*/
 #list {width:60em}
-#list .h{display:none;} /*”p~*/
+#list .h{display:none;} /*å»ƒæ­¢*/
 #list #c1 {width:2em;}
 #list #c2 {width:13.7em;}
 #list #c3 {width:4em;}
@@ -27,7 +27,7 @@ i {font-style:normal;display:block;font-size:80%;} /*ŠúŠÔ*/
 #top {margin-left:47em;font-size:80%;}
 #top span {color:blue;cursor:pointer;}
 
-/*ƒVƒŠ[ƒY*/
+/*ã‚·ãƒªãƒ¼ã‚º*/
 #sl {margin-top:0.2em;}
 #sl span {color:blue;cursor:pointer;}
 #sl .c1 {width:5em;}
@@ -36,7 +36,7 @@ i {font-style:normal;display:block;font-size:80%;} /*ŠúŠÔ*/
 #sl .c4 {width:10em;}
 #sl .h {display:none;}
 
-/*‚­‚¶*/
+/*ãã˜*/
 #lt {margin-top:0.2em;}
 #lt span {color:blue;cursor:pointer;}
 #lt .c1 {width:4em;}
@@ -45,7 +45,7 @@ i {font-style:normal;display:block;font-size:80%;} /*ŠúŠÔ*/
 #lt .c4 {width:2.5em;}
 #lt .h {display:none;}
 
-/*–¾×*/
+/*æ˜ç´°*/
 .mei {clear:left;width:65em;}
 .mei .c1 {width:2em;}
 .mei .c2 {width:13.7em;}
@@ -78,7 +78,7 @@ i {font-style:normal;display:block;font-size:80%;} /*ŠúŠÔ*/
 .mei  td:first-child+td+td+td+td,
 .mei  td:first-child+td+td+td+td+td {text-align:right;}
 
-/* Firefox—pƒnƒbƒN */
+/* Firefoxç”¨ãƒãƒƒã‚¯ */
 html:not([lang*=""]) table,
 html:not([lang*=""]) td,
 html:not([lang*=""]) th
