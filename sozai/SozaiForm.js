@@ -310,7 +310,7 @@ if (MST_Equip.Sozai[item_id]) {
 			if (eq_name.lastIndexOf("SP") !== -1) {
 				txt += "<tr><td>" + BouguName[eq_rui] + "</td><td><a href='../bougu/" + BouguId[eq_rui] +  "sp.htm#l" + eq_id + "'>" + eq_name + "</a></td><td style=\"text-align:center;\">" + lv.replace("0","生") + "</td><td style=\"text-align:right;\">" + su + "</td></tr>";
 			} else {
-				txt += "<tr><td>" + BouguName[eq_rui] + "</td><td><a href='../bougu/_tree.htm#" + BouguId[eq_rui].charAt(0) + eq_id + "'>" + eq_name + "</a></td><td style=\"text-align:center;\">" + lv.replace("0","生") + "</td><td style=\"text-align:right;\">" + su + "</td></tr>";
+				txt += "<tr><td>" + BouguName[eq_rui] + "</td><td><a href='../bougu/tree.htm#" + BouguId[eq_rui].charAt(0) + eq_id + "'>" + eq_name + "</a></td><td style=\"text-align:center;\">" + lv.replace("0","生") + "</td><td style=\"text-align:right;\">" + su + "</td></tr>";
 			}
 		su_sum += +su;
 		}
