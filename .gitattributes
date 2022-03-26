@@ -1,2 +1,2 @@
 # Auto detect text files and perform LF normalization
-*.htm text working-tree-encoding=UTF-8
+* text=auto
