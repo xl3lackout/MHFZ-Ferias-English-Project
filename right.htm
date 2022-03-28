@@ -25,9 +25,10 @@ a:active {color:black;}
 <p>This page is the database of
 <br>Monster Hunter Frontier Team FreeDom
 </p><p>
+Translated by Deerby, with help from the MHFZ community. <br><small>(pages marked in ※ have been translated)</small></p><p>
 IE8/IE11/Firefox25/GoogleChrome30 で表示確認しています。<small>白さが眩しいＨＰです＞＜P</small>
 <span id="ie8"></span>
-<div style="color:red;font-weight:bold;">MHF-Z has been officially shut down for:</div>
+<div style="color:red;font-weight:bold;">MHF-Z has been officially shut down.</div>
 <div style="color:crimson;" id="RealtimeCountdownArea"></div>
 <!--<br>現状<span style="color:crimson;">G5</span>前後の情報です。-->
 
@@ -400,7 +401,7 @@ function showCountdown() {
    var dlHour  = targetDate.getHours();
    var dlMin   = targetDate.getMinutes();
    var dlSec   = targetDate.getSeconds();
-   var msg1 = "サービス終了　2019年12月18日(水)<b>21:00</b>";
+   var msg1 = "End of service: 12/18/2019 at <b>21:00</b>";
  
    // 引き算して日数(ミリ秒)の差を計算
    var diff2Dates = dnumTarget - dnumNow;
@@ -417,10 +418,10 @@ function showCountdown() {
    var dMin   = diff2Dates / ( 1000 * 60 );   // 分
    diff2Dates = diff2Dates % ( 1000 * 60 );
    var dSec   = diff2Dates / 1000;   // 秒
-   var msg2 = Math.floor(dDays) + "日"
-            + Math.floor(dHour) + "時間"
-            + Math.floor(dMin) + "分"
-            + Math.floor(dSec) + "秒";
+   var msg2 = Math.floor(dDays) + " Days "
+            + Math.floor(dHour) + " Hours "
+            + Math.floor(dMin) + " Minutes and "
+            + Math.floor(dSec) + " Seconds ";
  
    // 表示文字列の作成
    var msg;
@@ -430,7 +431,7 @@ function showCountdown() {
    }
    else {
       // 期限が過ぎた場合
-      msg = msg1 + "から、既に" + msg2 + "経ちました。";
+      msg = msg1 + " since then, already " + msg2 + " have passed.";
    }
  
    // 作成した文字列を表示
