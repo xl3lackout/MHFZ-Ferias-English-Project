@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=shift_JIS">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 <style type="text/css">
 <!--
@@ -13,30 +13,30 @@ th,td {font-size:95%;}
 .l {text-align:center;background-color:silver;}
 -->
 </style>
-<title>????????</title>
+<title>装備検索</title>
 </head>
 <body>
 <form name="ls" action="" onsubmit="document.getElementById('b_search').click();return false;" style="margin-bottom:1em;">
-?????F<input type="text" value="" name="equip" id="equip" autocomplete="off" style="ime-mode: active;">
-<input type="submit" name="b_search" id="b_search" value="????">
+検索：<input type="text" value="" name="equip" id="equip" autocomplete=off style="ime-mode: active;">
+<input type="submit" name="b_search" id="b_search" value="検索">
 </form>
 <table>
  <tr><td style="padding:0px; vertical-align:top;" id="tblBuki">
 		<table>
-		<th style="width:7em;">??????</th><th style="width:10em;">????</th>
-		</table></td></tr>
+		<th style="width:7em;">武器種類</th><th style="width:10em;">武器名</th>
+		</tr></table></td>
 	<td style="padding:0px; vertical-align:top;" id="tblBougu">
 		<table>
-		<th style="width:4em;">????</th><th style="width:10em;">?h??</th>
-		</table></td>
+		<th style="width:4em;">部位</th><th style="width:10em;">防具名</th>
+		</tr></table></td>
 	<td style="padding:0px; vertical-align:top;" id="tblDec">
 		<table>
-		<th style="width:4em;">?????i</th><th style="width:10em;">??????</th>
-		</table></td>
- 
-
+		<th style="width:4em;">装飾品</th><th style="width:10em;">装飾名</th>
+		</tr></table></td>
+ </tr>
+</table>
 <script type="text/javascript" src="bougu_sozai.js"></script>
 <script type="text/javascript" src="buki_sozai.js"></script>
 <script type="text/javascript" src="equipForm.js"></script>
-</table></body>
+</body>
 </html>
