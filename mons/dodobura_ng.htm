@@ -5,22 +5,22 @@
 <link rel="stylesheet" href="style_n.css" type="text/css">
 <title>ドドブランゴG級</title>
 </head><body>
-<div id=monsname>ドドブランゴG級</div><div id=tophosoku><a href="dodobura_n.htm">原種肉質</a>／<a href="dodobura_nh.htm">Variant Stats</a>／<a href="dodobura_ni.htm">辿異肉質</a>／<a href="dodobura_h.htm">Carves</a></div>
+<div id=monsname>ドドブランゴG級</div><div id=tophosoku><a href="dodobura_n.htm">原種肉質</a>／<a href="dodobura_nh.htm">Variant Stats</a>／<a href="dodobura_ni.htm">Zenith Stats</a>／<a href="dodobura_h.htm">Carves</a></div>
 <div id=hosoku>
-<span><em>Roar</em>Small</span><span><em>Wind Pres.</em>－</span><span><em>Tremor</em>弱</span><span><em>Pitfall T.</em>20秒</span><span><em>Shock T.</em>10秒</span><span><em>Flash</em>30秒</span><span><em>音</em>×</span><span><em>肉</em>△</span><span><em>こやし</em>×</span><span><em>瀕死</em>非怒時頬の色が紫色になる</span>
+<span><em>Roar</em>Small</span><span><em>Wind Pres.</em>－</span><span><em>Tremor</em>弱</span><span><em>Pitfall T.</em>20s</span><span><em>Shock T.</em>10s</span><span><em>Flash</em>30s</span><span><em>Sonic</em>×</span><span><em>Meat</em>△</span><span><em>Dung</em>×</span><span><em>Capture Cue</em>非怒時頬の色が紫色になる</span>
 </div>
 <table id=izyo>
 <col class=c1><col class=c2><col class=c3><col class=c4><col class=c5>
-<tr class=l><th colspan=6>状態異常耐性</th></tr>
-<tr><th>属性</th><th>耐性値</th><th>耐性上昇</th><th>蓄積値減少</th><th>効果時間など</th></tr>
-<tr><td>毒</td><td>400</td><td>400：4回</td><td>5秒毎に10</td><td>60秒 5秒毎に20dmg<div class=n>合計240dmg</div></td></tr>
-<tr><td>麻痺</td><td>350</td><td>350：4回</td><td>10秒毎に5</td><td>10秒</td></tr>
-<tr><td>睡眠</td><td>300</td><td>300：4回</td><td>10秒毎に5</td><td>40秒</td></tr>
-<tr><td>気絶</td><td>200</td><td>100：4回</td><td>10秒毎に5</td><td>10秒</td></tr>
-<tr><td>捕獲</td><td>100</td><td></td><td>10秒毎に5</td><td>60秒 40%で捕獲</td></tr>
-<tr><td>爆破</td><td>500</td><td>300：12回</td><td><td>800dmg</td></tr>
-<tr><th colspan=6>怒り時の能力変化</th></tr>
-<tr><td colspan=6 style="width:26em;">怒り値600<span>60秒</span>攻撃力2.00x<span>防御率0.90x</span>俊敏性1.20x</td></tr>
+<tr class=l><th colspan=6>Status Resistance</th></tr>
+<tr><th>Status</th><th>Res</th><th>Res Tolerance</th><th>Status Reovery</th><th>Afflict Time</th></tr>
+<tr><td>Poison</td><td>400</td><td>400：4x</td><td>10 every 5s</td><td>60s 20dmg every 5s<div class=n>240dmg total</div></td></tr>
+<tr><td>Paralysis</td><td>350</td><td>350：4x</td><td>5 every 10s</td><td>10s</td></tr>
+<tr><td>Sleep</td><td>300</td><td>300：4x</td><td>5 every 10s</td><td>40s</td></tr>
+<tr><td>Stun</td><td>200</td><td>100：4x</td><td>5 every 10s</td><td>10s</td></tr>
+<tr><td>Capture</td><td>100</td><td></td><td>5 every 10s</td><td>60s Captureable at 40%</td></tr>
+<tr><td>Blast</td><td>500</td><td>300：12x</td><td><td>800dmg</td></tr>
+<tr><th colspan=6>Enrage Changes</th></tr>
+<tr><td colspan=6 style="width:26em;">怒り値600<span>60s</span>攻撃力2.00x<span>防御率0.90x</span>俊敏性1.20x</td></tr>
 <tr><td colspan=6><span class=l>落し物</span>落し物を隠すまで、そのエリアで見つからずにいる</td></tr>
 </table>
 <table id=hpang>
@@ -39,7 +39,7 @@
 </table>
 <table id=hp>
 <col class=n><col><col class=hpn><col><col>
-<tr><th>No</th><th><input type=button value=表示></th><th>体力</th><th>攻撃力<br>倍率</th><th>全体<br>防御率</th><th>よろめき<br>倍率</th></tr>
+<tr><th>No</th><th><input type=button value=Show></th><th>HP</th><th>Attack<br>Mult</th><th>Defense<br>Rate</th><th>Stagger<br>Mult</th></tr>
 <tr class=h><td>0</td><td><br></td><td>1400</td><td>1.00</td><td>1.00</td><td>1.00</td></tr>
 <tr class=h><td>1</td><td><br></td><td>1750</td><td>1.01</td><td>1.00</td><td>1.00</td></tr>
 <tr class=h><td>2</td><td><br></td><td>2100</td><td>1.03</td><td>1.00</td><td>1.00</td></tr>
@@ -117,29 +117,29 @@
 </table>
 <hr><table id=niku>
 <col class=c1><col class=c2n span=9>
-<tr class=l><th colspan=10>Stats</th></tr>
-<tr><th>部位</th><th>切断</th><th>打撃</th><th>弾</th><th>火</th><th>水</th><th>雷</th><th>龍</th><th>氷</th><th>気絶</th></tr>
-<tr><td>頭</td><td>50</td><td>55</td><td>45</td><td>25</td><td>5</td><td>15</td><td>0</td><td>0</td><td>50</td></tr>
+<tr class=l><th colspan=10>Hitzone Info</th></tr>
+<tr><th>Part</th><th>Cutting</th><th>Impact</th><th>Shot</th><th>Fire</th><th>Water</th><th>Thndr</th><th>Dragon</th><th>Ice</th><th>Stun</th></tr>
+<tr><td>Head</td><td>50</td><td>55</td><td>45</td><td>25</td><td>5</td><td>15</td><td>0</td><td>0</td><td>50</td></tr>
 <tr><td>前脚</td><td>35</td><td>30</td><td>30</td><td>15</td><td>5</td><td>15</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><td>後脚</td><td>30</td><td>35</td><td>30</td><td>15</td><td>5</td><td>15</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>胴体</td><td>35</td><td>40</td><td>40</td><td>25</td><td>5</td><td>15</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>尻尾</td><td>50</td><td>40</td><td>35</td><td>30</td><td>5</td><td>15</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>Torso</td><td>35</td><td>40</td><td>40</td><td>25</td><td>5</td><td>15</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>Tail</td><td>50</td><td>40</td><td>35</td><td>30</td><td>5</td><td>15</td><td>0</td><td>0</td><td>0</td></tr>
 </table>
 <table id=down>
 <col class=c1><col class=c2n><col class=c3>
 <tr class=l><th colspan=3>よろめき耐性(耐性値×怯み回数)</th></tr>
-<tr><th>部位</th><th>耐性値</th><th>破壊条件など</th></tr>
-<tr><td>頭</td><td>500</td><td></td></tr>
-<tr><td>右脚</td><td>300</td><td></td></tr>
-<tr><td>左脚</td><td>300</td><td></td></tr>
-<tr><td>胴体</td><td>450</td><td></td></tr>
-<tr><td>尻尾</td><td>900</td><td>切断系攻撃によるダメージ蓄積および切断</td></tr>
+<tr><th>Part</th><th>Res</th><th>Part Break Conditions</th></tr>
+<tr><td>Head</td><td>500</td><td></td></tr>
+<tr><td>Right Foot</td><td>300</td><td></td></tr>
+<tr><td>Left Foot</td><td>300</td><td></td></tr>
+<tr><td>Torso</td><td>450</td><td></td></tr>
+<tr><td>Tail</td><td>900</td><td>切断系攻撃によるダメージ蓄積および切断</td></tr>
 <tr><td>牙破壊</td><td>550</td><td>頭への火属性攻撃による蓄積</td></tr>
 </table>
 <table id=kou>
 <col span=2><col span=3 class=n><col>
-<tr class=l><th colspan=6>攻撃情報</th></tr>
-<tr><th>Attack</th><th>属性</th><th>攻撃力</th><th>威力</th><th>気絶</th><th>補足</th></tr><tr><td>猛ダッシュ</td><td></td><td>20</td><td>20</td><td>10</td><td></td></tr>
+<tr class=l><th colspan=6>Attack Information</th></tr>
+<tr><th>Attack</th><th>Status</th><th>Attack</th><th>威力</th><th>Stun</th><th>Notes</th></tr><tr><td>猛ダッシュ</td><td></td><td>20</td><td>20</td><td>10</td><td></td></tr>
 <tr><td>飛び込み殴り</td><td></td><td>65</td><td>40</td><td>25</td><td></td></tr>
 <tr><td>ボディプレス</td><td>地震</td><td>65</td><td>16</td><td>30</td><td></td></tr>
 <tr><td>左右ビンタ</td><td></td><td>35</td><td>16</td><td>10</td><td></td></tr>
