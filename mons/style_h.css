@@ -4,12 +4,12 @@ th {text-align:center;white-space:nowrap;font-weight:normal;background-color:sil
 th,td {vertical-align:top;white-space:nowrap;padding:2px;border:2px ridge #ffffff;}
 
 body {margin:5px 0 0 5px;}
-#monsname {width:11em;float:left;}
+#monsname {width:14em;float:left;}
 #tophosoku a {font-size:80%;text-decoration:none;}
 
-ul {margin:0;padding:0;list-style-type:none;width:11.8em;}
+ul {margin:0;padding:0;list-style-type:none;width:15em;}
 li {margin:0;padding:1px;text-align:right;border:1px solid silver}
-li.t {float:left;width:9em;text-align:left;}
+li.t {float:left;width:12em;text-align:left;}
 
 /* Firefox用ハック */
 html:not([lang*=""]) table,

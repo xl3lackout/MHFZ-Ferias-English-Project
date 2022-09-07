@@ -8,7 +8,7 @@ tr.l th {background-color:gray;}
 hr {clear:left;height:0;visibility:hidden}
 
 /*TOP*/
-#monsname {width:11em;float:left;}
+#monsname {width:14em;float:left;}
 #tophosoku a {font-size:80%;text-decoration:none;}
 #tophosoku span.on {font-size:80%;background-color:#FFB400}
 #tophosoku span.kan {font-size:80%;background-color:#0080C0}
@@ -35,7 +35,7 @@ hr {clear:left;height:0;visibility:hidden}
 /*激個体*/
 #geki table {float:left;width:50%;}
 /*HP*/
-#hp {margin:5px 0 0 0;}
+#hp {margin:5px 0 0 0;float:left;}
 #hp .hpn {text-align:right;}
 #hp tr.h {display:none;}
 #hp tr.h>td {display:none;}
@@ -43,10 +43,16 @@ hr {clear:left;height:0;visibility:hidden}
 /*#hp:hover tr.h {display:table-row;}
 #hp:hover tr.h>td {display:table-cell;}*/
 /*肉質*/
+
+#icon {margin:0 0 0 50px;border:5px solid gray;float:left;}
+
+#hitzones {margin:0 0 0 50px;border:5px solid gray;float:left;}
+
 #niku {margin:0 5px 0 0;float:left;}
 #niku col.c1 {width:3em;}
 #niku col.c2n {width:2.2em;text-align:right;}
 /*よろめき*/
+#down {float:left;}
 #down1 col.c1 {width:2.5em;}
 #down col.c2n {width:3em;text-align:right;}
 #down1 col.c3 {width:23em;}

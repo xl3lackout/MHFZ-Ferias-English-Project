@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="style_n.css" type="text/css">
 <title>Bulldrome</title>
 </head><body>
-<div id=monsname>Bulldrome</div><div id=tophosoku><a href="dosburu_nh.htm">Variant Stats</a>／<a href="dosburu_ng.htm">GR Stats</a>／<a href="dosburu_nt.htm">Tower Stats</a>／<a href="dosburu_h.htm">Carves</a></div>
+<div id=monsname>Bulldrome</div><div id=tophosoku><a href="dosburu_nh.htm">Henshu</a>／<a href="dosburu_ng.htm">GR</a>／<a href="dosburu_nt.htm">Corridor & Road</a>／<a href="dosburu_h.htm">Carves</a></div>
 <div id=hosoku>
 <span><em>Roar</em>－</span><span><em>Wind Pres.</em>－</span><span><em>Tremor</em>－</span><span><em>Pitfall T.</em>×</span><span><em>Shock T.</em>15s</span><span><em>Flash</em>×</span><span><em>Sonic</em>×</span><span><em>Meat</em>×</span><span><em>Dung</em>×</span>
 </div>
@@ -17,19 +17,19 @@
 <tr><td>Paralysis</td><td>150</td><td></td><td>5 every 10s</td><td>20s</td></tr>
 <tr><td>Sleep</td><td>30</td><td></td><td>5 every 10s</td><td>30s</td></tr>
 <tr><td>Stun</td><td>150</td><td></td><td>5 every 10s</td><td>15s</td></tr>
-<tr><td>Capture</td><td>100</td><td></td><td>5 every 10s</td><td>60s Captureable at 40%</td></tr>
+<tr><td>Tranq</td><td>100</td><td></td><td>5 every 10s</td><td>60s Captureable at 40%</td></tr>
 <tr><td>Blast</td><td>250</td><td>150：12x</td><td><td>700dmg</td></tr>
-<tr><th colspan=6>Enrage Changes</th></tr>
-<tr><td colspan=6 style="width:26em;">怒り値100<span>60s</span>攻撃力1.50x<span>防御率1.00x</span>俊敏性1.10x</td></tr>
+<tr><th colspan=6>Engrage</th></tr>
+<tr><td colspan=6 style="width:26em;">Anger 100<span>60s</span>Attack 1.50x<span>Defense 1.00x</span>Agility 1.10x</td></tr>
 <tr><td colspan=6 style="padding:0;"><table id=hc>
- <tr class=l><th colspan=7>特異個体追加補正(状態異常の蓄積値半減)</th></tr>
- <tr><th></th><th>HP</th><th>Attack</th><th>Defense</th><th>怒攻撃</th><th>怒防御</th><th>Flinch</th></tr>
+ <tr class=l><th colspan=7>Specific Values (Half Status Accumulation)</th></tr>
+ <tr><th></th><th>HP</th><th>Attack</th><th>Defense</th><th>Aggro</th><th>Enrage Def</th><th>Flinch</th></tr>
 <tr><td>LR</td><td>2.00x</td><td>3.00x</td><td>1.00x</td><td>1.00x</td><td>1.00x</td><td>1.70x</td></tr>
 <tr><td>HR</td><td>3.20x</td><td>2.95x</td><td>1.00x</td><td>1.00x</td><td>1.00x</td><td>3.00x</td></tr>
 <tr><td colspan=7>特異個体のみ肉質が頭と胴に分かれる。原種は頭のみ</td>
 </table></td></tr>
 <tr><td colspan=6 style="padding:0;" id=geki><table>
- <tr class=l><th colspan=3>若個体追加補正</th></tr>
+ <tr class=l><th colspan=3>Small Crown Values</th></tr>
  <tr><th>HP</th><th>Attack</th><th>Defense</th></tr>
 <tr><td>0.8x</td><td>0.5x</td><td>1.5x</td></tr>
 </table>
@@ -77,6 +77,7 @@
 <tr class=h><td>23</td><td><br></td><td>1500</td><td>1.05</td><td>0.95</td><td>1.00</td></tr>
 <tr><td>24</td><td>Arena</td><td>1500</td><td>1.10</td><td>0.95</td><td>1.00</td></tr>
 </table>
+<img id=icon src="../img/monsicons/bulldrome.webp" width="400"/>
 <hr><table id=niku>
 <col class=c1><col class=c2n span=9>
 <tr class=l><th colspan=10>Hitzone Info</th></tr>
@@ -86,14 +87,15 @@
 </table>
 <table id=down>
 <col class=c1><col class=c2n><col class=c3>
-<tr class=l><th colspan=3>Flinch Resistance</th></tr>
-<tr><th>Part</th><th>Res</th><th>Part Break Conditions</th></tr>
-<tr><td>全身</td><td>120</td><td></td></tr>
+<tr class=l><th colspan=3>Stagger Resistance</th></tr>
+<tr><th>Part</th><th>Tolerance</th><th>Part Break Info</th></tr>
+<tr><td>Whole Body</td><td>120</td><td></td></tr>
 </table>
+<img id=hitzones src="../img/monszones/bulldrome.png" width="400"/>
 <table id=kou>
 <col span=2><col span=3 class=n><col>
 <tr class=l><th colspan=6>Attack Information</th></tr>
-<tr><th>Attack</th><th>Status</th><th>Attack</th><th>威力</th><th>Stun</th><th>Notes</th></tr><tr><td>回転牙攻撃</td><td></td><td>35</td><td>15</td><td>2</td><td></td></tr>
+<tr><th>Attack</th><th>Status</th><th>Attack</th><th>Power</th><th>Stun</th><th>Notes</th></tr><tr><td>回転牙攻撃</td><td></td><td>35</td><td>15</td><td>2</td><td></td></tr>
 <tr><td>短距離突進</td><td></td><td>30</td><td>15</td><td>2</td><td></td></tr>
 <tr><td>長距離突進</td><td></td><td>40</td><td>15</td><td>2</td><td></td></tr>
 <tr><td>頭突き</td><td></td><td>35</td><td>15</td><td>2</td><td></td></tr>
