@@ -54,52 +54,52 @@ var armorCK = location.pathname.indexOf("deco") === -1,
 	s = document.createElement("select");
 dt.className = "m",i.type = "button";
 //名称ソート
-i.value = "名前",i.title = "名前順にソート";
+i.value = "名前",i.title = "Sort by Name";
 dt.appendChild(i.cloneNode(false));
 tH.cells[0].appendChild(dt);
 if (armorCK) {
 	//防御ソート
-	i.value = "防御",i.title = "防御順にソート";
+	i.value = "防御",i.title = "Sort by Defense";
 	dt.appendChild(i.cloneNode(false));
 	//レア制限
-	s.title = "レアで絞込み";
-	selectSet(s,["ﾚｱ","11","10","9","8","7","6","5","4","3","2","1"]);
+	s.title = "Filter by Rarity";
+	selectSet(s,["Rarity","11","10","9","8","7","6","5","4","3","2","1"]);
 	s.selectedIndex = 0;
 	dt.appendChild(s.cloneNode(true));
 	var ckRare_F = function (e) {
-		return e === "ﾚｱ" ? function(){return true} : function (cell) {return +cell.firstChild.nodeValue <= e};
+		return e === "Rarity" ? function(){return true} : function (cell) {return +cell.firstChild.nodeValue <= e};
 	};
 	//耐性ソート
-	s.style.display = "block",s.title = "耐性順にソート";
-	selectSet(s,["順","火","水","雷","氷","龍"]);
+	s.style.display = "none",s.title = "Sort by Resistances";
+	selectSet(s,["Res","Fire","Water","Thunder","Ice","Dragon"]);
 	tH.cells[3].appendChild(s.cloneNode(true));
 	//スロ制限
-	s.title = "スロットで絞込み";
-	selectSet(s,["ｽﾛ","3","2","1"]);
+	s.title = "Sort by Slot";
+	selectSet(s,["Slot","3","2","1"]);
 	tH.cells[5].removeChild(tH.cells[5].childNodes.item(1));
 	tH.cells[5].appendChild(s.cloneNode(true));
 	var ckSlot_F = function (e) {
-		return e === "ｽﾛ" ? function(){return true} : function (cell) {return cell.lastChild.nodeValue.split("/")[1] >= e;};
+		return e === "Slot" ? function(){return true} : function (cell) {return cell.lastChild.nodeValue.split("/")[1] >= e;};
 	};
 } else { //装飾品
 	//G制限
-	s.title = "GRで絞込み";
+	s.title = "GR Sort";
 	selectSet(s,["GR","GX","GF","G"]);
 	s.selectedIndex = 0;
 	if (location.pathname.indexOf("deco.htm") === -1) s.style.display = "none";
 	dt.appendChild(s.cloneNode(true));
 	var ckGr_F = function (e) {
 		return e === "GR" ? function(){return true} : 
-				e === "GX" ? function (cell) {return cell.firstChild.nodeValue.indexOf("射珠GX") !== -1 || cell.firstChild.nodeValue.indexOf("剣珠GX") !== -1;} :
-				e === "GF" ? function (cell) {return cell.firstChild.nodeValue.indexOf("射珠GF") !== -1 || cell.firstChild.nodeValue.indexOf("剣珠GF") !== -1;} :
-							function (cell) {return cell.firstChild.nodeValue.indexOf("射珠Ｇ") !== -1 || cell.firstChild.nodeValue.indexOf("剣珠Ｇ") !== -1;};
+				e === "GX" ? function (cell) {return cell.firstChild.nodeValue.indexOf("GN GX") !== -1 || cell.firstChild.nodeValue.indexOf("BM GX") !== -1;} :
+				e === "GF" ? function (cell) {return cell.firstChild.nodeValue.indexOf("GN GF") !== -1 || cell.firstChild.nodeValue.indexOf("BM GF") !== -1;} :
+							function (cell) {return cell.firstChild.nodeValue.indexOf("GN G") !== -1 || cell.firstChild.nodeValue.indexOf("BM G") !== -1;};
 	};
 	//素材絞りこみ
 	var dt = document.createElement("div"),
 		i = document.createElement("input");
-	i.type = "text",i.title = "素材で絞込み";
+	i.type = "text",i.title = "Filter by Material";
 	dt.appendChild(i.cloneNode(false));
-	i.type = "button",i.value = "絞込み",i.title = "素材で絞込み";
+	i.type = "button",i.value = "Search",i.title = "Filter by Material";
 	dt.appendChild(i.cloneNode(false));
 	tH.cells[7].appendChild(dt);
 	var ckSozai_F = function (e) {
@@ -107,10 +107,10 @@ if (armorCK) {
 	};
 }
 //スキル制限
-s.style.display = "block",s.title = "スキルで絞込み";
+s.style.display = "block",s.title = "Sort by Skill";
 if (location.pathname.indexOf("deconk") !== -1) {
 	selectSetGroup(s,[
-	["スキル",["選択"]],
+	["Skill",["Selection"]],
 	["攻撃系",["攻撃","会心","度胸","火属性強化","水属性強化","雷属性強化","氷属性強化","龍属性強化","剣術","心眼術","貫通投擲","特大投擲","麻痺攻撃","睡眠攻撃","毒攻撃","特殊攻撃"]],
 	["防御系",["防御","反射神経","反射術"]],
 	["体力・スタミナ系",["体力"]],
@@ -122,39 +122,39 @@ if (location.pathname.indexOf("deconk") !== -1) {
 	["その他系",["復帰力","発奮術","激励術","絆術","移動速度"]]
 	]);
 } else if (location.pathname.indexOf("decotk") !== -1 || location.pathname.indexOf("decotf") !== -1) {
-	selectSet(s,["選択"]);
+	selectSet(s,["Selection"]);
 	s.style.display = "none";
 } else {
 	selectSetGroup(s,[
-	["スキル",["選択"]],
-	["攻撃系",["剛撃","攻撃","一匹狼","一閃","達人","閃転","痛撃","巧撃","属撃","変撃","劇物の心得","特殊攻撃","怪奇","火属性攻撃","水属性攻撃","雷属性攻撃","氷属性攻撃","龍属性攻撃","属性攻撃","爆弾強化","砲術師","鼓舞","笛吹き名人","体術","逆境","怒","底力","腕利き","手練","断食","溜め短縮","溜め威力","武器捌き","尻上がり","適応撃","闘覇","血気活性","纏雷","贅撃","雌伏","猛進","幕無","一点突破","獅子奮迅","不退"]],
-	["防御系",["生命力","反射","防御","要塞","ガード性能","自動防御","とんずら"]],
-	["体力・スタミナ系",["体力","回復速度","回復","吸血","薬草学","気力回復","はらへり","スタミナ","食事","食いしん坊"]],
-	["剣士系",["研ぎ師","斬れ味","巧流","刀匠","匠","爆撃剣","猛毒剣","麻痺剣","睡眠剣","火炎剣","水激剣","雷神剣","氷結剣","龍王剣","片手剣技","双剣技","大剣技","太刀技","鎚技","狩猟笛技","槍技","銃槍技","剣斧技","穿龍棍技","磁斬鎚技","剣術","剣神"]],
-	["ガンナー系",["射手","通常弾強化","貫通弾強化","散弾強化","通常弾追加","貫通弾追加","散弾追加","榴弾追加","拡散弾追加","毒瓶追加","麻痺瓶追加","睡眠瓶追加","装着","穏射","装填数","速射","連射","装填","反動","扇射","精密射撃","弾調合","弾丸節約術","狙撃","空隙","重銃技","軽銃技","弓技"]],
-	["状態異常系",["毒","麻痺","睡眠","耐状態異常","気絶","脱臭","耐雪","声帯","対防御DOWN","耐酔","爆破耐性","磁力耐性","結晶耐性","凍結耐性"]],
-	["耐性系",["全耐性ＵＰ","火耐性","水耐性","氷耐性","雷耐性","龍耐性"]],
-	["保護系",["三界の護り","聴覚保護","耐震","風圧","盗み無効","耐暑","耐寒","警戒","地形","超回避","回避性能","回避距離","受け身","審判","根性","絶対防御"]],
-	["アイテム・調合系",["調合師","効果持続","広域","気まぐれ","投擲","強肩","狩人","肉焼き","釣り","調合成功率","錬金術","高速設置","鉄腕","ナイフ使い"]],
-	["MAP探知系",["地図","千里眼","気配","煽動"]],
-	["採取運搬系",["運搬","高速収集","採取","剥ぎ取り","平常心"]],
-	["報酬系",["運気","モンスター","圧力"]],
-	["その他系",["ブリーダー","絆","ひらめき","捕獲上手","救援","いたわり","移動速度","喝","支援","恩寵","代償","黒ノ命脈","炎寵","抜納術","氷界創生"]]
+	["Skill",["Selection"]],
+	["Attack",["Strong Attack","Attack","Lone Wolf","Issen","Expert","Crit Conversion","Exploit Weakness","Stylish Assault","Dissolver","Status Assault","Drug Knowledge","Status Attack","Abnormality","Fire Attack","Water Attack","Thunder Attack","Ice Attack","Dragon Attack","Elemental Attack","Bomb Boost","Gunnery","Encourage","Flute Expert","Taijutsu","Survivor","Rage","Adrenaline","Skilled","Trained","Fasting","Focus","Charge Attack Up","Weapon Handling","Shiriagari","Adaptation","Combat Supremacy","Vigorous","Thunder Clad","Lavish Attack","Obscurity","Rush","Ceaseless","Point Breakthrough","Furious","Determination"]],
+	["Defense",["Vitality","Reflect","Defense","Fortification","Guard","Auto-Guard","Breakout"]],
+	["Health・Stam",["Health","Recovery Speed","Recovery","Vampirism","Herbal Science","Stamina Recovery","Hunger","Stamina","Eating","Gluttony"]],
+	["Blade",["Sharpening","Sharpness","Stylish","Edgemaster","Artisan","Bomb Sword","Poison Sword","Para Sword","Sleep Sword","Fire Sword","Water Sword","Thunder Sword","Ice Sword","Dragon Sword","SnS Tech","DS Tech","GS Tech","LS Tech","Hammer Tech","HH Tech","Lance Tech","GL Tech","Switch Axe tech","Tonfa Tech","MS Tech","Fencing","Sword God"]],
+	["Gunner",["Steady Hand","Normal Shot Up","Pierce Shot Up","Pellet Shot Up","Normal Shot Add","Pierce Shot Add","Pellet Shot Add","Crag Shot Add","Cluster Shot Add","Poison Coating Add","Para Coating Add","Sleep Coating Add","Mounting","Gentle Shot","Loading","Rapid Fire","Auto-Reload","Reload","Recoil","Critical Shot","Precision","Ammo Combiner","Bullet Saver","Sniper","Spacing","HBG Tech","LBG Tech","Bow Tech"]],
+	["Status",["Poison","Paralysis","Sleep","Status Res","Stun","Deoderant","Snowball Res","Vocal Chords","Def Lock","Sobriety","Blast Resistance","Magnetic Res","Crystal Res","Freeze Res"]],
+	["Res",["All Res Up","Fire Res","Water Res","Ice Res","Thunder Res","Dragon Res"]],
+	["Protection",["Three Worlds","Hearing Protection","Quake Res","Wind Pressure","Anti-Theft","Heat Res","Cold Res","Light Tread","Terrain","Evasion Boost","Evasion","Evade Distance","Passive","Protection","Guts","Absolute Defense"]],
+	["Item・Combo",["Combo Expert","Everlasting","Wide-Area","Whim","Throwing","Strong Arm","Hunter","Cooking","Fish","Combining","Alchemy","Speed Setup","Iron Arm","Knife Throwing"]],
+	["MAP System",["Map","Psychic","Stealth","Incitement"]],
+	["Gathering",["Backpacking","Gathering Speed","Gather","Carving","Mindfulness"]],
+	["Reward",["Fate","Monster","Pressure"]],
+	["Other",["Breeder","Bond","Inspiration","Capture Proficiency","Relief","Caring","Movement Speed","Reinforcement","Assistance","Grace","Compensation","Dark Pulse","Blazing Grace","Drawing Arts","Ice Age"]]
 	]);
 }
 tH.cells[4].appendChild(s.cloneNode(true));
 tH.cells[4].appendChild(s.cloneNode(true));
 var ckSkill_F = function (e) {
-	return e === "選択" ? function(){return true} : function (cell) {return cell.innerHTML.indexOf(">"+e+"<") !== -1;};
+	return e === "Selection" ? function(){return true} : function (cell) {return cell.innerHTML.indexOf(">"+e+"<") !== -1;};
 	};
 //辿異制限
 if (armorCK || location.pathname.indexOf("decocz") !== -1) {
 	s = document.createElement("select");
-	s.title = "辿異で絞込み";
-	selectSet(s,["辿異","スキル枠拡張","閃転強化","巧撃強化","属撃強化","纏雷強化","氷界創生強化","耳栓強化","風圧強化","耐震強化","耐毒強化","耐麻痺強化","耐睡眠強化","吸血強化","劇物強化","支援強化","弾丸節約術強化","ガード性能強化","適応撃強化","鼓舞強化","反射強化","巧流強化","血気活性強化","雌伏強化","喝強化","幕無強化","猛進強化"]);
+	s.title = "Sort by Zenith Skill";
+	selectSet(s,["Zenith Skill","Skill Slots Up","Crit Conversion Up","Stylish Assault Up","Dissolver Up","Thunder Clad Up","Ice Age Up","Hearing Protection Up","Wind Res Up","Quake Res Up","Poison Res Up","Para Res Up","Sleep Res Up","Vampirism Up","Drug Knowledge Up","Assistance Up","Bullet Saver Up","Guard Up","Adaptation Up","Encourage Up","Reflect Up","Stylish Up","Vigorous Up","Obscurity Up","Soul Up","Ceaseless Up","Rush Up"]);
 	tH.cells[4].appendChild(s.cloneNode(true));
 	var ckTeni_F = function (e) {
-		return e === "辿異" ? function(){return true} : function (cell) {return cell.innerHTML.indexOf("「"+e) !== -1;};
+		return e === "Zenith Skill" ? function(){return true} : function (cell) {return cell.innerHTML.indexOf("「"+e) !== -1;};
 		};
 }
 tH=dt=i=s=null;
@@ -251,7 +251,7 @@ function (evt) {
 			N = tr.length,
 			x = [];
 		switch (t.title) {
-		case "名前順にソート":
+		case "Sort by Name":
 			var Fulltohalf = (function (){
 				var han = "0123456789.,-+ABCDEFGHIJKLMNOPQRSTUVWXYZｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｧｧｨｨｩｩｪｪｫｫｯｯｬｬｭｭｮｮｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾊﾋﾌﾍﾎﾊﾋﾌﾍﾎｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾊﾋﾌﾍﾎﾊﾋﾌﾍﾎｳ";
 				var zen = "０１２３４５６７８９．，－＋ＡＢＣＤＥＦＪＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんぁァぃィぅゥぇェぉォっッゃャゅュょョがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽガギグゲゴザジズゼゾダジヅデドバビブベボパピプペポヴ";
@@ -268,7 +268,7 @@ function (evt) {
 			for (var i = 0; i < N; marker.appendChild(x[i++].row));
 			tB.parentNode.replaceChild( marker,tB );
 			break;
-		case "防御順にソート":
+		case "Sort by Defence":
 			for (var i = 0; i < N; x[i] = [tr[i].cells[5].lastChild.nodeValue.split("/")[0]], x[i].row=tr[i++]);
 			x.sort(function(a, b){return b - a});
 			for (var i = 0; i < N; marker.appendChild(x[i++].row));

@@ -58,177 +58,177 @@ var tH = document.getElementsByTagName("thead")[0].rows[0],
 	s = document.createElement("select");
 i.type = "button";
 //名称ソート
-i.value = "名前",i.title = "名前順にソート";
+i.value = "名前",i.title = "Sort by Name";
 dt.appendChild(i.cloneNode(false));
 //攻撃ソート
-i.value = "攻撃",i.title = "攻撃順にソート";
+i.value = "攻撃",i.title = "Sort by Attack Value";
 dt.appendChild(i.cloneNode(false));
 //属性ソート
 if (treeCK){
-	i.value = "属性",i.title = "属性順にソート"; //,i.disabled = true
+	i.value = "属性",i.title = "Sort by Element Value"; //,i.disabled = true
 	dt.appendChild(i.cloneNode(false));
 }
 if (ckG) {
 	//LV制限
-	s.title = "LVで絞込み";
+	s.title = "Filter by Level";
 	//selectSet(s,["Lv","全",50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]);
-	selectSet(s,["Lv","全","簡","50"]);
+	selectSet(s,["Lv","All","Simple","50"]);
 	s.selectedIndex = 0;
 	dt.appendChild(s.cloneNode(true));
 	var ckRare_F = function (e) {
-		//return e === "Lv" || e === "全" ? function(){return true} : function (cell) {return cell.lastChild.firstChild.nodeValue === "Lv" + e;};
-		return  e === "Lv" || e === "全" ? function(){return true} : 
-				e === "簡" ? function (cell) {return cell.lastChild.firstChild.nodeValue === "Lv1" || cell.lastChild.firstChild.nodeValue === "Lv50";} :
+		//return e === "Lv" || e === "All" ? function(){return true} : function (cell) {return cell.lastChild.firstChild.nodeValue === "Lv" + e;};
+		return  e === "Lv" || e === "All" ? function(){return true} : 
+				e === "Simple" ? function (cell) {return cell.lastChild.firstChild.nodeValue === "Lv1" || cell.lastChild.firstChild.nodeValue === "Lv50";} :
 							function (cell) {return cell.lastChild.firstChild.nodeValue === "Lv" + e;};
 	};
 } else if (ckS) {
 	//LV制限
-	s.title = "LVで絞込み";
-	selectSet(s,["Lv","全","簡","100"]);
+	s.title = "Filter by Level";
+	selectSet(s,["Lv","All","Simple","100"]);
 	s.selectedIndex = 0;
 	dt.appendChild(s.cloneNode(true));
 	var ckRare_F = function (e) {
-		return  e === "Lv" || e === "全" ? function(){return true} : 
-				e === "簡" ? function (cell) {return cell.lastChild.firstChild.nodeValue === "Lv1" || cell.lastChild.firstChild.nodeValue === "Lv100";} :
+		return  e === "Lv" || e === "All" ? function(){return true} : 
+				e === "Simple" ? function (cell) {return cell.lastChild.firstChild.nodeValue === "Lv1" || cell.lastChild.firstChild.nodeValue === "Lv100";} :
 							function (cell) {return cell.lastChild.firstChild.nodeValue === "Lv" + e;};
 	};
 } else {
 	//レア制限
-	s.title = "レアで絞込み";
-	selectSet(s,["ﾚｱ","12","11","10","9","8","7","6","5","4","3","2","1"]);
+	s.title = "Include rarity up to";
+	selectSet(s,["Rarity","12","11","10","9","8","7","6","5","4","3","2","1"]);
 	s.selectedIndex = 0;
 	dt.appendChild(s.cloneNode(true));
 	var ckRare_F = function (e) {
-		return e === "ﾚｱ" ? function(){return true} : function (cell) {return +cell.firstChild.nodeValue <= e && !cell.firstChild.nextSibling;};
+		return e === "Rarity" ? function(){return true} : function (cell) {return +cell.firstChild.nodeValue <= e && !cell.firstChild.nextSibling;};
 	};
 }
 tH.cells[0].appendChild(dt);
 if (treeCK){ //剣士弓
 	if (location.pathname.indexOf("yumi") === -1) {
 		//状態異常
-		s.title = "状態異常で絞込み";
-		selectSet(s,["状態","無","麻痺","睡眠","毒","爆破"]);
+		s.title = "Sort by Status";
+		selectSet(s,["Status","None","Para","Sleep","Poison","Blast"]);
 		dt.appendChild(s.cloneNode(true));
 		var ckIzyo_F = function (e) {
-			return	e === "状態" ? function(){return true} :
-					e === "無"	? function (cell) {return !(/[麻睡毒爆]/).test(cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/);}
+			return	e === "Status" ? function(){return true} :
+					e === "None"	? function (cell) {return !(/[麻睡毒爆]/).test(cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/);}
 								: function (cell) {	return cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.lastIndexOf(e) !== -1;};
 		};
 	} else {
 		//曲射
-		s.title = "曲射で絞込み";
-		selectSet(s,["曲射","放散","集中","爆裂","切断"]);
+		s.title = "Sort by Shot Arc";
+		selectSet(s,["Arc","Wide","Narrow","Bomb","Slicing"]);
 		dt.appendChild(s.cloneNode(true));
 		var ckIzyo_F = function (e) {
-			return	e === "曲射" ? function(){return true} :
-					e === "無"	? function (cell) {return !(/[散集裂断]/).test(cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/);}
+			return	e === "Arc" ? function(){return true} :
+					e === "None"	? function (cell) {return !(/[散集裂断]/).test(cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/);}
 								: function (cell) {return cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.lastIndexOf(e) !== -1;};
 		};
 	}
 	//属性
-	s.style.display = "block",s.title = "属性で絞込み";
-	selectSet(s,["属性","無","火","水","雷","龍","氷","炎","光","雷極","天翔","熾凍","黒焔","奏","闇","紅魔","風","響","灼零","皇鳴"]);
+	s.style.display = "block",s.title = "Sort by Element";
+	selectSet(s,["Element","None","Fire","Water","Thunder","Dragon","Ice","Blaze","Light","Thunder Pole","Tenshou","Okiko","Black Flame","Music","Darkness","Crimson Demon","Wind","Sound","Burning Zero","Emperor's Roar"]);
 	tH.cells[2].appendChild(s.cloneNode(true));
 	tH.cells[2].childNodes.item(1).style.marginLeft = "0.5em";
 	var ckZoku_F = function (e) {
-		return	e === "属性" ? function(){return true} :
-				e === "無"	? function (cell) {return !(/[火水雷龍氷炎光天熾焔奏闇紅風響]/).test(cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/);} :
-				e === "雷"	? function (cell) {return cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.lastIndexOf("雷極") === -1 && cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.lastIndexOf(e) !== -1;}
+		return	e === "Element" ? function(){return true} :
+				e === "None"	? function (cell) {return !(/[火水雷龍氷炎光天熾焔奏闇紅風響]/).test(cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/);} :
+				e === "Thunder"	? function (cell) {return cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.lastIndexOf("雷極") === -1 && cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.lastIndexOf(e) !== -1;}
 							: function (cell) {return cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.lastIndexOf(e) !== -1;};
 	};
 	if (location.pathname.indexOf("gunlance") !== -1) {
 		//ガンランス
-		s.title = "砲撃タイプで絞込み";
-		selectSet(s,["砲撃","通常型","放射型","拡散型"]);
+		s.title = "Sort by Shot Type";
+		selectSet(s,["Shot","Normal","Long","Spread"]);
 		var ckKobetu_F = function (e) {
-			return e === "砲撃" ? function(){return true} : function (cell) {return cell.lastChild.firstChild.nodeValue.indexOf(e) !== -1;};
+			return e === "Shot" ? function(){return true} : function (cell) {return cell.lastChild.firstChild.nodeValue.indexOf(e) !== -1;};
 		};
 	} else if (location.pathname.indexOf("horn") !== -1) {
 		//狩猟笛
-		s.title = "旋律で絞込み";
-		selectSet2(s,["旋律","白黄赤","白黄空","白青赤","白青黄","白緑赤","白緑黄","白緑青","白緑空","白空赤","白空青","紫黄赤","紫黄空","紫青赤","紫青黄","紫緑赤","紫緑黄","紫緑青","紫緑空","紫空赤","紫空青"],
-					["旋律","321","327","341","342","351","352","354","357","371","374","621","627","641","642","651","652","654","657","671","674"]);
+		s.title = "Sort by Melody";
+		selectSet2(s,["Melody","White|Yellow|Red","White|Yellow|L.blue","White|D.Blue|Red","White|D.Blue|Yellow","White|Green|Red","White|Green|Yellow","White|Green|D.Blue","White|Green|L.Blue","White|L.Blue|Red","White|L.Blue|D.Blue","Purple|Yellow|Red","Purple|Yellow|L.Blue","Purple|D.Blue|Red","Purple|D.Blue|Yellow","Purple|L.Blue|Red","Purple|Green|Yellow","Purple|Green|D.Blue","Purple|Green|L.Blue","Purple|L.Blue|Red","Purple|L.Blue|D.Blue"],
+					["Melody","321","327","341","342","351","352","354","357","371","374","621","627","641","642","651","652","654","657","671","674"]);
 		var ckKobetu_F = function (e) {
-			return e === "旋律" ? function(){return true} : function (cell) {return cell.lastChild.href.lastIndexOf(e) !== -1;};
+			return e === "Melody" ? function(){return true} : function (cell) {return cell.lastChild.href.lastIndexOf(e) !== -1;};
 		};
 	} else if (location.pathname.indexOf("slaxe") !== -1) {
 		//ガンランス
-		s.title = "ビンタイプで絞込み";
-		selectSet(s,["ビン","強撃","強属性","強異常","スタン"]);
+		s.title = "Sort by Phial";
+		selectSet(s,["Phial","Power","Ele","Status","Stun"]);
 		var ckKobetu_F = function (e) {
-			return e === "ビン" ? function(){return true} : function (cell) {return cell.lastChild.firstChild.nodeValue.indexOf(e) !== -1;};
+			return e === "Phial" ? function(){return true} : function (cell) {return cell.lastChild.firstChild.nodeValue.indexOf(e) !== -1;};
 		};
 	} else if (location.pathname.indexOf("yumi") !== -1) {
 		//弓
-		s.title = "矢で絞込み";
-		selectSet(s,["矢","1:連射","1:拡散","1:貫通","2:連射","2:拡散","2:貫通","3:連射","3:拡散","3:貫通","4:連射","4:拡散","4:貫通"]);
+		s.title = "Sort by Arrow Type";
+		selectSet(s,["Arrow","1:Rpd","1:Spr","1:Prc","2:Rpd","2:Spr","2:Prc","3:Rpd","3:Spr","3:Prc","4:Rpd","4:Spr","4:Prc"]);
 		col = 5; //位置補正用
 		var ckKobetu_F = function (e) {
-			return e === "矢" ? function(){return true} : function (cell) {return cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.lastIndexOf(e) !== -1;};
+			return e === "Arrow" ? function(){return true} : function (cell) {return cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.lastIndexOf(e) !== -1;};
 		};
 	} else {
-		s.title = "リーチで絞込み";
-		selectSet(s,["ﾘｰﾁ","極長","長","中","短","極短","特殊"]);
+		s.title = "Sort by Length";
+		selectSet(s,["Length","Very Long","Long","Medium","Short","Very Short","Special"]);
 		var ckKobetu_F = function (e) {
 			e = "："+e;
-			return	e === "：ﾘｰﾁ" ? function(){return true} :
-					e === "：中" ? function (cell) {return cell.lastChild./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.indexOf("辿異：") === -1 ?
+			return	e === "：Length" ? function(){return true} :
+					e === "：Medium" ? function (cell) {return cell.lastChild./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.indexOf("Zenith Skill：") === -1 ?
 															cell.lastChild./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ === "" :
 															cell.lastChild.previousSibling./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ === "" ;}
-								: function (cell) {return cell.lastChild./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.indexOf("辿異：") === -1 ?
+								: function (cell) {return cell.lastChild./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.indexOf("Zenith Skill：") === -1 ?
 															cell.lastChild./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.indexOf(e) !== -1 :
 															cell.lastChild.previousSibling./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.indexOf(e) !== -1;};
 		};
 	}
 	tH.cells[3].appendChild(s.cloneNode(true));
 	//辿異制限
-	s.title = "辿異で絞込み";
-	selectSet(s,["辿異","スキル枠拡張","閃転強化","巧撃強化","属撃強化","纏雷強化","氷界創生強化","耳栓強化","風圧強化","耐震強化","耐毒強化","耐麻痺強化","耐睡眠強化","吸血強化","劇物強化","支援強化","弾丸節約術強化","ガード性能強化","適応撃強化","鼓舞強化","反射強化","巧流強化","血気活性強化","雌伏強化","喝強化"]);
+	s.title = "Sort by Zenith Skill";
+	selectSet(s,["Zenith Skill","Skill Slots Up","C.Conversion Up","S.Assault Up","Dissolver Up","Thunder Clad Up","Ice Age Up","Earplugs Up","Wind Res Up","Quake Res Up","Posion Res Up","Para Res Up","Sleep Res Up","Vampirism Up","Drug Knowledge Up","Assistance Up","Bullet Saver Up","Guard Up","Adaptation Up","Encourage Up","Reflect Up","Stylish Up","Vigorous Up","Obscurity Up","Soul Up","Ceaseless Up"]);
 	tH.cells[col-1].appendChild(s.cloneNode(true));
 } else { //ガン
 	dt = document.createElement("div");
-	s.title = "装填速度で絞込み"
-	selectSet2(s,["装填","遅い","やや遅","普通","やや速","速い"],["0","0","1","2","3","4"]);
+	s.title = "Sort by Reload Speed"
+	selectSet2(s,["Reload","Very Slow","Slow","Normal","Fast","Very Fast"],["0","0","1","2","3","4"]);
 	dt.appendChild(s.cloneNode(true));
-	s.title = "反動で絞込み"
-	selectSet2(s,["反動","最大","大","中","やや小","小"],["0","0","1","2","3","4"]);
+	s.title = "Sort by Recoil"
+	selectSet2(s,["Recoil","Very Large","Large","Medium","Small","Smaller"],["0","0","1","2","3","4"]);
 	dt.appendChild(s.cloneNode(true));
-	s.title = "弾速で絞込み"
-	selectSet2(s,["弾速","遅い","やや遅","やや速","速い"],["0","1","2","3","4"]);
+	s.title = "Sort by Bullet Speed"
+	selectSet2(s,["Bullet Speed","Very Slow","Slow","Fast","Very Fast"],["0","1","2","3","4"]);
 	dt.appendChild(s.cloneNode(true));
 	dt.appendChild(document.createElement("br"));
 	var ckGun_F = function (e1,e2,e3) {
 		if (e1 === "0" && e2 === "0" && e3 === "0") {
 			return function(){return true};
 		} else {
-			var wR = ["(遅い|やや遅い|普通|やや速い|速い)","(やや遅い|普通|やや速い|速い)","(普通|やや速い|速い)","(やや速い|速い)","速い"],
-				wK = ["(最大|大|中|やや小|小)","(大|中|やや小|小)","(中|やや小|小)","(やや小|小)","小"],
-				wS = ["(遅い|やや遅い|やや速い|速い)","遅い","やや遅い","やや速い","速い"],
+			var wR = ["(Very Slow|Slow|Normal|Fast|Very Fast)","(Slow|Normal|Fast|Very Fast)","(Normal|Fast|Very Fast)","(Fast|Very Fast)","Very Fast"],
+				wK = ["(Very Large|Large|Medium|Small|Smaller)","(Large|Medium|Small|Smaller)","(Medium|Small|Smaller)","(Small|Smaller)","Smaller"],
+				wS = ["(Very Slow|Slow|Fast|Very Fast)","Very Slow","Slow","Fast","Very Fast"],
 				reg = new RegExp("^" + wR[e1] + /*@if (@_jscript_version < 9) "\r\n" + /*@end@*/ wK[e2] + /*@if (@_jscript_version < 9) "\r\n" + /*@end@*/ wS[e3],"i");
 			return function (cell) {return reg.test(cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/);};
 		}
 	};
-	s.title = "弾で絞込み"
-	selectSet(s,["弾","通常1","通常1","通常2","通常3","貫通1","貫通2","貫通3","散弾1","散弾2","散弾3","徹甲1","徹甲2","徹甲3","拡散1","拡散2","拡散3","毒弾1","毒弾2","麻痺1","麻痺2","睡眠1","睡眠2","火炎","水冷","電撃","氷結","滅龍","ペ弾","回復","鬼人","硬化"]);
+	s.title = "Sort by Shot Type"
+	selectSet(s,["Shot","Norm 1","Norm 1","Norm 2","Norm 3","Pierc1","Pierc2","Pierc3","Pelet1","Pelet2","Pelet3","Crag 1","Crag 2","Crag 3","Clust1","Clust2","Clust3","Psn  1","Psn  2","Para 1","Para 2","Slp  1","Slp  2","Flame","Water","Thund","Freez","Dragn","Paint","Recov","Demon","Armor"]);
 	dt.appendChild(s.cloneNode(true));
 	dt.appendChild(s.cloneNode(true));
 	//辿異制限
-	s.title = "辿異で絞込み";
-	selectSet(s,["辿異","スキル枠拡張","閃転強化","巧撃強化","属撃強化","纏雷強化","氷界創生強化","耳栓強化","風圧強化","耐震強化","耐毒強化","耐麻痺強化","耐睡眠強化","吸血強化","劇物強化","支援強化"]);
+	s.title = "Sort by Zenith Skill";
+	selectSet(s,["Zenith Skill","Skill Slots Up","Crit Conversion Up","Stylish Assault Up","Dissolver Up","Thunder Clad Up","Ice Age Up","Hearing Protection Up","Wind Res Up","Quake Res Up","Poison Res Up","Para Res Up","Sleep Res Up","Vampirism Up","Drug Knowledge Up","Assistance Up"]);
 	dt.appendChild(s.cloneNode(true));
 	tH.cells[4].appendChild(dt);
 	var ckTama_F = function (e1,e2) {
-		if (e1 === "弾" && e2 === "弾") {
+		if (e1 === "Shot" && e2 === "Shot") {
 			return function(){return true};
 		} else {
 			var wT = [,"[0-9]+","(<u>|)([0-9]+|-)(</u>|)/[0-9]+","(<u>|)[0-9]+(</u>|)/(<u>|)[0-9]+(</u>|)/[0-9]"],
 				reg1,reg2;
-			if (e1 !== "弾") reg1 = e1.length === 2 ? new RegExp(e1 + "：" + wT[1]) : new RegExp(e1.substring(0,2) + "：" + wT[e1.substring(2,3)],"i");
-			if (e2 !== "弾") reg2 = e2.length === 2 ? new RegExp(e2 + "：" + wT[1]) : new RegExp(e2.substring(0,2) + "：" + wT[e2.substring(2,3)],"i");
+			if (e1 !== "Shot") reg1 = e1.length === 5 ? new RegExp(e1 + "：" + wT[1]) : new RegExp(e1.substring(0,5) + "：" + wT[e1.substring(5,6)],"i");
+			if (e2 !== "Shot") reg2 = e2.length === 5 ? new RegExp(e2 + "：" + wT[1]) : new RegExp(e2.substring(0,5) + "：" + wT[e2.substring(5,6)],"i");
 
-			if (e1 !== "弾" && e2 !== "弾") {
+			if (e1 !== "Shot" && e2 !== "Shot") {
 				return function (cell) {return reg1.test(cell.innerHTML) && reg2.test(cell.innerHTML);};
-			} else if (e1 !== "弾") {
+			} else if (e1 !== "Shot") {
 				return function (cell) {return reg1.test(cell.innerHTML);};
 			} else {
 				return function (cell) {return reg2.test(cell.innerHTML);};
@@ -241,17 +241,18 @@ if (treeCK){ //剣士弓
 //辿異制限
 var ckTeni_F = function (e) {
 	e = "："+e;
-	return	e === "：辿異" ? function(){return true}
+	return	e === "：Zenith Skill" ? function(){return true}
 						: function (cell) {return cell.lastChild./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.indexOf(e) !== -1;};
 }
 //スロ制限
-s.title = "スロットで絞込み";
-selectSet(s,["ｽﾛ","3","2","1"]);
+s.title = "Filter by Slot";
+selectSet(s,["slot","3","2","1"]);
 tH.cells[col].removeChild(tH.cells[col].lastChild);
 tH.cells[col].appendChild(s.cloneNode(true));
-tH.cells[col].lastChild.style.marginTop = "0.2em";
+tH.cells[col].lastChild.style.marginLeft = "1.4em";
+tH.cells[col].lastChild.style.marginTop = "2.0em";
 var ckSlot_F = function (e) {
-	return e === "ｽﾛ" ? function(){return true} : function (cell) {return cell.firstChild.nodeValue >= e;};
+	return e === "slot" ? function(){return true} : function (cell) {return cell.firstChild.nodeValue >= e;};
 };
 
 /*@if (@_jscript_version >=  9)@*/
@@ -260,7 +261,7 @@ tH.cells[col].lastChild.style.right = "1.8em";
 /*@end@*/
 
 //解除
-i.value = "解除",i.title = "絞込み解除",i.style.display = "block";
+i.value = "Clear Selections",i.title = "Clear Selected Drop Downs",i.style.display = "block";
 tH.cells[col+3].appendChild(i.cloneNode(true));
 tH.cells[col+3].style.marginRight = "auto";
 
@@ -1190,7 +1191,7 @@ function (evt) {
 			N = tr.length,
 			x = [];
 		switch (t.title) {
-		case "名前順にソート":
+		case "Sort by Name":
 			marker.id = "N"+tB.id.substring(0,2);
 			var Fulltohalf = (function (){
 				var han = "0123456789.,-+ABCDEFGHIJKLMNOPQRSTUVWXYZｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｧｧｨｨｩｩｪｪｫｫｯｯｬｬｭｭｮｮｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾊﾋﾌﾍﾎﾊﾋﾌﾍﾎｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾊﾋﾌﾍﾎﾊﾋﾌﾍﾎｳ";
@@ -1208,14 +1209,14 @@ function (evt) {
 			for (var i = 0; i<N; marker.appendChild(x[i++].row));
 			tB.parentNode.replaceChild( marker,tB );
 			break;
-		case "攻撃順にソート":
+		case "Sort by Attack Value":
 			marker.id = "A"+tB.id.substring(0,2);
 			for (var i = 0; i<N; x[i] = [tr[i].cells[2].firstChild.nodeValue.split(" ")[0]], x[i].row = tr[i++]);
 			x.sort(function(a, b){return b - a});
 			for (var i = 0; i<N; marker.appendChild(x[i++].row));
 			tB.parentNode.replaceChild( marker,tB );
 			break;
-		case "属性順にソート":
+		case "Sort by Element Value":
 			marker.id = "Z"+tB.id.substring(0,2);
 			var s1 = document.getElementsByTagName("thead")[0].getElementsByTagName("select")[2].value,
 				s2 = document.getElementsByTagName("thead")[0].getElementsByTagName("select")[1].value;
@@ -1240,7 +1241,7 @@ function (evt) {
 			for (var i=0; i<N; marker.appendChild(x[i++].row));
 			tB.parentNode.replaceChild( marker,tB );
 			break;
-		case "絞込み解除":
+		case "Clear Selected Drop Downs":
 			var s = document.getElementsByTagName("thead")[0].getElementsByTagName("select");
 			for (var i = 0,m = s.length; i  <m; s[i++].selectedIndex = 0);
 			if (document.getElementById("top")) {

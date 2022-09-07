@@ -13,25 +13,26 @@ th,td {font-size:95%;}
 .l {text-align:center;background-color:silver;}
 -->
 </style>
-<title>装備検索</title>
+<title>Equipment Search</title>
 </head>
 <body>
 <form name="ls" action="" onsubmit="document.getElementById('b_search').click();return false;" style="margin-bottom:1em;">
-検索：<input type="text" value="" name="equip" id="equip" autocomplete=off style="ime-mode: active;">
-<input type="submit" name="b_search" id="b_search" value="検索">
+Search：<input type="text" value="" name="equip" id="equip" autocomplete=off style="ime-mode: active;">
+<input type="submit" name="b_search" id="b_search" value="Search">
+<small>※Case Sensitive</small> <br>
 </form>
 <table>
  <tr><td style="padding:0px; vertical-align:top;" id="tblBuki">
 		<table>
-		<th style="width:7em;">武器種類</th><th style="width:10em;">武器名</th>
+		<th style="width:7em;">Weapon Type</th><th style="width:10em;">Weapon Name</th>
 		</tr></table></td>
 	<td style="padding:0px; vertical-align:top;" id="tblBougu">
 		<table>
-		<th style="width:4em;">部位</th><th style="width:10em;">防具名</th>
+		<th style="width:4em;">Part</th><th style="width:10em;">Armor Name</th>
 		</tr></table></td>
 	<td style="padding:0px; vertical-align:top;" id="tblDec">
 		<table>
-		<th style="width:4em;">装飾品</th><th style="width:10em;">装飾名</th>
+		<th style="width:4em;">Deco</th><th style="width:10em;">Deco Name</th>
 		</tr></table></td>
  </tr>
 </table>

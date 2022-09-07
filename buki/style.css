@@ -38,24 +38,24 @@ s {color:red;text-decoration:none;} /*ƒ}ƒCƒiƒX‰ïS,à–¾—“*/
 #yumi {width:65.5em;}
 #gun {width:77.0em;}
 
-#ken #cN {width:10.5em}
-#ken #cSp {width:110px}
+#ken #cN {width:14.00em}
+#ken #cSp {width:160px}
 
-#yumi #cN {width:9.5em}
-#yumi #cTm {width:4.5em}
-#yumi #cBn {width:4.0em}
+#yumi #cN {width:15.0em}
+#yumi #cTm {width:12.6em}
+#yumi #cBn {width:10.5em}
 
-#gun #cN {width:9.3em}
-#gun #cKi {width:4.0em;text-align:center;}
-#gun #cGn {width:17.0em}
+#gun #cN {width:15.3em}
+#gun #cKi {width:7.0em;text-align:center;}
+#gun #cGn {width:24.0em}
 
-#cR {width:1.2em}
-#cAt{width:4.5em}
-#cSl {width:1.1em;text-align:center;}
-#cHr {width:1.7em;text-align:right;}
-#cZ {width:3.8em;text-align:right;}
-#cSz {width:9.3em}
-#cDc {width:13.5em;}
+#cR {width:4.5em}
+#cAt{width:11.0em}
+#cSl {width:3.0em;text-align:right;}
+#cHr {width:2.5em;text-align:right;}
+#cZ {width:7.8em;text-align:right;}
+#cSz {width:13.8em}
+#cDc {width:15.2em;}
 
 #ken td:first-child+td+td+td+td,	/*Œ•Žm‚Ì5—ñ–ÚƒXƒƒbƒg*/
 #yumi td:first-child+td+td+td+td+td,/*‹|‚Ì6—ñ–ÚƒXƒƒbƒg*/
@@ -162,7 +162,7 @@ s {color:red;text-decoration:none;} /*ƒ}ƒCƒiƒX‰ïS,à–¾—“*/
 #ken .s90 {width:90px}
 #ken .s100 {width:100px}
 /*ƒKƒ“*/
-#gun ul {margin:0;padding:0;list-style-type:none;width:17.5em}
+#gun ul {margin:0;padding:0;list-style-type:none;width:27.0em}
 #gun li {float:left;margin-right:0.2em;}
 u {color:red;text-decoration:none;} /*ƒ}ƒCƒiƒX’e*/
 i {font-style:normal;color:blue;clear:left;display:block;} /*ƒrƒ“‘¬ŽË*/

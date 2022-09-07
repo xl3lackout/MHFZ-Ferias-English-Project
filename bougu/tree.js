@@ -171,13 +171,13 @@ var sozaiHtml = function (recipe) {
 	return t.join(","); //ココだけ違う
 };
 //copyここまで
-		var BUINAME = ["頭","胴","腕","腰","脚"],
-			SEXNAME = ["","男性","女性"],
-			TYPENAME = ["","剣士","ガン"],
+		var BUINAME = ["Head","Chest","Arm","Waist","Leg"],
+			SEXNAME = ["","Male","Female"],
+			TYPENAME = ["","Blademaster","Gunner"],
 			CLASSTYPE = {"":" ",A:"ＳＰ",B:"<p>剛種防具</p>",C:"<p>天嵐防具</p>",D:"<p>覇種防具</p>",E:"<p>HC防具</p>",F:"<p>狩護防具</p>",G:"<p>Ｇ級覇種防具</p>",H:"<p>烈種防具</p>",I:"<p>G級防具</p>",J:"<p>G級狩護防具</p>",K:"<p>秘伝防具</p>",L:"<p>G級秘伝防具</p>",M:"<p>始種防具</p>",N:"<p>天廊防具</p>",O:"<p>遷悠防具</p>",P:"<p>辿異防具</p>",Q:"<p>辿異狩護防具</p>"},
-			SKILLNAME = [,"受身","運気","運搬","自動防御","ガード性能","回復","回復速度","拡散弾追加","審判","雷耐性","貫通弾強化","貫通弾追加","気絶","気まぐれ","斬れ味","食いしん坊","気配","達人","広域回復","広域解毒","攻撃","採取","散弾強化","散弾追加","睡眠","全耐性ＵＰ","千里眼","装填","耐寒","耐暑","体力","匠","種広域化","弾調合","地図","聴覚保護","調合成功率","通常弾強化","通常弾追加","釣り","------","------","------","投擲","研ぎ師","毒","特殊攻撃","肉","盗み無効","爆弾強化","はらへり","反動","火耐性","風圧","笛","防御","麻痺","水耐性","龍耐性","榴弾追加","錬金術","連射","高速収集","回避性能","底力","効果持続","スタミナ","装填数","精密射撃","モンスター","食事","剥ぎ取り","地形","脱臭","耐雪","氷耐性","耐震","広域","声帯","肉焼き","砲術師","------","------","------","笛吹き名人","------","------","------","------","とんずら","体術","強肩","------","ひらめき","受け身","------","------","------","------","絆","------","根性","------","圧力","捕獲上手","------","------","毒瓶追加","麻痺瓶追加","睡眠瓶追加","火属性攻撃","水属性攻撃","雷属性攻撃","氷属性攻撃","龍属性攻撃","断食","----","爆撃剣","強撃剣","猛毒剣","麻痺剣","睡眠剣","火炎剣","水激剣","雷神剣","氷結剣","龍王剣","溜め短縮","片手剣技","双剣技","大剣技","太刀技","鎚技","狩猟笛技","槍技","銃槍技","重銃技","軽銃技","弓技","高速設置","武器捌き","属性攻撃","気力回復","ナイフ使い","いたわり","対防御DOWN","剣術","耐状態異常","耐酔","結晶耐性","磁力耐性","警戒","救援","尻上がり","一匹狼","三界の護り","反射","代償","刀匠","速射","剛撃","鼓舞","恩寵","生命力","怒","鉄腕","ブリーダー","相討ち","一閃","逆境","射手","装着","痛撃","調合師","狩人","扇射","連撃(削除)","回避距離","溜め威力","弾丸節約術","移動速度","喝","吸血","適応撃","黒ノ命脈","薬草学","穿龍棍技","煽動","炎寵","劇物の心得","絶対防御","平常心","採集の極み","巧流","支援","穏射","属撃","闘覇","血気活性","剣神","纏雷","変撃","抜納術","爆破耐性","閃転","不退","巧撃","凍結耐性","氷界創生","贅撃","剣斧技","要塞","狙撃","雌伏","超回避","猛進","腕利き","幕無","一点突破","怪奇","空隙","手練","獅子奮迅","磁斬鎚技"],
-			TENINAME = ["なし","スキル枠拡張+1","スキル枠拡張+2","スキル枠拡張+3","スキル枠拡張+4","スキル枠拡張+5","スキル枠拡張+6","スキル枠拡張+7","閃転強化+1","閃転強化+2","巧撃強化+1","巧撃強化+2","属撃強化","纏雷強化+1","纏雷強化+2","氷界創生強化","氷界創生強化","耳栓強化+1","耳栓強化+2","耳栓強化+3","風圧強化+1","風圧強化+2","風圧強化+3","風圧強化+4","耐震強化+1","耐震強化+2","耐毒強化+1","耐毒強化+2","耐麻痺強化+1","耐麻痺強化+2","耐睡眠強化+1","耐睡眠強化+2","吸血強化+1","吸血強化+2","劇物強化","支援強化","弾丸節約術強化+1","弾丸節約術強化+2","ガード性能強化+1","ガード性能強化+2","適応撃強化+1","適応撃強化+2","鼓舞強化+1","鼓舞強化+2","反射強化+1","反射強化+2","反射強化+3","巧流強化","血気活性強化","雌伏強化","喝強化","幕無強化","猛進強化"],
-			MAKENAME = {"":"",1:"",2:"猟団",3:"カフェ",4:"課金",5:"特典","-":"",e:"イベ",es:"イベ/狩衛戦",s:"狩衛戦",t:"狩煉道",u:"迎撃戦",m:"狩人祭",c:"ﾊﾟﾛｰﾈ",g:"ガチャ",k:"キット",i:"韋駄天",p:"パッケ"},
+			SKILLNAME = [,"Passive","Fate","Backpacking","Auto-Guard","Guard","Recovery","Recovery Speed","Cluster Shot Add","Protection","Thunder Res","Pierce Shot Up","Pierce Shot Add","Stun","Whim","Sharpness","Gluttony","Stealth","Expert","広域回復","広域解毒","Attack","Gather","Pellet Shot Up","Pellet Shot Add","Sleep","All Res Up","Psychic","Reload","Cold Res","Heat Res","Health","Artisan","種広域化","Ammo Combiner","Map","Hearing Protection","Combining","Normal Shot Up","Normal Shot Add","Fish","------","------","------","Throwing","Sharpening","Poison","Status Attack","肉","Anti-Theft","Bomb Boost","Hunger","Recoil","Fire Res","Wind Pressure","笛","Defense","Paralysis","Water Res","Dragon Res","Crag Shot Add","Alchemy","Auto-Reload","Gathering Speed","Evasion","Adrenaline","Everlasting","Stamina","Loading","Precision","Monster","Eating","Carving","Terrain","Deoderant","Snowball Res","Ice Res","Quake Res","Wide-Area","Vocal Chords","Cooking","Gunnery","------","------","------","Flute Expert","------","------","------","------","Breakout","Taijutsu","Strong Arm","------","Inspiration","Passive","------","------","------","------","Bond","------","Guts","------","Pressure","Capture Proficiency","------","------","Poison Coating Add","Para Coating Add","Sleep Coating Add","Fire Attack","Water Attack","Thunder Attack","Ice Attack","Dragon Attack","Fasting","----","Bomb Sword","強撃剣","Poison Sword","Para Sword","Sleep Sword","Fire Sword","Water Sword","Thunder Sword","Ice Sword","Dragon Sword","Focus","SnS Tech","DS Tech","GS Tech","LS Tech","Hammer Tech","HH Tech","Lance Tech","GL Tech","HBG Tech","LBG Tech","Bow Tech","Speed Setup","Weapon Handling","Elemental Attack","Stamina Recovery","Knife Throwing","Caring","Def Lock","Fencing","Status Res","Sobriety","Crystal Res","Magnetic Res","Light Tread","Relief","Shiriagari","Lone Wolf","Three Worlds","Reflect","Compensation","Edgemaster","Rapid Fire","Strong Attack","Encourage","Grace","Vitality","Rage","Iron Arm","Breeder","相討ち","Issen","Survivor","Steady Hand","Mounting","Exploit Weakness","Combo Expert","Hunter","Critical Shot","連撃(削除)","Evade Distance","Charge Attack Up","Bullet Saver","Movement Speed","Reinforcement","Vampirism","Adaptation","Dark Pulse","Herbal Science","Tonfa Tech","Incitement","Blazing Grace","Drug Knowledge","Absolute Defense","Mindfulness","採集の極み","Stylish","Assistance","Gentle Shot","Dissolver","Combat Supremacy","Vigorous","Sword God","Thunder Clad","Status Assault","Drawing Arts","Blast Resistance","Crit Conversion","Determination","Stylish Assault","Freeze Res","Ice Age","Lavish Attack","Switch Axe tech","Fortification","Sniper","Obscurity","Evasion Boost","Rush","Skilled","Ceaseless","Point Breakthrough","Abnormality","Spacing","Trained","Furious","MS Tech"],
+			TENINAME = ["なし","Skill Slots Up+1","Skill Slots Up+2","Skill Slots Up+3","Skill Slots Up+4","Skill Slots Up+5","Skill Slots Up+6","Skill Slots Up+7","Crit Conversion Up+1","Crit Conversion Up+2","Stylish Assault Up+1","Stylish Assault Up+2","Dissolver Up+","Thunder Clad Up+1","Thunder Clad Up+2","Ice Age Up+","Ice Age Up+","Hearing Protection Up+1","Hearing Protection Up+2","Hearing Protection Up+3","Wind Res Up+1","Wind Res Up+2","Wind Res Up+3","Wind Res Up+4","Quake Res Up+1","Quake Res Up+2","Poison Res Up+1","Poison Res Up+2","Para Res Up+1","Para Res Up+2","Sleep Res Up+1","Sleep Res Up+2","Vampirism Up+1","Vampirism Up+2","Drug Knowledge Up+","Assistance Up+","Bullet Saver Up+1","Bullet Saver Up+2","Guard Up+1","Guard Up+2","Adaptation Up+1","Adaptation Up+2","Encourage Up+1","Encourage Up+2","Reflect Up+1","Reflect Up+2","Reflect Up+3","Stylish Up+","Vigorous Up+","Obscurity Up+","Soul Up+","Ceaseless Up+","Rush Up+"],
+			MAKENAME = {"":"",1:"",2:"Guild",3:"NetCafe",4:"課金",5:"Subscription","-":"",e:"Event",es:"Diva Battle",s:"Diva Battle",t:"Road",u:"Interception",m:"Festival",c:"ﾊﾟﾛｰﾈ",g:"Lottery",k:"Premium",i:"Prize",p:"Bundle"},
 			len = id_list[0].href.length,upglist = [[],[],[],[],[]],
 			tB=document.getElementsByTagName("tbody")[0],tBCre = document.createElement("tbody"),insHeader = document.createElement("th");
 		insHeader.style.height = "1em";
@@ -234,9 +234,9 @@ var sozaiHtml = function (recipe) {
 					ck = upglist[l][k].charAt(8);
 				}
 			}
-			if (ck) t += "（Lv" + ck + "以上）";
+			if (ck) t += "（Lv" + ck + "+）";
 			//精錬先名称
-			if (eq[I_bDEC]) t += "<a href=\"deco.htm#l" + eq[I_bDEC] + "\">→" + MST_Equip["deco"][eq[I_bDEC]].split(",")[0] + "</a>Lv7より精錬";
+			if (eq[I_bDEC]) t += "<a href=\"deco.htm#l" + eq[I_bDEC] + "\">→" + MST_Equip["deco"][eq[I_bDEC]].split(",")[0] + "</a>Lv7→Refined Gem";
 			t += "</div>";
 			t += CLASSTYPE[eq[I_bCLASS]];
 			
@@ -254,11 +254,11 @@ var sozaiHtml = function (recipe) {
 			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = eq[I_bRARE];
 			insTR.appendChild(insTD.cloneNode(true));
 			//耐性
-			insTD.innerHTML = "火:" + eq[I_bF] + "<br>"
-							+ "水:" + eq[I_bW] + "<br>"
-							+ "雷:" + eq[I_bT] + "<br>"
-							+ "氷:" + eq[I_bI] + "<br>"
-							+ "龍:" + eq[I_bD];
+			insTD.innerHTML = "Fire:" + eq[I_bF] + "<br>"
+							+ "Water:" + eq[I_bW] + "<br>"
+							+ "Thunder:" + eq[I_bT] + "<br>"
+							+ "Ice:" + eq[I_bI] + "<br>"
+							+ "Dragon:" + eq[I_bD];
 			insTR.appendChild(insTD.cloneNode(true));
 			//スキル
 			if (eq[I_bSP1]) {
@@ -307,7 +307,7 @@ var sozaiHtml = function (recipe) {
 				tzeny += zeny_data[j] + "<br>";
 				//素材
 				if (j === 0 && eq[I_bRECIPE1]) {
-					treci += "生産:"
+					treci += "Create:"
 				}
 				treci += sozaiHtml(reci_data[j]) + "<br>";
 				//強化元があるのに生産素材もある
