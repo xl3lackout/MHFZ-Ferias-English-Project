@@ -9,26 +9,26 @@ td{ white-space: nowrap; }
 tr{ vertical-align: top; }
 -->
 </style>
-<title>食事</title>
+<title>Bento</title>
 </head>
 <body>
-<table id="zk" border="1" Width="800">
+<table id="zk" border="1" Width="1000">
 <tr>
-<th style="width:310px"><select id="kisetu"><option value="5" selected>温暖期</option><option value="7">寒冷期</option><option value="9">繁殖期</option></select>
-<th style="Width:125px">検索条件</th>
-<th><select id="hpz"><option value="" selected>なし</option><option value="：+50">+50</option><option value="：+40">+40</option><option value="：+30">+30</option><option value="：+20">+20</option><option value="：+10">+10</option><option value="－">-</option><option value="：-10">-10</option><option value="：-20">-20</option><option value="：-30">-30</option><option value="：-40">-40</option><option value="：-50">-50</option></select></th>
-<th><select id="stz"><option value="" selected>なし</option><option value="：+50">+50</option><option value="：+25">+25</option><option value="－">-</option><option value="：-25">-25</option><option value="：-50">-50</option></select></th>
-<th><select id="strz"><option value="" selected>なし</option><option value="：+5">+5</option><option value="：+3">+3</option><option value="－">-</option><option value="：-3">-3</option><option value="：-5">-5</option></select></th>
-<th><select id="defz"><option value="" selected>なし</option><option value="：+20">+20</option><option value="：+10">+10</option><option value="－">-</option><option value="：-10">-10</option><option value="：-20">-20</option></select></th>
+<th style="width:310px"><select id="kisetu"><option value="5" selected>Warm Season</option><option value="7">Cold Season</option><option value="9">Breeding Season</option></select>
+<th style="Width:125px">Search Criteria</th>
+<th><select id="hpz"><option value="" selected>Health</option><option value="：+50">+50</option><option value="：+40">+40</option><option value="：+30">+30</option><option value="：+20">+20</option><option value="：+10">+10</option><option value="－">-</option><option value="：-10">-10</option><option value="：-20">-20</option><option value="：-30">-30</option><option value="：-40">-40</option><option value="：-50">-50</option></select></th>
+<th><select id="stz"><option value="" selected>Stam</option><option value="：+50">+50</option><option value="：+25">+25</option><option value="－">-</option><option value="：-25">-25</option><option value="：-50">-50</option></select></th>
+<th><select id="strz"><option value="" selected>Atk</option><option value="：+5">+5</option><option value="：+3">+3</option><option value="－">-</option><option value="：-3">-3</option><option value="：-5">-5</option></select></th>
+<th><select id="defz"><option value="" selected>Def</option><option value="：+20">+20</option><option value="：+10">+10</option><option value="－">-</option><option value="：-10">-10</option><option value="：-20">-20</option></select></th>
 </tr>
 </table>
-<table id="syoku" border="1" cellspacing="0" cellpadding="2" Width="800" style="table-layout: fixed;">
+<table id="syoku" border="1" cellspacing="0" cellpadding="2" Width="1000" style="table-layout: fixed;">
 <col span=1 width=40>
 <col span=2 width=130>
 <col span=1 width=120>
 <col span=4 width=80 align="center">
 <thead><tr style="background-color:silver;">
- <th>季節</th><th colspan="2">食材</th><th>料理名</th><th colspan="4">効果</th>
+ <th>Season</th><th colspan="2">Ingredient</th><th>Dish Name</th><th colspan="4">Effect</th>
 </tr></thead><tbody>
 </tbody></table>
 </body>
@@ -49,68 +49,68 @@ var addEvent = function (elm, type, func) {
 };
 
 var sokuzai = [
-["ジャンゴーネギ","010D",13,"ST","",5,0,5,0,5,0],
-["スライスサボテン","010E",14,"ST","",0,0,10,0,-5,0],
-["レアオニオン","010F",15,"ST","",-5,0,0,0,10,0],
-["シモフリトマト","0110",0,"ST","",-15,0,20,0,5,0],
-["オニマツタケ","0111",1,"ST","",30,0,-10,0,10,0],
-["ウォーミル麦","0112",2,"HP","",5,0,0,0,5,0],
-["ミックスビーンズ","0113",3,"HP","",5,0,-5,0,10,0],
-["頑固パン","0114",4,"HP","",0,0,5,0,10,0],
-["銀シャリ草","0115",5,"HP","",-5,0,20,0,5,0],
-["古代豆","0116",6,"HP","",-5,0,30,0,10,0],
-["ゲンコツ米","1AA9",9,"HP","",20,0,20,0,15,0],
-["ホワイトレバー","0117",7,"ATK","",-5,0,0,0,5,0],
-["ポポノタン","0118",8,"ATK","",-5,0,10,0,0,0],
-["フルベビ漬け","0119",9,"ATK","",5,0,-10,0,10,0],
-["ガブリブロース","011A",10,"ATK","",5,0,20,0,-10,0],
-["リュウノテール","011B",11,"ATK","",5,0,30,0,10,0],
-["オンプウオ","011C",12,"DEF","",0,0,5,0,-5,0],
-["サシミウオ","00EB",11,"DEF","",-5,0,0,0,10,0],
-["スネークサーモン","011D",13,"DEF","",10,0,-15,0,5,0],
-["古代魚","00FD",13,"DEF","",-10,0,20,0,5,0],
-["カジキマグロ","00FA",10,"DEF","",25,0,-10,0,10,0],
-["米虫","011E",14,"ST","HP",5,5,-5,-5,5,-5],
-["不死虫","0103",3,"ST","HP",0,5,5,5,0,0],
-["スパイスワーム","011F",15,"ST","HP",-10,-10,10,5,5,-10],
-["蜜トンボ","0120",0,"ST","HP",5,5,5,10,5,5],
-["ドスヘラクレス","0121",1,"ST","HP",10,5,-10,-10,15,10],
-["ペッパーバグ","1AA5",5,"ST","HP",5,5,0,-10,0,15],
-["クラブマンティス","1AA7",7,"ST","HP",5,10,10,10,-15,-10],
-["レッドオイル","0122",2,"ST","HP",-5,5,5,5,-5,5],
-["パワーラード","0123",3,"ST","HP",15,-5,-5,-5,5,5],
-["長寿ジャム","0124",4,"ST","HP",0,10,10,0,10,10],
-["アブラフグ","1AA6",6,"ST","HP",15,10,-5,-15,5,0],
-["ドライマーガリン","0125",5,"DEF","",5,0,-5,0,0,0],
-["猛牛バター","0126",6,"DEF","",-15,0,5,0,10,0],
-["ロイヤルチーズ","0127",7,"DEF","",5,0,10,0,15,0],
-["ホピ酒","0128",8,"ATK","",10,0,5,0,-5,0],
-["ブレスワイン","0129",9,"ATK","",5,0,-5,0,15,0],
-["黄金芋酒","012A",10,"ATK","",5,0,0,0,20,0],
-["キノコ吟醸酒","1AA8",8,"ATK","",-15,0,15,0,15,0],
-["モンスターエッグ","012B",11,"ATK","DEF",-5,10,5,5,10,5],
-["まんまる卵","1AAA",10,"ATK","DEF",10,15,10,10,-10,-15],
-["子持ちナマコ","1AAB",11,"ATK","DEF",10,10,-10,-15,10,10],
-["ブタせんべい","012C",12,"ST","ATK",-5,-5,-5,-5,-5,-5],
-["ゴールドエキス","1AAC",12,"ST","ATK",0,5,5,15,0,15],
-["プレデターハニー","1AAD",13,"ST","ATK",5,15,0,5,5,15]];
+["Green Onion","010D",13,"ST","",5,0,5,0,5,0],
+["Sliced Cactus","010E",14,"ST","",0,0,10,0,-5,0],
+["Rare Onion","010F",15,"ST","",-5,0,0,0,10,0],
+["Frost Tomato","0110",0,"ST","",-15,0,20,0,5,0],
+["Demon Mushroom","0111",1,"ST","",30,0,-10,0,10,0],
+["Wheat & Barley","0112",2,"HP","",5,0,0,0,5,0],
+["Mixed Beans","0113",3,"HP","",5,0,-5,0,10,0],
+["Stubborn Bread","0114",4,"HP","",0,0,5,0,10,0],
+["Silver Cordgrass","0115",5,"HP","",-5,0,20,0,5,0],
+["Beans","0116",6,"HP","",-5,0,30,0,10,0],
+["Fist Rice","1AA9",9,"HP","",20,0,20,0,15,0],
+["Wht Liver","0117",7,"ATK","",-5,0,0,0,5,0],
+["Popo Tongue","0118",8,"ATK","",-5,0,10,0,0,0],
+["Pickled Khezu Whlp","0119",9,"ATK","",5,0,-10,0,10,0],
+["Remobra Shank","011A",10,"ATK","",5,0,20,0,-10,0],
+["Wyvern Tail Meat","011B",11,"ATK","",5,0,30,0,10,0],
+["Fish Notes","011C",12,"DEF","",0,0,5,0,-5,0],
+["Sushifish","00EB",11,"DEF","",-5,0,0,0,10,0],
+["Snake Salmon","011D",13,"DEF","",10,0,-15,0,5,0],
+["Ancient Fish","00FD",13,"DEF","",-10,0,20,0,5,0],
+["Speartuna","00FA",10,"DEF","",25,0,-10,0,10,0],
+["Rice Weevil","011E",14,"ST","HP",5,5,-5,-5,5,-5],
+["Godbug","0103",3,"ST","HP",0,5,5,5,0,0],
+["Spice Worm","011F",15,"ST","HP",-10,-10,10,5,5,-10],
+["Honey Dragonfly","0120",0,"ST","HP",5,5,5,10,5,5],
+["Hercudrome","0121",1,"ST","HP",10,5,-10,-10,15,10],
+["Pepper Bug","1AA5",5,"ST","HP",5,5,0,-10,0,15],
+["Scythe Mantis","1AA7",7,"ST","HP",5,10,10,10,-15,-10],
+["Red Oil","0122",2,"ST","HP",-5,5,5,5,-5,5],
+["Power Lard","0123",3,"ST","HP",15,-5,-5,-5,5,5],
+["Longevity Jam","0124",4,"ST","HP",0,10,10,0,10,10],
+["Fat Blowfish","1AA6",6,"ST","HP",15,10,-5,-15,5,0],
+["Dry Margarine","0125",5,"DEF","",5,0,-5,0,0,0],
+["Maengwoo Butter","0126",6,"DEF","",-15,0,5,0,10,0],
+["Royal Cheese","0127",7,"DEF","",5,0,10,0,15,0],
+["Hopi Alcohol","0128",8,"ATK","",10,0,5,0,-5,0],
+["Brass Wine","0129",9,"ATK","",5,0,-5,0,15,0],
+["Golden Alcohol","012A",10,"ATK","",5,0,0,0,20,0],
+["Sake Mushrooms","1AA8",8,"ATK","",-15,0,15,0,15,0],
+["Monster Egg","012B",11,"ATK","DEF",-5,10,5,5,10,5],
+["Round Egg","1AAA",10,"ATK","DEF",10,15,10,10,-10,-15],
+["Whirlpool Cucumber","1AAB",11,"ATK","DEF",10,10,-10,-15,10,10],
+["Poogie Crackers","012C",12,"ST","ATK",-5,-5,-5,-5,-5,-5],
+["Gold Extract","1AAC",12,"ST","ATK",0,5,5,15,0,15],
+["Predator Honey","1AAD",13,"ST","ATK",5,15,0,5,5,15]];
 var mesi = [
-["ビックリシチュー",1],
-["ドッキリゾット",1],
-["オッタマケーキ",2],
-["ガッツチャーハン",2],
-["ランランサラダ",1],
-["ドクドクドリア",-1.5],
-["パッパラパスタ",1.5],
-["ポッコリフライ",1],
-["コロコロッケ",1],
-["グラグラタン",1.5],
-["ホクホク鍋",2],
-["ドッカンスープ",-1.5],
-["ジャンボピザ",1.5],
-["ギンギラーメン",1],
-["ヒーヒーカレー",1.5],
-["アンアンゾースイ",1]];
+["Surprise Stew",1],
+["Dokkiri Risotto",1],
+["Ottama Cake",2],
+["Guts Fried Rice",2],
+["Ran-Ran Salad",1],
+["Doku-doku Doria",-1.5],
+["Pappara Pasta",1.5],
+["Fried Pokkori",1],
+["Coro-Croquettes",1],
+["Gura-Gratin",1.5],
+["Hoku-hoku Hot Pot",2],
+["Dokkan Soup",-1.5],
+["Jumbo Pizza",1.5],
+["Gingi Ramen",1],
+["Hi-hi Curry",1.5],
+["Ananzo Suey",1]];
 
 var kisetu = document.getElementById("kisetu");
 var hpz = document.getElementById("hpz");
@@ -138,7 +138,7 @@ for (var i=0;i<sokuzaiMax;i++) {
 		mesi_p["ATK"] *= mesi[ryori_p][1];
 		mesi_p["DEF"] *= mesi[ryori_p][1];
 		
-		insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = kisetu.options[kisetu.selectedIndex].text.substring(0,2);
+		insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = kisetu.options[kisetu.selectedIndex].text.substring(0,5);
 		insTR.appendChild(insTD.cloneNode(true));
 
 		insTD.innerHTML = "<a href=\"../sozai/sozai.htm?" + sokuzai[i][1] + "\">" + sokuzai[i][0] + "</a>";
@@ -151,34 +151,34 @@ for (var i=0;i<sokuzaiMax;i++) {
 		insTR.appendChild(insTD.cloneNode(true));
 
 		if (mesi_p["HP"] > 25) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：+50";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Health：+50";
 			insTR.x="150";
 		} else if (mesi_p["HP"] > 20) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：+40";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Health：+40";
 			insTR.x="140";
 		} else if (mesi_p["HP"] > 15) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：+30";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Health：+30";
 			insTR.x="130";
 		} else if (mesi_p["HP"] > 10) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：+20";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Health：+20";
 			insTR.x="120";
 		} else if (mesi_p["HP"] > 5) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：+10";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Health：+10";
 			insTR.x="110";
 		} else if (mesi_p["HP"] < -25) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：-50";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Health：-50";
 			insTR.x="010";
 		} else if (mesi_p["HP"] < -20) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：-40";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Health：-40";
 			insTR.x="020";
 		} else if (mesi_p["HP"] < -15) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：-30";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Health：-30";
 			insTR.x="030";
 		} else if (mesi_p["HP"] < -10) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：-20";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Health：-20";
 			insTR.x="040";
 		} else if (mesi_p["HP"] < -5) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "体力：-10";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Health：-10";
 			insTR.x="050";
 		} else {
 			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "－";
@@ -188,34 +188,34 @@ for (var i=0;i<sokuzaiMax;i++) {
 		insTR.appendChild(insTD.cloneNode(true));
 
 		if (mesi_p["ST"] > 25) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：+50";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Stam：+50";
 			insTR.x+="150";
 		} else if (mesi_p["ST"] > 20) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：+50";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Stam：+50";
 			insTR.x+="150";
 		} else if (mesi_p["ST"] > 15) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：+25";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Stam：+25";
 			insTR.x+="125";
 		} else if (mesi_p["ST"] > 10) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：+25";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Stam：+25";
 			insTR.x+="125";
 		} else if (mesi_p["ST"] > 5) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：+25";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Stam：+25";
 			insTR.x+="125";
 		} else if (mesi_p["ST"] < -25) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：-50";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Stam：-50";
 			insTR.x+="025";
 		} else if (mesi_p["ST"] < -20) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：-50";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Stam：-50";
 			insTR.x+="025";
 		} else if (mesi_p["ST"] < -15) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：-25";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Stam：-25";
 			insTR.x+="050";
 		} else if (mesi_p["ST"] < -10) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：-25";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Stam：-25";
 			insTR.x+="050";
 		} else if (mesi_p["ST"] < -5) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "ｽﾀﾐﾅ：-25";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Stam：-25";
 			insTR.x+="050";
 		} else {
 			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "－";
@@ -225,34 +225,34 @@ for (var i=0;i<sokuzaiMax;i++) {
 		insTR.appendChild(insTD.cloneNode(true));
 
 		if (mesi_p["ATK"] > 25) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：+5";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Atk：+5";
 			insTR.x+="110";
 		} else if (mesi_p["ATK"] > 20) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：+5";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Atk：+5";
 			insTR.x+="110";
 		} else if (mesi_p["ATK"] > 15) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：+3";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Atk：+3";
 			insTR.x+="103";
 		} else if (mesi_p["ATK"] > 10) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：+3";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Atk：+3";
 			insTR.x+="103";
 		} else if (mesi_p["ATK"] > 5) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：+3";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Atk：+3";
 			insTR.x+="103";
 		} else if (mesi_p["ATK"] < -25) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：-5";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Atk：-5";
 			insTR.x+="003";
 		} else if (mesi_p["ATK"] < -20) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：-5";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Atk：-5";
 			insTR.x+="003";
 		} else if (mesi_p["ATK"] < -15) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：-3";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Atk：-3";
 			insTR.x+="003";
 		} else if (mesi_p["ATK"] < -10) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：-3";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Atk：-3";
 			insTR.x+="010";
 		} else if (mesi_p["ATK"] < -5) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "攻撃力：-3";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Atk：-3";
 			insTR.x+="010";
 		} else {
 			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "－";
@@ -262,34 +262,34 @@ for (var i=0;i<sokuzaiMax;i++) {
 		insTR.appendChild(insTD.cloneNode(true));
 
 		if (mesi_p["DEF"] > 25) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：+20";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Def：+20";
 			insTR.x+="120";
 		} else if (mesi_p["DEF"] > 20) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：+20";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Def：+20";
 			insTR.x+="120";
 		} else if (mesi_p["DEF"] > 15) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：+10";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Def：+10";
 			insTR.x+="110";
 		} else if (mesi_p["DEF"] > 10) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：+10";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Def：+10";
 			insTR.x+="110";
 		} else if (mesi_p["DEF"] > 5) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：+10";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Def：+10";
 			insTR.x+="110";
 		} else if (mesi_p["DEF"] < -25) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：-20";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Def：-20";
 			insTR.x+="010";
 		} else if (mesi_p["DEF"] < -20) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：-20";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Def：-20";
 			insTR.x+="010";
 		} else if (mesi_p["DEF"] < -15) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：-10";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Def：-10";
 			insTR.x+="020";
 		} else if (mesi_p["DEF"] < -10) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：-10";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Def：-10";
 			insTR.x+="020";
 		} else if (mesi_p["DEF"] < -5) {
-			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "防御力：-10";
+			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "Def：-10";
 			insTR.x+="020";
 		} else {
 			insTD./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/ = "－";
