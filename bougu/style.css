@@ -37,31 +37,31 @@ s {font-size:80%;color:red;text-decoration:none;} /*説明欄*/
 #c {width:57.0em} /*装飾品*/
 #s {width:46.0em} /*シジル*/
 
+#b ul,#c ul,#s ul {margin:0;padding:1px 0;list-style-type:none;} /*スキル*/
+#b em,#c em,#s em {font-style:normal;display:block;float:left}
+
 #head {content: url("../img/mhficons/tile076.png"); width:20px}
 #body {content: url("../img/mhficons/tile077.png"); width:20px}
 #arms {content: url("../img/mhficons/tile078.png"); width:20px}
 #waist {content: url("../img/mhficons/tile079.png"); width:20px}
 #feet {content: url("../img/mhficons/tile074.png"); width:20px}
 
-#b ul,#c ul,#s ul {margin:0;padding:1px 0;list-style-type:none;} /*スキル*/
-#b em,#c em,#s em {font-style:normal;display:block;float:left}
-
-#b col#cN {width:10em;}
-#c col#cN {width:8em;}
+#b col#cN {width:16em;}
+#c col#cN {width:13em;}
 #s col#cN {width:8em;}
-col#cTy {width:3em;}
-col#cR {width:1.2em}
-#b col#cDf {width:3.0em;text-align:right;}
-#b col#cTi {width:3.0em;}
-#c col#cSl {width:1.1em;text-align:center;}
-col#cSk {width:6.7em;text-align:right;}
-col#cSk2 {width:10em;text-align:right;}
+col#cTy {width:7em;}
+col#cR {width:4em}
+#b col#cDf {width:5.0em;text-align:right;}
+#b col#cTi {width:6.0em;}
+#c col#cSl {width:3.0em;text-align:center;}
+col#cSk {width:10.7em;text-align:right;}
+col#cSk2 {width:12em;text-align:right;}
 #s col#cSk {width:10em;text-align:right;}
 #s col#cRi {width:2.5em;}
-col#cZ {width:3.5em;text-align:right;}
-col#cHr {width:3em;text-align:right;}
-#b col#cS {width:34em;}
-#c col#cS {width:29em;}
+col#cZ {width:6.0em;text-align:right;}
+col#cHr {width:3.5em;text-align:right;}
+#b col#cS {width:48em;}
+#c col#cS {width:48em;}
 #s col#cS {width:10em;}
 #b tbody tr {height:7em}
 #c tbody tr {height:4em}
