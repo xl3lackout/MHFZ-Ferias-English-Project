@@ -12,12 +12,12 @@ body {width:65em}
 i {font-style:normal;display:block;font-size:80%;} /*期間*/
 
 /*一覧*/
-#list {width:60em}
+#list {width:70em}
 #list .h{display:none;} /*廃止*/
-#list #c1 {width:2em;}
-#list #c2 {width:13.7em;}
-#list #c3 {width:4em;}
-#list #c5n {width:3.5em;text-align:right;}
+#list #c1 {width:5em;}
+#list #c2 {width:15em;}
+#list #c3 {width:8em;}
+#list #c5n {width:4.5em;text-align:right;}
 #list #c6n {width:4em;text-align:right;}
 #list #c7n {width:3em;text-align:right;}
 #list #c8 {width:15em;}
