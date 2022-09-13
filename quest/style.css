@@ -46,16 +46,16 @@ i {font-style:normal;display:block;font-size:80%;} /*期間*/
 #lt .h {display:none;}
 
 /*明細*/
-.mei {clear:left;width:65em;}
-.mei .c1 {width:2em;}
-.mei .c2 {width:13.7em;}
-.mei .c3 {width:4em;}
-.mei .c5 {width:3.5em;}
-.mei .c6 {width:3.5em;}
-.mei .c7 {width:2.5em;}
+.mei {clear:left;width:90em;}
+.mei .c1 {width:5em;}
+.mei .c2 {width:18em;}
+.mei .c3 {width:10em;}
+.mei .c5 {width:4.5em;}
+.mei .c6 {width:4em;}
+.mei .c7 {width:3em;}
 .mei .c8 {width:15em;}
-.mei .ca {width:3em;}
-.mei .cb {width:3.5em;}
+.mei .ca {width:5em;}
+.mei .cb {width:4.5em;}
 
 .s,.S,.sa {width:9.3em;float:left;margin-right:1px;margin-bottom:1em;}
 .s th,.S th,.sa th {background-color:aquamarine;}
