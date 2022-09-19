@@ -7,8 +7,8 @@ var CK_FULL = location.pathname.indexOf("damageT") !== -1,
 	CK_OPERA = /*@if (@_jscript_version >= 9) true @else@*/ !!window.opera || /chrome/i.test(navigator.userAgent) /*@end@*/,
 	I_aNAME = 0,I_aAT = 1,I_aZOKU = 2,I_aZOKUAT = 3,I_aZYOU = 4,I_aZYOUAT = 5,I_aCRI = 6,I_aRARE = 7,I_aGR = 8,I_aSLOT = 9,I_aDEF = 10,I_aHR = 11,I_aCRE = 12,I_aCLASS = 13,I_aSINKAGR = 14,I_aDOC = 15,I_aGAUGE = 16,I_aREACH = 17,I_aKYOKUSYA = 5,I_aYA = 16,I_aBIN = 17,I_aSPEED = 4,I_aSOKUSYA = 16,I_aKICK = 17,I_aRELO = 18,I_aGUN = 19,
 	I_sREF1 = 0 ,I_sREF2 = 1, I_sZENY = 2, I_sCRE = 3, I_sREP = 4,
-	BUKITYPE = ["","斬","打","弾"],
-	ZOKUNAME = ["","火","水","雷","龍","氷","炎","光","雷極","天翔","熾凍","黒焔","奏","闇","紅魔","風","響","灼零","皇鳴"],
+	BUKITYPE = ["","Cut","Imp","Shot"],
+	ZOKUNAME = ["","Fire","Water","Thunder","Dragon","Ice","Blaze","Light","Thunder Pole","Tenshou","Okiko","Black Flame","Music","Darkness","Crimson Demon","Wind","Sound","Burning Zero","Emperors Roar"],
 	ZOKUPOINT = [	[0,0,0,0,0,0,0],/*無*/
 					[0,100,0,0,0,0],/*火*/
 					[0,0,100,0,0,0],/*水*/
@@ -29,12 +29,12 @@ var CK_FULL = location.pathname.indexOf("damageT") !== -1,
 					[0,125,0,0,0,125], /*灼零*/
 					[0,0,0,150,50,0] /*皇鳴*/
 				],
-	IZYONAME = ["","毒","麻痺","睡眠","爆破"],
-	RELOADNAME = ["装填:遅い","装填:やや遅い","装填:普通","装填:やや速い","装填:速い"],
-	KICKNAME = ["反動:最大","反動:大","反動:中","反動:やや小","反動:小"],
-	SPEEDNAME = ["弾速:遅い","弾速:やや遅い","弾速:やや速い","弾速:速い","弾速:凄く速い","弾速:凄く遅い"],
+	IZYONAME = ["","Poison","Para","Sleep","Explosive"],
+	RELOADNAME = ["Reload:Very Slow","Reload:Slow","Reload:Normal","Reload:Fast","Reload:Very Fast"],
+	KICKNAME = ["Recoil:最大","Recoil:大","Recoil:中","Recoil:やや小","Recoil:小"],
+	SPEEDNAME = ["Bullet Speed:Very Slow","Bullet Speed:Slow","Bullet Speed:Fast","Bullet Speed:Very Fast","Bullet Speed:Fastest","Bullet Speed:Slowest"],
 	ONPUCOLOR = [0,"<span class=fr>♪</span>","<span class=fy>♪</span>","<span class=fw>♪</span>","<span class=fb>♪</span>","<span class=fg>♪</span>","<span class=fp>♪</span>","<span class=fa>♪</span>"],
-	KYOKUNAME = ["放散型","集中型","爆裂型","切断型"],
+	KYOKUNAME = ["Wide","Narrow","Bomb","Slicing"],
 	MAKENAME = {"":"",1:"",2:"猟団",3:"カフェ",4:"課金",5:"特典","-":"",e:"イベ",es:"イベ/狩衛戦",ms:"狩人祭/狩衛戦",m:"狩人祭",c:"パローネ",g:"ガチャ",k:"キット",i:"韋駄天",t:"天廊",p:"パッケ",s:"狩衛戦"},
 	CLASSTYPE = {"":" ",A:"ＳＰ",B:"親方",C:"ＨＣ",D:"剛種",E:"剛猫",F:"進化",G:"天嵐",H:"覇種",I:"G覇",J:"烈種",K:"準Ｇ",L:"Ｇ級",M:"Ｇ技",N:"天廊",O:"始種",P:"遷悠",Q:"Ｇ進",R:"準技",S:"祈歌",T:"辿異",
 					SP:"A",Sinka:"FQ",HC:"C",Neko:"E",Gosyu:"DEGHIJO",Tenran:"GHIJ",GSizil:"KLMOPQRT",GClass:"KLMR",Resyu:"JO",Sisyu:"O",Tenrou:"N",Senyu:"P",Teni:"T"},
@@ -657,27 +657,27 @@ INFO[10].Bullet = {
 			"ｵｰﾗ5":{N:"ｵｰﾗ LV5",P:[12],C:"|12"},
 			"貫薙4":{N:"貫薙 LV4",P:[47],C:"|47x6"},
 			"貫薙5":{N:"貫薙 LV5",P:[47],C:"|47x6"},
-			"放散型":{N:"放散",P:18,K:3,C:"|18x7回"},
-			"集中型":{N:"集中",P:16,K:2,C:"|16x5回"},
-			"爆裂型":{N:"爆裂",P:15,K:30,C:"|15"},
-			"切断型":{N:"切断",P:12,C:"|12x7回"}
+			"Wide":{N:"放散",P:18,K:3,C:"|18x7回"},
+			"Narrow":{N:"集中",P:16,K:2,C:"|16x5回"},
+			"Bomb":{N:"爆裂",P:15,K:30,C:"|15"},
+			"Slicing":{N:"切断",P:12,C:"|12x7回"}
 			};
 INFO[10].IzyoBin = {"近接":2,
 					//ノーマル,+1,+2,+3
 					"連射":[[13,7,5,4],[14,8,5,4],[17,9,6,5],[19,10,7,6]],
 					"拡散":[[5,6,5,5],[5,6,5,5],[6,7,6,6],[7,9,7,7]],
 					"貫通":[[5,4,4,4],[5,4,4,4],[6,5,5,5],[7,6,6,6]],
-					"ｵｰ":25,"貫薙":19,"放散":2,"集中":6,"爆裂":0,"切断":2};
+					"ｵｰ":25,"貫薙":19,"Wide":2,"Narrow":6,"Bomb":0,"Slicing":2};
 INFO[10].BakuBin = {"近接":{Normal:2,TenRan:10},
 					"連射":[70,40,32,28],
 					"拡散":[26,32,22,24],
 					"貫通":[28,28,28,28],
-					"ｵｰ":37,"貫薙":0,"ｵｰ火事場":55,"放散":26,"集中":28,"爆裂":50,"爆裂追加":100,"切断":24};
+					"ｵｰ":37,"貫薙":0,"ｵｰ火事場":55,"Wide":26,"Narrow":28,"Bomb":50,"爆裂追加":100,"Slicing":24};
 INFO[10].DaBin = {"近接":0,
 					"連射":4,
 					"拡散":4,
 					"貫通":4,
-					"ｵｰ":20,"貫薙":0,"放散":4,"集中":4,"爆裂":4,"切断":4};
+					"ｵｰ":20,"貫薙":0,"Wide":4,"Narrow":4,"Bomb":4,"Slicing":4};
 var createGauge = function (w){
 	var MaxSharp = +w.substring(3,6);
 	//通常
@@ -1154,11 +1154,11 @@ case 10: //弓
 	//武器を選ぶ度に実行
 	this.cngWpSub = function(eq){
 		if (debug) var time = new Date().getTime();
-		//溜め(曲射)
+		//溜め(Arc)
 		var kyoku_name = KYOKUNAME[eq[I_aKYOKUSYA]],df = document.createDocumentFragment(),o = document.createElement("option");
 		if (eq[I_aGR] && this.c_sizilkyoku.value) kyoku_name =  KYOKUNAME[this.c_sizilkyoku.value];
 		if (eq[I_aCLASS] === CLASSTYPE.Tenrou) kyoku_name =  KYOKUNAME[this.c_tenrouYumiKyoku.value];
-		o.setAttribute("value", kyoku_name),df.appendChild(o.cloneNode(false)),df.lastChild.appendChild(document.createTextNode("曲射:" + WP_Info.Bullet[kyoku_name].N + (CK_FULL ? WP_Info.Bullet[kyoku_name].C : "")));
+		o.setAttribute("value", kyoku_name),df.appendChild(o.cloneNode(false)),df.lastChild.appendChild(document.createTextNode("Arc:" + WP_Info.Bullet[kyoku_name].N + (CK_FULL ? WP_Info.Bullet[kyoku_name].C : "")));
 		//溜め(矢)
 		var ya_G = eq[I_aYA].split(":");
 		if (eq[I_aCLASS] === CLASSTYPE.Tenrou) ya_G =  (this.c_tenrouYumiya1.value + this.c_tenrouYumiyaLv1.value + ":" + this.c_tenrouYumiya2.value + this.c_tenrouYumiyaLv2.value + ":" + this.c_tenrouYumiya3.value + this.c_tenrouYumiyaLv3.value + ":" + this.c_tenrouYumiya4.value + this.c_tenrouYumiyaLv4.value).split(":");;
@@ -1190,7 +1190,7 @@ case 10: //弓
 		if (debug) this.debug.innerText += "cngTame:\n";
 		//矢セット
 		var df = document.createDocumentFragment(),o = document.createElement("option");
-		if (this.c_tame.selectedIndex <= 1) { //近接、曲射
+		if (this.c_tame.selectedIndex <= 1) { //近接、Arc
 			df.appendChild(o.cloneNode(false)),df.lastChild.appendChild(document.createTextNode("-----"));
 		} else {
 			for (var i = 0,w = WP_Info.Bullet[this.c_tame.value].P,max = w.length; i < max ; i++) {
@@ -1767,7 +1767,7 @@ case 10: //弓
 	} else if (this.s_wp.value) {
 		WP_Info.Type = 3;
 		if (this.c_tame.selectedIndex === 1) {
-			//曲射
+			//Arc
 			WP_Motion = [(function (e){var F = function(){};F.prototype = e;return new F;})(WP_Info.Bullet[this.c_tame.value])];
 			WP_Motion[0].C = WP_Motion[0].C.substring(3);	//余計なのが入るので消し
 			WP_Motion[0].ZH = 70;	//曲射は属性0.7倍
@@ -2157,7 +2157,7 @@ if (eq[I_aCLASS] === CLASSTYPE.Neko) {
 	this.g_Neko.style.display = this.g_tenrou.style.display = "none";
 	this.g_sizil.style.display = "";
 } else {
-	this.d_bukibetu.firstChild.nodeValue = "個別";
+	this.d_bukibetu.firstChild.nodeValue = "Personal";
 	this.g_tenrou.style.display = this.g_sizil.style.display = this.g_Neko.style.display = "none";
 }
 //表示
@@ -2166,7 +2166,7 @@ var t = "";
 if (WP_Rui === 1 || WP_Rui === 5){
 	t = this.wp_Gclass || eq[I_aCLASS] === CLASSTYPE.Tenrou || eq[I_aGR] && eq[I_aCLASS] === CLASSTYPE.Senyu || this.wp_sinka || eq[I_aCLASS] === CLASSTYPE.Teni ? "" : "LV5強化";
 } else if (WP_Rui === 10){
-	t = KYOKUNAME[eq[I_aKYOKUSYA]]; //曲射
+	t = KYOKUNAME[eq[I_aKYOKUSYA]]; //Arc
 	if (eq[I_aZOKUAT]) t += (t ? "<br>" : "") + ZOKUNAME[eq[I_aZOKU]] + "：" + eq[I_aZOKUAT] + "0"; //属性
 } else {
 	if (eq[I_aZOKUAT]) t = ZOKUNAME[eq[I_aZOKU]] + "：" + eq[I_aZOKUAT] + "0"; //属性
@@ -2339,7 +2339,7 @@ this.d_att.firstChild.nodeValue = eqSinka[0] * WP_Info.Ritu / 10|0;
 if (WP_Rui === 1 || WP_Rui === 5){
 	t = this.wp_Gclass || eq[I_aCLASS] === CLASSTYPE.Tenrou || eq[I_aCLASS] === CLASSTYPE.Senyu || this.wp_sinka || eq[I_aCLASS] === CLASSTYPE.Teni ? "" : "LV5強化";
 } else if (WP_Rui === 10){
-	t = KYOKUNAME[eq[I_aKYOKUSYA]]; //曲射
+	t = KYOKUNAME[eq[I_aKYOKUSYA]]; //Arc
 	if (eq[I_aZOKUAT]) t += (t ? "<br>" : "") + ZOKUNAME[eq[I_aZOKU]] + "：" + eqSinka[1] + "0"; //属性
 } else {
 	if (eq[I_aZOKUAT]) t = ZOKUNAME[eq[I_aZOKU]] + "：" + eqSinka[1] + "0"; //属性
@@ -2390,7 +2390,7 @@ case 5: //ライトボウガン
 	} else {
 		eq[I_aSPEED] = 4;
 	}
-	//装填,反動,弾速
+	//Reload,Recoil,Bullet Speed
 	this.d_spec.innerHTML = RELOADNAME[eq[I_aRELO]] + " " + KICKNAME[eq[I_aKICK]] + " " + SPEEDNAME[eq[I_aSPEED]];
 	if (eq[I_aSOKUSYA] && WP_Rui === 5) {
 		this.d_spec.innerHTML += (this.wp_gousyu ? "<br>超速射:" : "<br>速射:") + eq[I_aSOKUSYA];
@@ -2415,7 +2415,7 @@ var t = "";
 if (WP_Rui === 1 || WP_Rui === 5){
 	t = this.wp_Gclass || eq[I_aCLASS] === CLASSTYPE.Tenrou || eq[I_aCLASS] === CLASSTYPE.Senyu ? "" : "LV5強化";
 } else if (WP_Rui === 10){
-	t = KYOKUNAME[eq[I_aKYOKUSYA]]; //曲射
+	t = KYOKUNAME[eq[I_aKYOKUSYA]]; //Arc
 	if (eq[I_aZOKUAT]) t += (t ? "<br>" : "") + ZOKUNAME[eq[I_aZOKU]] + "：" + eq[I_aZOKUAT] + "0"; //属性
 } else {
 	if (eq[I_aZOKUAT]) t = ZOKUNAME[eq[I_aZOKU]] + "：" + eqG[1] + "0"; //属性
@@ -2468,7 +2468,7 @@ if (WP_Rui === 1 || WP_Rui === 5){
 	t = this.wp_Gclass || eq[I_aCLASS] === CLASSTYPE.Tenrou || eq[I_aCLASS] === CLASSTYPE.Senyu ? "" : "LV5強化";
 } else if (WP_Rui === 10){
 	if (this.c_tenrouZoku.value-0) t = ZOKUNAME[this.c_tenrouZoku.value] + "：" + this.c_tenrouZokuAtt.value + "0"; //属性
-	t += "<br>" + KYOKUNAME[this.c_tenrouYumiKyoku.value]; //曲射
+	t += "<br>" + KYOKUNAME[this.c_tenrouYumiKyoku.value]; //Arc
 } else {
 	if (this.c_tenrouZoku.value-0) t = ZOKUNAME[this.c_tenrouZoku.value] + "：" + this.c_tenrouZokuAtt.value + "0"; //属性
 }
@@ -3666,10 +3666,10 @@ do {
 } while (sozai_pool);
 }
 this.sub_WinBody.innerHTML = "<table border=1 cellspacing=0 cellpadding=2>" +
-						"<tr><td>名称</td><td>" + this.s_wp.options[this.s_wp.selectedIndex].text + "</td></tr>" +
-						"<tr><td>費用</td>" + tzeny + "</tr>" +
-						"<tr class=rep><td class=rep_n>強化</td>" + tupg +"</tr>" +
-						"<tr class=sozai><td>素材</td>" + tsozai + "</tr>";
+						"<tr><td>Name</td><td>" + this.s_wp.options[this.s_wp.selectedIndex].text + "</td></tr>" +
+						"<tr><td>Cost</td>" + tzeny + "</tr>" +
+						"<tr class=rep><td class=rep_n>Upgd</td>" + tupg +"</tr>" +
+						"<tr class=sozai><td>Mats</td>" + tsozai + "</tr>";
 						"</table>";
 
 this.sub_Win.style.display = "block";
