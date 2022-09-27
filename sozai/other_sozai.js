@@ -299,7 +299,7 @@ Cyougo : {
 ,"1B60":"7Completed the event 「Successive Interception Battle」 and get 1~6 Tickets"
 ,"1B49":"04|1B481 Pieces=1 Pieces0z,04|381E1 Pieces=1 Pieces0z,7Obtained by purchasing a G-enhancement ticket set."
 ,"1B81":"7ＧCommemorative promotion! A gift for all sigils with a special recipe! and get 10 Tickets(2013/05/01~2014/04/30),7for Hunter Navi GR ⑪ 10 Tickets,7Hunter Navi Sigils ①②③10 Tickets"
-,"0AA7":"62211 Pieces,7G9.1ま and SR Equip and Acquired by completing quests such as hunting, and capturing large monsters other than HC"
+,"0AA7":"62211 Pieces,7G9.1ま and SR Equip and Acquired by completing quests such as hunting,7 and capturing large monsters other than HC"
 ,"1507":"7Series Quest Reception：|15089 Pieces and get 25 Pieces と交換"
 ,"065E":"7Hunter Life 60 Days Registration Campaign and get 5 Tickets(2009/02/27~2009/03/19)<br>HL stamp８x and get 5 Tickets"
 ,"0A02":"78.0Package Purchase Benefits and get 1 Tickets<br>Purchase text kit and get 1 Tickets"
