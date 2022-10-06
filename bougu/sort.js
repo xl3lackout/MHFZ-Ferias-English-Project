@@ -111,15 +111,15 @@ s.style.display = "block",s.title = "Sort by Skill";
 if (location.pathname.indexOf("deconk") !== -1) {
 	selectSetGroup(s,[
 	["Skill",["Selection"]],
-	["攻撃系",["攻撃","会心","度胸","火属性強化","水属性強化","雷属性強化","氷属性強化","龍属性強化","剣術","心眼術","貫通投擲","特大投擲","麻痺攻撃","睡眠攻撃","毒攻撃","特殊攻撃"]],
-	["防御系",["防御","反射神経","反射術"]],
-	["体力・スタミナ系",["体力"]],
-	["状態異常系",["毒","麻痺","睡眠","気絶"]],
-	["耐性系",["全耐性","火耐性","水耐性","雷耐性","氷耐性","龍耐性"]],
-	["保護系",["防音","耐震","風圧","胆力"]],
-	["アイテム・調合系",["鬼人笛術","回復笛術","硬化笛術","痺罠術"]],
-	["報酬系",["運"]],
-	["その他系",["復帰力","発奮術","激励術","絆術","移動速度"]]
+	["Attack Skills",["Attack","Affinity","Guts","Fire Element Up","Water Element Up","Thunder Element Up","Ice Element Up","Dragon Element Up","Fencing","Mind's Eye","Piercing Throw","Jumbo Throw","Paralysis Attack","Sleep Attack","Poison Attack","Status Attack"]],
+	["Defense Skills",["Defense","Reflex","Reflect"]],
+	["Health & Stam",["Health"]],
+	["Status",["Poison","Paralysis","Sleep","Stun"]],
+	["Res Skills",["All Res","Fire Res","Water Res","Thunder Res","Ice Res","Dragon Res"]],
+	["Protect Skills",["Soundproof","Quake Res","Wind Pressure","Courage"]],
+	["Item & Combo",["Demon Flute","Health Flute","Armour Flute","Shock Trap"]],
+	["Rewards Skills",["Luck"]],
+	["Other Skills",["Resilience","Excitement","Encouragement","Bonding","Movement Speed"]]
 	]);
 } else if (location.pathname.indexOf("decotk") !== -1 || location.pathname.indexOf("decotf") !== -1) {
 	selectSet(s,["Selection"]);
