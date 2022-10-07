@@ -21,311 +21,312 @@ ul.ttop {margin:0;padding:1px 0;width:60em;list-style-type:none;}
 ul.ttop li {font-size:100%;float:left;padding:2px 5px 2px 5px;border:1px solid silver;}
 -->
 </style>
-<title>モンスターへの攻撃　【ボウガン編】</title>
+<title>Attacking Monsters　【Bowgun】</title>
 </head>
 <body>
 <ul class=ttop>
-<li>モンスターへの攻撃　<a href="doc-sword.htm">【近接武器編】</a>
-／<a href="doc-gun.htm">【ボウガン編】</a>
-／<a href="doc-yumi.htm">【弓編】</a>
-<li><a href="doc-spec.htm">武器性能</a>
-<li><a href="doc-kensyo.htm">剣晶スキル</a>
-<li><a href="doc-buki.htm">武器の種類</a>
-<li><a href="doc-bougu.htm">防具の種類</a>
-<li><a href="doc-feature.htm">フィーチャー</a>
+<li>Attacking Monsters　<a href="doc-sword.htm">【Melee Weapons】</a>
+／<a href="doc-gun.htm">【Bowgun】</a>
+／<a href="doc-yumi.htm">【Bow】</a>
+<li><a href="doc-spec.htm">Weapon Performance</a>
+<li><a href="doc-kensyo.htm">Sword Crystal Skills</a>
+<li><a href="doc-buki.htm">Weapons</a>
+<li><a href="doc-bougu.htm">Armor Types</a>
+<li><a href="doc-feature.htm">Active Feature</a>
 </ul>
 <hr style="clear:both">
-<h3>モンスターへの攻撃　【ボウガン編】</h3>
+<h3>Attacking Monsters　【Bowgun】</h3>
 
-<h4>●　武器倍率</h4>
+<h4>●　Weapon Multiplier</h4>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku id>
-<tr><th>武器の種類</th><th>倍率</th></tr>
-<tr><td>大剣/太刀</td><td class=c>4.8</td></tr>
-<tr><td>片手剣/双剣</td><td class=c>1.4</td></tr>
-<tr><td>ハンマー/狩猟笛</td><td class=c>5.2</td></tr>
-<tr><td>ランス/ガンランス</td><td class=c>2.3</td></tr>
-<tr><td>ボウガン/弓</td><td class=c>1.2</td></tr>
+<tr><th>Weapons</th><th>Multiplier</th></tr>
+<tr><td>GS/LS</td><td class=c>4.8</td></tr>
+<tr><td>SnS/DS</td><td class=c>1.4</td></tr>
+<tr><td>Hamer/Hunting Horn</td><td class=c>5.2</td></tr>
+<tr><td>Lance/Gunlance</td><td class=c>2.3</td></tr>
+<tr><td>Bowgun/Bow</td><td class=c>1.2</td></tr>
 </table>
-<p>武器倍率は、武器が本来持っている強さを表す数値で、攻撃によるモンスターへのダメージ計算の元になります。
-<br>ステータスに表示されている攻撃力は、この武器倍率に一定の倍率を掛けたものが表示されています。
-<br>各武器の倍率は左表のとおりです。
-<br><small>※ステータスに表示されている攻撃力を左記の倍率で割ることで、武器倍率を求めることができます</small>
+<p>The weapon multiplier is a number that represents the inherent strength of the weapon and is the basis for calculating the damage to the monster from attacks.
+<br>The attack power shown in the status is this weapon multiplier multiplied by a certain factor.
+<br>The multipliers for each weapon are shown in the table to the left.
+<br><small>※The weapon multiplier can be obtained by dividing the attack power shown in the status by the multiplier shown on the left</small>
 <br>
-<br>食事効果やアイテム使用等による攻撃力アップは、全てこの武器倍率に一定値が加算されます。
-<br>従って、ステータス上では、武器の種類によって攻撃力のアップ量が異なります。
+<br>Any increase in attack power due to food effects, item use, etc. will be added to this weapon multiplier by a fixed value.
+<br>Thus, in terms of status, the amount of increase in attack power depends on the type of weapon.
 </p>
-<p style="clear:both" class=ex>例：グレネードボウガン（武器倍率：90）の場合は　90×1.2＝108 が攻撃力となる　108÷1.2＝90
+<p style="clear:both" class=ex>Ex：Grenade Launcher（Weapon Multiplier：90）　90×1.2＝108 is the attack power　108÷1.2＝90
 </p>
-<h4>●　弾の威力</h4>
+<h4>●　Shot Power</h4>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th colspan=8>通常</th><th colspan=4 class=l>ヘビィ[圧縮リロード]</th><th colspan=4 class=l>ヘビィ[パーフェクト圧縮リロード]</th></tr>
-<tr><th>弾名</th><th>威力</th><th>属性</th><th>ヒット数</th><th>所持数</th><th>リロード値</th><th>反動値</th><th>補足</th><th class=l>威力</th><th>属性</th><th>気絶</th><th>着弾</th><th class=l>威力</th><th>属性</th><th>気絶</th><th>着弾</th></tr>
-<tr><td>LV1 通常弾</td><td class=c>6</td><td><br></td><td class=c>1</td><td class=c>∞</td><td class=c>5</td><td class=c>8</td><td><br></td><td class="c l">1.9</td><td><br></td><td class=c>0.3</td><td class=c>5</td><td class="c l">3.1</td><td><br></td><td class=c>0.3</td><td class=c>10</td></tr>
-<tr><td>LV2 通常弾</td><td class=c>12</td><td><br></td><td class=c>1</td><td class=c>99</td><td class=c>6</td><td class=c>9</td><td><br></td><td class="c l">4.8</td><td><br></td><td class=c>0.5</td><td class=c>20</td><td class="c l">7.3</td><td><br></td><td class=c>0.5</td><td class=c>20</td></tr>
-<tr><td>LV3 通常弾</td><td class=c>12</td><td><br></td><td class=c>跳弾</td><td class=c>99</td><td class=c>7</td><td class=c>10</td><td><br></td><td class="c l">4.8</td><td><br></td><td class=c>0.7</td><td class=c>10</td><td class="c l">7.2</td><td><br></td><td class=c>0.7</td><td class=c>10</td></tr>
-<tr><td>LV1 貫通弾</td><td class=c>10</td><td><br></td><td class=c>3</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">5</td><td><br></td><td class=c>0.7</td><td class=c>20</td><td class="c l">7</td><td><br></td><td class=c>0.7</td><td class=c>20</td></tr>
-<tr><td>LV2 貫通弾</td><td class=c>9</td><td><br></td><td class=c>4</td><td class=c>50</td><td class=c>7</td><td class=c>10</td><td><br></td><td class="c l">4.5</td><td><br></td><td class=c>0.7</td><td class=c>20</td><td class="c l">6.2</td><td><br></td><td class=c>0.7</td><td class=c>20</td></tr>
-<tr><td>LV3 貫通弾</td><td class=c>7</td><td><br></td><td class=c>6</td><td class=c>40</td><td class=c>8</td><td class=c>11</td><td><br></td><td class="c l">3.5</td><td><br></td><td class=c>1.4</td><td class=c>20</td><td class="c l">4.9</td><td><br></td><td class=c>1.4</td><td class=c>20</td></tr>
-<tr><td>LV1 散弾</td><td class=c>5</td><td>水属性：5</td><td class=c>3</td><td class=c>60</td><td class=c>5</td><td class=c>10</td><td><br></td><td class="c l">3</td><td>水属性：2.5</td><td class=c>0.6</td><td class=c>5</td><td class="c l">4</td><td>水属性：3.5</td><td class=c>0.6</td><td class=c>5</td></tr>
-<tr><td>LV2 散弾</td><td class=c>5</td><td>水属性：4</td><td class=c>4</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">3</td><td>水属性：2</td><td class=c>0.6</td><td class=c>5</td><td class="c l">4</td><td>水属性：2.5</td><td class=c>0.6</td><td class=c>5</td></tr>
-<tr><td>LV3 散弾</td><td class=c>5</td><td>水属性：4</td><td class=c>5</td><td class=c>60</td><td class=c>7</td><td class=c>11</td><td><br></td><td class="c l">3</td><td>水属性：2</td><td class=c>0.6</td><td class=c>5</td><td class="c l">4</td><td>水属性：2.5</td><td class=c>0.6</td><td class=c>5</td></tr>
-<tr><td>LV1 徹甲榴弾</td><td class=c>3</td><td>着弾後<br>爆発：30火属性：40</td><td class=c>1</td><td class=c>9</td><td class=c>7</td><td class=c>11</td><td rowspan=3>ライトは<br>気絶値： 5<br>ヘヴィは<br>気絶値：10</td><td class="c l">2</td><td>着弾後<br>爆発：24火属性：20</td><td class=c>2.5</td><td class=c>20</td><td class="c l">2</td><td>着弾後<br>爆発：30火属性：20</td><td class=c>2.5</td><td class=c>20</td></tr>
-<tr><td>LV2 徹甲榴弾</td><td class=c>3</td><td>着弾後<br>爆発：40火属性：60</td><td class=c>1</td><td class=c>9</td><td class=c>8</td><td class=c>12</td><td class="c l">2</td><td>着弾後<br>爆発：32火属性：30</td><td class=c>2.5</td><td class=c>20</td><td class="c l">2</td><td>着弾後<br>爆発：40火属性：30</td><td class=c>2.5</td><td class=c>20</td></tr>
-<tr><td>LV3 徹甲榴弾</td><td class=c>3</td><td>着弾後<br>爆発：50火属性：80</td><td class=c>1</td><td class=c>9</td><td class=c>9</td><td class=c>13</td><td class="c l">2</td><td>着弾後<br>爆発：40火属性：40</td><td class=c>2.5</td><td class=c>20</td><td class="c l">2</td><td>着弾後<br>爆発：50火属性：40</td><td class=c>2.5</td><td class=c>20</td></tr>
-<tr><td>LV1 拡散弾</td><td class=c>6</td><td>着弾後<br>爆発：32火属性：2×3</td><td class=c>1</td><td class=c>3</td><td class=c>8</td><td class=c>13</td><td><br></td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>LV2 拡散弾</td><td class=c>6</td><td>着弾後<br>爆発：32火属性：2×4</td><td class=c>1</td><td class=c>3</td><td class=c>9</td><td class=c>14</td><td><br></td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>LV3 拡散弾</td><td class=c>6</td><td>着弾後<br>爆発：32火属性：2×5</td><td class=c>1</td><td class=c>3</td><td class=c>10</td><td class=c>14</td><td><br></td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>火炎弾</td><td class=c>1</td><td>火属性<br>ライト：武器倍率×0.4<br>ヘビィ：武器倍率×0.5</td><td class=c>1</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">0.5</td><td>武器倍率×0.3</td><td class=c>2</td><td class=c>20</td><td class="c l">0.8</td><td>武器倍率×0.4</td><td class=c>2</td><td class=c>20</td></tr>
-<tr><td>水冷弾</td><td class=c>1</td><td>水属性<br>ライト：武器倍率×0.2<br>ヘビィ：武器倍率×0.25</td><td class=c>3</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">0.5</td><td>武器倍率×0.15</td><td class=c>1.7</td><td class=c>20</td><td class="c l">0.8</td><td>武器倍率×0.2</td><td class=c>1.7</td><td class=c>20</td></tr>
-<tr><td>電撃弾</td><td class=c>1</td><td>雷属性<br>ライト：武器倍率×0.2<br>ヘビィ：武器倍率×0.27</td><td class=c>3</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">0.5</td><td>武器倍率×0.17</td><td class=c>1.7</td><td class=c>20</td><td class="c l">0.8</td><td>武器倍率×0.215</td><td class=c>1.7</td><td class=c>20</td></tr>
-<tr><td>氷結弾</td><td class=c>1</td><td>氷属性<br>ライト：武器倍率×0.2<br>ヘビィ：武器倍率×0.25</td><td class=c>3</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">0.5</td><td>武器倍率×0.15</td><td class=c>1.7</td><td class=c>20</td><td class="c l">0.8</td><td>武器倍率×0.2</td><td class=c>1.7</td><td class=c>20</td></tr>
-<tr><td>滅龍弾</td><td class=c>1</td><td>龍属性<br>ライト：75<br>ヘビィ：90</td><td class=c>6</td><td class=c>20</td><td class=c>9</td><td class=c>13</td><td><br></td><td class="c l">0.5</td><td>72</td><td class=c>10</td><td class=c>20</td><td class="c l">0.5</td><td>90</td><td class=c>10</td><td class=c>20</td></tr>
-<tr><td>LV1 回復弾</td><td class=c>0</td><td><br></td><td class=c>-</td><td class=c>12</td><td class=c>7</td><td class=c>11</td><td>回復量：30</td><td class="c l">0</td><td><br></td><td class=c>-</td><td class=c>-</td><td class="c l">0</td><td><br></td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>LV2 回復弾</td><td class=c>0</td><td><br></td><td class=c>-</td><td class=c>12</td><td class=c>9</td><td class=c>13</td><td>回復量：50</td><td class="c l">0</td><td><br></td><td class=c>-</td><td class=c>-</td><td class="c l">0</td><td><br></td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>LV1 毒弾</td><td class=c>10</td><td>毒蓄積量：25</td><td class=c>1</td><td class=c>12</td><td class=c>7</td><td class=c>11</td><td><br></td><td class="c l">6</td><td>毒蓄積量：20</td><td class=c>2.5</td><td class=c>-</td><td class="c l">8</td><td>毒蓄積量：25</td><td class=c>2.5</td><td class=c>-</td></tr>
-<tr><td>LV2 毒弾</td><td class=c>15</td><td>毒蓄積量：50</td><td class=c>1</td><td class=c>8</td><td class=c>9</td><td class=c>13</td><td><br></td><td class="c l">9</td><td>毒蓄積量：40</td><td class=c>2.5</td><td class=c>-</td><td class="c l">11</td><td>毒蓄積量：50</td><td class=c>2.5</td><td class=c>-</td></tr>
-<tr><td>LV1 麻痺弾</td><td class=c>10</td><td>麻痺蓄積量：25</td><td class=c>1</td><td class=c>12</td><td class=c>7</td><td class=c>11</td><td><br></td><td class="c l">6</td><td>麻痺蓄積量：20</td><td class=c>2.5</td><td class=c>-</td><td class="c l">8</td><td>麻痺蓄積量：25</td><td class=c>2.5</td><td class=c>-</td></tr>
-<tr><td>LV2 麻痺弾</td><td class=c>15</td><td>麻痺蓄積量：50</td><td class=c>1</td><td class=c>8</td><td class=c>9</td><td class=c>13</td><td><br></td><td class="c l">9</td><td>麻痺蓄積量：40</td><td class=c>2.5</td><td class=c>-</td><td class="c l">11</td><td>麻痺蓄積量：50</td><td class=c>2.5</td><td class=c>-</td></tr>
-<tr><td>LV1 睡眠弾</td><td class=c>0</td><td>睡眠蓄積量：25</td><td class=c>1</td><td class=c>12</td><td class=c>7</td><td class=c>11</td><td><br></td><td class="c l">0</td><td>睡眠蓄積量：20</td><td class=c>2.5</td><td class=c>-</td><td class="c l">0</td><td>睡眠蓄積量：25</td><td class=c>2.5</td><td class=c>-</td></tr>
-<tr><td>LV2 睡眠弾</td><td class=c>0</td><td>睡眠蓄積量：50</td><td class=c>1</td><td class=c>8</td><td class=c>9</td><td class=c>13</td><td><br></td><td class="c l">0</td><td>睡眠蓄積量：40</td><td class=c>2.5</td><td class=c>-</td><td class="c l">0</td><td>睡眠蓄積量：50</td><td class=c>2.5</td><td class=c>-</td></tr>
-<tr><td>捕獲用麻酔弾</td><td class=c>0</td><td>麻酔蓄積量：80</td><td class=c>1</td><td class=c>8</td><td class=c>8</td><td class=c>11</td><td><br></td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>ペイント弾</td><td class=c>0</td><td><br></td><td class=c>1</td><td class=c>99</td><td class=c>7</td><td class=c>11</td><td>ペイント効果</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>鬼人弾</td><td class=c>0</td><td><br></td><td class=c>-</td><td class=c>5</td><td class=c>7</td><td class=c>11</td><td>武器倍率＋3</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>硬化弾</td><td class=c>0</td><td><br></td><td class=c>-</td><td class=c>5</td><td class=c>7</td><td class=c>11</td><td>防御力＋6</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>排熱弾</td><td class=c>-</td><td>固定22＋火10</td><td class=c>-</td><td class=c>∞</td><td class=c>10</td><td class=c>15</td><td>装填速度<br>反動軽減<br>は無効</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>強酸弾</td><td class=c>1</td><td><br></td><td class=c>1</td><td class=c>5</td><td class=c>12</td><td class=c>15</td><td>斬打弾-10</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>氷酸弾</td><td class=c>1</td><td><br></td><td class=c>1</td><td class=c>5</td><td class=c>12</td><td class=c>15</td><td>氷-10</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>龍酸弾</td><td class=c>1</td><td><br></td><td class=c>1</td><td class=c>5</td><td class=c>12</td><td class=c>15</td><td>龍-10</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>爆撃弾[初期]</td><td class=c>0</td><td>固定(30＋LV/2)+<br>(15+LV/4)×15</td><td class=c>-</td><td class=c>5</td><td class=c>12</td><td class=c>30</td><td>1秒1ヒット</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>爆撃弾[派生後]</td><td class=c>0</td><td>固定(36＋LV/2)+<br>(18+LV/4)×15</td><td class=c>-</td><td class=c>5</td><td class=c>12</td><td class=c>30</td><td>1秒1ヒット</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>龍爆撃弾</td><td class=c>0</td><td>固定20龍(60+LV)+<br>龍(120+LV/4)×15</td><td class=c>-</td><td class=c>5</td><td class=c>12</td><td class=c>30</td><td>〃</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><th colspan=8>Normal</th><th colspan=4 class=l>Heavy[Compressed Reload]</th><th colspan=4 class=l>Heavy[Perfect Compression Reload]</th></tr>
+<tr><th>Bullet Name</th><th>Power</th><th>Attribute</th><th>Hits</th><th>No. Held</th><th>Reload Value</th><th>Recoil Value</th><th>Info</th><th class=l>Power</th><th>Attribute</th><th>Stun</th><th>Impact</th><th class=l>Power</th><th>Attribute</th><th>Stun</th><th>Impact</th></tr>
+<tr><td>LV1 Norm S</td><td class=c>6</td><td><br></td><td class=c>1</td><td class=c>∞</td><td class=c>5</td><td class=c>8</td><td><br></td><td class="c l">1.9</td><td><br></td><td class=c>0.3</td><td class=c>5</td><td class="c l">3.1</td><td><br></td><td class=c>0.3</td><td class=c>10</td></tr>
+<tr><td>LV2 Norm S</td><td class=c>12</td><td><br></td><td class=c>1</td><td class=c>99</td><td class=c>6</td><td class=c>9</td><td><br></td><td class="c l">4.8</td><td><br></td><td class=c>0.5</td><td class=c>20</td><td class="c l">7.3</td><td><br></td><td class=c>0.5</td><td class=c>20</td></tr>
+<tr><td>LV3 Norm S</td><td class=c>12</td><td><br></td><td class=c>ricochet</td><td class=c>99</td><td class=c>7</td><td class=c>10</td><td><br></td><td class="c l">4.8</td><td><br></td><td class=c>0.7</td><td class=c>10</td><td class="c l">7.2</td><td><br></td><td class=c>0.7</td><td class=c>10</td></tr>
+<tr><td>LV1 Pierc S</td><td class=c>10</td><td><br></td><td class=c>3</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">5</td><td><br></td><td class=c>0.7</td><td class=c>20</td><td class="c l">7</td><td><br></td><td class=c>0.7</td><td class=c>20</td></tr>
+<tr><td>LV2 Pierc S</td><td class=c>9</td><td><br></td><td class=c>4</td><td class=c>50</td><td class=c>7</td><td class=c>10</td><td><br></td><td class="c l">4.5</td><td><br></td><td class=c>0.7</td><td class=c>20</td><td class="c l">6.2</td><td><br></td><td class=c>0.7</td><td class=c>20</td></tr>
+<tr><td>LV3 Pierc S</td><td class=c>7</td><td><br></td><td class=c>6</td><td class=c>40</td><td class=c>8</td><td class=c>11</td><td><br></td><td class="c l">3.5</td><td><br></td><td class=c>1.4</td><td class=c>20</td><td class="c l">4.9</td><td><br></td><td class=c>1.4</td><td class=c>20</td></tr>
+<tr><td>LV1 Pelet S</td><td class=c>5</td><td>Water Properties：5</td><td class=c>3</td><td class=c>60</td><td class=c>5</td><td class=c>10</td><td><br></td><td class="c l">3</td><td>Water Properties：2.5</td><td class=c>0.6</td><td class=c>5</td><td class="c l">4</td><td>Water Properties：3.5</td><td class=c>0.6</td><td class=c>5</td></tr>
+<tr><td>LV2 Pelet S</td><td class=c>5</td><td>Water Properties：4</td><td class=c>4</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">3</td><td>Water Properties：2</td><td class=c>0.6</td><td class=c>5</td><td class="c l">4</td><td>Water Properties：2.5</td><td class=c>0.6</td><td class=c>5</td></tr>
+<tr><td>LV3 Pelet S</td><td class=c>5</td><td>Water Properties：4</td><td class=c>5</td><td class=c>60</td><td class=c>7</td><td class=c>11</td><td><br></td><td class="c l">3</td><td>Water Properties：2</td><td class=c>0.6</td><td class=c>5</td><td class="c l">4</td><td>Water Properties：2.5</td><td class=c>0.6</td><td class=c>5</td></tr>
+<tr><td>LV1 Crag S</td><td class=c>3</td><td>After Impact<br>Explosion：30 Fire：40</td><td class=c>1</td><td class=c>9</td><td class=c>7</td><td class=c>11</td><td rowspan=3>Light<br>Stun： 5<br>Heavy<br>Stun：10</td><td class="c l">2</td><td>After Impact<br>Explosion：24 Fire：20</td><td class=c>2.5</td><td class=c>20</td><td class="c l">2</td><td>After Impact<br>Explosion：30 Fire：20</td><td class=c>2.5</td><td class=c>20</td></tr>
+<tr><td>LV2 Crag S</td><td class=c>3</td><td>After Impact<br>Explosion：40 Fire：60</td><td class=c>1</td><td class=c>9</td><td class=c>8</td><td class=c>12</td><td class="c l">2</td><td>After Impact<br>Explosion：32火属性：30</td><td class=c>2.5</td><td class=c>20</td><td class="c l">2</td><td>After Impact<br>Explosion：40 Fire：30</td><td class=c>2.5</td><td class=c>20</td></tr>
+<tr><td>LV3 Crag S</td><td class=c>3</td><td>After Impact<br>Explosion：50 Fire：80</td><td class=c>1</td><td class=c>9</td><td class=c>9</td><td class=c>13</td><td class="c l">2</td><td>After Impact<br>Explosion：40火属性：40</td><td class=c>2.5</td><td class=c>20</td><td class="c l">2</td><td>After Impact<br>Explosion：50 Fire：40</td><td class=c>2.5</td><td class=c>20</td></tr>
+<tr><td>LV1 Clust S</td><td class=c>6</td><td>After Impact<br>Explosion：32 Fire：2×3</td><td class=c>1</td><td class=c>3</td><td class=c>8</td><td class=c>13</td><td><br></td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>LV2 Clust S</td><td class=c>6</td><td>After Impact<br>Explosion：32 Fire：2×4</td><td class=c>1</td><td class=c>3</td><td class=c>9</td><td class=c>14</td><td><br></td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>LV3 Clust S</td><td class=c>6</td><td>After Impact<br>Explosion：32 Fire：2×5</td><td class=c>1</td><td class=c>3</td><td class=c>10</td><td class=c>14</td><td><br></td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>Flame S</td><td class=c>1</td><td>Fire<br>Light：Weapon Multiplier×0.4<br>Heavy：Weapon Multiplier×0.5</td><td class=c>1</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">0.5</td><td>Weapon Multiplier×0.3</td><td class=c>2</td><td class=c>20</td><td class="c l">0.8</td><td>Weapon Multiplier×0.4</td><td class=c>2</td><td class=c>20</td></tr>
+<tr><td>Water S</td><td class=c>1</td><td>Water Properties<br>Light：Weapon Multiplier×0.2<br>Heavy：Weapon Multiplier×0.25</td><td class=c>3</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">0.5</td><td>Weapon Multiplier×0.15</td><td class=c>1.7</td><td class=c>20</td><td class="c l">0.8</td><td>Weapon Multiplier×0.2</td><td class=c>1.7</td><td class=c>20</td></tr>
+<tr><td>Thund S</td><td class=c>1</td><td>Thunder Properties<br>Light：Weapon Multiplier×0.2<br>Heavy：Weapon Multiplier×0.27</td><td class=c>3</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">0.5</td><td>Weapon Multiplier×0.17</td><td class=c>1.7</td><td class=c>20</td><td class="c l">0.8</td><td>Weapon Multiplier×0.215</td><td class=c>1.7</td><td class=c>20</td></tr>
+<tr><td>Freez S</td><td class=c>1</td><td>Ice Properties<br>Light：Weapon Multiplier×0.2<br>Heavy：Weapon Multiplier×0.25</td><td class=c>3</td><td class=c>60</td><td class=c>6</td><td class=c>10</td><td><br></td><td class="c l">0.5</td><td>Weapon Multiplier×0.15</td><td class=c>1.7</td><td class=c>20</td><td class="c l">0.8</td><td>Weapon Multiplier×0.2</td><td class=c>1.7</td><td class=c>20</td></tr>
+<tr><td>Dragon S</td><td class=c>1</td><td>Dragon Properties<br>Light：75<br>Heavy：90</td><td class=c>6</td><td class=c>20</td><td class=c>9</td><td class=c>13</td><td><br></td><td class="c l">0.5</td><td>72</td><td class=c>10</td><td class=c>20</td><td class="c l">0.5</td><td>90</td><td class=c>10</td><td class=c>20</td></tr>
+<tr><td>LV1 Recov S</td><td class=c>0</td><td><br></td><td class=c>-</td><td class=c>12</td><td class=c>7</td><td class=c>11</td><td>Recovery Amt：30</td><td class="c l">0</td><td><br></td><td class=c>-</td><td class=c>-</td><td class="c l">0</td><td><br></td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>LV2 Recov S</td><td class=c>0</td><td><br></td><td class=c>-</td><td class=c>12</td><td class=c>9</td><td class=c>13</td><td>Recovery Amt：50</td><td class="c l">0</td><td><br></td><td class=c>-</td><td class=c>-</td><td class="c l">0</td><td><br></td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>LV1 Poisn S</td><td class=c>10</td><td>Poison Accum：25</td><td class=c>1</td><td class=c>12</td><td class=c>7</td><td class=c>11</td><td><br></td><td class="c l">6</td><td>Poison Accum：20</td><td class=c>2.5</td><td class=c>-</td><td class="c l">8</td><td>Poison Accum：25</td><td class=c>2.5</td><td class=c>-</td></tr>
+<tr><td>LV2 Poisn S</td><td class=c>15</td><td>Poison Accum：50</td><td class=c>1</td><td class=c>8</td><td class=c>9</td><td class=c>13</td><td><br></td><td class="c l">9</td><td>Poison Accum：40</td><td class=c>2.5</td><td class=c>-</td><td class="c l">11</td><td>Poison Accum：50</td><td class=c>2.5</td><td class=c>-</td></tr>
+<tr><td>LV1 Para S</td><td class=c>10</td><td>Para Accum：25</td><td class=c>1</td><td class=c>12</td><td class=c>7</td><td class=c>11</td><td><br></td><td class="c l">6</td><td>Para Accum：20</td><td class=c>2.5</td><td class=c>-</td><td class="c l">8</td><td>Para Accum：25</td><td class=c>2.5</td><td class=c>-</td></tr>
+<tr><td>LV2 Para S</td><td class=c>15</td><td>Para Accum：50</td><td class=c>1</td><td class=c>8</td><td class=c>9</td><td class=c>13</td><td><br></td><td class="c l">9</td><td>Para Accum：40</td><td class=c>2.5</td><td class=c>-</td><td class="c l">11</td><td>Para Accum：50</td><td class=c>2.5</td><td class=c>-</td></tr>
+<tr><td>LV1 Sleep S</td><td class=c>0</td><td>Sleep Accum：25</td><td class=c>1</td><td class=c>12</td><td class=c>7</td><td class=c>11</td><td><br></td><td class="c l">0</td><td>Sleep Accum：20</td><td class=c>2.5</td><td class=c>-</td><td class="c l">0</td><td>Sleep Accum：25</td><td class=c>2.5</td><td class=c>-</td></tr>
+<tr><td>LV2 Sleep S</td><td class=c>0</td><td>Sleep Accum：50</td><td class=c>1</td><td class=c>8</td><td class=c>9</td><td class=c>13</td><td><br></td><td class="c l">0</td><td>Sleep Accum：40</td><td class=c>2.5</td><td class=c>-</td><td class="c l">0</td><td>Sleep Accum：50</td><td class=c>2.5</td><td class=c>-</td></tr>
+<tr><td>Tranq S</td><td class=c>0</td><td>Drowsy Accum：80</td><td class=c>1</td><td class=c>8</td><td class=c>8</td><td class=c>11</td><td><br></td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>Paint S</td><td class=c>0</td><td><br></td><td class=c>1</td><td class=c>99</td><td class=c>7</td><td class=c>11</td><td>Paint Effect</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>Demon S</td><td class=c>0</td><td><br></td><td class=c>-</td><td class=c>5</td><td class=c>7</td><td class=c>11</td><td>Weapon Multiplier＋3</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>Armor S</td><td class=c>0</td><td><br></td><td class=c>-</td><td class=c>5</td><td class=c>7</td><td class=c>11</td><td>Def＋6</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>Heat Bomb</td><td class=c>-</td><td>fixed22＋Fire10</td><td class=c>-</td><td class=c>∞</td><td class=c>10</td><td class=c>15</td><td>Reload Speed<br>Recoil Reduction<br>Invalid</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>Acid S</td><td class=c>1</td><td><br></td><td class=c>1</td><td class=c>5</td><td class=c>12</td><td class=c>15</td><td>Cutting Shot-10</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>Ice Acid S</td><td class=c>1</td><td><br></td><td class=c>1</td><td class=c>5</td><td class=c>12</td><td class=c>15</td><td>Ice-10</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>Dragon Acid S</td><td class=c>1</td><td><br></td><td class=c>1</td><td class=c>5</td><td class=c>12</td><td class=c>15</td><td>Dragon-10</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>Blast Shot[Start]</td><td class=c>0</td><td>fixed(30＋LV/2)+<br>(15+LV/4)×15</td><td class=c>-</td><td class=c>5</td><td class=c>12</td><td class=c>30</td><td>1 hit per second</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>Blast Shot[End]</td><td class=c>0</td><td>fixed(36＋LV/2)+<br>(18+LV/4)×15</td><td class=c>-</td><td class=c>5</td><td class=c>12</td><td class=c>30</td><td>1 hit per second</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>Dragon Blast Shot</td><td class=c>0</td><td>fixed20 Dragon(60+LV)+<br>Dragon(120+LV/4)×15</td><td class=c>-</td><td class=c>5</td><td class=c>12</td><td class=c>30</td><td>〃</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td><td class="c l">-</td><td>-</td><td class=c>-</td><td class=c>-</td></tr>
 </table>
-<p>ボウガンの場合、弾によって威力が異なります。
-<br>武器倍率に、弾の威力を％として掛けたものが、基本威力となります。
-<br>徹甲榴弾は着弾後に爆発、拡散弾は子爆弾が散らばります。
-<br>着弾後に起こる爆発は固定ダメージで肉質によって軽減はされませんが、火属性の部分は肉質で軽減されます。
-<br>回復弾がモンスターに当たっても回復はしません。（ダメージ 1が入ります）
+<p>In the case of bowguns, the power varies depending on the bullet.
+<br>The base power is the weapon multiplier multiplied by the power of the bullet as a percentage.
+<br>Crag Shots explode after impact, while Clust Shots scatter their small bombs.
+<br>The explosion that occurs after landing is fixed damage and is not reduced by part values, but the fire attribute part is reduced by part values.
+<br>If the recovery shot hits a monster, it will not recover. (Damage 1 will be incurred.)
 <br>
-<br>ヘビィボウガンの圧縮リロードによる威力等は装填した弾数によって変わります
-<br>　※着弾ダメージは無属性で固定ですが、徹甲榴弾の着弾後の爆破ダメージは弾数によって変わる
+<br>The power of heavy bowguns with compressed reloads, etc., depends on the number of bullets loaded.
+<br>　※The impact damage is non-elemental and fixed, but the explosion damage after the impact of the Crag Shot changes depending on the number of bullets.
 </p>
-<p style="clear:both" class=ex>例：グレネードボウガンでLV2通常弾を撃った場合　90×12%＝10.8＝10 が基本威力となる
+<p style="clear:both" class=ex>Ex：When shooting LV2 normal bullets with a grenade launcher　90×12%＝10.8＝10 is the base power
 </p>
-<h4>●　弾のリロード速度</h4>
+<h4>●　Bullet Reload Speed</h4>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th>リロード速度値</th><th>モーション</th></tr>
-<tr><td class=c>４ 以下</td><td class=c>速い （62）</td></tr>
-<tr><td class=c>５ ～ ７</td><td class=c>普通 （78）</td></tr>
-<tr><td class=c>８ 以上</td><td class=c>遅い （103）</td></tr>
+<tr><th>Reload Speed Value</th><th>Motion</th></tr>
+<tr><td class=c>4 or less</td><td class=c>Very Fast （62）</td></tr>
+<tr><td class=c>５ ～ ７</td><td class=c>Normal （78）</td></tr>
+<tr><td class=c>8 or more</td><td class=c>Very Slow （103）</td></tr>
 </table>
-<p>ボウガンに弾をリロードする速度は、次の計算式の結果によって、左表で示すように３段階に分かれます。
+<p>The speed at which bullets are reloaded into the bow gun is divided into three stages as shown in the table on the left, depending on the result of the following formula.
 <br>
-<br>　　　リロード速度値 ＝ 弾のリロード値 － （ボウガンのリロード修正値 ＋ 装填速度スキルによる修正値
+<br>　　　Reload Speed Value ＝ Reload value of bullets － (Reload modifier for bowgun + modifier from loading speed skill)
 <br>
-<br>モーション欄の （） の中の値は、リロードに要するフレーム数です。（30フレーム＝１秒）
-</p>
-<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<caption>ボウガンのリロード修正値</caption>
-<tr><th>リロード</th><th>修正値</th></tr>
-<tr><td class=c>遅い</td><td class=c>0</td></tr>
-<tr><td class=c>やや遅い</td><td class=c>1</td></tr>
-<tr><td class=c>普通</td><td class=c>2</td></tr>
-<tr><td class=c>やや速い</td><td class=c>3</td></tr>
-<tr><td class=c>速い</td><td class=c>4</td></tr>
-</table>
-<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<caption>装填速度スキルによる修正値</caption>
-<tr><th>スキル</th><th>修正値</th></tr>
-<tr><td class=c>装填速度-1</td><td class=c>-1</td></tr>
-<tr><td class=c>スキルなし</td><td class=c>0</td></tr>
-<tr><td class=c>装填速度+1</td><td class=c>1</td></tr>
-<tr><td class=c>装填速度+2</td><td class=c>2</td></tr>
-<tr><td class=c>装填速度+3</td><td class=c>3</td></tr>
-</table>
-<div style="clear:both" class=ex>例：
-<div class=hosoku>超イャンクック砲 （リロード：遅い） で
-<br>LV2拡散弾をリロードする場合
-<br>　　装填速度スキルなし
-<br>　　　　9－（0＋0）＝9　⇒　遅い
-<br>　　装填速度+2スキルあり
-<br>　　　　9－（0＋2）＝7　⇒　普通
-</div>
-<div>繚乱の対弩 （リロード：やや速い） で
-<br>LV2拡散弾をリロードする場合
-<br>　　装填速度スキルなし
-<br>　　　　9－（3＋0）＝6　⇒　普通
-<br>　　装填速度+2スキルあり
-<br>　　　　9－（3＋2）＝4　⇒　速い
-</div>
-</div>
-<h4>●　発射時の反動</h4>
-<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th>発射反動値</th><th>モーション</th></tr>
-<tr><td class=c>０ ～ ８</td><td class=c>反動小 （26）</td></tr>
-<tr><td class=c>９ ～ １０</td><td class=c>反動中 （56）</td></tr>
-<tr><td class=c>１１ ～ １４</td><td class=c>反動大 （72）</td></tr>
-</table>
-<p>弾を発射した際に生ずる反動は、次の計算式の結果によって、左表で示すように３段階に分かれます。
-<br>
-<br>　　　反動値 ＝ 弾の反動値 － （ボウガンの反動修正値 ＋ 反動軽減スキルによる修正値）
-<br>
-<br>モーション欄の （） の中の値は、反動が収まるまでに要するフレーム数です。（30フレーム＝１秒）
-<br>
-<br>なお、連射スキルが発動している場合、２つの修正値は０となり、弾の反動値がそのまま発射反動値となります。
-<br>従って、ほとんどの弾はスキルがない場合より反動が大きくなってしまいます。
+<br>The value in parentheses in the Motion column is the number of frames required to reload. (30 frames = 1 second)
 </p>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<caption>ボウガンの反動修正値</caption>
-<tr><th>反動</th><th>修正値</th></tr>
-<tr><td class=c>最大</td><td class=c>0</td></tr>
-<tr><td class=c>やや大</td><td class=c>1</td></tr>
-<tr><td class=c>中</td><td class=c>2</td></tr>
-<tr><td class=c>やや小</td><td class=c>3</td></tr>
+<caption>Bowgun reload modifier</caption>
+<tr><th>Reload</th><th>Modified Value</th></tr>
+<tr><td class=c>Very Slow</td><td class=c>0</td></tr>
+<tr><td class=c>Slow</td><td class=c>1</td></tr>
+<tr><td class=c>Normal</td><td class=c>2</td></tr>
+<tr><td class=c>Fast</td><td class=c>3</td></tr>
+<tr><td class=c>Very Fast</td><td class=c>4</td></tr>
 </table>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<caption>反動軽減スキルによる修正値</caption>
-<tr><th>スキル</th><th>修正値</th></tr>
-<tr><td class=c>スキルなし</td><td class=c>0</td></tr>
-<tr><td class=c>反動軽減+1</td><td class=c>2</td></tr>
-<tr><td class=c>反動軽減+2</td><td class=c>4</td></tr>
+<caption>Modified value by loading speed skill</caption>
+<tr><th>Skill</th><th>Modified Value</th></tr>
+<tr><td class=c>Reload Speed-1</td><td class=c>-1</td></tr>
+<tr><td class=c>No Skill</td><td class=c>0</td></tr>
+<tr><td class=c>Reload Speed+1</td><td class=c>1</td></tr>
+<tr><td class=c>Reload Speed+2</td><td class=c>2</td></tr>
+<tr><td class=c>Reload Speed+3</td><td class=c>3</td></tr>
 </table>
-<div style="clear:both" class=ex>例：
-<div class=hosoku>超イャンクック砲 （反動：中） で
-<br>LV2毒弾を発射した場合
-<br>　　反動軽減スキルなし
-<br>　　　　13－（2＋0）＝11　⇒　反動大
-<br>　　反動軽減+1スキルあり
-<br>　　　　13－（2＋2）＝ 9　⇒　反動中
+<div style="clear:both" class=ex>Ex：
+<div class=hosoku>Mega Kut-Ku Cannon （reload：Very Slow） で
+<br>When reloading LV2 Clust rounds
+<br>　　No reload speed skill
+<br>　　　　9－（0＋0）＝9　⇒　Very Slow
+<br>　　With Reload Speed +2 skill
+<br>　　　　9－（0＋2）＝7　⇒　Normal
 </div>
-<div>老山龍砲・覇 （反動：やや小） で
-<br>LV2毒弾を発射した場合
-<br>　　反動軽減スキルなし
-<br>　　　　13－（3＋0）＝10　⇒　反動中
-<br>　　反動軽減+1スキルあり
-<br>　　　　13－（3＋2）＝ 8　⇒　反動小
+<div>Profusion （reload：Fast）
+<br>When reloading LV2 Clust rounds
+<br>　　No reload speed skill
+<br>　　　　9－（3＋0）＝6　⇒　Normal
+<br>　　With Reload Speed +2 skill
+<br>　　　　9－（3＋2）＝4　⇒　Very Fast
 </div>
 </div>
-<h4>リロード速度/反動一覧</h4>
+<h4>●　recoil when fired</h4>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<tr><th>Recoil Value</th><th>Motion</th></tr>
+<tr><td class=c>０ ～ ８</td><td class=c>Smaller （26）</td></tr>
+<tr><td class=c>９ ～ １０</td><td class=c>Medium （56）</td></tr>
+<tr><td class=c>１１ ～ １４</td><td class=c>Very Large （72）</td></tr>
+</table>
+<p>The recoil generated when a bullet is fired is divided into three stages as shown in the table on the left, depending on the result of the following formula.
+<br>
+<br>　　　Recoil Value ＝ Recoil value of the bullet - (bowgun recoil modifier + recoil reduction skill modifier)
+<br>
+<br>The value in parentheses in the Motion column is the number of frames required for the recoil to subside. (30 frames = 1 second)
+<br>
+<br>Note that when the rapid fire skill is activated, the two modifiers are set to 0, and the recoil value of the bullet becomes the firing recoil value as it is.
+<br>Therefore, most bullets will recoil more than without the skill.
+</p>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<caption>Bowgun recoil modifier</caption>
+<tr><th>Recoil</th><th>Modified Value</th></tr>
+<tr><td class=c>Very Large</td><td class=c>0</td></tr>
+<tr><td class=c>Large</td><td class=c>1</td></tr>
+<tr><td class=c>Medium</td><td class=c>2</td></tr>
+<tr><td class=c>Small</td><td class=c>3</td></tr>
+</table>
+<table border=1 cellspacing=0 cellpadding=2 class=hosoku>
+<caption>Modified by recoil reduction skill</caption>
+<tr><th>Skill</th><th>Modified Value</th></tr>
+<tr><td class=c>No Skill</td><td class=c>0</td></tr>
+<tr><td class=c>Recoil Reduction+1</td><td class=c>2</td></tr>
+<tr><td class=c>Recoil Reduction+2</td><td class=c>4</td></tr>
+</table>
+<div style="clear:both" class=ex>Ex：
+<div class=hosoku>Mega Kut-Ku Cannon （Recoil：Medium）
+<br>When firing LV2 poison bullets
+<br>　　No recoil reduction skill
+<br>　　　　13－（2＋0）＝11　⇒　Very Large
+<br>　　With Recoil Reduction +1 skill
+<br>　　　　13－（2＋2）＝ 9　⇒　Medium
+</div>
+<div>Supreme Lao-Shan Cannon （Recoil：Small）
+<br>When firing LV2 poison bullets
+<br>　　No recoil reduction skill
+<br>　　　　13－（3＋0）＝10　⇒　Medium
+<br>　　With Recoil Reduction +1 skill
+<br>　　　　13－（3＋2）＝ 8　⇒　Smaller
+</div>
+</div>
+<h4>Reload Speed/Recoil List</h4>
 <table border=1 cellspacing=0 cellpadding=2>
-<tr><th rowspan=2>弾名</th><th rowspan=2>弾の<br>リロード値</th><th colspan=8>ボウガンのリロード修正値＋装填速度スキルによる修正値</th><th rowspan=2>弾の<br>反動値</th><th colspan=7>ボウガンの反動修正値＋反動軽減スキルによる修正値</th></tr>
+<tr><th rowspan=2>Bullet Name</th><th rowspan=2>Bullet<br>Reload Value</th><th colspan=8>Bowgun reload modifier + reload speed skill modifier</th><th rowspan=2>Bullet<br>Recoil Value</th><th colspan=7>Bowgun recoil modifier + recoil reduction skill modifier</th></tr>
 <tr><th>-1</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr>
-<tr><th>LV1 通常弾</th><td class=c>5</td><td class="c y">普通</td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>8</td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>LV2 通常弾</th><td class=c>6</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>9</td><td class="c y">中</td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>LV3 通常弾</th><td class=c>7</td><td class="c r">遅い</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>LV1 貫通弾</th><td class=c>6</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>LV2 貫通弾</th><td class=c>7</td><td class="c r">遅い</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>LV3 貫通弾</th><td class=c>8</td><td class="c r">遅い</td><td class="c r"></td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">大</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>LV1 散弾</th><td class=c>5</td><td class="c y">普通</td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>LV2 散弾</th><td class=c>6</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>LV3 散弾</th><td class=c>7</td><td class="c r">遅い</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">大</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>LV1 徹甲榴弾</th><td class=c>7</td><td class="c r">遅い</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">大</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>LV2 徹甲榴弾</th><td class=c>8</td><td class="c r">遅い</td><td class="c r"></td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class=c>12</td><td class="c r">大</td><td class="c r"></td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>LV3 徹甲榴弾</th><td class=c>9</td><td class="c r">遅い</td><td class="c r"></td><td class="c r"></td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class=c>13</td><td class="c r">大</td><td class="c r"></td><td class="c r"></td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td></tr>
-<tr><th>LV1 拡散弾</th><td class=c>8</td><td class="c r">遅い</td><td class="c r"></td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class=c>13</td><td class="c r">大</td><td class="c r"></td><td class="c r"></td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td></tr>
-<tr><th>LV2 拡散弾</th><td class=c>9</td><td class="c r">遅い</td><td class="c r"></td><td class="c r"></td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class=c>14</td><td class="c r">大</td><td class="c r"></td><td class="c r"></td><td class="c r"></td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td></tr>
-<tr><th>LV3 拡散弾</th><td class=c>10</td><td class="c r">遅い</td><td class="c r"></td><td class="c r"></td><td class="c r"></td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class=c>14</td><td class="c r">大</td><td class="c r"></td><td class="c r"></td><td class="c r"></td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td></tr>
-<tr><th>火炎弾</th><td class=c>6</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>水冷弾</th><td class=c>6</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>電撃弾</th><td class=c>6</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>氷結弾</th><td class=c>6</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>滅龍弾</th><td class=c>9</td><td class="c r">遅い</td><td class="c r"></td><td class="c r"></td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class=c>13</td><td class="c r">大</td><td class="c r"></td><td class="c r"></td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td></tr>
-<tr><th>LV1 回復弾</th><td class=c>7</td><td class="c r">遅い</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">大</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>LV2 回復弾</th><td class=c>9</td><td class="c r">遅い</td><td class="c r"></td><td class="c r"></td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class=c>13</td><td class="c r">大</td><td class="c r"></td><td class="c r"></td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td></tr>
-<tr><th>LV1 毒弾</th><td class=c>7</td><td class="c r">遅い</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">大</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>LV2 毒弾</th><td class=c>9</td><td class="c r">遅い</td><td class="c r"></td><td class="c r"></td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class=c>13</td><td class="c r">大</td><td class="c r"></td><td class="c r"></td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td></tr>
-<tr><th>LV1 麻痺弾</th><td class=c>7</td><td class="c r">遅い</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">大</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>LV2 麻痺弾</th><td class=c>9</td><td class="c r">遅い</td><td class="c r"></td><td class="c r"></td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class=c>13</td><td class="c r">大</td><td class="c r"></td><td class="c r"></td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td></tr>
-<tr><th>LV1 睡眠弾</th><td class=c>7</td><td class="c r">遅い</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">大</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>LV2 睡眠弾</th><td class=c>9</td><td class="c r">遅い</td><td class="c r"></td><td class="c r"></td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class=c>13</td><td class="c r">大</td><td class="c r"></td><td class="c r"></td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td></tr>
-<tr><th>捕獲用麻酔弾</th><td class=c>8</td><td class="c r">遅い</td><td class="c r"></td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">大</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>ペイント弾</th><td class=c>7</td><td class="c r">遅い</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">大</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>鬼人弾</th><td class=c>7</td><td class="c r">遅い</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">大</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
-<tr><th>硬化弾</th><td class=c>7</td><td class="c r">遅い</td><td class="c y">普通</td><td class="c y"></td><td class="c y"></td><td class="c b">速い</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">大</td><td class="c y">中</td><td class="c y"></td><td class="c b">小</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV1 Norm S</th><td class=c>5</td><td class="c y">Normal</td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>8</td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV2 Norm S</th><td class=c>6</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>9</td><td class="c y">Medium</td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV3 Norm S</th><td class=c>7</td><td class="c r">Very Slow</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV1 Pierc S</th><td class=c>6</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV2 Pierc S</th><td class=c>7</td><td class="c r">Very Slow</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV3 Pierc S</th><td class=c>8</td><td class="c r">Very Slow</td><td class="c r"></td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">large</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV1 Pelet S</th><td class=c>5</td><td class="c y">Normal</td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV2 Pelet S</th><td class=c>6</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV3 Pelet S</th><td class=c>7</td><td class="c r">Very Slow</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">large</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV1 Crag S</th><td class=c>7</td><td class="c r">Very Slow</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">large</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV2 Crag S</th><td class=c>8</td><td class="c r">Very Slow</td><td class="c r"></td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class=c>12</td><td class="c r">large</td><td class="c r"></td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV3 Crag S</th><td class=c>9</td><td class="c r">Very Slow</td><td class="c r"></td><td class="c r"></td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class=c>13</td><td class="c r">large</td><td class="c r"></td><td class="c r"></td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td></tr>
+<tr><th>LV1 Clust S</th><td class=c>8</td><td class="c r">Very Slow</td><td class="c r"></td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class=c>13</td><td class="c r">large</td><td class="c r"></td><td class="c r"></td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td></tr>
+<tr><th>LV2 Clust S</th><td class=c>9</td><td class="c r">Very Slow</td><td class="c r"></td><td class="c r"></td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class=c>14</td><td class="c r">large</td><td class="c r"></td><td class="c r"></td><td class="c r"></td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td></tr>
+<tr><th>LV3 Clust S</th><td class=c>10</td><td class="c r">Very Slow</td><td class="c r"></td><td class="c r"></td><td class="c r"></td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class=c>14</td><td class="c r">large</td><td class="c r"></td><td class="c r"></td><td class="c r"></td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td></tr>
+<tr><th>Flame S</th><td class=c>6</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>Water S</th><td class=c>6</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>Thund S</th><td class=c>6</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>Freez S</th><td class=c>6</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>10</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>Dragon S</th><td class=c>9</td><td class="c r">Very Slow</td><td class="c r"></td><td class="c r"></td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class=c>13</td><td class="c r">large</td><td class="c r"></td><td class="c r"></td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td></tr>
+<tr><th>LV1 Recov S</th><td class=c>7</td><td class="c r">Very Slow</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">large</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV2 Recov S</th><td class=c>9</td><td class="c r">Very Slow</td><td class="c r"></td><td class="c r"></td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class=c>13</td><td class="c r">large</td><td class="c r"></td><td class="c r"></td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td></tr>
+<tr><th>LV1 Poisn S</th><td class=c>7</td><td class="c r">Very Slow</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">large</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV2 Poisn S</th><td class=c>9</td><td class="c r">Very Slow</td><td class="c r"></td><td class="c r"></td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class=c>13</td><td class="c r">large</td><td class="c r"></td><td class="c r"></td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td></tr>
+<tr><th>LV1 Para S</th><td class=c>7</td><td class="c r">Very Slow</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">large</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV2 Para S</th><td class=c>9</td><td class="c r">Very Slow</td><td class="c r"></td><td class="c r"></td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class=c>13</td><td class="c r">large</td><td class="c r"></td><td class="c r"></td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td></tr>
+<tr><th>LV1 Sleep S</th><td class=c>7</td><td class="c r">Very Slow</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">large</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>LV2 Sleep S</th><td class=c>9</td><td class="c r">Very Slow</td><td class="c r"></td><td class="c r"></td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class=c>13</td><td class="c r">large</td><td class="c r"></td><td class="c r"></td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td></tr>
+<tr><th>Tranq S</th><td class=c>8</td><td class="c r">Very Slow</td><td class="c r"></td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">large</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>Paint S</th><td class=c>7</td><td class="c r">Very Slow</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">large</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>Demon S</th><td class=c>7</td><td class="c r">Very Slow</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">large</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
+<tr><th>Armor S</th><td class=c>7</td><td class="c r">Very Slow</td><td class="c y">Normal</td><td class="c y"></td><td class="c y"></td><td class="c b">Very Fast</td><td class="c b"></td><td class="c b"></td><td class="c b"></td><td class=c>11</td><td class="c r">large</td><td class="c y">Medium</td><td class="c y"></td><td class="c b">Small</td><td class="c b"></td><td class="c b"></td><td class="c b"></td></tr>
 </table>
-<h4>●　飛距離による基本威力修正</h4>
+<h4>●　Basic power modification by distance</h4>
 
-<p>通常弾・貫通弾・徹甲榴弾の３種は、発射後の飛距離に伴って基本威力が変化します。
+<p>The basic power of the Norm S, Pierc S, and Crag S varies with the distance after firing.
 <br>
-<br>　　通常弾は、発射後 1.5倍 ⇒ 1.0倍　⇒ 0.8倍 ⇒ 0.5倍　のように変化
-<br>　　貫通弾と徹甲榴弾は、発射後 1.0倍 ⇒ 1.5倍 ⇒ 1.0倍 ⇒ 0.8倍 ⇒ 0.5倍　のように変化
-<br>　　　※ヘビィボウガンの場合1.5倍ではなく1.7倍
+<br>　　Normal bullets change 1.5x ⇒ 1.0x ⇒ 0.8x ⇒ 0.5x after firing
+<br>　Pierce bullets and Clust bullets change after firing: 1.0x ⇒ 1.5x ⇒ 1.0x ⇒ 0.8x ⇒ 0.5x
+<br>　*1.7x instead of 1.5x for heavy bowguns
 <br>
-<br>下のグラフは、時間経過に伴う威力の変化を表したものです。ボウガンや加工レベル等によって
-<br>弾の速度には違いがあるので、下のグラフは弾の速度によって補正がかけられます。
-<br>弾の速度が早いほどグラフが横方向に圧縮され、遅いほど伸張されるといった要領です。
-<br>ちなみに、ヘビィボウガンはライトボウガンより弾の速度が早いものが多いです。
+<br>The graph below shows changes in power over time. Depending on the bow gun and processing level, etc.
+<br>There is a difference in bullet velocity, so the graph below is corrected for bullet velocity.
+<br>The faster the bullet speed, the more the graph is compressed horizontally, and the slower it is, the more it expands.
+<br>By the way, many heavy bowguns shoot faster than light bowguns.
 <br>
-<br>補正によって、時間的に見た場合は、弾の速度が早いほど高威力を発揮する時間帯が短くなりますが、
-<br>距離的に見た場合は、どのボウガンやどの加工レベルでも、高威力を発揮する距離はほぼ等しくなります。
-<br>したがって、その距離さえ把握しておけば、どのボウガンでも同じ距離で高威力を発揮させることができます。
+<br>Due to the correction, when viewed in terms of time, the faster the bullet speed, the shorter the time period during which high power is exerted,
+<br>From a distance perspective, the distance at which high power is exerted is almost the same regardless of the bowgun or processing level.
+<br>Therefore, as long as you know the distance, you can use any bowgun to demonstrate high power at the same distance.
 <br>
-<br>上記３種の弾以外は、飛距離に伴って基本威力が変化することはありません。
-<br>散弾は飛距離によって威力が変わることはありませんが、ヒット数が変化します。
-<br>各種属性弾も、飛距離に伴って属性値が変化することはありません。
+<br>Except for the three bullets listed above, the basic power does not change with distance.
+<br>The power of a pellet S does not change with distance, but the number of hits does.
+<br>The various attribute bullets also do not change their attribute values with distance.
 </p>
 <div><img src="../img/doc-bowgun.gif" alt="減衰"></div>
 
-<h4>●　スキルによる基本威力・属性値修正</h4>
+<h4>●　Basic power/attribute value correction by skill</h4>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th>スキル</th><th>効果</th></tr>
-<tr><td>通常弾攻撃力UP</td><td>通常弾の威力が 1.1倍</td></tr>
-<tr><td>貫通弾攻撃力UP</td><td>貫通弾の威力が 1.1倍</td></tr>
-<tr><td>散弾攻撃力UP</td><td>散弾の威力が 1.3倍</td></tr>
-<tr><td>狙い撃ち</td><td>特定の条件で、弾肉質＋５</td></tr>
-<tr><td>○属性攻撃強化</td><td>各属性弾の威力アップ</td></tr>
-<tr><td>状態異常攻撃強化</td><td>状態異常弾の属性値が 1.125倍</td></tr>
+<tr><th>Skill</th><th>Effect</th></tr>
+<tr><td>Normal S UP</td><td>Normal bullets are 1.1 times more powerful</td></tr>
+<tr><td>Pierce S UP</td><td>Pierce bullets are 1.1 times more powerful</td></tr>
+<tr><td>Clust S UP</td><td>Clust bullets are 1.3 times more powerful</td></tr>
+<tr><td>Sniper</td><td>Auto-Reload and +5 to weakness value within critical distance</td></tr>
+<tr><td>○Elemental Attack Up</td><td>Increases the power of each elemental bullet</td></tr>
+<tr><td>Status Attack Up</td><td>The attribute value of the status bullet is 1.125x</td></tr>
 </table>
-<p>左表で示すスキルが発動していると、弾の威力や属性値が増加します。
+<p>When the skills shown in the left table are activated, the power and attribute values of the bullets are increased.
 </p>
-<h4>●　会心率</h4>
+<h4>●　Affinity Rate</h4>
 
-<p>会心率とは、攻撃した際のクリティカルヒットが出る確率です。
-<br>クリティカルヒットの時、会心率が　0％より大きい場合は、基本威力が 1.25倍、マイナス値の場合は、基本威力が　0.75倍になります。
+<p>Affinity rate is the probability of a critical hit when attacking.
+<br>On a critical hit, if the affinity rate is greater than 0%, the base power is multiplied by 1.25; if it is a negative value, the base power is multiplied by 0.75.
 </p>
-<h4>●　ヒットエフェクト</h4>
+<h4>●　Hit Effects</h4>
 
-<p>ボウガンのヒットエフェクトは、発射後の威力変化によって異なります。
-<br>エフェクトは1.5倍 ⇒ 1.0倍　⇒ 0.8倍 ⇒ 0.5倍の順で小さなエフェクトになります。
-<br>　　※ヘビィボウガンの場合1.5倍ではなく1.7倍
-<br><small>(与えるダメージには影響されないため、ダメージがほとんど通らない部位でも大きなエフェクトがでる場合もあります)</small>
+<p>The bowgun's hit effect varies depending on the change in power after firing.
+<br>The effect becomes smaller in the order of 1.5x ⇒ 1.0x ⇒ 0.8x ⇒ 0.5x.
+<br>　　※1.7x instead of 1.5x for Heavy Bowgun
+<br><small>(Since it is not affected by the damage dealt, even parts that receive little damage may have a large effect.)</small>
 </p>
-<h4>●　与えるダメージの増大</h4>
+<h4>●　Increased damage dealt</h4>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th>状態</th><th>倍率</th></tr>
-<tr><td>麻痺状態中</td><td class=n>1.1倍</td></tr>
-<tr><td>岩に擬態中　（バサルモス）</td><td class=n>1.1倍</td></tr>
-<tr><td>落とし穴　（落ちてから<br>もがき始めるまでの間のみ）</td><td class=n>1.1倍</td></tr>
-<tr><td>睡眠中　（初撃のみ）</td><td class=n>3.0倍</td></tr>
+<tr><th>Condition</th><th>Multiplier</th></tr>
+<tr><td>Paralized</td><td class=n>1.1x</td></tr>
+<tr><td>Impersonating a Rock　（Basarios）</td><td class=n>1.1x</td></tr>
+<tr><td>Pitfall　（Only from the time they fall<br>to the time they start struggling)</td><td class=n>1.1x</td></tr>
+<tr><td>Sleep　（First Shot Only）</td><td class=n>3.0x</td></tr>
 </table>
-<p>モンスターが特定の状態の時に攻撃すると、左表のように与えるダメージが増大します。
-<br><small>(増大するのは無属性ダメージのみで、属性ダメージは変化しません)</small>
-<br>シビレ罠にかかっている時は麻痺状態ではなくシビレ状態なので、増大はしません。
-<br>未発覚の状態で落とし穴にはめると、効果時間が約 1.7倍に延びます。なお、怒り時は約 0.7倍になります。(未発覚が優先)
-<br><small>(ラージャンは、寝かせて落としても 6秒のまま)</small>
-<br>モンスターが弱って寝ている場合も睡眠中と同じ。ただし、モンスターの体力は徐々に回復している。
-<br><small>(エスピナスのクエスト開始時の状態は除く)</small>
+<p>If you attack a monster in a certain state, the damage dealt will increase as shown on the left table.
+<br><small>(Only non-element damage increases, element damage does not change)</small>
+<br>When caught in a shock trap, it is not paralyzed but shocked, so it does not increase.
+<br>If you put it in a pitfall in an undiscovered state, the effect time will be extended by about 1.7 times. In addition, when angry, it will be about 0.7 times. (Priority is given to undiscovered cases)
+<br><small>(Rajang always stays at 6 seconds even if he is asleep when you lay down the trap)</small>
+<br>If the monster is weak and sleeping, it is the same as when put to sleep. But, the monster's HP is gradually recovering.
+<br><small>(except for Espinas' status at the beginning of the quest)</small>
 </p>
-<h4>●　肉質と全体防御率によるダメージ軽減</h4>
+<h4>●　Damage reduction due to part values and overall defense rate</h4>
 
-<p>モンスターには肉質が設定されており、ダメージを軽減してしまいます。
-<br>通常ダメージ、属性ダメージそれぞれが肉質によって軽減されます。
-<br>また、モンスターには肉質とは別に全体の防御率が設定されており、総ダメージ値を軽減してしまいます。
-<br>さらに、怒り状態になると、全体防御率に補正がかかるモンスターもいます。
+<p>Monsters have a set part value, which reduces damage.
+<br>Normal damage and element damage are each reduced by the part value.
+<br>In addition, monsters have an overall defense rate that is separate from their part values, which reduces the total damage value.
+<br>Furthermore, there are monsters whose overall defense rate is corrected when they become enraged.
 </p>
-<p style="clear:both" class=ex>例：グレネードボウガンでリオレイア（全体防御率：0.9）の頭に通常弾LV2をクリティカル距離で当てた場合
+<p style="clear:both" class=ex>Ex：When a normal bullet LV2 hits the head of Rathian (overall defense rate: 0.9) at a critical distance with a grenade launcher
 <br>　　 90×6%×1.5×50%＝4.05＝4
-<br>　　 4×90%＝3.6＝3 ダメージ
+<br>　　 4×90%＝3.6＝3 Damage
 </p>
-<h4>●　プレイヤーの攻撃力アップ</h4>
+<h4>●　Increased player attack power</h4>
 
-<p>プレイヤーの攻撃力をアップする手段はいろいろありますが、大別して３つのグループに分けられます。
-<br>　　１：攻撃力アップのスキル発動、攻撃力をアップするアイテムの所持（力の護符・力の爪）
-<br>　　２：食事効果によるアップ、鬼人薬・鬼人薬グレートの使用
-<br>　　３：怪力の種・怪力の丸薬・鬼人笛の使用
+<p>There are many ways to increase a player's offensive power, but they can be broadly divided into three groups.
+<br>　　１：Activation of skills that increase attack power, possession of items that increase attack power (Powercharm, Powertalon)
+<br>　　２：Up due to food effects, use of demon drug and mega demon drug
+<br>　　３：Use of power seeds, power pills, and demon flute
 <br>
-<br>グループ１は、クエスト中に力尽きても効力が失われることはありません。
-<br>グループ２は、クエスト中はずっと有効ですが、力尽きると効力が失われます。
-<br>グループ３は、一定の時間が経過すると、効力が失われます。
+<br>Group 1 will not lose potency even if you run out during a quest.
+<br>Group 2 is effective all the time during the quest, but loses its effectiveness when you faint.
+<br>Group 3 loses potency after a certain amount of time.
 <br>
-<br>グループ２と３は、グループ内の各効果が重複することはありません。重複した場合は、順番にかかわらず効果の大きいものが優先されます。
+<br>Groups 2 and 3 do not overlap in their respective effects within the group. In the event of overlap, the one with the greater effect takes precedence regardless of the order.
+</p>
 </body></html>
