@@ -16,212 +16,212 @@ ul.ttop {margin:0;padding:1px 0;width:60em;list-style-type:none;}
 ul.ttop li {font-size:100%;float:left;padding:2px 5px 2px 5px;border:1px solid silver;}
 -->
 </style>
-<title>モンスターへの攻撃　【弓編】</title>
+<title>Attacking Monsters　【Bow】</title>
 </head>
 <body>
 <ul class=ttop>
-<li>モンスターへの攻撃　<a href="doc-sword.htm">【近接武器編】</a>
-／<a href="doc-gun.htm">【ボウガン編】</a>
-／<a href="doc-yumi.htm">【弓編】</a>
-<li><a href="doc-spec.htm">武器性能</a>
-<li><a href="doc-kensyo.htm">剣晶スキル</a>
-<li><a href="doc-buki.htm">武器の種類</a>
-<li><a href="doc-bougu.htm">防具の種類</a>
-<li><a href="doc-feature.htm">フィーチャー</a>
+<li>Attacking Monsters　<a href="doc-sword.htm">【Melee Weapons】</a>
+／<a href="doc-gun.htm">【Bowgun】</a>
+／<a href="doc-yumi.htm">【Bow】</a>
+<li><a href="doc-spec.htm">Weapon Performance</a>
+<li><a href="doc-kensyo.htm">Sword Crystal Skills</a>
+<li><a href="doc-buki.htm">Weapons</a>
+<li><a href="doc-bougu.htm">Armor Types</a>
+<li><a href="doc-feature.htm">Active Feature</a>
 </ul>
 <hr style="clear:both">
-<h3>モンスターへの攻撃　【弓編】</h3>
+<h3>Attacking Monsters　【Bow】</h3>
 
-<h4>●　武器倍率</h4>
+<h4>●　Weapon multiplier</h4>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th>武器の種類</th><th>倍率</th></tr>
-<tr><td>大剣/太刀</td><td class=c>4.8</td></tr>
-<tr><td>片手剣/双剣</td><td class=c>1.4</td></tr>
-<tr><td>ハンマー/狩猟笛</td><td class=c>5.2</td></tr>
-<tr><td>ランス/ガンランス</td><td class=c>2.3</td></tr>
-<tr><td>穿龍棍</td><td class=c>1.8</td></tr>
-<tr><td>スラッシュアックス</td><td class=c>5.4</td></tr>
-<tr><td>ボウガン/弓</td><td class=c>1.2</td></tr>
+<tr><th>Weapons</th><th>Multiplier</th></tr>
+<tr><td>GS/LS</td><td class=c>4.8</td></tr>
+<tr><td>SnS/DS</td><td class=c>1.4</td></tr>
+<tr><td>Hammer/Hunting Horn</td><td class=c>5.2</td></tr>
+<tr><td>Lance/Gunlance</td><td class=c>2.3</td></tr>
+<tr><td>Tonfa</td><td class=c>1.8</td></tr>
+<tr><td>Switch Axe</td><td class=c>5.4</td></tr>
+<tr><td>Bowgun/Bow</td><td class=c>1.2</td></tr>
 </table>
-<p>武器倍率は、武器が本来持っている強さを表す数値で、攻撃によるモンスターへのダメージ計算の元になります。
-<br>ステータスに表示されている攻撃力は、この武器倍率に一定の倍率を掛けたものが表示されています。
-<br>各武器の倍率は左表のとおりです。
-<br><small>※ステータスに表示されている攻撃力を左記の倍率で割ることで、武器倍率を求めることができます</small>
+<p>The weapon multiplier is a number that represents the inherent strength of the weapon and is the basis for calculating the damage to the monster from attacks.
+<br>The attack power shown in the status is this weapon multiplier multiplied by a certain factor.
+<br>The multipliers for each weapon are shown in the table to the left.
+<br><small>※The weapon multiplier can be obtained by dividing the attack power shown in the status by the multiplier shown on the left</small>
 <br>
-<br>食事効果やアイテム使用等による攻撃力アップは、全てこの武器倍率に一定値が加算されます。
-<br>従って、ステータス上では、武器の種類によって攻撃力のアップ量が異なります。
+<br>Any increase in attack power due to food effects, item use, etc. will be added to this weapon multiplier by a fixed value.
+<br>Thus, in terms of status, the amount of increase in attack power depends on the type of weapon.
 </p>
-<h4>●　矢の威力</h4>
+<h4>●　Arrow Power</h4>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th>タイプ</th><th>威力</th><th>曲射</th><th>威力</th><th>属性</th><th>気絶</th></tr>
-<tr><td>連射LV1</td><td class=c>12</td><td>放散型</td><td class=c>18×7ヒット</td><td class=c>0.7倍</td><td class=c>3</td></tr>
-<tr><td>連射LV2</td><td class=c>12・5</td><td>集中型</td><td class=c>16×5ヒット</td><td class=c>0.7倍</td><td class=c>2</td></tr>
-<tr><td>連射LV3</td><td class=c>12・5・4</td><td>爆裂型</td><td class=c>15・無19</td><td class=c>0.2倍</td><td class=c>30</td></tr>
-<tr><td>連射LV4</td><td class=c>12・5・4・2</td><td>切断型</td><td class=c>12×7ヒット</td><td class=c>0.7倍</td><td class=c>-</td></tr>
-<tr><td>拡散LV1</td><td class=c>4・5・4</td></tr>
-<tr><td>拡散LV2</td><td class=c>5・6・5</td></tr>
-<tr><td>拡散LV3</td><td class=c>4・5・5・5・4</td></tr>
-<tr><td>拡散LV4</td><td class=c>4・5・6・5・4</td></tr>
-<tr><td>貫通LV1</td><td class=c>6×3ヒット</td></tr>
-<tr><td>貫通LV2</td><td class=c>6×4ヒット</td></tr>
-<tr><td>貫通LV3</td><td class=c>6×5ヒット</td></tr>
-<tr><td>貫通LV4</td><td class=c>6×6ヒット</td></tr>
-<tr><td>オーラアロー</td><td class=c>12×5倍</td></tr>
+<tr><th>Type</th><th>Power</th><th>Arc</th><th>Power</th><th>Attribute</th><th>Stun</th></tr>
+<tr><td>RpdLv1</td><td class=c>12</td><td>Wide</td><td class=c>18×7 hit</td><td class=c>0.7x</td><td class=c>3</td></tr>
+<tr><td>RpdLv2</td><td class=c>12・5</td><td>Narrow</td><td class=c>16×5 hit</td><td class=c>0.7x</td><td class=c>2</td></tr>
+<tr><td>RpdLv3</td><td class=c>12・5・4</td><td>Bomb</td><td class=c>15・None 19</td><td class=c>0.2x</td><td class=c>30</td></tr>
+<tr><td>RpdLv4</td><td class=c>12・5・4・2</td><td>Slicing</td><td class=c>12×7 hit</td><td class=c>0.7x</td><td class=c>-</td></tr>
+<tr><td>SprLv1</td><td class=c>4・5・4</td></tr>
+<tr><td>SprLv2</td><td class=c>5・6・5</td></tr>
+<tr><td>SprLv3</td><td class=c>4・5・5・5・4</td></tr>
+<tr><td>SprLv4</td><td class=c>4・5・6・5・4</td></tr>
+<tr><td>PrcLv1</td><td class=c>6×3 hit</td></tr>
+<tr><td>PrcLv2</td><td class=c>6×4 hit</td></tr>
+<tr><td>PrcLv3</td><td class=c>6×5 hit</td></tr>
+<tr><td>PrcLv4</td><td class=c>6×6 hit</td></tr>
+<tr><td>Aura Arrow</td><td class=c>12×5x</td></tr>
 </table>
-<p>弓の矢は、連射、拡散、貫通と３種類のタイプがあり、それぞれがLV1～LV4まであります。
-<br>　　連射：　ピンポイントに1～４本の矢を同時に放つ。連射レベルが高いほど矢の本数が増える
-<br>　　拡散：　放射状に複数の矢を放つ。拡散レベルが高いほど矢の本数が増える
-<br>　　貫通：　貫通する矢を放つ。貫通レベルが高いほどヒット数が増える
-<br>曲射は、放散、集中、爆裂、切断と４種類のタイプがあります。
-<br>　　放散：　矢の攻撃力が通常よりも高い
-<br>　　集中：　状態異常の蓄積値が通常よりも高い
-<br>　　爆裂：　気絶値が高く、肉質無視ダメージがある
-<br>　　切断：　弾肉質で計算するが、切断属性の攻撃をする
-<br>弓の種類によって、どのタイプ/レベルが使用できるかは決められています。
-<br>タイプごとの矢の威力は、左表のとおりです。
-<br>武器倍率に、矢の威力を％として掛けたものが基本威力となります。
+<p>There are three types of bow arrows: rapid, spread, and pierce, each ranging from lv. 1 to lv. 4.
+<br>　　Rapid: 1 to 4 arrows are shot simultaneously at a point. The higher the firing level, the more arrows are shot.
+<br>　　Spread: Shoots multiple arrows in a radial pattern. The higher the spread level, the more arrows are released.
+<br>　　Pierce: Shoots arrows that pierce. The higher the pierce level, the greater the number of hits.
+<br>There are four types of bow arcs: Wide, Narrow, Bomb, and Slicing.
+<br>　　Wide: Arrows have higher attack power than usual
+<br>　　Narrow: higher than usual accumulation value of abnormal status
+<br>　　Bomb: high stun value and damage ignores part defense
+<br>　　Slicing: calculated by bullet quality, but attacks with the Slicing effect
+<br>The type of bow determines which type/level can be used.
+<br>The arrow power for each type is shown in the table on the left.
+<br>The base power is the weapon multiplier multiplied by the power of the arrow as a percentage.
 <br>
-<br>矢に強撃ビンを装着すると、威力が 1.5倍になります。
-<br>（弓技【弓鬼】発動時または剛種武器は1.6倍、弓技【弓鬼】発動時で剛種武器の場合は1.7倍、
-<br>　剛種/覇種クエストで天嵐防具２部位以上かつ覇種武器の場合、1.7倍）
-<br>矢に打撃ビンを装着すると、打肉質で計算し、気絶値が蓄積します。
+<br>Attaching a power coating to an arrow increases its power by 1.5 times.
+<br>(1.6 times for gou weapons, 1.7 times for gou weapons when Bow Demon is activated,
+<br>　(1.7x for 2 or more parts of Tenran Armor and a HC weapon in the Gou/HC quests)
+<br>When an explosive coating is attached to an arrow, the stun value accumulates, calculated by the strike quality
 </p>
-<h4>●　溜め段階による倍率</h4>
+<h4>●　Charge Multiplier</h4>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th>溜め段階</th><th>基本威力倍率</th><th>属性倍率</th><th>状態異常倍率</th></tr>
-<tr><td class=c>1</td><td class=c>0.4 倍</td><td class=c>0.5 倍</td><td class=c>0.5 倍</td></tr>
-<tr><td class=c>2</td><td class=c>1.0 倍</td><td class=c>0.75 倍</td><td class=c>1.0 倍</td></tr>
-<tr><td class=c>3</td><td class=c>1.5 倍</td><td class=c>1.0 倍</td><td class=c>1.0 倍</td></tr>
-<tr><td class=c>4</td><td class=c>1.8 倍</td><td class=c>1.125 倍</td><td class=c>1.0 倍</td></tr>
-<tr><td class=c>オーラ4</td><td class=c>1.0 倍</td><td class=c>1.0 倍</td><td class=c>1.0 倍</td></tr>
-<tr><td class=c>オーラ5</td><td class=c>1.125 倍</td><td class=c>1.1 倍</td><td class=c>1.1 倍</td></tr>
+<tr><th>Charge Stage</th><th>Basic Power Multiplier</th><th>Element Multiplier</th><th>Status Multiplier</th></tr>
+<tr><td class=c>1</td><td class=c>0.4 x</td><td class=c>0.5 x</td><td class=c>0.5 x</td></tr>
+<tr><td class=c>2</td><td class=c>1.0 x</td><td class=c>0.75 x</td><td class=c>1.0 x</td></tr>
+<tr><td class=c>3</td><td class=c>1.5 x</td><td class=c>1.0 x</td><td class=c>1.0 x</td></tr>
+<tr><td class=c>4</td><td class=c>1.8 x</td><td class=c>1.125 x</td><td class=c>1.0 x</td></tr>
+<tr><td class=c>Aura 4</td><td class=c>1.0 x</td><td class=c>1.0 x</td><td class=c>1.0 x</td></tr>
+<tr><td class=c>Aura 5</td><td class=c>1.125 x</td><td class=c>1.1 x</td><td class=c>1.1 x</td></tr>
 </table>
-<p>同じタイプ/レベルの矢でも、溜め段階によって基本威力が変化します。
-<br>左表は、溜め段階ごとの基本威力倍率です。
-<br>　（溜め段階４は、装填数アップスキルが発動している場合のみ使用可能です）
+<p>Even with arrows of the same type/level, the base power will change depending on the charging stage.
+<br>The table on the left shows the basic power multiplier for each charge stage.
+<br>　(Charge stage 4 can only be used when the Loading UP skill is activated.)
 </p>
-<h4>●　時間経過による基本威力修正</h4>
+<h4>●　Basic power correction over time</h4>
 
-<p>矢は、発射後の時間経過に伴って、下図のように威力が変化します。
+<p>The power of arrows changes as time elapses after being fired, as shown in the diagram below.
 </p>
 <div><img src="../img/doc-yumi.gif" alt="減衰"></div>
 
-<h4>●　スキルによる基本威力・属性値修正</h4>
+<h4>●　Basic power/element value correction by skill</h4>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th>スキル</th><th>効果</th></tr>
-<tr><td>連射矢威力UP</td><td>連射矢の威力が 1.1倍</td></tr>
-<tr><td>貫通矢威力UP</td><td>貫通矢の威力が 1.1倍</td></tr>
-<tr><td>拡散矢威力UP</td><td>拡散矢の威力が 1.3倍</td></tr>
-<tr><td>○属性攻撃強化</td><td>各属性の威力アップ</td></tr>
-<tr><td>状態異常攻撃強化</td><td>各ビンの属性値が 1.125倍</td></tr>
+<tr><th>Skill</th><th>Effect</th></tr>
+<tr><td>Rapid UP</td><td>Power of rapid arrows 1.1x</td></tr>
+<tr><td>Pierce UP</td><td>Power of pierce arrows 1.1x</td></tr>
+<tr><td>Spread UP</td><td>Power of spread arrows 1.3x</td></tr>
+<tr><td>○Elemental Attack Up</td><td>Power up for each element</td></tr>
+<tr><td>Status Attack Up</td><td>If the attribute value of each coating is 1.125x</td></tr>
 </table>
-<p>左表で示すスキルが発動していると、矢の威力や属性値が増加します。
+<p>The power and attribute values of arrows are increased when the skills shown in the left table are activated.
 </p>
-<h4>●　会心率</h4>
+<h4>●　Affinity Rate</h4>
 
-<p>会心率とは、攻撃した際のクリティカルヒットが出る確率です。
-<br>クリティカルヒットの時、会心率が　0％より大きい場合は、基本威力が 1.25倍、マイナス値の場合は、基本威力が　0.75倍になります。
+<p>Affinity rate is the probability of a critical hit when attacking.
+<br>On a critical hit, if the affinity rate is greater than 0%, the base power is multiplied by 1.25; for negative values, the base power is multiplied by 0.75.
 </p>
 
-<h4>●　属性による追加ダメージ</h4>
+<h4>●　Additional damage by elements</h4>
 
-<p>通常属性（火/水/雷/龍/氷）付きの武器で攻撃すると、通常ダメージに加えて属性ダメージが追加されます。
-<br>複合属性は複数の属性がひとつの武器に含まれます。○属性強化のスキルはそれぞれに適用されます。
+<p>Attacking with a weapon with normal elements (Fire/Water/Thunder/Dragon/Ice) adds element damage in addition to normal damage.
+<br>Compound elements include multiple elements in one weapon. ○ element strengthening skills are applied to each.
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th>複合属性</th><th>火</th><th>水</th><th>雷</th><th>龍</th><th>氷</th></tr>
-<tr><td>炎</td><td class=c>70%</td><td class=c>-</td><td class=c>-</td><td class=c>70%</td><td class=c>-</td></tr>
-<tr><td>光</td><td class=c>70%</td><td class=c>-</td><td class=c>70%</td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>雷極</td><td class=c>-</td><td class=c>-</td><td class=c>70%</td><td class=c>70%</td><td class=c>-</td></tr>
-<tr><td>天翔</td><td class=c>30%</td><td class=c>100%</td><td class=c>70%</td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>熾凍</td><td class=c>80%</td><td class=c>-</td><td class=c>-</td><td class=c>40%</td><td class=c>80%</td></tr>
-<tr><td>黒焔</td><td class=c>50%</td><td class=c>-</td><td class=c>-</td><td class=c>150%</td><td class=c>-</td></tr>
-<tr><td>奏</td><td class=c>-</td><td class=c>100%</td><td class=c>-</td><td class=c>-</td><td class=c>100%</td></tr>
-<tr><td>闇</td><td class=c>-</td><td class=c>-</td><td class=c>-</td><td class=c>80%</td><td class=c>80%</td></tr>
-<tr><td>紅魔</td><td class=c>150%</td><td class=c>-</td><td class=c>-</td><td class=c>50%</td><td class=c>-</td></tr>
-<tr><td>風</td><td class=c>-</td><td class=c>-</td><td class=c>80%</td><td class=c>-</td><td class=c>80%</td></tr>
-<tr><td>響</td><td class=c>-</td><td class=c>100%</td><td class=c>-</td><td class=c>100%</td><td class=c>-</td></tr>
+<tr><th>compound element</th><th>Fire</th><th>Water</th><th>Thunder</th><th>Dragon</th><th>Ice</th></tr>
+<tr><td>Blaze</td><td class=c>70%</td><td class=c>-</td><td class=c>-</td><td class=c>70%</td><td class=c>-</td></tr>
+<tr><td>Light</td><td class=c>70%</td><td class=c>-</td><td class=c>70%</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>Thunder Pole</td><td class=c>-</td><td class=c>-</td><td class=c>70%</td><td class=c>70%</td><td class=c>-</td></tr>
+<tr><td>Tenshou</td><td class=c>30%</td><td class=c>100%</td><td class=c>70%</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>Okiko</td><td class=c>80%</td><td class=c>-</td><td class=c>-</td><td class=c>40%</td><td class=c>80%</td></tr>
+<tr><td>Black Flame</td><td class=c>50%</td><td class=c>-</td><td class=c>-</td><td class=c>150%</td><td class=c>-</td></tr>
+<tr><td>Music</td><td class=c>-</td><td class=c>100%</td><td class=c>-</td><td class=c>-</td><td class=c>100%</td></tr>
+<tr><td>Darkness</td><td class=c>-</td><td class=c>-</td><td class=c>-</td><td class=c>80%</td><td class=c>80%</td></tr>
+<tr><td>Crimson Demon</td><td class=c>150%</td><td class=c>-</td><td class=c>-</td><td class=c>50%</td><td class=c>-</td></tr>
+<tr><td>Wind</td><td class=c>-</td><td class=c>-</td><td class=c>80%</td><td class=c>-</td><td class=c>80%</td></tr>
+<tr><td>Sound</td><td class=c>-</td><td class=c>100%</td><td class=c>-</td><td class=c>100%</td><td class=c>-</td></tr>
 </table>
-<p>ステータスに表示されている属性値は、実際の属性値を 10倍しており、ダメージ計算の際には1/10の数値で計算されます
-<br>したがって、属性ダメージ量は　表示属性値÷10×溜め倍率　となります。
+<p>The element value shown in the status is the actual element value multiplied by 10, which is 1/10 of the actual element value when calculating the damage.
+<br>Therefore, the amount of element damage is the displayed element value ÷ 10 × charge multiplier.
 </p>
-<h4>●　ビンの装着</h4>
+<h4>●　Loading a Coating</h4>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th>タイプ</th><th>状態異常ビン</th><th>＋１</th><th>＋２</th><th>＋３</th><th>爆撃ビン</th><th>打撃ビン<br>気絶値</th></tr>
-<tr><td>連射LV1</td><td class=c>13</td><td class=c>14</td><td class=c>17</td><td class=c>19</td><td class=c>70</td><td class=c>3-4</td></tr>
-<tr><td>連射LV2</td><td class=c>7×2本</td><td class=c>8</td><td class=c>9</td><td class=c>10</td><td class=c>40×2本</td><td class=c>3-4</td></tr>
-<tr><td>連射LV3</td><td class=c>5×3本</td><td class=c>5</td><td class=c>6</td><td class=c>7</td><td class=c>32×3本</td><td class=c>3-4</td></tr>
-<tr><td>連射LV4</td><td class=c>4×4本</td><td class=c>4</td><td class=c>5</td><td class=c>6</td><td class=c>28×4本</td><td class=c>3-4</td></tr>
-<tr><td>拡散LV1</td><td class=c>5×3本</td><td class=c>5</td><td class=c>6</td><td class=c>7</td><td class=c>26×3本</td><td class=c>3-4</td></tr>
-<tr><td>拡散LV2</td><td class=c>6×3本</td><td class=c>6</td><td class=c>7</td><td class=c>9</td><td class=c>32×3本</td><td class=c>3-4</td></tr>
-<tr><td>拡散LV3</td><td class=c>5×5本</td><td class=c>5</td><td class=c>6</td><td class=c>7</td><td class=c>22×5本</td><td class=c>3-4</td></tr>
-<tr><td>拡散LV4</td><td class=c>5×5本</td><td class=c>5</td><td class=c>6</td><td class=c>7</td><td class=c>24×5本</td><td class=c>3-4</td></tr>
-<tr><td>貫通LV1</td><td class=c>5×3ヒット</td><td class=c>5</td><td class=c>6</td><td class=c>7</td><td class=c>28×3ヒット</td><td class=c>3-4</td></tr>
-<tr><td>貫通LV2</td><td class=c>4×4ヒット</td><td class=c>4</td><td class=c>5</td><td class=c>6</td><td class=c>28×4ヒット</td><td class=c>3-4</td></tr>
-<tr><td>貫通LV3</td><td class=c>4×5ヒット</td><td class=c>4</td><td class=c>5</td><td class=c>6</td><td class=c>28×5ヒット</td><td class=c>3-4</td></tr>
-<tr><td>貫通LV4</td><td class=c>4×6ヒット</td><td class=c>4</td><td class=c>5</td><td class=c>6</td><td class=c>28×6ヒット</td><td class=c>3-4</td></tr>
-<tr><td>オーラアロー</td><td class=c>25</td><td class=c></td><td class=c></td><td class=c></td><td class=c>37×5倍<br>55×5倍(火事場)</td><td class=c>20</td></tr>
-<tr><td>放散型</td><td class=c>2×7ヒット</td><td class=c>3</td><td class=c>4</td><td class=c>5</td><td class=c>26×7ヒット</td><td class=c></td></tr>
-<tr><td>集中型</td><td class=c>6×5ヒット</td><td class=c>7</td><td class=c>8</td><td class=c>9</td><td class=c>28×5ヒット</td><td class=c></td></tr>
-<tr><td>爆裂型</td><td class=c>-</td><td class=c>-</td><td class=c>-</td><td class=c>-</td><td class=c>50・100</td><td class=c></td></tr>
-<tr><td>切断型</td><td class=c>2×7ヒット</td><td class=c>3</td><td class=c>4</td><td class=c>5</td><td class=c>24×7ヒット</td><td class=c></td></tr>
+<tr><th>Type</th><th>Status Coating</th><th>＋１</th><th>＋２</th><th>＋３</th><th>Explosive Coating</th><th>Impact Coating<br>Stun</th></tr>
+<tr><td>RpdLv1</td><td class=c>13</td><td class=c>14</td><td class=c>17</td><td class=c>19</td><td class=c>70</td><td class=c>3-4</td></tr>
+<tr><td>RpdLv2</td><td class=c>7×2 applied</td><td class=c>8</td><td class=c>9</td><td class=c>10</td><td class=c>40×2 applied</td><td class=c>3-4</td></tr>
+<tr><td>RpdLv3</td><td class=c>5×3 applied</td><td class=c>5</td><td class=c>6</td><td class=c>7</td><td class=c>32×3 applied</td><td class=c>3-4</td></tr>
+<tr><td>RpdLv4</td><td class=c>4×4 applied</td><td class=c>4</td><td class=c>5</td><td class=c>6</td><td class=c>28×4 applied</td><td class=c>3-4</td></tr>
+<tr><td>SprLv1</td><td class=c>5×3 applied</td><td class=c>5</td><td class=c>6</td><td class=c>7</td><td class=c>26×3 applied</td><td class=c>3-4</td></tr>
+<tr><td>SprLv2</td><td class=c>6×3 applied</td><td class=c>6</td><td class=c>7</td><td class=c>9</td><td class=c>32×3 applied</td><td class=c>3-4</td></tr>
+<tr><td>SprLv3</td><td class=c>5×5 applied</td><td class=c>5</td><td class=c>6</td><td class=c>7</td><td class=c>22×5 applied</td><td class=c>3-4</td></tr>
+<tr><td>SprLv4</td><td class=c>5×5 applied</td><td class=c>5</td><td class=c>6</td><td class=c>7</td><td class=c>24×5 applied</td><td class=c>3-4</td></tr>
+<tr><td>PrcLv1</td><td class=c>5×3 hit</td><td class=c>5</td><td class=c>6</td><td class=c>7</td><td class=c>28×3 hit</td><td class=c>3-4</td></tr>
+<tr><td>PrcLv2</td><td class=c>4×4 hit</td><td class=c>4</td><td class=c>5</td><td class=c>6</td><td class=c>28×4 hit</td><td class=c>3-4</td></tr>
+<tr><td>PrcLv3</td><td class=c>4×5 hit</td><td class=c>4</td><td class=c>5</td><td class=c>6</td><td class=c>28×5 hit</td><td class=c>3-4</td></tr>
+<tr><td>PrcLv4</td><td class=c>4×6 hit</td><td class=c>4</td><td class=c>5</td><td class=c>6</td><td class=c>28×6 hit</td><td class=c>3-4</td></tr>
+<tr><td>Aura Arrow</td><td class=c>25</td><td class=c></td><td class=c></td><td class=c></td><td class=c>37×5x<br>55×5x(State of Fire)</td><td class=c>20</td></tr>
+<tr><td>Wide</td><td class=c>2×7 hit</td><td class=c>3</td><td class=c>4</td><td class=c>5</td><td class=c>26×7 hit</td><td class=c></td></tr>
+<tr><td>Narrow</td><td class=c>6×5 hit</td><td class=c>7</td><td class=c>8</td><td class=c>9</td><td class=c>28×5 hit</td><td class=c></td></tr>
+<tr><td>Bomb</td><td class=c>-</td><td class=c>-</td><td class=c>-</td><td class=c>-</td><td class=c>50・100</td><td class=c></td></tr>
+<tr><td>Slicing</td><td class=c>2×7 hit</td><td class=c>3</td><td class=c>4</td><td class=c>5</td><td class=c>24×7 hit</td><td class=c></td></tr>
 </table>
-<p>矢に状態異常属性 （毒・麻痺・睡眠） ビンを装着すると、状態異常属性が付加された矢を放つことができます。
-<br>状態異常属性ビンを装着すると、弓に付加されている通常属性は無効となります。
-<br>属性値は、左表のとおりです。 複数の矢を放った場合は、１本ごとに属性値が付加されます。
-<br>近接武器とは違い、必ず発動します。
+<p>If you attach a status attribute (poison, paralysis, sleep) coating to an arrow, you can shoot an arrow with the status attribute added.
+<br>When the status attribute coating is attached, the normal element attached to the bow is nullified.
+<br>Attribute values are shown in the table on the left. If you shoot multiple arrows, an attribute value will be added to each one.
+<br>Unlike melee weapons, it is always triggered.
 <br>
-<br>状態異常ビンは状態異常攻撃強化 スキルが発動していると、属性値が 1.125倍になります。
-<br>また、溜め段階１の時のみ属性値が半分となります。毒ビンの場合、溜め段階３以上で１．５倍になります。
+<br>The attribute value of the status coating is multiplied by 1.125 when the condition attack enhancement skill is activated.
+<br>In addition, the attribute value is halved only at the accumulation stage 1. In the case of Poison Coatings, it will be 1.5 times higher than charge level 3.
 <br>
-<br>爆撃ビンの場合、無属性のダメージになり固定値のダメージを与えます。
+<br>In the case of explosive coatings, the damage is unattributed and deals a fixed value of damage.
 <br>
-<br>打撃ビンの場合、溜め１の場合気絶値は半分になります。
-<br>距離に応じ、0.7倍、1.0倍、0.8倍と気絶値は変化します。
+<br>In the case of an impact coating, the stun value is halved for charge 1.
+<br>Depending on the distance, the stun value varies from 0.7x, 1.0x, and 0.8x.
 </p>
-<h4>●　弓の近接攻撃</h4>
+<h4>●　Bow Melee Attacks</h4>
 
-<p>近接に記載しています。
+<p>Described Elsewhere
 </p>
-<h4>●　ヒットエフェクト</h4>
+<h4>●　Hit Effects</h4>
 
-<p>弓のヒットエフェクトは、発射後の威力変化によって異なります。
-<br>エフェクトは1.5倍 ⇒ 1.0倍　⇒ 0.8倍 ⇒ 0.5倍の順で小さなエフェクトになります。
-<br><small>(与えるダメージには影響されないため、ダメージがほとんど通らない部位でも大きなエフェクトがでる場合もあります)</small>
+<p>Bow hit effects vary depending on the change in power after firing.
+<br>The effect becomes smaller in the order of 1.5x ⇒ 1.0x ⇒ 0.8x ⇒ 0.5x.
+<br><small>(Since it is not affected by the damage dealt, even parts that receive little damage may have a large effect.)</small>
 </p>
-<h4>●　与えるダメージの増大</h4>
+<h4>●　Increased damage dealt</h4>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th>状態</th><th>倍率</th></tr>
-<tr><td>麻痺状態中</td><td class=n>1.1倍</td></tr>
-<tr><td>岩に擬態中　（バサルモス）</td><td class=n>1.1倍</td></tr>
-<tr><td>落とし穴　（落ちてから<br>もがき始めるまでの間のみ）</td><td class=n>1.1倍</td></tr>
-<tr><td>睡眠中　（初撃のみ）</td><td class=n>3.0倍</td></tr>
+<tr><th>Condition</th><th>Multiplier</th></tr>
+<tr><td>Paralized</td><td class=n>1.1x</td></tr>
+<tr><td>Impersonating a Rock　（Basarios）</td><td class=n>1.1x</td></tr>
+<tr><td>Pitfall　（Only from the time they fall<br>to the time they start struggling)</td><td class=n>1.1x</td></tr>
+<tr><td>Sleep　（First Shot Only）</td><td class=n>3.0x</td></tr>
 </table>
-<p>モンスターが特定の状態の時に攻撃すると、左表のように与えるダメージが増大します。
-<br><small>(増大するのは無属性ダメージのみで、属性ダメージは変化しません)</small>
-<br>シビレ罠にかかっている時は麻痺状態ではなくシビレ状態なので、増大はしません。
-<br>未発覚の状態で落とし穴にはめると、効果時間が約 1.7倍に延びます。なお、怒り時は約 0.7倍になります。(未発覚が優先)
-<br><small>(ラージャンは、寝かせて落としても 6秒のまま)</small>
-<br>モンスターが弱って寝ている場合も睡眠中と同じ。ただし、モンスターの体力は徐々に回復している。
-<br><small>(エスピナスのクエスト開始時の状態は除く)</small>
+<p>If you attack a monster in a certain state, the damage dealt will increase as shown on the left table.
+<br><small>(Only non-element damage increases, element damage does not change)</small>
+<br>When caught in a shock trap, it is not paralyzed but shocked, so it does not increase.
+<br>If you put it in a pitfall in an undiscovered state, the effect time will be extended by about 1.7 times. In addition, when angry, it will be about 0.7 times. (Priority is given to undiscovered cases)
+<br><small>(Rajang always stays at 6 seconds even if he is asleep when you lay down the trap)</small>
+<br>If the monster is weak and sleeping, it is the same as when put to sleep. But, the monster's HP is gradually recovering.
+<br><small>(except for Espinas' status at the beginning of the quest)</small>
 </p>
-<h4>●　肉質と全体防御率によるダメージ軽減</h4>
+<h4>●　Damage reduction due to part values and overall defense rate</h4>
 
-<p>モンスターには肉質が設定されており、ダメージを軽減してしまいます。
-<br>通常ダメージ、属性ダメージそれぞれが肉質によって軽減されます。
-<br>また、モンスターには肉質とは別に全体の防御率が設定されており、総ダメージ値を軽減してしまいます。
-<br>さらに、怒り状態になると、全体防御率に補正がかかるモンスターもいます。
+<p>Monsters have a set part value, which reduces damage.
+<br>Normal damage and element damage are each reduced by the part value.
+<br>In addition, monsters have an overall defense rate that is separate from their part values, which reduces the total damage value.
+<br>Furthermore, there are monsters whose overall defense rate is corrected when they become enraged.
 </p>
-<h4>●　プレイヤーの攻撃力アップ</h4>
+<h4>●　Increased player attack power</h4>
 
-<p>プレイヤーの攻撃力をアップする手段はいろいろありますが、大別して３つのグループに分けられます。
-<br>　　１：攻撃力アップのスキル発動、攻撃力をアップするアイテムの所持（力の護符・力の爪）
-<br>　　２：食事効果によるアップ、鬼人薬・鬼人薬グレートの使用
-<br>　　３：怪力の種・怪力の丸薬・鬼人笛の使用
+<p>There are many ways to increase a player's offensive power, but they can be broadly divided into three groups.
+<br>　　１：Activation of skills that increase attack power, possession of items that increase attack power (Powercharm, Powertalon)
+<br>　　２：Up due to food effects, use of demon drug and mega demon drug
+<br>　　３：Use of power seeds, power pills, and demon flute
 <br>
-<br>グループ１は、クエスト中に力尽きても効力が失われることはありません。
-<br>グループ２は、クエスト中はずっと有効ですが、力尽きると効力が失われます。
-<br>グループ３は、一定の時間が経過すると、効力が失われます。
+<br>Group 1 will not lose potency even if you run out during a quest.
+<br>Group 2 is effective all the time during the quest, but loses its effectiveness when you faint.
+<br>Group 3 loses potency after a certain amount of time.
 <br>
-<br>グループ２と３は、グループ内の各効果が重複することはありません。重複した場合は、順番にかかわらず効果の大きいものが優先されます。
+<br>Groups 2 and 3 do not overlap in their respective effects within the group. In the event of overlap, the one with the greater effect takes precedence regardless of the order.
 </p>
 </body></html>
