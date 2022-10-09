@@ -16,232 +16,233 @@ ul.ttop {margin:0;padding:1px 0;width:60em;list-style-type:none;}
 ul.ttop li {font-size:100%;float:left;padding:2px 5px 2px 5px;border:1px solid silver;}
 -->
 </style>
-<title>モンスターへの攻撃　【近接武器編】</title>
+<title>Attacking Monsters [Melee Weapons]</title>
 </head>
 <body>
 <ul class=ttop>
-<li>モンスターへの攻撃　<a href="doc-sword.htm">【近接武器編】</a>
-／<a href="doc-gun.htm">【ボウガン編】</a>
-／<a href="doc-yumi.htm">【弓編】</a>
-<li><a href="doc-spec.htm">武器性能</a>
-<li><a href="doc-kensyo.htm">剣晶スキル</a>
-<li><a href="doc-buki.htm">武器の種類</a>
-<li><a href="doc-bougu.htm">防具の種類</a>
-<li><a href="doc-feature.htm">フィーチャー</a>
+<li>Attacking Monsters　<a href="doc-sword.htm">【Melee Weapons】</a>
+／<a href="doc-gun.htm">【Bowgun】</a>
+／<a href="doc-yumi.htm">【Bow】</a>
+<li><a href="doc-spec.htm">Weapon Performance</a>
+<li><a href="doc-kensyo.htm">Sword Crystal Skills</a>
+<li><a href="doc-buki.htm">Weapons</a>
+<li><a href="doc-bougu.htm">Armor types</a>
+<li><a href="doc-feature.htm">Active Feature</a>
 </ul>
 <hr style="clear:both">
-<h3>モンスターへの攻撃　【近接武器編】</h3>
+<h3>Attacking Monsters　【Melee Weapons】</h3>
 
-<h4>●　武器倍率</h4>
+<h4>●　Weapon Multiplier</h4>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th>武器の種類</th><th>倍率</th></tr>
-<tr><td>大剣/太刀</td><td class=c>4.8</td></tr>
-<tr><td>片手剣/双剣</td><td class=c>1.4</td></tr>
-<tr><td>ハンマー/狩猟笛</td><td class=c>5.2</td></tr>
-<tr><td>ランス/ガンランス</td><td class=c>2.3</td></tr>
-<tr><td>穿龍棍</td><td class=c>1.8</td></tr>
-<tr><td>スラッシュアックス</td><td class=c>5.4</td></tr>
-<tr><td>ボウガン/弓</td><td class=c>1.2</td></tr>
+<tr><th>Weapons</th><th>Multiplier</th></tr>
+<tr><td>GS/LS</td><td class=c>4.8</td></tr>
+<tr><td>SnS/DS</td><td class=c>1.4</td></tr>
+<tr><td>Hammer/Hunting Horn</td><td class=c>5.2</td></tr>
+<tr><td>Lance/Gunlance</td><td class=c>2.3</td></tr>
+<tr><td>Tonfa</td><td class=c>1.8</td></tr>
+<tr><td>Switch Axe</td><td class=c>5.4</td></tr>
+<tr><td>Magnet Spike</td><td class=c>1.2</td></tr>
+<tr><td>Bowgun/Bow</td><td class=c>1.2</td></tr>
 </table>
-<p>武器倍率は、武器が本来持っている強さを表す数値で、攻撃によるモンスターへのダメージ計算の元になります。
-<br>ステータスに表示されている攻撃力は、この武器倍率に一定の倍率を掛けたものが表示されています。
-<br>各武器の倍率は左表のとおりです。
-<br><small>※ステータスに表示されている攻撃力を左記の倍率で割ることで、武器倍率を求めることができます</small>
+<p>The weapon multiplier is a number that represents the inherent strength of the weapon and is the basis for calculating the damage to the monster from the attack.
+<br>The attack power shown in the status is this weapon multiplier multiplied by a certain factor.
+<br>The multipliers for each weapon are shown in the table to the left.
+<br><small>※The weapon multiplier can be obtained by dividing the attack power shown in the status by the multiplier shown on the left</small>
 <br>
-<br>食事効果やアイテム使用等による攻撃力アップは、全てこの武器倍率に一定値が加算されます。
-<br>従って、ステータス上では、武器の種類によって攻撃力のアップ量が異なります。
+<br>Any increase in attack power due to food effects, item use, etc. will be added to this weapon multiplier by a fixed value.
+<br>Therefore, in terms of status, the amount of increase in attack power depends on the type of weapon.
 </p>
-<p style="clear:both" class=ex>例：龍刀【紅蓮】 （武器倍率：170）の場合　170×4.8＝816 が攻撃力となる　816÷4.8＝170
+<p style="clear:both" class=ex>Ex：Bloodred Drgn Sword （Weapon Multiplier：170）　170×4.8＝816 Attack Power　816÷4.8＝170
 <br>
-<br>ステータスの表示の際に切り捨てがあるため、正確に割り戻せない場合もあります
-<br>例：大蛇ノ大鉈LV5（武器倍率：154）の場合　154×4.8＝739.2＝739 が攻撃力となる　739÷4.8＝153.96
+<br>(In some cases, the statuses may not be accurately divisible back due to rounding differences when displaying statuses.
+<br>Ex：Ophion BladeLV5（Weapon Multiplier：154）　154×4.8＝739.2＝739 Attack Power　739÷4.8＝153.96
 </p>
-<h4>●　攻撃アクションの威力</h4>
+<h4>●　Power of Motion Values</h4>
 
-<p>同じ武器でも、攻撃の仕方によって威力が異なります。
-<br>武器倍率に、各アクションの威力を％として掛けたものが、基本威力となります。
-<br>各アクションの威力は、別ページに記載します。
+<p>The same weapon can have different power depending on how it is used to attack.
+<br>The weapon multiplier multiplied by the power of each action as a percentage is the base power.
+<br>The power of each action is described on a separate page. (Untranslated section of damage Calc)
 <br>
-<p style="clear:both" class=ex>例：龍刀【紅蓮】 の縦斬り（威力：28)の場合　170×28%＝47.6＝47 が基本威力となる
+<p style="clear:both" class=ex>Ex：Bloodred Drgn Sword In the case of a vertical slash (power: 28), the basic power is 170 x 28% = 47.6 = 47
 <br>
-<br>また、武器の種類によっては威力に補正がかかります。
-<br>例：クロオビソードのジャンプ斬り（威力：18)の場合　150×18%×補正125%＝33.75＝33 が基本威力となる
+<br>Also, depending on the type of weapon, the power will be corrected.
+<br>Ex：Blackbelt Sword JumpSlash（Power：18)　150 x 18% x correction 125% = 33.75 = 33 is the base power
 </p>
-<h4>●　会心率</h4>
+<h4>●　Affinity Rate</h4>
 
-<p>会心率とは、攻撃した際のクリティカルヒットが出る確率です。
-<br>クリティカルヒットの時、会心率が　0％より大きい場合は、基本威力が 1.25倍、マイナス値の場合は、基本威力が　0.75倍になります。
+<p>Affinity rate is the probability of a critical hit when attacking.
+<br>On a critical hit, if the affinity rate is greater than 0%, the base power is multiplied by 1.25; for negative values, the base power is multiplied by 0.75.
 <br>
-<br>会心率が 0％より大きいプラス値の場合は、斬れ味レベルによっては会心率が変動します。<small>（後述：切れ味倍率）</small>
-<br>ステータス上の会心率は固定表示ですが、実際にはクエスト中の斬れ味の状態によります。
-<br>なお、斬れ味レベル２ （黄）以下の状態では、クリティカルは発動しません。
-<br><small>※スキル：達人により、会心率がプラス値になった場合も斬れ味レベルによって変動します。ただし、餓狼、ＳＰ補正でプラス値になった場合は対象外です</small>
+<br>If the hit rate is a positive value greater than 0%, the hit rate will fluctuate depending on the sharpness level.<small>（後述：切れ味倍率）</small>
+<br>Affinity rate on the status page is displayed as fixed, but it actually depends on the level of sharpness during a quest.
+<br>In addition, a crit will not be triggered when the sharpness level is 2 (yellow) or lower.
+<br><small>※Skill: When the plus value of the affinity rate is obtained by the expert skill, it will also be affected by the slashing ability level. (However, this does not apply when the positive value is obtained by starving wolf or SP compensation.</small>
 </p>
-<p style="clear:both" class=ex>例：龍刀【紅蓮】 の踏み込み斬りでクリティカルヒットが出た場合
-<br>　　 170×28%×1.25＝59.5＝59 が基本威力
+<p style="clear:both" class=ex>Ex：Bloodred Drgn Sword If a critical hit is made with a step-in slash
+<br>　　 170×28%×1.25＝59.5＝59 is the base power
 </p>
 
-<h4>●　属性による追加ダメージ</h4>
+<h4>●　Additional damage by elements</h4>
 
-<p>通常属性（火/水/雷/龍/氷）付きの武器で攻撃すると、通常ダメージに加えて属性ダメージが追加されます。
-<br>複合属性は複数の属性がひとつの武器に含まれます。○属性強化のスキルはそれぞれに適用されます。
+<p>When attacking with weapons with normal elements (fire/water/lightning/dragon/ice), element damage is added in addition to normal damage.
+<br>Composite elements include multiple elements in one weapon. ○ Element strengthening skills are applied to each.
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th>複合属性</th><th>火</th><th>水</th><th>雷</th><th>龍</th><th>氷</th></tr>
-<tr><td>炎</td><td class=c>70%</td><td class=c>-</td><td class=c>-</td><td class=c>70%</td><td class=c>-</td></tr>
-<tr><td>光</td><td class=c>70%</td><td class=c>-</td><td class=c>70%</td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>雷極</td><td class=c>-</td><td class=c>-</td><td class=c>70%</td><td class=c>70%</td><td class=c>-</td></tr>
-<tr><td>天翔</td><td class=c>30%</td><td class=c>100%</td><td class=c>70%</td><td class=c>-</td><td class=c>-</td></tr>
-<tr><td>熾凍</td><td class=c>80%</td><td class=c>-</td><td class=c>-</td><td class=c>40%</td><td class=c>80%</td></tr>
-<tr><td>黒焔</td><td class=c>50%</td><td class=c>-</td><td class=c>-</td><td class=c>150%</td><td class=c>-</td></tr>
-<tr><td>奏</td><td class=c>-</td><td class=c>100%</td><td class=c>-</td><td class=c>-</td><td class=c>100%</td></tr>
-<tr><td>闇</td><td class=c>-</td><td class=c>-</td><td class=c>-</td><td class=c>80%</td><td class=c>80%</td></tr>
-<tr><td>紅魔</td><td class=c>150%</td><td class=c>-</td><td class=c>-</td><td class=c>50%</td><td class=c>-</td></tr>
-<tr><td>風</td><td class=c>-</td><td class=c>-</td><td class=c>80%</td><td class=c>-</td><td class=c>80%</td></tr>
-<tr><td>響</td><td class=c>-</td><td class=c>100%</td><td class=c>-</td><td class=c>100%</td><td class=c>-</td></tr>
-<tr><td>灼零</td><td class=c>125%</td><td class=c>-</td><td class=c>-</td><td class=c>-</td><td class=c>125%</td></tr>
-<tr><td>皇鳴</td><td class=c>-</td><td class=c>-</td><td class=c>150%</td><td class=c>50%</td><td class=c>-</td></tr>
+<tr><th>Compound Element</th><th>Fire</th><th>Water</th><th>Thunder</th><th>Dragon</th><th>Ice</th></tr>
+<tr><td>Blaze</td><td class=c>70%</td><td class=c>-</td><td class=c>-</td><td class=c>70%</td><td class=c>-</td></tr>
+<tr><td>Light</td><td class=c>70%</td><td class=c>-</td><td class=c>70%</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>Thunder Pole</td><td class=c>-</td><td class=c>-</td><td class=c>70%</td><td class=c>70%</td><td class=c>-</td></tr>
+<tr><td>Tenshou</td><td class=c>30%</td><td class=c>100%</td><td class=c>70%</td><td class=c>-</td><td class=c>-</td></tr>
+<tr><td>Okiko</td><td class=c>80%</td><td class=c>-</td><td class=c>-</td><td class=c>40%</td><td class=c>80%</td></tr>
+<tr><td>Black Flame</td><td class=c>50%</td><td class=c>-</td><td class=c>-</td><td class=c>150%</td><td class=c>-</td></tr>
+<tr><td>Music</td><td class=c>-</td><td class=c>100%</td><td class=c>-</td><td class=c>-</td><td class=c>100%</td></tr>
+<tr><td>Darkness</td><td class=c>-</td><td class=c>-</td><td class=c>-</td><td class=c>80%</td><td class=c>80%</td></tr>
+<tr><td>Crimson Demon</td><td class=c>150%</td><td class=c>-</td><td class=c>-</td><td class=c>50%</td><td class=c>-</td></tr>
+<tr><td>Wind</td><td class=c>-</td><td class=c>-</td><td class=c>80%</td><td class=c>-</td><td class=c>80%</td></tr>
+<tr><td>Sound</td><td class=c>-</td><td class=c>100%</td><td class=c>-</td><td class=c>100%</td><td class=c>-</td></tr>
+<tr><td>Burning Zero</td><td class=c>125%</td><td class=c>-</td><td class=c>-</td><td class=c>-</td><td class=c>125%</td></tr>
+<tr><td>Emperor's Roar</td><td class=c>-</td><td class=c>-</td><td class=c>150%</td><td class=c>50%</td><td class=c>-</td></tr>
 </table>
-<p>ステータスに表示されている属性値は、実際の属性値を 10倍しており、ダメージ計算の際には1/10の数値で計算されます
+<p>The element value shown in the status is the actual element value multiplied by 10, which is 1/10 of the actual element value when calculating the damage.
 <br>
-<br>火属性攻撃強化 などの強化スキルが発動していると、属性値がアップします。
+<br>When a strengthening skill such as "Fire Attack" is activated, the element value will be increased.
 </p>
-<p style="clear:both" class=ex>例：龍刀【紅蓮】の場合　龍480÷10＝龍48
+<p style="clear:both" class=ex>Ex：Bloodred Drgn Sword　480 Dragon÷10＝48 Dragon
 </p>
-<h4>●　状態異常属性による攻撃</h4>
+<h4>●　Abnormal Status Attacks</h4>
 
-<p>状態異常属性 （毒・麻痺・睡眠）付きの武器で攻撃すると、１/３の確率で状態異常属性が付加された攻撃ができます。
-<br>ステータスに表示されている属性値は、実際の属性値を 10倍しており、蓄積の際には1/10の数値で計算されます。
-<br>状態異常攻撃強化 スキルが発動していると、属性値が 1.125倍になります。
-<br>双属性（通常属性＋状態異常属性）の場合、状態異常属性が発動した場合でも通常属性のダメージは加算されます。
-<br>蓄積が耐性値を超えた場合、モンスターは状態異常に陥ります。
-<br>一定時間経過して状態異常が解除されると、モンスターはその属性に対して耐性が上がるので、耐性値が上昇します。
-<br>蓄積値は時間の経過と共に減少していきます。
+<p>When attacking with a weapon with an abnormal status attribute (poison, paralysis, sleep), there is a 1/3 chance of an attack with the abnormal attribute added.
+<br>The attribute values shown in the status are multiplied by 10 times the actual attribute values, and are calculated as 1/10 of the actual value when accumulating.
+<br>If the Status Attack Up skill is activated, the attribute value is multiplied by 1.125.
+<br>In the case of dual attributes (normal element + abnormal status), damage from the normal attribute is added even if the abnormal attribute is activated.
+<br>If the accumulation exceeds the resistance value, the monster will fall into the status condition.
+<br>When the condition is removed after a certain period of time, the monster becomes more resistant to that attribute, thus increasing its resistance value.
+<br>The accumulated value decreases over time.
 <br>
-<br>モンスターが毒状態に陥った時、毒の蓄積量はいったん０に戻りますが、毒状態中でも毒攻撃を行えば再び蓄積されていきます。
-<br>蓄積量は現在の耐性値－１止まりとなりますが、毒状態中は蓄積量が減ることはありません。
-<br>この蓄積量は毒状態が解除されたあともそのままなので、毒攻撃を行うことで連続して毒状態にできます。
+<br>When a monster is poisoned, the amount of poison accumulated returns to zero, but it will accumulate again if a poison attack is performed while the monster is poisoned.
+<br>The amount of accumulation stops at the current resistance value -1, but the amount of accumulation does not decrease during the poisoned state.
+<br>This accumulated amount remains unchanged even after the poison state is removed, so the monster can be continuously poisoned by performing a poison attack.
 <br>
-<br>麻痺の場合は、麻痺中に麻痺攻撃を行っても蓄積されることはありません。麻痺状態解除後は、再び０からの蓄積となります。
+<br>In the case of paralysis, no accumulation occurs even if a paralyzing attack is performed during paralysis. After the paralyzed state is over, the accumulation will start from 0 again.
 <br>
-<br>打撃攻撃すると、モンスターに気絶値が蓄積されていき、耐性値を超えるとモンスターは一定時間、気絶状態に陥ります。
+<br>Impact attacks cause the monster to accumulate a stun value, and when the resistance level is exceeded, the monster is stunned for a certain period of time.
 </p>
 
-<h4>●　斬れ味倍率</h4>
+<h4>●　Sharpness Multiplier</h4>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th>切れ味レベル</th><th>弾かれ倍率</th><th>斬れ味倍率</th><th>属性倍率</th><th>状態異常倍率</th><th>会心率補正</th></tr>
-<tr><td>レベル０ （赤）</td><td class=n>0.5倍</td><td class=n>0.6倍</td><td class=n>0.6倍</td><td class=n>1.0倍</td><td>発動なし</td></tr>
-<tr><td>レベル１ （橙）</td><td class=n>0.75倍</td><td class=n>0.85倍</td><td class=n>0.85倍</td><td class=n>1.0倍</td><td>発動なし</td></tr>
-<tr><td>レベル２ （黄）</td><td class=n>1.0倍</td><td class=n>1.1倍</td><td class=n>1.1倍</td><td class=n>1.0倍</td><td>発動なし</td></tr>
-<tr><td>レベル３ （緑）</td><td class=n>1.125倍</td><td class=n>1.325倍</td><td class=n>1.325倍</td><td class=n>1.0倍</td><td>-</td></tr>
-<tr><td>レベル４ （青）</td><td class=n>1.25倍</td><td class=n>1.45倍</td><td class=n>1.45倍</td><td class=n>1.0倍</td><td>+5％</td></tr>
-<tr><td>レベル５ （白）</td><td class=n>1.4倍</td><td class=n>1.6倍</td><td class=n>1.6倍</td><td class=n>1.0倍</td><td>+10％</td></tr>
-<tr><td>レベル６ （紫）</td><td class=n>1.5倍</td><td class=n>1.7倍</td><td class=n>1.7倍</td><td class=n>1.0倍</td><td>+10％</td></tr>
-<tr><td>レベル７ （空）</td><td class=n>1.6倍</td><td class=n>1.8倍</td><td class=n>1.8倍</td><td class=n>1.0倍</td><td>+10％</td></tr>
+<tr><th>Sharpness Level</th><th>Bounced Multiplier</th><th>Sharpness Multiplier</th><th>Element Multiplier</th><th>Ab Status Multiplier</th><th>Affinity Correction</th></tr>
+<tr><td>Level 0 （Red）</td><td class=n>0.5x</td><td class=n>0.6x</td><td class=n>0.6x</td><td class=n>1.0x</td><td>Not Activated</td></tr>
+<tr><td>Level 1 （Orange）</td><td class=n>0.75x</td><td class=n>0.85x</td><td class=n>0.85x</td><td class=n>1.0x</td><td>Not Activated</td></tr>
+<tr><td>Level 2 （Yellow）</td><td class=n>1.0x</td><td class=n>1.1x</td><td class=n>1.1x</td><td class=n>1.0x</td><td>Not Activated</td></tr>
+<tr><td>Level 3 （Green）</td><td class=n>1.125x</td><td class=n>1.325x</td><td class=n>1.325x</td><td class=n>1.0x</td><td>-</td></tr>
+<tr><td>Level 4 （Blue）</td><td class=n>1.25x</td><td class=n>1.45x</td><td class=n>1.45x</td><td class=n>1.0x</td><td>+5％</td></tr>
+<tr><td>Level 5 （White）</td><td class=n>1.4x</td><td class=n>1.6x</td><td class=n>1.6x</td><td class=n>1.0x</td><td>+10％</td></tr>
+<tr><td>Level 6 （Purple）</td><td class=n>1.5x</td><td class=n>1.7x</td><td class=n>1.7x</td><td class=n>1.0x</td><td>+10％</td></tr>
+<tr><td>Level 7 （Cyan）</td><td class=n>1.6x</td><td class=n>1.8x</td><td class=n>1.8x</td><td class=n>1.0x</td><td>+10％</td></tr>
 </table>
-<p>基本威力・属性に、武器の斬れ味レベルによる倍率が加味されます。
-<br>各レベルの倍率は左表のとおりです。
+<p>A multiplier based on the weapon's sharpness level is added to the basic power and attributes.
+<br>The multipliers for each level are shown in the table on the left.
 </p>
-<p style="clear:both" class=ex>例：緑ゲージの龍刀【紅蓮】で縦斬りの場合
+<p style="clear:both" class=ex>Ex：In the case of a vertical cut with a Bloodred Drgn Sword
 <br>　　 170×28%×1.125＝53.55＝53
-<br>　　 龍48×1＝48　となる
+<br>　　 48 Dragon×1＝48
 </p>
 
-<h4>●　斬り方修正値</h4>
+<h4>●　Sharpness Modifier</h4>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th>モーション</th><th>斬れ味：黄以下<br>の修正値</th><th>斬れ味：緑以上<br>の修正値</th></tr>
-<tr><td>振り始め</td><td class=n>0.3倍</td><td class=n>1.0倍</td></tr>
-<tr><td>通常ヒット</td><td class=n>1.0倍</td><td class=n>1.0倍</td></tr>
-<tr><td>振り終わり</td><td class=n>0.5倍</td><td class=n>1.0倍</td></tr>
+<tr><th>Motion</th><th>Sharpness: yellow or lower<br>Correction</th><th>Sharpness: Green or higher<br>Correction</th></tr>
+<tr><td>Beginning of Swing</td><td class=n>0.3x</td><td class=n>1.0x</td></tr>
+<tr><td>Normal Hit</td><td class=n>1.0x</td><td class=n>1.0x</td></tr>
+<tr><td>End of Swing</td><td class=n>0.5x</td><td class=n>1.0x</td></tr>
 </table>
-<p>斬り方修正値とは、攻撃アクションのどのモーションでヒットしたかによって威力を修正するものです。
-<br>斬れ味レベルが２（黄）以下の場合、左表のように、武器の降り始めや振り終わりには、威力が低下してしまいます。
-<br>斬れ味レベルが３（緑）以上の場合、どのモーションでも 1.0倍となります。
-<br>（大剣／太刀の中腹部分でヒットした場合は、1.0倍の部分が 1.05倍となります）
+<p>The sharpness modifier value is the one that modifies the power depending on which motion of the attack action hits.
+<br>If the sharpness level is 2 (yellow) or less, as shown in the left table, the power will decrease at the beginning and end of the swing of the weapon.
+<br>If the sharpness level is 3 (green) or higher, any motion will be 1.0x.
+<br>（GS／LS Normal middle hit will be 1.05 instead of 1.0）
 </p>
 
-<h4>●　ヒットモーション</h4>
+<h4>●　Hit Motion</h4>
 
-<p>モンスターを攻撃した場合、「弾かれ」「通常」「スローモーション」「ヒットストップ」のどれかのモーションを行います
-<br>このモーションは、肉質・弾かれ倍率をもとに判定されます
-<br><small>(与えるダメージが低いから弾かれるのではなく、硬い部位を斬ったから弾かれる)</small>
+<p>When you attack a monster, it will perform one of the following motions: "bounced," "normal," "slow motion," or "hit stop"
+<br>This motion is judged based on the hitzone values.
+<br><small>(A hit is not repelled because the damage dealt is low, it is repelled because it cut a hard part of the monster)</small>
 <br>
-<br>判定式：肉質×弾かれ倍率×斬り方修正値×武器補正
+<br>Formula：Part Value×Bounced Multiplier×Sharpness Modifier x Weapon Correction
 </p>
 <table border=1 cellspacing=0 cellpadding=2>
-<tr><th>ゲージ</th><th width=70>弾かれ</th><th width=70>通常</th><th>スローモーション</th><th>ヒットストップ</th></tr>
-<tr><td>青ゲージ以下</td><td class=c>23以下</td><td class=c>24以上</td><td class=c>45以上</td><td class=c>100以上</td></tr>
-<tr><td>白ゲージ以上</td><td class=c>16以下</td><td class=c>17以上</td><td class=c>31以上</td><td class=c>70以上</td></tr>
+<tr><th>Gauge</th><th width=70>Bounce</th><th width=70>Normal</th><th>Slow Motion</th><th>Hit Stop</th></tr>
+<tr><td>Blue or Lower</td><td class=c>23 or less</td><td class=c>24+</td><td class=c>45+</td><td class=c>100+</td></tr>
+<tr><td>White or Higher</td><td class=c>16 or less</td><td class=c>17+</td><td class=c>31+</td><td class=c>70+</td></tr>
 </table>
-<p>スローモーション,ヒットストップ時に発生するフレーム数（30フレーム＝1秒)
+<p>Slow Motion, Number of frames generated at hit stop （30 frames = 1 second)
 </p>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th style="text-align:right"><small>ﾌﾚｰﾑ数</small></th><th>スローモーション</th><th>ヒットストップ</th></tr>
-<tr><td>大剣</td><td class=c>6</td><td class=c>10</td></tr>
-<tr><td>太刀</td><td class=c>2</td><td class=c>3</td></tr>
-<tr><td>太刀：<br>気刃斬り/貫刺し1hit</td><td class=c>1</td><td class=c>2</td></tr>
-<tr><td>片手剣</td><td class=c>2</td><td class=c>4</td></tr>
-<tr><td>双剣</td><td class=c>1</td><td class=c>3</td></tr>
-<tr><td>双剣（乱舞)</td><td class=c>2+1x8+1</td><td class=c>3+1x8+3</td></tr>
-<tr><td>双剣（乱舞改)</td><td class=c>1x3,1*3</td><td class=c>1x3,1*3</td></tr>
-<tr><td>ハンマー</td><td class=c>4</td><td class=c>7</td></tr>
-<tr><td>ハンマー：回転1hit</td><td class=c>1</td><td class=c>2</td></tr>
-<tr><td>狩猟笛</td><td class=c>4</td><td class=c>8</td></tr>
-<tr><td>ランス</td><td class=c>2</td><td class=c>5</td></tr>
-<tr><td>ガンランス</td><td class=c>2</td><td class=c>5</td></tr>
-<tr><td>弓(矢斬り)</td><td class=c>2</td><td class=c>5</td></tr>
-<tr><td>弓(昇竜弓)</td><td class=c colspan=2>固定9+11+1x3+2</td></tr>
+<tr><th style="text-align:right"><small>No. of Frames</small></th><th>Slow Motion</th><th>Hit Stop</th></tr>
+<tr><td>GS</td><td class=c>6</td><td class=c>10</td></tr>
+<tr><td>LS</td><td class=c>2</td><td class=c>3</td></tr>
+<tr><td>LS：<br>Kai blade Slash / Penetration 1 hit</td><td class=c>1</td><td class=c>2</td></tr>
+<tr><td>SnS</td><td class=c>2</td><td class=c>4</td></tr>
+<tr><td>DS</td><td class=c>1</td><td class=c>3</td></tr>
+<tr><td>DS（Demon Dance)</td><td class=c>2+1x8+1</td><td class=c>3+1x8+3</td></tr>
+<tr><td>DS（True Demon Dance)</td><td class=c>1x3,1*3</td><td class=c>1x3,1*3</td></tr>
+<tr><td>Hammer</td><td class=c>4</td><td class=c>7</td></tr>
+<tr><td>Hammer：rotate 1hit</td><td class=c>1</td><td class=c>2</td></tr>
+<tr><td>HH</td><td class=c>4</td><td class=c>8</td></tr>
+<tr><td>Lance</td><td class=c>2</td><td class=c>5</td></tr>
+<tr><td>Gunlance</td><td class=c>2</td><td class=c>5</td></tr>
+<tr><td>Bow(Arrow Cut)</td><td class=c>2</td><td class=c>5</td></tr>
+<tr><td>Bow(Shoriyuken)</td><td class=c colspan=2>Fixed 9+11+1x3+2</td></tr>
 </table>
-<p>ヒットストップが発生してる間に起こる事象 
-<br>・体力の自然回復、地形・毒などによる減少の停止 
-<br>・スタミナの自然回復、モーションによる減少の停止 
-<br>・狩猟笛の効果時間の減少の停止 
-<br>・時限効果のアイテムの効果時間の減少の停止 
-<br>・ダメージを受けない 
+<p>Events that occur while a hit stop is in progress. 
+<br>・Natural recovery of HP, suspension of reduction due to terrain, poison, etc. 
+<br>・Natural recovery of stamina, stop depletion by motion 
+<br>・Stopped hunting horn song duration 
+<br>・Stopped reduction of the effect time of items with timed effects 
+<br>・No Damage
 </p>
-<p style="clear:both" class=ex>例：緑ゲージの龍刀【紅蓮】でリオレイアの頭にため斬り３（武器補正：130%)
+<p style="clear:both" class=ex>Ex：Slash Rathian's head with a green sharpness Bloodred Drgn Sword (weapon correction: 130%)
 <br>　　 70×1.125×1.0×130%＝102.375＝102
 </p>
 
-<h4>●　与えるダメージの増大</h4>
+<h4>●　Increased Damage Dealt</h4>
 <table border=1 cellspacing=0 cellpadding=2 class=hosoku>
-<tr><th>状態</th><th>倍率</th></tr>
-<tr><td>麻痺状態中</td><td class=n>1.1倍</td></tr>
-<tr><td>岩に擬態中　（バサルモス）</td><td class=n>1.1倍</td></tr>
-<tr><td>落とし穴　（落ちてから<br>もがき始めるまでの間のみ）</td><td class=n>1.1倍</td></tr>
-<tr><td>睡眠中　（初撃のみ）</td><td class=n>3.0倍</td></tr>
+<tr><th>Condition</th><th>Multiplier</th></tr>
+<tr><td>During Paralysis</td><td class=n>1.1x</td></tr>
+<tr><td>Impersonating a Rock (Basarios)</td><td class=n>1.1x</td></tr>
+<tr><td>Pitfalls (Only between falling<br>and starting to struggle)</td><td class=n>1.1x</td></tr>
+<tr><td>Sleep (first attack only)</td><td class=n>3.0x</td></tr>
 </table>
-<p>モンスターが特定の状態の時に攻撃すると、左表のように与えるダメージが増大します。
-<br><small>(増大するのは無属性ダメージのみで、属性ダメージは変化しません)</small>
-<br>シビレ罠にかかっている時は麻痺状態ではなくシビレ状態なので、増大はしません。
-<br>未発覚の状態で落とし穴にはめると、効果時間が約 1.7倍に延びます。なお、怒り時は約 0.7倍になります。(未発覚が優先)
-<br><small>(ラージャンは、寝かせて落としても 6秒のまま)</small>
-<br>モンスターが弱って寝ている場合も睡眠中と同じ。ただし、モンスターの体力は徐々に回復している。
-<br><small>(エスピナスのクエスト開始時の状態は除く)</small>
+<p>If you attack a monster in a certain state, the damage dealt will increase as shown on the left table.
+<br><small>(Only non-element damage increases, element damage does not change)</small>
+<br>When caught in a shock trap, it is not paralyzed but shocked, so it does not increase.
+<br>If you put it in a pitfall in an undiscovered state, the effect time will be extended by about 1.7 times. In addition, when angry, it will be about 0.7 times. (Priority is given to undiscovered cases)
+<br><small>(Rajang always stays at 6 seconds even if he is asleep when you lay down the trap)</small>
+<br>If the monster is weak and sleeping, it is the same as when put to sleep. But, the monster's HP is gradually recovering.
+<br><small>(except for Espinas' status at the beginning of the quest)</small>
 </p>
-<h4>●　肉質と全体防御率によるダメージ軽減</h4>
+<h4>●　Damage reduction due to part values and overall defense rate</h4>
 
-<p>モンスターには肉質が設定されており、ダメージを軽減してしまいます。
-<br>通常ダメージ、属性ダメージそれぞれが肉質によって軽減されます。
-<br>また、モンスターには肉質とは別に全体の防御率が設定されており、総ダメージ値を軽減してしまいます。
-<br>さらに、怒り状態になると、全体防御率に補正がかかるモンスターもいます。
+<p>Monsters have a set part value, which reduces damage.
+<br>Normal damage and element damage are each reduced by the part value.
+<br>In addition, monsters have an overall defense rate that is separate from their part values, which reduces the total damage value.
+<br>Furthermore, there are monsters whose overall defense rate is corrected when they become enraged.
 </p>
-<p style="clear:both" class=ex>例：緑ゲージの龍刀【紅蓮】でリオレイア（全体防御率：0.9）の頭に縦斬り
+<p style="clear:both" class=ex>Ex：A vertical slash to the head of Rathian (total defense rate: 0.9) with a green sharpness Bloodred Drgn Sword
 <br>　　 170×28%×1.125×70%＝37.485＝37
-<br>　　 龍48×35%＝16.8＝16
+<br>　　 48 Dragon×35%＝16.8＝16
 <br>　　 （37＋16）×90%＝47.7＝47
-<br>　　 合計で 47のダメージとなる
+<br>　　 47 total damage
 </p>
-<h4>●　プレイヤーの攻撃力アップ</h4>
+<h4>●　Increased player attack power</h4>
 
-<p>プレイヤーの攻撃力をアップする手段はいろいろありますが、大別して３つのグループに分けられます。
-<br>　　１：攻撃力アップのスキル発動、攻撃力をアップするアイテムの所持（力の護符・力の爪）
-<br>　　２：食事効果によるアップ、鬼人薬・鬼人薬グレートの使用
-<br>　　３：怪力の種・怪力の丸薬・鬼人笛の使用
+<p>There are many ways to increase a player's offensive power, but they can be broadly divided into three groups.
+<br>　　１：Activation of skills that increase attack power, possession of items that increase attack power (Powercharm, Powertalon)
+<br>　　２：Up due to food effects, use of demon drug and mega demon drug
+<br>　　３：Use of power seeds, power pills, and demon flute
 <br>
-<br>グループ１は、クエスト中に力尽きても効力が失われることはありません。
-<br>グループ２は、クエスト中はずっと有効ですが、力尽きると効力が失われます。
-<br>グループ３は、一定の時間が経過すると、効力が失われます。
+<br>Group 1 will not lose potency even if you run out during a quest.
+<br>Group 2 is effective all the time during the quest, but loses its effectiveness when you faint.
+<br>Group 3 loses potency after a certain amount of time.
 <br>
-<br>グループ２と３は、グループ内の各効果が重複することはありません。重複した場合は、順番にかかわらず効果の大きいものが優先されます。
+<br>Groups 2 and 3 do not overlap in their respective effects within the group. In the event of overlap, the one with the greater effect takes precedence regardless of the order.
 </p>
 </body></html>
