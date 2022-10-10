@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<title>サイズ</title>
+<title>Size</title>
 <style type="text/css">
 <!--
 th {font-weight:normal;background-color:silver;}
@@ -13,84 +13,84 @@ p {margin-bottom:0;}
 </style>
 </head>
 <body>
-<div>モンスターのサイズ</div>
-<p>モンスターのサイズは、クエスト毎に設定されている基本サイズと変動制限幅によって決定される。<br>
-<strong>基本サイズ％×変動値％（変動制限幅以内）</strong><br>
+<div>Monster Size</div>
+<p>The monster size is determined by the basic size and variable limit width set for each quest.<br>
+<strong>Basic size % × fluctuation value % (within fluctuation limit range)</strong><br>
 <br>
-基本サイズは、クエスト毎に設定されており、内部では％で表されている。<br>
-これに、ランダムに求めた変動値％（100を中心に上下に変動）を掛け合わせ、結果の％とモンスターの100％時の大きさを掛けて、サイズが決定する。<br>
+The basic size is set for each quest, and is expressed in % inside.<br>
+This is multiplied by the randomly determined variation value % (varying up and down around 100), and the resulting % multiplied by the size of the monster at 100% determines the size.<br>
 <br>
-変動幅は、まず、以下の７種類のうちのいずれかの変動テーブルを選択する。</p>
+The variation table is first selected from one of the following seven types.</p>
 <table border=1 cellspacing=0 cellpadding=2>
-<tr><th><br></th><th>変動幅</th><th style="width:4.5em">確率</th></tr>
-<tr><td>テーブル1</td><td>75％～79％</td><td>1/32</td></tr>
-<tr><td>テーブル2</td><td>80％～84％</td><td>1/32</td></tr>
-<tr><td>テーブル3</td><td>85％～94％</td><td>2/32</td></tr>
-<tr><td>テーブル4</td><td>95％～105％</td><td>19/32</td></tr>
-<tr><td>テーブル5</td><td>106％～115％</td><td>6/32 </td></tr>
-<tr><td>テーブル6</td><td>116％～120％</td><td>2/32</td></tr>
-<tr><td>テーブル7</td><td>121％～125％</td><td>1/32</td></tr>
+<tr><th><br></th><th>Fluctuation Range</th><th style="width:4.5em">Chance</th></tr>
+<tr><td>Table 1</td><td>75％～79％</td><td>1/32</td></tr>
+<tr><td>Table 2</td><td>80％～84％</td><td>1/32</td></tr>
+<tr><td>Table 3</td><td>85％～94％</td><td>2/32</td></tr>
+<tr><td>Table 4</td><td>95％～105％</td><td>19/32</td></tr>
+<tr><td>Table 5</td><td>106％～115％</td><td>6/32 </td></tr>
+<tr><td>Table 6</td><td>116％～120％</td><td>2/32</td></tr>
+<tr><td>Table 7</td><td>121％～125％</td><td>1/32</td></tr>
 </table>
-<p>変動テーブルが選択されたら、そのテーブル内の変動値をランダムに決定する。
-<br>ただし、クエストデータには変動制限幅が設定されており、以下の範囲に入るように修正される。
-<br>（下記５種類のいずれか。どの制限幅かはクエストによって異なる）</p>
+<p>Once a variation table is selected, the variation values within that table are randomly determined.
+<br>However, a variation limit range is set in the quest data, which is modified to fall within the following range
+<br>(One of the following five types. Which limit width depends on the quest)</p>
 <table border=1 cellspacing=0 cellpadding=2>
-<tr><th>パターン</th><th>制限幅</th></tr>
-<tr><td>0</td><td>100％固定</td></tr>
+<tr><th>Pattern</th><th>Width Limit</th></tr>
+<tr><td>0</td><td>100％ Fixed</td></tr>
 <tr><td>1</td><td>100％～105％</td></tr>
 <tr><td>2</td><td>95％～110％</td></tr>
 <tr><td>3</td><td>87％～118％</td></tr>
 <tr><td>4</td><td>80％～125％</td></tr>
 </table>
-<p>何らかの条件によって、+10％または-10％される場合がある。その条件は不明。(連続狩猟、得意な時間帯？でかいのこい！？）</p>
-<p>サイズ表</p>
+<p>It may be +10% or -10% depending on some conditions. Those conditions are unknown. (Continuous hunting, good time of day? Come on big guy!)</p>
+<p>Size Chart</p>
 <table border=1 cellspacing=0 cellpadding=2>
-<tr><th></th><th style="width:4.5em">基本</th><th style="width:4.5em">ビッグ</th><th style="width:4.5em">キング</th><th style="width:4.5em">スモール</th><th>キングサイズが出る主なクエスト</th></tr>
-<tr><td>ドスランポス</td><td class=n>738.4 </td><td class=n>841.8 </td><td class=n>908.2 </td><td class=n>664.6 </td><td>★５繁殖期 ≪密林探索≫青き２つの影</td></tr>
-<tr><td>ドスゲネポス</td><td class=n>732.1 </td><td class=n>827.3 </td><td class=n>900.5 </td><td class=n>658.9 </td><td>★５寒冷期 ≪砂漠探索≫砂漠に跳ねる狩人</td></tr>
-<tr><td>ドスイーオス</td><td class=n>774.6 </td><td class=n>875.3 </td><td class=n>1053.5 </td><td class=n>697.1 </td><td>★５温暖期 ≪沼地探索≫赤き毒たちの統率者</td></tr>
-<tr><td>イャンクック</td><td class=n>919.8 </td><td class=n>1048.6 </td><td class=n>1122.2 </td><td class=n>827.8 </td><td>★５温暖期 ≪沼地探索≫怪鳥の双激</td></tr>
-<tr><td>ゲリョス</td><td class=n>1013.7 </td><td class=n>1196.2 </td><td class=n>1267.1 </td><td class=n>942.7 </td><td>★５温暖期 ≪密林探索≫毒の嵐</td></tr>
-<tr><td>リオレイア</td><td class=n>1645.6 </td><td class=n>1941.8 </td><td class=n>2122.8 </td><td class=n>1530.4 </td><td>★６寒冷期 ≪密林探索≫百花繚乱</td></tr>
-<tr><td>リオレウス</td><td class=n>1629.4 </td><td class=n>1857.5 </td><td class=n>2069.3 </td><td class=n>1466.5 </td><td>★７繁殖期 ≪古塔探索≫竜たちのねぐら</td></tr>
-<tr><td>フルフル</td><td class=n>873.2 </td><td class=n>1030.4 </td><td class=n>1178.8 </td><td class=n>812.1 </td><td>★６寒冷期 ≪沼地探索≫赤と白</td></tr>
-<tr><td>バサルモス</td><td class=n>1297.6 </td><td class=n>1531.2 </td><td class=n>1673.9 </td><td class=n>1206.8 </td><td>★５温暖期 ≪火山探索≫岩地に潜む罠</td></tr>
-<tr><td>グラビモス</td><td class=n>2099.9 </td><td class=n>2582.9 </td><td class=n>2834.9 </td><td class=n>2036.9 </td><td>★７繁殖期 ≪沼地探索≫脅威の双璧</td></tr>
-<tr><td>モノブロス</td><td class=n>2004.2 </td><td class=n>2324.9 </td><td class=n>2545.3 </td><td class=n>1984.2 </td><td>☆３寒冷期 ≪ハンターズクエスト：砂漠≫白き一角竜の猛り</td></tr>
-<tr><td>ディアブロス</td><td class=n>1993.4 </td><td class=n>2451.9 </td><td class=n>2770.8 </td><td class=n>1933.6 </td><td>★７繁殖期 ≪砂漠探索≫４本の角</td></tr>
-<tr><td>ドスガレオス</td><td class=n>1538.3 </td><td class=n>1815.2 </td><td class=n>1876.7 </td><td class=n>1430.6 </td><td>★６寒冷期 ≪砂漠探索≫砂の中を泳ぐ竜</td></tr>
-<tr><td>ガノトトス</td><td class=n>2315.2 </td><td class=n>2847.7 </td><td class=n>3102.4 </td><td class=n>2245.7 </td><td>★７温暖期 ≪密林探索≫大漁</td></tr>
-<tr><td>ダイミョウザザミ</td><td class=n>1044.0 </td><td class=n>1148.4 </td><td class=n>1284.1 </td><td class=n>918.7 </td><td>★６繁殖期 ≪砂漠探索≫砂塵の砦</td></tr>
-<tr><td>ショウグンギザミ</td><td class=n>863.0 </td><td class=n>983.8 </td><td class=n>1035.6 </td><td class=n>811.2 </td><td>★７寒冷期 ≪火山探索≫４本の大鎌</td></tr>
-<tr><td>ドスファンゴ</td><td class=n>566.0 </td><td class=n>735.8 </td><td class=n>1188.6 </td><td class=n>554.7 </td><td>★５温暖期 ≪雪山探索≫極寒の地での狩猟</td></tr>
-<tr><td>ババコンガ</td><td class=n>984.0 </td><td class=n>1131.6 </td><td class=n>1230.0 </td><td class=n>954.5 </td><td>★６寒冷期 ≪密林探索≫桃毛獣のなわばり</td></tr>
-<tr><td>ドドブランゴ</td><td class=n>860.0 </td><td class=n>1075.0 </td><td class=n>1186.8 </td><td class=n>851.4 </td><td>★７繁殖期 ≪雪山探索≫雪山の大家族</td></tr>
-<tr><td>ラージャン</td><td class=n>960.0 </td><td class=n>1200.0 </td><td class=n>1344.4 </td><td class=n>1008.4 </td><td>★８ ≪火山探索≫金獅子</td></tr>
-<tr><td>イャンガルルガ</td><td class=n>1290.0</td><td class=n>1483.5</td><td class=n>1560.9</td><td class=n>1173.9</td><td>？</td></tr>
-<tr><td>キリン</td><td class=n>464.3 </td><td class=n>603.6 </td><td class=n>821.8 </td><td class=n>450.4 </td><td>★８ ≪古龍クエスト：古塔≫古塔を撃つ落雷</td></tr>
-<tr><td>クシャルダオラ</td><td class=n>1577.0 </td><td class=n>1734.7 </td><td class=n>1892.4 </td><td class=n>1435.1 </td><td>★８ ≪ドンドルマ防衛戦≫風翔龍を討伐せよ！</td></tr>
-<tr><td>オオナズチ</td><td class=n>1744.0 </td><td class=n>2092.8 </td><td class=n>2459.0 </td><td class=n>1674.2 </td><td>★８ ≪古龍クエスト：森丘≫静寂を奏でし龍 </td></tr>
-<tr><td>テオ・テスカトル</td><td class=n>1740.0 </td><td class=n>2001.0 </td><td class=n>2105.4 </td><td class=n>1583.4 </td><td>★８ ≪古龍クエスト：火山≫炎国の王</td></tr>
-<tr><td>ナナ・テスカトリ</td><td class=n>1740.0 </td><td class=n>1914.0 </td><td class=n>2175.0 </td><td class=n>1531.2 </td><td>☆４ ≪ハンターズ古龍：古塔≫炎妃龍の宿りし塔</td></tr>
-<tr><td>ヒプノック</td><td class=n>1208.0</td><td class=n>1389.2</td><td class=n>1461.7</td><td class=n>1099.3</td><td>？</td></tr>
-<tr><td>ヒプノック【希少種】</td><td class=n>1308.0</td><td class=n>1504.2</td><td class=n>1582.7</td><td class=n>1190.3</td><td>？</td></tr>
-<tr><td>ティガレックス</td><td class=n>1735.3</td><td class=n>2065.0</td><td class=n>2134.4</td><td class=n>1561.8</td><td>？</td></tr>
-<tr><td>ヴォルガノス</td><td class=n>2431.2</td><td class=n>2968.2</td><td class=n>3233.7</td><td class=n>2340.8</td><td>？</td></tr>
-<tr><td>エスピナス</td><td class=n>1673.8</td><td class=n>1908.1</td><td class=n>2125.7</td><td class=n>1506.4</td><td>？</td></tr>
-<tr><td>アクラ・ヴァシム</td><td class=n>2008.7</td><td class=n>2310.0</td><td class=n>2490.8</td><td class=n>1807.8</td><td>？</td></tr>
-<tr><td>アクラ・ジェビア</td><td class=n>2008.7</td><td class=n>2540.0</td><td class=n>2738.8</td><td class=n>1987.8</td><td>？</td></tr>
-<tr><td>パリアプリア</td><td class=n>2009.4</td><td class=n>2310.8</td><td class=n>2491.7</td><td class=n>1808.5</td><td>？</td></tr>
-<tr><td>ベルキュロス</td><td class=n>1543.0</td><td class=n>1774.5</td><td class=n>1913.3</td><td class=n>1388.7</td><td>★７≪フロンティアクエスト≫天翔ける雷</td></tr>
-<tr><td>カム・オルガロン</td><td class=n>980.0</td><td class=n>1078.8</td><td class=n>1176.0</td><td class=n>891.8</td><td>？</td></tr>
-<tr><td>ノノ・オルガロン</td><td class=n>920.0</td><td class=n>1012.0</td><td class=n>1104.0</td><td class=n>837.2</td><td>？</td></tr>
-<tr><td>デュラガウア</td><td class=n>1388.0</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
-<tr><td>ドラギュロス</td><td class=n>1467.0</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
-<tr><td>グレンゼブル</td><td class=n>1858.0</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
-<tr><td>ルコディオラ</td><td class=n>1687.0</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
-<tr><td>アンノウン</td><td class=n>1974.20</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
-<tr><td>ゴゴモア</td><td class=n>1072.00</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
-<tr><td>ココモア</td><td class=n>327.00</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
-<tr><td>アビオルグ</td><td class=n>1645.60</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
+<tr><th></th><th style="width:4.5em">Base</th><th style="width:4.5em">Big</th><th style="width:4.5em">King</th><th style="width:4.5em">Small</th><th>Major quests with King Size</th></tr>
+<tr><td>Velocidrome</td><td class=n>738.4 </td><td class=n>841.8 </td><td class=n>908.2 </td><td class=n>664.6 </td><td>★５Breeding Season ≪Jungle Survey≫Two Blue Shadows</td></tr>
+<tr><td>Gendrome</td><td class=n>732.1 </td><td class=n>827.3 </td><td class=n>900.5 </td><td class=n>658.9 </td><td>★５Cold Season ≪Desert Survey≫The Leaping Desert Hunter</td></tr>
+<tr><td>Iodrome</td><td class=n>774.6 </td><td class=n>875.3 </td><td class=n>1053.5 </td><td class=n>697.1 </td><td>★５Warm Season ≪Swamp Survey≫Commander of the Red Pack</td></tr>
+<tr><td>Yian Kut-Ku</td><td class=n>919.8 </td><td class=n>1048.6 </td><td class=n>1122.2 </td><td class=n>827.8 </td><td>★５Warm Season ≪Swamp Survey≫Intense Twins</td></tr>
+<tr><td>Gypceros</td><td class=n>1013.7 </td><td class=n>1196.2 </td><td class=n>1267.1 </td><td class=n>942.7 </td><td>★５Warm Season ≪Jungle Survey≫Poison Storm</td></tr>
+<tr><td>Rathian</td><td class=n>1645.6 </td><td class=n>1941.8 </td><td class=n>2122.8 </td><td class=n>1530.4 </td><td>★６Cold Season ≪Jungle Survey≫The Beautiful People</td></tr>
+<tr><td>Rathalos</td><td class=n>1629.4 </td><td class=n>1857.5 </td><td class=n>2069.3 </td><td class=n>1466.5 </td><td>★７Breeding Season ≪Tower Survey≫The Wyvern's Roost</td></tr>
+<tr><td>Khezu</td><td class=n>873.2 </td><td class=n>1030.4 </td><td class=n>1178.8 </td><td class=n>812.1 </td><td>★６Cold Season ≪Swamp Survey≫Red and White</td></tr>
+<tr><td>Basarios</td><td class=n>1297.6 </td><td class=n>1531.2 </td><td class=n>1673.9 </td><td class=n>1206.8 </td><td>★５Warm Season ≪Volcano Survey≫The Rock Trap</td></tr>
+<tr><td>Gravios</td><td class=n>2099.9 </td><td class=n>2582.9 </td><td class=n>2834.9 </td><td class=n>2036.9 </td><td>★７Breeding Season ≪Swamp Survey≫Two Best Threats</td></tr>
+<tr><td>Monoblos</td><td class=n>2004.2 </td><td class=n>2324.9 </td><td class=n>2545.3 </td><td class=n>1984.2 </td><td>☆３Cold Season ≪Hunter Quest：Desert≫Raging White Horn</td></tr>
+<tr><td>Diablos</td><td class=n>1993.4 </td><td class=n>2451.9 </td><td class=n>2770.8 </td><td class=n>1933.6 </td><td>★７Breeding Season ≪Desert Survey≫Four Horns</td></tr>
+<tr><td>Cephadrome</td><td class=n>1538.3 </td><td class=n>1815.2 </td><td class=n>1876.7 </td><td class=n>1430.6 </td><td>★６Cold Season ≪Desert Survey≫The Sand Swimming Wyvern</td></tr>
+<tr><td>Plesioth</td><td class=n>2315.2 </td><td class=n>2847.7 </td><td class=n>3102.4 </td><td class=n>2245.7 </td><td>★７Warm Season ≪Jungle Survey≫Big Catch</td></tr>
+<tr><td>Daimyo Hermitaur</td><td class=n>1044.0 </td><td class=n>1148.4 </td><td class=n>1284.1 </td><td class=n>918.7 </td><td>★６Breeding Season ≪Desert Survey≫Fortress in the Sands</td></tr>
+<tr><td>Shogun Ceanataur</td><td class=n>863.0 </td><td class=n>983.8 </td><td class=n>1035.6 </td><td class=n>811.2 </td><td>★７Cold Season ≪Volcano Survey≫Four Scythes</td></tr>
+<tr><td>Bulldrome</td><td class=n>566.0 </td><td class=n>735.8 </td><td class=n>1188.6 </td><td class=n>554.7 </td><td>★５Warm Season ≪Snowy Mountain Survey≫Frigid Hunting</td></tr>
+<tr><td>Congalala</td><td class=n>984.0 </td><td class=n>1131.6 </td><td class=n>1230.0 </td><td class=n>954.5 </td><td>★６Cold Season ≪Jungle Survey≫The Pink Beast's Territory</td></tr>
+<tr><td>Blangonga</td><td class=n>860.0 </td><td class=n>1075.0 </td><td class=n>1186.8 </td><td class=n>851.4 </td><td>★７Breeding Season ≪Snowy Mountain Survey≫The Snowy Mountains' Family</td></tr>
+<tr><td>Rajang</td><td class=n>960.0 </td><td class=n>1200.0 </td><td class=n>1344.4 </td><td class=n>1008.4 </td><td>★８ ≪Volcano Survey≫The Golden Lion</td></tr>
+<tr><td>Yian Garuga</td><td class=n>1290.0</td><td class=n>1483.5</td><td class=n>1560.9</td><td class=n>1173.9</td><td>？</td></tr>
+<tr><td>Kirin</td><td class=n>464.3 </td><td class=n>603.6 </td><td class=n>821.8 </td><td class=n>450.4 </td><td>★８ ≪Elder Dragon Quest：Tower≫Lightning atop the Tower</td></tr>
+<tr><td>Kushala Daora</td><td class=n>1577.0 </td><td class=n>1734.7 </td><td class=n>1892.4 </td><td class=n>1435.1 </td><td>★８ ≪Dundorma Defense≫Kushala!</td></tr>
+<tr><td>Chameleos</td><td class=n>1744.0 </td><td class=n>2092.8 </td><td class=n>2459.0 </td><td class=n>1674.2 </td><td>★８ ≪Elder Dragon Quest：Forest and Hills≫Silently Stalking Dragon </td></tr>
+<tr><td>Teostra</td><td class=n>1740.0 </td><td class=n>2001.0 </td><td class=n>2105.4 </td><td class=n>1583.4 </td><td>★８ ≪Elder Dragon Quest：Volcano≫The Flaming King</td></tr>
+<tr><td>Lunastra</td><td class=n>1740.0 </td><td class=n>1914.0 </td><td class=n>2175.0 </td><td class=n>1531.2 </td><td>☆４ ≪Hunter's Elder Dragon：Tower≫Flame Goddess' Tower</td></tr>
+<tr><td>Hypnoc</td><td class=n>1208.0</td><td class=n>1389.2</td><td class=n>1461.7</td><td class=n>1099.3</td><td>？</td></tr>
+<tr><td>White Hypnoc</td><td class=n>1308.0</td><td class=n>1504.2</td><td class=n>1582.7</td><td class=n>1190.3</td><td>？</td></tr>
+<tr><td>Tigrex</td><td class=n>1735.3</td><td class=n>2065.0</td><td class=n>2134.4</td><td class=n>1561.8</td><td>？</td></tr>
+<tr><td>Volganos</td><td class=n>2431.2</td><td class=n>2968.2</td><td class=n>3233.7</td><td class=n>2340.8</td><td>？</td></tr>
+<tr><td>Espinas</td><td class=n>1673.8</td><td class=n>1908.1</td><td class=n>2125.7</td><td class=n>1506.4</td><td>？</td></tr>
+<tr><td>Akura Vashimu</td><td class=n>2008.7</td><td class=n>2310.0</td><td class=n>2490.8</td><td class=n>1807.8</td><td>？</td></tr>
+<tr><td>Akura Jebia</td><td class=n>2008.7</td><td class=n>2540.0</td><td class=n>2738.8</td><td class=n>1987.8</td><td>？</td></tr>
+<tr><td>Pariapuria</td><td class=n>2009.4</td><td class=n>2310.8</td><td class=n>2491.7</td><td class=n>1808.5</td><td>？</td></tr>
+<tr><td>Berukyurosu</td><td class=n>1543.0</td><td class=n>1774.5</td><td class=n>1913.3</td><td class=n>1388.7</td><td>★７≪Frontier Quest≫Heavenly Thunder</td></tr>
+<tr><td>Kamu Orugaron</td><td class=n>980.0</td><td class=n>1078.8</td><td class=n>1176.0</td><td class=n>891.8</td><td>？</td></tr>
+<tr><td>Nono Orugaron</td><td class=n>920.0</td><td class=n>1012.0</td><td class=n>1104.0</td><td class=n>837.2</td><td>？</td></tr>
+<tr><td>Dyuragaua</td><td class=n>1388.0</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
+<tr><td>Doragyurosu</td><td class=n>1467.0</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
+<tr><td>Gurenzeburu</td><td class=n>1858.0</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
+<tr><td>Rukodiora</td><td class=n>1687.0</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
+<tr><td>Unknown</td><td class=n>1974.20</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
+<tr><td>Gogomoa</td><td class=n>1072.00</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
+<tr><td>Kokomoa</td><td class=n>327.00</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
+<tr><td>Abiorugu</td><td class=n>1645.60</td><td class=n></td><td class=n></td><td class=n></td><td>？</td></tr>
 </table>
 </body>
 </html>
