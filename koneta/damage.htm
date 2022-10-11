@@ -10,31 +10,31 @@ td {text-align:center}
 td.n {text-align:right;}
 -->
 </style>
-<title>プレイヤーのダメージ</title>
+<title>Player Damage</title>
 </head><body>
-<div>受けるダメージ(dosの情報)</div>
+<div>Damage received (dos information)</div>
 <p>
-・プレイヤーが受けるダメージの計算式<br>
-　軽減率 ＝ 1 － (防御力の半分 ÷ (防御力の半分 ＋ 80))<br>
-　ダメージ ＝ モンスターの攻撃力 × 軽減率
-　　<small>※モンスターの攻撃力は、固体別の攻撃力倍率・怒り倍率で増加する</small>
+・Formula for calculating player damage<br>
+　Reduction rate = 1 - (half defense ÷ (half defense + 80))<br>
+　Damage = monster attack power x mitigation rate
+　　<small>※A monster's attack power increases with the attack power multiplier and anger multiplier for each individual.</small>
 </p><p>
-・攻撃が属性付きの攻撃だった場合、さらに耐性により増減<br>
-　ダメージ ＝ ダメージ × (1 － (耐性値 ÷ 100))
-　　<small>※耐性がマイナスの場合はダメージが増える<br><br>
-　　理論上、耐性値が100なら属性付きダメージの場合、ゼロになる</small>
+・If the attack is an elemental attack, it is further increased or decreased depending on resistance.<br>
+　Damage = Damage × (1 - (Resistance ÷ 100))
+　　<small>※More damage if resistance is negative.<br><br>
+　　Theoretically, if the resistance value is 100, it will be zero for damage from elements.</small>
 </p>
 <table>
 <tr><td>
-防御力：<input id=bou type=text onfocus="this.select()" maxlength=4 size=4 value=0>
-耐性：<input id=tai type=text onfocus="this.select()" maxlength=3 size=3 value=0>
-<input type=button value="計算" OnClick="document.getElementById('mu').innerHTML = (10000 - Math.floor(document.getElementById('bou').value / 2 / (document.getElementById('bou').value / 2 + 80) * 10000)) / 100;document.getElementById('zo').innerHTML = Math.floor((10000 - Math.floor(document.getElementById('bou').value / 2 / (document.getElementById('bou').value / 2 + 80) * 10000)) * (100 - document.getElementById('tai').value) / 100) / 100;"></td>
-<td>無属性のダメージは 約</td><td class=n><span id=mu>100</span>%に軽減される</td></tr>
-<tr><td></td><td>属性付きダメージは 約</td><td class=n><span id=zo>100</span>%に軽減される</td></tr>
+Defense：<input id=bou type=text onfocus="this.select()" maxlength=4 size=4 value=0>
+Res：<input id=tai type=text onfocus="this.select()" maxlength=3 size=3 value=0>
+<input type=button value="Calculate" OnClick="document.getElementById('mu').innerHTML = (10000 - Math.floor(document.getElementById('bou').value / 2 / (document.getElementById('bou').value / 2 + 80) * 10000)) / 100;document.getElementById('zo').innerHTML = Math.floor((10000 - Math.floor(document.getElementById('bou').value / 2 / (document.getElementById('bou').value / 2 + 80) * 10000)) * (100 - document.getElementById('tai').value) / 100) / 100;"></td>
+<td>Non Elemental Damage Reduced to about</td><td class=n><span id=mu>100</span>%</td></tr>
+<tr><td></td><td>Elemental Damage Reduced to about</td><td class=n><span id=zo>100</span>%</td></tr>
 </table>
-<div>防御力によるダメージの軽減率をグラフにすると以下のとおり。</div>
+<div>The following graph shows the percentage of damage reduction due to defense.</div>
 <table border=1 cellspacing=0 cellpadding=2>
-<tr><th>防御力</th><th>軽減率<br>(%)</th><th rowspan=22><img src="../img/damage.gif" alt="ダメージ表"></th></tr>
+<tr><th>Defense</th><th>Reduction Rate<br>(%)</th><th rowspan=22><img src="../img/damage.gif" alt="ダメージ表"></th></tr>
 <tr><td>1</td><td>99.3</td></tr>
 <tr><td>50</td><td>76.1</td></tr>
 <tr><td>100</td><td>61.5</td></tr>
