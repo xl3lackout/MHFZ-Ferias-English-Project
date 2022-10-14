@@ -198,7 +198,7 @@ if (MST_Other.Riyou[item_id]) {
 			txt += CyougoName[list[i].charAt(1)] + list[i].substring(2) + "Created<br>";
 			break;
 		case "1": //交換
-			txt += JijiMei[list[i].charAt(1)] + list[i].substring(2) + "と交換可能<br>";
+			txt += JijiMei[list[i].charAt(1)] + list[i].substring(2) + "Exchangeable<br>";
 			break;
 		case "7": //他
 			txt += list[i].substring(1) + "<br>";
