@@ -35,7 +35,7 @@ i_item.value.toLowerCase() = searchMei;
 
 var n = 0,cnt = 0,page = 1,list = [];
 for (var i in MST_Item) {
-	if (MST_Item[i][0].indexOf(searchMei) !== -1 && MST_Item[i][1] !== "-") {
+	if (MST_Item[i][0].toLowerCase().indexOf(searchMei.toLowerCase()) !== -1 && MST_Item[i][1] !== "-") {
 		list[n++] = MST_Item[i][5] + i;
 	}
 }
