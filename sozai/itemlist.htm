@@ -31,7 +31,7 @@ var MST_Item = setItem(),
 	searchMei = /*@if (true) location.search.substring(1) @else@*/ UnescapeSJIS(location.search.substring(1)) /*@end@*/;
 setItem = null;
 i_item.focus();
-i_item.value.toLowerCase() = searchMei;
+i_item.value = searchMei;
 
 var n = 0,cnt = 0,page = 1,list = [];
 for (var i in MST_Item) {
