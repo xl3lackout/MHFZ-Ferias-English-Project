@@ -28,7 +28,7 @@ Item Index <input type="text" value="" name="i_item" id="i_item" autocomplete="o
 /*@cc_on if (@_jscript_version < 9) {_d=document;eval('var document=_d');}@*/
 var MST_Item = setItem(),
 	i_item = document.getElementById("i_item"),
-	searchMei = /*@if (true) location.search.substring(1) @else@*/ UnescapeSJIS(location.search.substring(1).toLowerCase()) /*@end@*/;
+	searchMei = /*@if (true) location.search.substring(1) @else@*/ UnescapeSJIS(location.search.substring(1)) /*@end@*/;
 setItem = null;
 i_item.focus();
 i_item.value.toLowerCase() = searchMei;
