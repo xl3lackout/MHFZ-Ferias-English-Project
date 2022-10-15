@@ -24,7 +24,7 @@ var BouguName = {"h":"Head","b":"Chest","a":"Arm","w":"Waist","l":"Leg","d":"Dec
 
 var txt = "<table><tr><th style=\"width:7em;\">Weapon Type</th><th style=\"width:10em;\">Weapon Name</th></tr>";
 for (var i in MST_Equip.Name) {
-	if (MST_Equip.Name[i]toLowerCase().indexOf(searchMei.toLowerCase()) !== -1) {
+	if (MST_Equip.Name[i].toLowerCase().indexOf(searchMei.toLowerCase()) !== -1) {
 		var eq_rui = i.charAt(0),
 			eq_id = i.substring(1,5),
 			eq_name = MST_Equip.Name[i],
