@@ -47,7 +47,7 @@ MST_Equip = setBougu();
 var txt = "<table><tr><th style=\"width:4em;\">Part</th><th style=\"width:10em;\">Armor Name</th></tr>";
 var txts = "<table><tr><th style=\"width:4em;\">Deco type</th><th style=\"width:10em;\">Deco Name</th></tr>";
 for (var i in MST_Equip.Name) {
-	if (MST_Equip.Name[i].indexOf(searchMei) !== -1) {
+	if (MST_Equip.Name[i].toLowerCase().indexOf(searchMei.toLowerCase()) !== -1) {
 		var eq_rui = i.charAt(0),
 			eq_id = i.substring(1,5),
 			eq_name = MST_Equip.Name[i],
