@@ -40,18 +40,42 @@ s.title = "Sort by Map";
 selectSet(s,["Map","Jungle","Desert","Swamp","Snowy Mountains","Volcano","Great Forest","Forest and Hills","Tower","Gorge","Highlands","Tide Island","Polar Sea","Flower Fields","Bamboo Forest","Fort","Interceptor Base","Schrade","Arena","Battlefield","Solitude Island"]);
 s.selectedIndex = 0;
 tH.cells[2].appendChild(s.cloneNode(true));
+	
+/*
 //ターゲット
-s.title = "Filter by Target";
-selectSet(s,["Broken, Don't Use","Felyne","Akantor","Akura Vashimu","Akura Jebia","Anorupatisu","Abiorugu","Apceros","Aptonoth","Amatsu","Aruganosu","Unknown","Ioprey","Inagami","Deviljho","イビルジョー蝕","Yian Garuga","Yian Kut-Ku","Blue Yian Kut-Ku","Varusaburosu","Voljang","Volganos","Red Volganos","Uragaan","Uruki","Egyurasu","Espinas","Orange Espinas","White Espinas","Elzelion","Erupe","Chameleos","Odibatorasu","Anteka","Gasurabazura","Plesioth","Green Plesioth","Remobra","Hermitaur","Kamu Orugaron","Garuba Daora","Cephalos","Hornetaur","Giaorugu","Giaprey","Kirin","Kuarusepusu","Guanzorumu","Kushala Daora","Kusubami","Gravios","Black Gravios","Gureadomosu","Gurenzeburu","Keoaruboru","Genprey","Gypceros","Purple Gypceros","Kelbi","Gore Magala","Gougarf","Kokomoa","Gogomoa","Goruganosu","Conga","Shen Gaoren","Shagaru Magala","Shantien","Shogun Ceanataur","Zinogre","Stygian Zinogre","Zenaserisu","Zerureusu","Seregios","Taikun Zamuza","Daimyo Hermitaur","Great Thunderbug","Shakalaka","Diablos","Black Diablos","Diorex","Tigrex","Disufiroa","Teostra","Dyuragaua","Toa Tesukatora","Duremudira","Iodrome","Cephadrome","Gendrome","Bulldrome","Velocidrome","Blangonga","Doragyurosu","Toridcless","Lunastra","Nargacuga","Nono Orugaron","Basarios","Congalala","Pariapuria","Harudomerugu","Baruragaru","Hypnocatrice","White Hypnocatrice","Bright Hypnocatrice","Hyujikiki","Farunokku","Forokururu","Brachydios","Blango","Burukku","Bullfango","Khezu","Red Khezu","Barioth","Berukyurosu","Pokara","Pokaradon","Popo","Bogabadorumu","Poborubarumu","Mi Ru","Midogaron","Fatalis","Crimson Fatalis","White Fatalis","Meraginasu","Melynx","Mosswine","Monoblos","White Monoblos","Ceanataur","Yama Kurai","Yama Tsukami","Rajang","Raviente","Berserk Raviente","Lao-Shan Lung","Ashen Lao-Shan Lung","Vespoid","Velociprey","Rathian","Pink Rathian","Gold Rathian","Rathalos","Azure Rathalos","Silver Rathalos","Rukodiora","Rebidiora"]);
+s.title = "ターゲットで絞り込み";
+selectSet(s,["ターゲット","アイルー","アカムトルム","アクラ・ヴァシム","アクラ・ジェビア","アノルパティス","アビオルグ","アプケロス","アプトノス","アマツマガツチ","アルガノス","アンノウン","イーオス","イナガミ","イビルジョー","イビルジョー蝕","イャンガルルガ","イャンクック","イャンクック亜種","ヴァルサブロス","ヴォージャン","ヴォルガノス","ヴォルガノス亜種","ウラガンキン","ウルキー","エギュラス","エスピナス","エスピナス亜種","エスピナス希少種","エルゼリオン","エルペ","オオナズチ","オディバトラス","ガウシカ","ガスラバズラ","ガノトトス","ガノトトス亜種","ガブラス","ガミザミ","カム・オルガロン","ガルバダオラ","ガレオス","カンタロス","ギアオルグ","ギアノス","キリン","クアルセプス","グァンゾルム","クシャルダオラ","クスバミ","グラビモス","グラビモス亜種","グレアドモス","グレンゼブル","ケオアルボル","ゲネポス","ゲリョス","ゲリョス亜種","ケルビ","ゴア・マガラ","ゴウガルフ","ココモア","ゴゴモア","ゴルガノス","コンガ","シェンガオレン","シャガル・マガラ","シャンティエン","ショウグンギザミ","ジンオウガ","ジンオウガ亜種","ゼナセリス","ゼルレウス","セルレギオス","タイクンザムザ","ダイミョウザザミ","大雷光虫","チャチャブー","ディアブロス","ディアブロス亜種","ディオレックス","ティガレックス","ディスフィロア","テオ・テスカトル","デュラガウア","トア・テスカトラ","ドゥレムディラ","ドスイーオス","ドスガレオス","ドスゲネポス","ドスファンゴ","ドスランポス","ドドブランゴ","ドラギュロス","トリドクレス","ナナ・テスカトリ","ナルガクルガ","ノノ・オルガロン","バサルモス","ババコンガ","パリアプリア","ハルドメルグ","バルラガル","ヒプノック","ヒプノック希少種","ヒプノック繁殖期","ヒュジキキ","ファルノック","フォロクルル","ブラキディオス","ブランゴ","ブルック","ブルファンゴ","フルフル","フルフル亜種","ベリオロス","ベルキュロス","ポカラ","ポカラドン","ポポ","ボガバドルム","ポボルバルム","ミ・ル","ミドガロン","ミラボレアス","ミラボレアス【紅龍】","ミラボレアス【祖龍】","メラギナス","メラルー","モス","モノブロス","モノブロス亜種","ヤオザミ","ヤマクライ","ヤマツカミ","ラージャン","ラヴィエンテ","ラヴィエンテ猛狂期","ラオシャンロン","ラオシャンロン亜種","ランゴスタ","ランポス","リオレイア","リオレイア亜種","リオレイア希少種","リオレウス","リオレウス亜種","リオレウス希少種","ルコディオラ","レビディオラ"]);
 tH.cells[6].appendChild(s.cloneNode(true));
-	var ckTtarget_F = function (e) {
-	if (e === "Broken, Don't Use") {
+var ckTtarget_F = function (e) {
+	if (e === "ターゲット") {
 		return function(){return true};
 	} else {
-		var reg = new RegExp(">[\w]+\s"+e+"\s[0-9]+<");
+		var reg = new RegExp(">"+e+"[0-9].+の|>"+e+"の");
 		return function (cell) {return reg.test(">"+cell.innerHTML.replace("アクラ・ジェビア奇種","アクラ・ジェビア").replace("ヒプノック奇種","ヒプノック繁殖期").split("奇種").join("亜種").split("変種").join(""));};
 	}
+};	
+*/	
+	
+
+//ターゲット
+//["Any","Felyne","Akantor","Akura Vashimu","Akura Jebia","Anorupatisu","Abiorugu","Apceros","Aptonoth","Amatsu","Aruganosu","Unknown","Ioprey","Inagami","Deviljho","イビルジョー蝕","Yian Garuga","Yian Kut-Ku","Blue Yian Kut-Ku","Varusaburosu","Voljang","Volganos","Red Volganos","Uragaan","Uruki","Egyurasu","Espinas","Orange Espinas","White Espinas","Elzelion","Erupe","Chameleos","Odibatorasu","Anteka","Gasurabazura","Plesioth","Green Plesioth","Remobra","Hermitaur","Kamu Orugaron","Garuba Daora","Cephalos","Hornetaur","Giaorugu","Giaprey","Kirin","Kuarusepusu","Guanzorumu","Kushala Daora","Kusubami","Gravios","Black Gravios","Gureadomosu","Gurenzeburu","Keoaruboru","Genprey","Gypceros","Purple Gypceros","Kelbi","Gore Magala","Gougarf","Kokomoa","Gogomoa","Goruganosu","Conga","Shen Gaoren","Shagaru Magala","Shantien","Shogun Ceanataur","Zinogre","Stygian Zinogre","Zenaserisu","Zerureusu","Seregios","Taikun Zamuza","Daimyo Hermitaur","Great Thunderbug","Shakalaka","Diablos","Black Diablos","Diorex","Tigrex","Disufiroa","Teostra","Dyuragaua","Toa Tesukatora","Duremudira","Iodrome","Cephadrome","Gendrome","Bulldrome","Velocidrome","Blangonga","Doragyurosu","Toridcless","Lunastra","Nargacuga","Nono Orugaron","Basarios","Congalala","Pariapuria","Harudomerugu","Baruragaru","Hypnocatrice","White Hypnocatrice","Bright Hypnocatrice","Hyujikiki","Farunokku","Forokururu","Brachydios","Blango","Burukku","Bullfango","Khezu","Red Khezu","Barioth","Berukyurosu","Pokara","Pokaradon","Popo","Bogabadorumu","Poborubarumu","Mi Ru","Midogaron","Fatalis","Crimson Fatalis","White Fatalis","Meraginasu","Melynx","Mosswine","Monoblos","White Monoblos","Ceanataur","Yama Kurai","Yama Tsukami","Rajang","Raviente","Berserk Raviente","Lao-Shan Lung","Ashen Lao-Shan Lung","Vespoid","Velociprey","Rathian","Pink Rathian","Gold Rathian","Rathalos","Azure Rathalos","Silver Rathalos","Rukodiora","Rebidiora"]);	
+	
+s.title = "Filter by Target";
+selectSet(s,["Any","Abiorugu","Akantor","Akura Jebia","Akura Vashimu","Amatsu","Anorupatisu","Anteka","Apceros","Aptonoth","Aruganosu","Ashen Lao-Shan Lung","Azure Rathalos","Barioth","Baruragaru","Basarios","Berserk Raviente","Berukyurosu","Black Diablos","Black Gravios","Blango","Blangonga","Blue Yian Kut-Ku","Bogabadorumu","Brachydios","Bright Hypnocatrice","Bulldrome","Bullfango","Burukku","Ceanataur","Cephadrome","Cephalos","Chameleos","Conga","Congalala","Crimson Fatalis","Daimyo Hermitaur","Deviljho","Diablos","Diorex","Disufiroa","Doragyurosu","Duremudira","Dyuragaua","Egyurasu","Elzelion","Erupe","Espinas","Farunokku","Fatalis","Felyne","Forokururu","Garuba Daora","Gasurabazura","Gendrome","Genprey","Giaorugu","Giaprey","Gogomoa","Gold Rathian","Gore Magala","Goruganosu","Gougarf","Gravios","Great Thunderbug","Green Plesioth","Guanzorumu","Gureadomosu","Gurenzeburu","Gypceros","Harudomerugu","Hermitaur","Hornetaur","Hypnocatrice","Hyujikiki","Inagami","Iodrome","Ioprey","Kamu Orugaron","Kelbi","Keoaruboru","Khezu","Kirin","Kokomoa","Kuarusepusu","Kushala Daora","Kusubami","Lao-Shan Lung","Lunastra","Melynx","Meraginasu","Mi Ru","Midogaron","Monoblos","Mosswine","Musou Deviljho","Nargacuga","Nono Orugaron","Odibatorasu","Orange Espinas","Pariapuria","Pink Rathian","Plesioth","Poborubarumu","Pokara","Pokaradon","Popo","Purple Gypceros","Rajang","Rathalos","Rathian","Raviente","Rebidiora","Red Khezu","Red Volganos","Remobra","Rukodiora","Seregios","Shagaru Magala","Shakalaka","Shantien","Shen Gaoren","Shogun Ceanataur","Silver Rathalos","Stygian Zinogre","Taikun Zamuza","Teostra","Tigrex","Toa Tesukatora","Toridcless","Unknown","Uragaan","Uruki","Varusaburosu","Velocidrome","Velociprey","Vespoid","Volganos","Voljang","White Espinas","White Fatalis","White Hypnocatrice","White Monoblos","Yama Kurai","Yama Tsukami","Yian Garuga","Yian Kut-Ku","Zenaserisu","Zerureusu","Zinogre"]);
+tH.cells[6].appendChild(s.cloneNode(true));
+	var ckTtarget_F = function (e) {
+	if (e === "Any") {
+		return function(){return true};
+	} else {
+		var reg = new RegExp(e);
+		return function (cell) {
+			return reg.test(cell.innerHTML);};
+	}
 };
+
+	
+	
+	
 /*こっちは亜種も引っかかるので没
 var ckTtarget = function (cell,s) {
 		return s === "-" ? true : (cell.innerHTML.indexOf(s) === 0 || cell.innerHTML.indexOf(">"+s) >= 1);
