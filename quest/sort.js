@@ -67,11 +67,13 @@ tH.cells[6].appendChild(s.cloneNode(true));
 	if (e === "Any") {
 		return function(){return true};
 	} else {
-		var reg = new RegExp(">[\w]+\s"+e+"\s[0-9]+<");
+		var reg = new RegExp(e);
 		console.log(reg);
-		console.log(cell.innerHTML);
-		console.log(reg.test(cell.innerHTML));
-		return function (cell) {return reg.test(cell.innerHTML);};
+		
+		return function (cell) {
+			console.log(cell.innerHTML);
+			console.log(reg.test(cell.innerHTML));
+			return reg.test(cell.innerHTML);};
 	}
 };
 
