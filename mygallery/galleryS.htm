@@ -21,31 +21,31 @@ table#List_type,table#List_series {table-layout:auto;}
 ul {margin:0 0 0 1em}
 -->
 </style>
-<title>ギャラリーシミュレータ</title>
+<title>Gallery Simulator</title>
 </head>
 <body>
 <div>
-<fieldset style="width:30em;float:left;"><legend>運勢</legend>
+<fieldset style="width:30em;float:left;"><legend>Luck</legend>
 	<select id="L_type"></select>
 	<select id="L_color"></select>
 	<select id="L_lv"></select>
 </fieldset>
-<fieldset><legend>狩人珠</legend>
+<fieldset><legend>Hunter Jewel</legend>
 	<select id="L_skill"></select>
 </fieldset>
 </div>
-<fieldset style="clear:both;"><legend>家具の検索</legend>
-	<select id="S_rank"></select><label for="S_extra" class=fs><input type="checkbox" id="S_extra" name="S_extra" value=1>エクストラ</label><label for="S_event" class=fs><input type="checkbox" id="S_event" name="S_event" value=1>イベント</label>
+<fieldset style="clear:both;"><legend>Furniture Search</legend>
+	<select id="S_rank"></select><label for="S_extra" class=fs><input type="checkbox" id="S_extra" name="S_extra" value=1>Extra</label><label for="S_event" class=fs><input type="checkbox" id="S_event" name="S_event" value=1>Event</label>
 	<select id="S_type"></select>
 	<select id="S_color"></select>
 	<select id="S_series"></select>
 	<select id="S_set"></select><br>
-	<select id="S_sort"><option value=0>名前順<option value=1 selected>ランク順<option value=2>金額順</select><select id="S_kagu_list"></select><input type="button" id="S_add" value="追加">
+	<select id="S_sort"><option value=0>Name order<option value=1 selected>Rank order<option value=2>Order by Amount</select><select id="S_kagu_list"></select><input type="button" id="S_add" value="Add">
 </fieldset>
-<fieldset style="width:45em;float:left;"><legend>ギャラリー配置</legend>
+<fieldset style="width:45em;float:left;"><legend>Gallery Placement</legend>
 	<table>
 		<col style="width:10em"><col style="width:3em"><col style="width:4em"><col style="width:3.5em"><col style="width:25em">
-		<tr><th>名前</th><th>数</th><th>ゼニー</th><th colspan=2>素材買い <small>(金額をクリックで切り替え)</small></th></tr>
+		<tr><th>Name</th><th>No.</th><th>Zenny</th><th colspan=2>Buy Materials <small>(Switch by clicking the amount)</small></th></tr>
 		<tr><td id="G_kagu1Name"></td><td><select id="G_kagu1Suu"></select></td><td id="G_kagu1Zeny" class="n c"></td><td id="G_kagu1Sozai_Zeny" class="n c"></td><td id="G_kagu1Sozai" class="fs"></td></tr>
 		<tr><td id="G_kagu2Name"></td><td><select id="G_kagu2Suu"></select></td><td id="G_kagu2Zeny" class="n c"></td><td id="G_kagu2Sozai_Zeny" class="n c"></td><td id="G_kagu2Sozai" class="fs"></td></tr>
 		<tr><td id="G_kagu3Name"></td><td><select id="G_kagu3Suu"></select></td><td id="G_kagu3Zeny" class="n c"></td><td id="G_kagu3Sozai_Zeny" class="n c"></td><td id="G_kagu3Sozai" class="fs"></td></tr>
@@ -56,64 +56,64 @@ ul {margin:0 0 0 1em}
 		<tr><td id="G_kagu8Name"></td><td><select id="G_kagu8Suu"></select></td><td id="G_kagu8Zeny" class="n c"></td><td id="G_kagu8Sozai_Zeny" class="n c"></td><td id="G_kagu8Sozai" class="fs"></td></tr>
 		<tr><td id="G_kagu9Name"></td><td><select id="G_kagu9Suu"></select></td><td id="G_kagu9Zeny" class="n c"></td><td id="G_kagu9Sozai_Zeny" class="n c"></td><td id="G_kagu9Sozai" class="fs"></td></tr>
 		<tr><td id="G_kagu10Name"></td><td><select id="G_kagu10Suu"></select></td><td id="G_kagu10Zeny" class="n c"></td><td id="G_kagu10Sozai_Zeny" class="n c"><td id="G_kagu10Sozai" class="fs"></td></tr>
-		<tr><td>計：</td><td id="G_kaguZeny_Sum" class=n colspan=2></td><td id="G_kaguSozai_Sum" colspan=2></tr>
+		<tr><td>Total：</td><td id="G_kaguZeny_Sum" class=n colspan=2></td><td id="G_kaguSozai_Sum" colspan=2></tr>
 	</table>
 </fieldset>
-<fieldset style="width:17.5em;"><legend>情報</legend>
+<fieldset style="width:17.5em;"><legend>Info</legend>
 	<span id="D_name">-</span>
 	<hr>
 	<table>
 		<col style="width:5em;"><col style="width:5em;"><col style="width:7.5em;">
-		<tr><td>ランク</td><td id="D_rank">-</td><td id="D_series1">-</td></tr>
-		<tr><td>家具タイプ</td><td id="D_type">-</td><td id="D_series2">-</td></tr>
-		<tr><td>家具色</td><td id="D_color">-</td><td id="D_series3">-</td></tr>
-		<tr><td>シリーズP</td><td class=n id="D_point">-</td><td id="D_series4">-</td></tr>
-		<tr><td>ボーナス</td><td class=n id="D_bonus_point">-pt</td><td id="D_series5">-</td></tr>
-		<tr><td>かっこいい</td><td class=n id="D_cool_point">-pt</td><td rowspan=5 id="D_sozai" class="fs">-</td></tr>
-		<tr><td>かわいい</td><td class=n id="D_cute_point">-pt</td></tr>
-		<tr><td>現金買い</td><td class=n id="D_zeny">-z</td></tr>
-		<tr><td>素材買い</td><td class=n id="D_zeny_sozai">-z</td></tr>
+		<tr><td>Rank</td><td id="D_rank">-</td><td id="D_series1">-</td></tr>
+		<tr><td>Furniture Type</td><td id="D_type">-</td><td id="D_series2">-</td></tr>
+		<tr><td>Furniture Colors</td><td id="D_color">-</td><td id="D_series3">-</td></tr>
+		<tr><td>P Series</td><td class=n id="D_point">-</td><td id="D_series4">-</td></tr>
+		<tr><td>Bonus</td><td class=n id="D_bonus_point">-pt</td><td id="D_series5">-</td></tr>
+		<tr><td>Cool</td><td class=n id="D_cool_point">-pt</td><td rowspan=5 id="D_sozai" class="fs">-</td></tr>
+		<tr><td>Cute</td><td class=n id="D_cute_point">-pt</td></tr>
+		<tr><td>Buy W Zenny</td><td class=n id="D_zeny">-z</td></tr>
+		<tr><td>Buy W Mats</td><td class=n id="D_zeny_sozai">-z</td></tr>
 		<tr><td><br></td></tr>
 	</table>
 </fieldset>
 <hr style="clear:both;">
-<fieldset style="width:12em;float:left;"><legend>総合評価</legend>
+<fieldset style="width:12em;float:left;"><legend>comprehensive evaluation</legend>
 	<table>
 		<col style="width:6em;"><col>
-		<tr><td class=r>個別評価</td><td class=n id="G_point">-</td></tr>
-		<tr><td class=r>配置運</td><td class=n id="G_luck_point">-</td></tr>
-		<tr><td class=r>狩人珠</td><td class=n id="G_skill_point">-</td></tr>
-		<tr><td>評価ポイント</td><td class=n id="G_all_point">-</td></tr>
+		<tr><td class=r>Individual Evaluation</td><td class=n id="G_point">-</td></tr>
+		<tr><td class=r>Deployment</td><td class=n id="G_luck_point">-</td></tr>
+		<tr><td class=r>Hunter Jewel</td><td class=n id="G_skill_point">-</td></tr>
+		<tr><td>Evaluation Point</td><td class=n id="G_all_point">-</td></tr>
 		<tr><td colspan=2><hr></td></tr>
-		<tr><td>かっこいい</td><td class=n id="G_cool_point">-</td></tr>
-		<tr><td>かわいい</td><td class=n id="G_cute_point">-</td></tr>
+		<tr><td>Cool</td><td class=n id="G_cool_point">-</td></tr>
+		<tr><td>Cute</td><td class=n id="G_cute_point">-</td></tr>
 	</table>
-	<input type="button" id="G_text" value="テキスト出力">
+	<input type="button" id="G_text" value="Text Output">
 </fieldset>
-<fieldset style=""><legend>個別評価</legend>
+<fieldset style=""><legend>Individual Evaluation</legend>
 	<table style="float:left;width:11em;">
 		<col style="width:7em;"><col>
-		<tr><td>タイプ</td><td class=n id="K_type">-</td></tr>
-		<tr><td>シリーズ</td><td class=n id="K_series">-</td></tr>
-		<tr><td>セット</td><td class=n id="K_set">-</td></tr>
-		<tr><td>バラエティ</td><td class=n id="K_variety">-</td></tr>
-		<tr><td>ボーナス</td><td class=n id="K_bonus">-</td></tr>
-		<tr><td>家具の数</td><td class=n id="K_count">-</td></tr>
-		<tr><td>高評価の色</td><td class=n id="K_lucky_color">-</td></tr>
-		<tr><td>高評価の家具</td><td class=n id="K_lucky_type">-</td></tr>
+		<tr><td>Type</td><td class=n id="K_type">-</td></tr>
+		<tr><td>Series</td><td class=n id="K_series">-</td></tr>
+		<tr><td>Set</td><td class=n id="K_set">-</td></tr>
+		<tr><td>Variety</td><td class=n id="K_variety">-</td></tr>
+		<tr><td>Bonus</td><td class=n id="K_bonus">-</td></tr>
+		<tr><td>No. of Furniture</td><td class=n id="K_count">-</td></tr>
+		<tr><td>High Rated Color</td><td class=n id="K_lucky_color">-</td></tr>
+		<tr><td>High Rated Furniture</td><td class=n id="K_lucky_type">-</td></tr>
 	</table>
 	<table id="List_type" style="float:left;width:10em;margin-right:2em">
-	<caption>タイプ</caption>
+	<caption>Type</caption>
 	</table>
 	<table id="List_series" style="float:left;width:12em;">
-	<caption>シリーズ</caption>
+	<caption>Series</caption>
 	</table>
 </fieldset>
-<fieldset><legend style="clear:both;text-align:center;">高評価の秘訣</legend>
+<fieldset><legend style="clear:both;text-align:center;">Secret to High Evaluation</legend>
 <ul>
-	<li>同じ家具を10個以上置かない。</li>
-	<li>同じ家具タイプを10個揃える。</li>
-	<li>同じ家具シリーズを10個揃える。</li>
+	<li>Do not place more than 10 of the same piece of furniture.</li>
+	<li>Match 10 of the same furniture type.</li>
+	<li>Collect 10 pieces of the same furniture series.</li>
 </ul>
 </fieldset>
 <script type="text/javascript" src="global.js"></script>

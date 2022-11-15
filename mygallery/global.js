@@ -1,9 +1,9 @@
-var set_type_name = ["（家具セット）","豪華な歌姫人形","豪華な村置物","豪華な御輿","クリスマスツリー"];
-var rank_type_name = ["★なし","★１","★２","★３","★４","★５","★６","エクストラ","イベント"];
-var series_type_name = ["（家具シリーズ）","竜骨","赤","青","黄","紫の家具","白","石光沢","黒光沢","黄金","赤光沢","桃光沢","青光沢","動く家具","照明家具","木製家具","草原","骨メイン","イーオス","ランポス","ゲネポス","光沢","植物","赤い家具","青い家具","黄の家具","白の家具","光沢の家具","アイルー系","赤のシリーズ","青のシリーズ","黄のシリーズ","紫のシリーズ","白のシリーズ","匠のシリーズ","鱗もの","獣形状もの","竜骨のシリーズ"];
-var color_type_name = ["（家具色）","赤","青","黄","紫","白","石光沢","黒光沢","金","桃","赤光沢","桃光沢","青光沢","黒","緑","茶"];
-var kagu_type_name = ["（家具タイプ）","ハイチェスト","ローチェスト","クローゼット","食器セット","テーブル","仕切り材","スタンド","壷","玩具","植物飾り","ランプ","その他","吊り玉","お面","羽飾り","絵飾り","骨飾り","花飾り","牙飾り","敷物","模型","樽","武具人形","からくり","床","天井","壁紙"];
-var luck_type_name = ["（配置運）","超アンラッキー","アンラッキー","ラッキー","超ラッキー","奇跡が起こる？"];
-var skill_name = ["なし","ギャラリー名人【小】","ギャラリー名人【中】","ギャラリー名人【大】"];
+var set_type_name = ["（Furniture Set）","Gorgeous Diva Doll","Gorgeous Village Decor","Gorgeous Portable Shrine","Christmas Tree"];
+var rank_type_name = ["★None","★１","★２","★３","★４","★５","★６","Extra","Event"];
+var series_type_name = ["（Furniture Series）","Bone","Red","Blue","Yellow","Purple Furniture","White","Glittering Stone","Glittering Black","Gold","Glittering Red","Glittering Peach","Glittering Blue","Moving Furniture","Lighting Fixture","Wooden Furniture","Praire","Bone Main","Ioprey","Velociprey","Genprey","Glittering","Plant","Red Furniture","Blue Furniture","Yellow Furniture","White Furniture","Glittering Furniture","Felyne","Red Series","Blue Series","Yellow Series","Purple Series","White Series","Artisan Series","Scales","Animal Shaped","Bone Series"];
+var color_type_name = ["（Furniture Color）","Red","Blue","Yellow","Purple","White","Glittering Stone","Glittering Black","Gold","Peach","Glittering Red","Glittering Peach","Glittering Blue","Black","Green","Brown"];
+var kagu_type_name = ["（Furniture Type）","Tall Chest","Small Chest","Armoire","Tableware Set","Table","Partition","Stand","Pot","Toy","Plant Decor","Lamp","Other","Disco Ball","Mask","Feathers","Decor","Bone Decor","Floral Decor","Fang Decor","Rug","Model","Barrel","Hunter Doll","Device","Floor","Ceiling","Wallpaper"];
+var luck_type_name = ["（Placement Luck）","Super Unlucky","Unlucky","Lucky","Super Lucky","Miraculous?"];
+var skill_name = ["None","Gallery Celebrity（Sm）","Gallery Celebrity（Med）","Gallery Celebrity（Lrg）"];
 var MAX_KAGU_LIST = 10;
 var gId = 0,gName = 1,gPoint = 2,gRank = 3,gSeries1 = 4,gSeries2 = 5,gSeries3 = 6,gSeries4 = 7,gSeries5 = 8,gType = 9,gSet = 10,gColor1 = 11,gColor2 = 12,gCool_point = 13,gBonus_point = 14,gCute_point = 15,gZeny = 16,gSozai_Zeny = 17,gSozai = 18;
