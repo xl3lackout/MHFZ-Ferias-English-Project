@@ -1509,14 +1509,21 @@ case 9: //ガンランス
 		if (eq[I_aGR] && this.c_sizilgunsup.value) hougekiType = hougekiType.substring(0,13) + (+hougekiType.substring(13) + +this.c_sizilgunsup.value);
 		if (eq[I_aCLASS] === CLASSTYPE.Tenrou) hougekiType = this.c_tenrouGuns.value + "Shot" + this.c_tenrouGunsLv.value;
 		var hougeki = WP_Info.Bullet[ hougekiType ],rengekiP = 0;
-		switch (hougeki.N.substring(0,6)) {
-		case "Normal":
-			rengekiP = 9;break;
-		case "Long  ":
-			rengekiP = 7;break;
-		case "Spread":
-			rengekiP = 8;break;
-		}
+		function getShellingType(mystring){
+			var x = 0;
+		    if (mystring.indexOf("Normal") != -1) {
+				x = 9;
+			};
+		    if (mystring.indexOf("Long") != -1) {
+				x = 7;
+			};
+		    if (mystring.indexOf("Spread") != -1) {
+				x = 8;
+			};
+		    return x;
+		};
+		rengekiP = getShellingType(hougeki.N);
+		
 		//赤ゲージでは砲撃、HB使用不可、龍撃砲可
 		switch (this.c_style.value) {
 		case "Heaven":
