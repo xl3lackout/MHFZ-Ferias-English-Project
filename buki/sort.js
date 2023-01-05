@@ -183,7 +183,7 @@ if (treeCK){ //剣士弓
 	tH.cells[3].appendChild(s.cloneNode(true));
 	//辿異制限
 	s.title = "Sort by Zenith Skill";
-	selectSet(s,["Zenith Skill","Skill Slots Up","C.Conversion Up","S.Assault Up","Dissolver Up","Thunder Clad Up","Ice Age Up","Earplugs Up","Wind Res Up","Quake Res Up","Posion Res Up","Para Res Up","Sleep Res Up","Vampirism Up","Drug Knowledge Up","Assistance Up","Bullet Saver Up","Guard Up","Adaptation Up","Encourage Up","Reflect Up","Stylish Up","Vigorous Up","Obscurity Up","Soul Up","Ceaseless Up"]);
+	selectSet(s,["Zenith Skill","Skill Slots Up","C.Conversion Up","S.Assault Up","Dissolver Up","Thunder Clad Up","Ice Age Up","Earplugs Up","Wind Res Up","Quake Res Up","Posion Res Up","Para Res Up","Sleep Res Up","Vampirism Up","Drug Knowledge Up","Assistance Up","Bullet Saver Up","Guard Up","Adaptation Up","Encourage Up","Reflect Up","Stylish Up","Vigorous Up","Obscurity Up","Soul Up","Ceaseless Up","Rush Up"]);
 	tH.cells[col-1].appendChild(s.cloneNode(true));
 } else { //ガン
 	dt = document.createElement("div");
