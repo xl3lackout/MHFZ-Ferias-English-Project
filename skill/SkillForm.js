@@ -1830,17 +1830,17 @@ for (var j = 1; j < 4; j++) {
 }
 var txt = "<div>" + (g>2 ? "Weapon multiplier in G-rank quest+30" : "") + "</div>";
 if (hs*33+tr*6 >= 100 || rs || ss || Tsup) {
-	txt += "<div>常時ｽｷﾙﾗﾝｸUP</div>";
+	txt += "<div>Skill rankUP</div>";
 } else if (gou || tr || hs) {
-	txt += "<div>体力" + (tr || hs ? 100-hs*33-tr*6 : [0,100,90,83,76,70][gou]) + "%以上でｽｷﾙﾗﾝｸUP</div>";
+	txt += "<div>Health over" + (tr || hs ? 100-hs*33-tr*6 : [0,100,90,83,76,70][gou]) + "%Skill rankUP</div>";
 }
 if (tr || hs || rs || ss || tkup) {
-	txt += "<div>剛種/覇種/G級ｸｴで武器倍率+" + ((tr + hs + rs) === 5 ? 80 : ss+tkup >= 5 ? 110 : 15 * (tr + hs + rs) + 20 * (ss + tkup)) + "UP[剛武器↑]</div>"
+	txt += "<div>Gou/Supr/GRank Wep Multi+" + ((tr + hs + rs) === 5 ? 80 : ss+tkup >= 5 ? 110 : 15 * (tr + hs + rs) + 20 * (ss + tkup)) + "UP[Gou Wep↑]</div>"
 }
 if (hs || rs || ss || tzup) {
-	txt += "<div>剛種/覇種/G級ｸｴで属性" + ((hs + rs) * 2 + (ss + tzup) * 3) + "%UP[剛武器↑]</div>"
+	txt += "<div>Gou/Supr/GRank Elem" + ((hs + rs) * 2 + (ss + tzup) * 3) + "%UP[Gou Wep↑]</div>"
 }
-if (tr>=2 || hs || rs || ss || Tup) txt += "<div>剛種/覇種/G級ｸｴで武器性能UP[天嵐↑]</div>";
+if (tr>=2 || hs || rs || ss || Tup) txt += "<div>Gou/Supr/GRank Wep MultiUP[Tenran↑]</div>";
 this.b_effectT.innerHTML =  txt +
 							"<div>" + ["","Recovers every 8 seconds with stamina at 150 in HC quest","Recovers every 4 seconds with stamina at 125 in HC quest","Recovers every 2 seconds with stamina at 100 in HC quest","Recovers every 1.5 seconds with stamina at 75 in HC quest","Recovers every 1 second with stamina at 50 in HC quest"][hc+sg] + "</div>" +
 							"<div>" + ["","10% damage reduction in quests after SR100","17% damage reduction in quests after SR100","24% damage reduction in quests after SR100","27% less damage in quests after SR100","30% damage reduction from SR100 onwards"][sg+tdcut] + "</div>" +
