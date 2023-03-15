@@ -48,7 +48,7 @@ s {font-size:80%;color:red;text-decoration:none;} /*説明欄*/
 
 #b col#cN {width:16em;}
 #c col#cN {width:13em;}
-#s col#cN {width:8em;}
+#s col#cN {width:11em;}
 col#cTy {width:7em;}
 col#cR {width:4em}
 #b col#cDf {width:5.0em;text-align:right;}
@@ -56,13 +56,13 @@ col#cR {width:4em}
 #c col#cSl {width:3.0em;text-align:center;}
 col#cSk {width:10.7em;text-align:right;}
 col#cSk2 {width:12em;text-align:right;}
-#s col#cSk {width:10em;text-align:right;}
-#s col#cRi {width:2.5em;}
+#s col#cSk {width:14.1em;text-align:right;}
+#s col#cRi {width:5.5em;}
 col#cZ {width:6.0em;text-align:right;}
 col#cHr {width:3.5em;text-align:right;}
 #b col#cS {width:48em;}
 #c col#cS {width:48em;}
-#s col#cS {width:10em;}
+#s col#cS {width:14em;}
 #b tbody tr {height:7em}
 #c tbody tr {height:4em}
 #cDc {width:13.5em;}
