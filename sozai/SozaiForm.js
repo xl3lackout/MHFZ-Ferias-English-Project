@@ -195,7 +195,7 @@ if (MST_Other.Riyou[item_id]) {
 		txt += CyougoType[list[i].charAt(0)].replace("・",":");
 		switch (list[i].charAt(0)) {
 		case "0": //調合
-			txt += CyougoName[list[i].charAt(1)] + list[i].substring(2) + "Created<br>";
+			txt += CyougoName[list[i].charAt(1)] + list[i].substring(2) + " Created<br>";
 			break;
 		case "1": //交換
 			txt += JijiMei[list[i].charAt(1)] + list[i].substring(2) + "Exchangeable<br>";

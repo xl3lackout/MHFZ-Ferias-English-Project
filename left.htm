@@ -6,13 +6,17 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 <meta name="robots" content="NOINDEX,NOFOLLOW">
 <base target="bdy">
+<link rel="stylesheet" href="style.css" type="text/css">
 <style type="text/css">
-<!--
-select{font-size: 70%;}
-p {margin-bottom:0;margin-top:0.5em;}
-p.bk {margin-top:0.9em;}
-.c{color: blue; cursor:pointer;}
--->
+	:root {
+	background: #2b2b2b;
+	color: white;
+}
+a:link { color: #33B2FF; text-decoration:none;}
+a:visited { color: #33B2FF; text-decoration:none}
+
+
+	
 </style>
 <script type="text/javascript">
 <!--
@@ -39,103 +43,103 @@ var w = document.getElementById("m"+no+"l");
 </head>
 <body style="margin-right: 0px;">
 <img src="img\line.png">
-<center><div style="font-weight:bold;"><a href="right.htm">Top Page</a></div></center>
+<div style="font-weight:bold;"><center><a  href="right.htm">Top Page</a></center></div>
 <img src="img\line.png">
-<p><small>(pages marked ※ ARENT translated)</small></p>
-<p><a href="skill\skillsimu.htm">Skill Simulator</a><br>
-└<a href="koneta\skill.htm">Skill Descriptions</a>/<a href="koneta\skillno.htm">Priority</a></p>
+<p><small>(using patch 4.1)</small></p>
+<p><a  href="skill\skillsimu.htm">Skill Simulator</a><br>
+└<a  href="koneta\skill.htm">Skill Descriptions</a>/<a  href="koneta\skillno.htm">Priority</a></p>
 
-<p><a href="damage\damageT.htm">Damage Calculator</a><small>(Outdated)</small><br>
-├<a href="damage\damageK.htm" id="DS">Damage Comparison※</a><select name="suu" onchange="link(this.value)"><option value="2" selected="">2<option value="3">3<option value="4">4</select><br>
-└<a href="damage\bowgun.htm">Bowgun Information</a></p>
+<p><a  href="damage\damageT.htm">Damage Calculator</a><small>(Outdated)</small><br>
+├<a  href="damage\damageK.htm" id="DS">Damage Comparison※</a><select name="suu" onchange="link(this.value)"><option value="2" selected="">2<option value="3">3<option value="4">4</select><br>
+└<a  href="damage\bowgun.htm">Bowgun Information</a></p>
 
-<p><a href="buki\bukiF.htm"><image src="img/mhficons/tile063.png" width=20px>Weapon List</a><br><a href="damage\gakufu.htm"><image src="img/mhficons/tile071.png" width=20px>HH Songs</a></p>
-<p><a href="bougu\tree.htm"><image src="img/mhficons/tile077.png" width=20px>Armour List</a><br><a href="bougu\bouguF.htm"><image src="img/mhficons/tile044.png" width=20px>Decos and Other</a></p>
-
-<p></p>
-<img src="img\line.png">
-<center><p style="font-weight:bold; color:black; font-size:100%;"><image src="img/mhficons/tile024.png" width=20px> Monster Information <image src="img/mhficons/tile024.png" width=20px><br></p></center>
-<img src="img\line.png">
-<p><a href="mons\monsF_h.htm"><image src="img/mhficons/tile107.png" width=20px>Carve Tables</a>
-<br><a href="mons\monsF_n.htm"><image src="img/mhficons/tile010.png" width=20px>Hitboxes and Stats</a></p>
+<p><a href="buki\bukiF.htm"><image src="img/mhficons/tile063.png" width=20px>Weapon List</a><br><a  href="damage\gakufu.htm"><image src="img/mhficons/tile071.png" width=20px>HH Songs</a></p>
+<p><a href="bougu\tree.htm"><image src="img/mhficons/tile077.png" width=20px>Armour List</a><br><a  href="bougu\bouguF.htm"><image src="img/mhficons/tile044.png" width=20px>Decos and Other</a></p>
 
 <p></p>
 <img src="img\line.png">
-<center><p style="font-weight:bold; color:black; font-size:100%;"><image src="img/mhficons/tile038.png" width=20px>  Quest Information  <image src="img/mhficons/tile038.png" width=20px><br></p></center>
+<center><p style="font-weight:bold; color: var(--color); font-size:100%;"><image src="img/mhficons/tile024.png" width=20px> Monster Information <image src="img/mhficons/tile024.png" width=20px><br></p></center>
 <img src="img\line.png">
-<p><a href="quest\hrF.htm">Low/High/HR100</a>
-/<a href="quest\grF.htm">GR</a></p>
+<p><a  href="mons\monsF_h.htm"><image src="img/mhficons/tile107.png" width=20px>Carve Tables</a>
+<br><a  href="mons\monsF_n.htm"><image src="img/mhficons/tile010.png" width=20px>Hitboxes and Stats</a></p>
+
+<p></p>
+<img src="img\line.png">
+<center><p style="font-weight:bold; font-size:100%;"><image src="img/mhficons/tile038.png" width=20px>  Quest Information  <image src="img/mhficons/tile038.png" width=20px><br></p></center>
+<img src="img\line.png">
+<p><a  href="quest\hrF.htm">Low/High/HR100</a>
+/<a  href="quest\grF.htm">GR</a></p>
 
 <p></p>
 <img src="img\line.png">
 <center><p style="font-weight:bold;"><image src="img/mhficons/tile017.png" width=20px>Gathering Information<image src="img/mhficons/tile017.png" width=20px></p></center>
 <img src="img\line.png">
-<p><a href="saisyu\kaiF.htm">Low</a>
-<br><a href="saisyu\zyouiF.htm">High</a>
-<br><a href="saisyu\sugoF.htm">HR100</a>
-<br><a href="saisyu\gF.htm">GR</a>
-<br><a href="saisyu\enF.htm">Training</a></p>
+<p><a  href="saisyu\kaiF.htm">Low</a>
+<br><a  href="saisyu\zyouiF.htm">High</a>
+<br><a  href="saisyu\sugoF.htm">HR100</a>
+<br><a  href="saisyu\gF.htm">GR</a>
+<br><a  href="saisyu\enF.htm">Training</a></p>
 <p></p>
 <img src="img\line.png">
 
-<p class="bk"><a href="sozai\itemlist.htm">Item Index</a><br><a href="sozai\equip.htm">Equipment Index</a></p>
-<p><a href="mesi\syokuji.htm">Bentos</a><br><a href="mesi\mesion.htm">Recommendations</a>/</p>
+<p class="bk"><a  href="sozai\itemlist.htm">Item Index</a><br><a  href="sozai\equip.htm">Equipment Index</a></p>
+<p><a  href="mesi\syokuji.htm">Bentos</a><br><a  href="mesi\mesion.htm">Recommendations</a>/</p>
 
 <p><img id="m21" src="img\open.gif" onclick="mclick(21)">
 <span onclick="mclick(21)" class="c">Gacha/Special Rewards</span><br>
 <span id="m21l" style="display: none;">
-├<a href="quest\lot_l.htm">Cat lottery</a><br>
-├<a href="koneta\pay_quest.htm">Other</a><br>
-└<a href="koneta\pay_special.htm">Special</a><br>
+├<a  href="quest\lot_l.htm">Cat lottery</a><br>
+├<a  href="koneta\pay_quest.htm">Other</a><br>
+└<a  href="koneta\pay_special.htm">Special</a><br>
 </span>
 
 <p><img id="m20" src="img\open.gif" onclick="mclick(20)">
 <span onclick="mclick(20)" class="c"><image src="img/mhficons/guku.png" width=20px>Gook Farm</span><br>
 <span id="m20l" style="display: none;">
-├<a href="mygarden\mygarden.htm">About</a><br>
-├<a href="mygarden\mizumaki.htm">Plants and Herbs</a><br>
-├<a href="mygarden\souji.htm">Tools and Junk</a><br>
-├<a href="mygarden\nikuyaki.htm">Cooking</a><br>
-├<a href="mygarden\saikutu.htm">Mining</a><br>
-├<a href="mygarden\musi.htm">Bug Catching</a><br>
-├<a href="mygarden\tubo.htm">Mocha Pots</a><br>
-├<a href="mygarden\horidasi.htm">Bargains</a><br>
-├<a href="mygarden\otosimono.htm">Lost Cat</a><br>
+├<a  href="mygarden\mygarden.htm">About</a><br>
+├<a  href="mygarden\mizumaki.htm">Plants and Herbs</a><br>
+├<a  href="mygarden\souji.htm">Tools and Junk</a><br>
+├<a  href="mygarden\nikuyaki.htm">Cooking</a><br>
+├<a  href="mygarden\saikutu.htm">Mining</a><br>
+├<a  href="mygarden\musi.htm">Bug Catching</a><br>
+├<a  href="mygarden\tubo.htm">Mocha Pots</a><br>
+├<a  href="mygarden\horidasi.htm">Bargains</a><br>
+├<a  href="mygarden\otosimono.htm">Lost Cat</a><br>
 └<img id="m23" src="img\open.gif" onclick="mclick(23)">
 	<span onclick="mclick(23)" class="c">Gooks</span><br>
 	<span id="m23l" style="display: none;">
-	├<a href="mygarden\gook-doc.htm">About</a><br>
-	├<a href="mygarden\gook-food.htm">Food</a><br>
-	├<a href="mygarden\gook-rusu.htm">Housesitting</a><br>
-	├<a href="mygarden\gook-nabe.htm">Cooking</a><br>
-	└<a href="mygarden\gook-saisyu.htm">Gathering</a><br>
+	├<a  href="mygarden\gook-doc.htm">About</a><br>
+	├<a  href="mygarden\gook-food.htm">Food</a><br>
+	├<a  href="mygarden\gook-rusu.htm">Housesitting</a><br>
+	├<a  href="mygarden\gook-nabe.htm">Cooking</a><br>
+	└<a  href="mygarden\gook-saisyu.htm">Gathering</a><br>
 	</span>
 </span>
 <img id="m15" src="img\open.gif" onclick="mclick(15)">
 <span onclick="mclick(15)" class="c">My Tore (Pugi Farm)</span><br>
 <span id="m15l" style="display: none;">
-├<a href="mytre\mytre.htm">About</a><br>
-├<a href="mytre\kanri.htm">Manager</a><br>
-├<a href="mytre\mytrebuta.htm">Pugis</a><br>
-├<a href="mytre\mytreneko.htm">Felynes</a><br>
-├<a href="shop\mytre.htm">General Store</a><br>
-├<a href="mytre\cyougou.htm">Combiner</a><br>
-├<a href="mytre\bouken.htm">Adventure House</a><br>
-├<a href="mytre\fuku.htm">Clothing Store</a><br>
-└<a href="mytre\nomi.htm">Bar</a><br>
+├<a  href="mytre\mytre.htm">About</a><br>
+├<a  href="mytre\kanri.htm">Manager</a><br>
+├<a  href="mytre\mytrebuta.htm">Pugis</a><br>
+├<a  href="mytre\mytreneko.htm">Felynes</a><br>
+├<a  href="shop\mytre.htm">General Store</a><br>
+├<a  href="mytre\cyougou.htm">Combiner</a><br>
+├<a  href="mytre\bouken.htm">Adventure House</a><br>
+├<a  href="mytre\fuku.htm">Clothing Store</a><br>
+└<a  href="mytre\nomi.htm">Bar</a><br>
 </span>
 
 <img id="m13" src="img\open.gif" onclick="mclick(13)">
 <span onclick="mclick(13)" class="c">Gallery</span><br>
 <span id="m13l" style="display: none;">
-├<a href="mygallery\galleryS.htm">Gallery Sim</a><br>
-├<a href="mygallery\kihon.htm">Ranking Info</a><br>
-├<a href="mygallery/syouhin.htm">Prizes</a><br>
-├<a href="mygallery\kagu.htm">Furniture</a><br>
-└<a href="mygallery\60000.htm">Combinations</a><br>
+├<a  href="mygallery\galleryS.htm">Gallery Sim</a><br>
+├<a  href="mygallery\kihon.htm">Ranking Info</a><br>
+├<a  href="mygallery/syouhin.htm">Prizes</a><br>
+├<a  href="mygallery\kagu.htm">Furniture</a><br>
+└<a  href="mygallery\60000.htm">Combinations</a><br>
 </span>
 
-<a href="koneta\myhouse.htm" style="text-decoration:none;margin-left:0.8em">My House</a><br>
+<a  href="koneta\myhouse.htm" style="text-decoration:none;margin-left:0.8em">My House</a><br>
 
 <img id="m22" src="img\open.gif" onclick="mclick(22)">
 <span onclick="mclick(22)" class="c">My Support</span><br>
@@ -143,130 +147,130 @@ var w = document.getElementById("m"+no+"l");
     　<img id="m221" src="img\open.gif" onclick="mclick(221)">
 	<span onclick="mclick(221)" class="c">My Halk</span><br>
 	<span id="m221l" style="display: none;">
-	├<a href="npc\myholk_doc.htm">About</a><br>
-	├<a href="npc\myholk_book.htm">Halk Skills</a><br>
-	└<a href="npc\myholk_food.htm">Food</a><br>
+	├<a  href="npc\myholk_doc.htm">About</a><br>
+	├<a  href="npc\myholk_book.htm">Halk Skills</a><br>
+	└<a  href="npc\myholk_food.htm">Food</a><br>
 	</span>
 	　<img id="m222" src="img\open.gif" onclick="mclick(222)">
 	<span onclick="mclick(222)" class="c">Partnyaas</span><br>
 	<span id="m222l" style="display: none;">
-	├<a href="npc\partnya_doc.htm">About</a><br>
-	├<a href="npc\partnya_skill.htm">Skills</a>/<a href="npc\partnya_skillno.htm">Priority</a><br>
-	├<a href="buki\buki_partnyaF.htm">Weapon List</a><br>
-	└<a href="bougu\bougu_partnyaF.htm">Armour List</a><br>
+	├<a  href="npc\partnya_doc.htm">About</a><br>
+	├<a  href="npc\partnya_skill.htm">Skills</a>/<a  href="npc\partnya_skillno.htm">Priority</a><br>
+	├<a  href="buki\buki_partnyaF.htm">Weapon List</a><br>
+	└<a  href="bougu\bougu_partnyaF.htm">Armour List</a><br>
 	</span>
 </span>
 
-<a href="koneta\mymission.htm" style="text-decoration:none;margin-left:0.8em">My Mission</a>
+<a  href="koneta\mymission.htm" style="text-decoration:none;margin-left:0.8em">My Mission</a>
 
 <p><img id="m11" src="img\open.gif" onclick="mclick(11)">
 <span onclick="mclick(11)" class="c">Mocha/Trading/Combos</span><br>
 <span id="m11l" style="display: none;">
-├<a href="koneta\maka.htm">Mocha Pots</a><br>
-├<a href="koneta\koukan.htm">Veggie Elder Trades</a><br>
-└<a href="koneta\mix.htm">Combinations</a><br>
+├<a  href="koneta\maka.htm">Mocha Pots</a><br>
+├<a  href="koneta\koukan.htm">Veggie Elder Trades</a><br>
+└<a  href="koneta\mix.htm">Combinations</a><br>
 </span></p>
 
 <p><img id="m12" src="img\open.gif" onclick="mclick(12)">
 <span onclick="mclick(12)" class="c">Shops</span><br>
 <span id="m12l" style="display: none;">
-├<a href="shop\tougou.htm">General Store</a><br>
-├<a href="shop\syokuzai.htm">Grocery Store</a><br>
+├<a  href="shop\tougou.htm">General Store</a><br>
+├<a  href="shop\syokuzai.htm">Grocery Store</a><br>
 ├<u>Combiner</u><br>
-｜├<a href="koneta\mix.htm">Bulk Combos</a><br>
-｜├<a href="shop\mix-gp.htm">GCP Combos</a><br>
-｜├<a href="shop\mix-cp.htm">CP Combos</a><br>
-｜├<a href="shop\mix-pr.htm">Special Combos</a><br>
-｜├<a href="shop\mix-gofu.htm">Talisman Exchange</a><br>
-｜├<a href="shop\mix-hiden.htm">Hiden Deco Exchange</a><br>
-｜├<a href="shop\mix-thk.htm">Souls Exchange</a><br>
-｜└<a href="shop\cyougou.htm">Buyables</a><br>
-├<a href="shop\harisen.htm">Blacksmith</a><br>
-├<a href="shop\koukan.htm">Trades</a><br>
-├<a href="shop\utahime.htm">Diva Defence Stores</a><br>
-├<a href="shop\ryoudan.htm">Guild</a>(<a href="shop\ryoudan_geigeki.htm">Diva Defence</a>)<br>
-├<a href="shop\mytre.htm">Pugi</a><br>
-├<a href="shop\caravan.htm">Caravan</a><br>
-├<a href="shop\tenro.htm">Hunter's Road</a>(<a href="shop\tenromedal.htm">Road Shop</a>)<br>
-└<a href="shop\mezefes.htm">MezFes</a>
+｜├<a  href="koneta\mix.htm">Bulk Combos</a><br>
+｜├<a  href="shop\mix-gp.htm">GCP Combos</a><br>
+｜├<a  href="shop\mix-cp.htm">CP Combos</a><br>
+｜├<a  href="shop\mix-pr.htm">Special Combos</a><br>
+｜├<a  href="shop\mix-gofu.htm">Talisman Exchange</a><br>
+｜├<a  href="shop\mix-hiden.htm">Hiden Deco Exchange</a><br>
+｜├<a  href="shop\mix-thk.htm">Souls Exchange</a><br>
+｜└<a  href="shop\cyougou.htm">Buyables</a><br>
+├<a  href="shop\harisen.htm">Blacksmith</a><br>
+├<a  href="shop\koukan.htm">Trades</a><br>
+├<a  href="shop\utahime.htm">Diva Defence Stores</a><br>
+├<a  href="shop\ryoudan.htm">Guild</a>(<a  href="shop\ryoudan_geigeki.htm">Diva Defence</a>)<br>
+├<a  href="shop\mytre.htm">Pugi</a><br>
+├<a  href="shop\caravan.htm">Caravan</a><br>
+├<a  href="shop\tenro.htm">Hunter's Road</a>(<a  href="shop\tenromedal.htm">Road Shop</a>)<br>
+└<a  href="shop\mezefes.htm">MezFes</a>
 </span></p>
 
 <p><img id="m16" src="img\open.gif" onclick="mclick(16)">
 <span onclick="mclick(16)" class="c">Guild</span><br>
 <span id="m16l" style="display: none;">
-├<a href="ryodan\ryodan.htm">About</a><br>
-├<a href="ryodan\buta.htm">Pugi</a><br>
-├<a href="ryodan\butaesa.htm">Pugi Food</a><br>
-├<a href="shop\ryoudan.htm">General Store</a><br>
-├<a href="ryodan\addquest.htm">Extra Objective</a><br>
-├<a href="ryodan\carnival.htm">Hunter Festival</a><br>
-├<a href="ryodan\cooking.htm">Cuisine</a><br>
-├<a href="ryodan\bouken.htm">Adventure Boat</a><br>
-└<a href="ryodan\treasure.htm">Treasure</a>
+├<a  href="ryodan\ryodan.htm">About</a><br>
+├<a  href="ryodan\buta.htm">Pugi</a><br>
+├<a  href="ryodan\butaesa.htm">Pugi Food</a><br>
+├<a  href="shop\ryoudan.htm">General Store</a><br>
+├<a  href="ryodan\addquest.htm">Extra Objective</a><br>
+├<a  href="ryodan\carnival.htm">Hunter Festival</a><br>
+├<a  href="ryodan\cooking.htm">Cuisine</a><br>
+├<a  href="ryodan\bouken.htm">Adventure Boat</a><br>
+└<a  href="ryodan\treasure.htm">Treasure</a>
 </span></p>
 
 <p><img id="m18" src="img\open.gif" onclick="mclick(18)">
 <span onclick="mclick(18)" class="c">Caravan</span><br>
 <span id="m18l" style="display: none;">
-├<a href="caravan\caravan.htm">About</a><br>
-├<a href="caravan\hunterdec.htm">Hunter Jewel</a><br>
-├<a href="caravan\quest.htm">Quests</a><br>
-├<a href="caravan\questg.htm">G Rank Quests</a><br>
-├<a href="caravan\daikousai.htm">G. Voyage Festi</a>(Removed)<br>
-├<a href="caravan\daitoubatu.htm">Great Slay (Raviente)</a><br>
-├<a href="caravan\kaitaku.htm">Pioneering</a><br>
-├<a href="shop\caravan.htm">Shop</a><br>
-├<a href="caravan\lounge.htm">Lounge</a><br>
-└<a href="shop\mix-cp.htm">CP Combinations</a>
+├<a  href="caravan\caravan.htm">About</a><br>
+├<a  href="caravan\hunterdec.htm">Hunter Jewel</a><br>
+├<a  href="caravan\quest.htm">Quests</a><br>
+├<a  href="caravan\questg.htm">G Rank Quests</a><br>
+├<a  href="caravan\daikousai.htm">G. Voyage Festi</a>(Removed)<br>
+├<a  href="caravan\daitoubatu.htm">Great Slay (Raviente)</a><br>
+├<a  href="caravan\kaitaku.htm">Pioneering</a><br>
+├<a  href="shop\caravan.htm">Shop</a><br>
+├<a  href="caravan\lounge.htm">Lounge</a><br>
+└<a  href="shop\mix-cp.htm">CP Combinations</a>
 </span></p>
 
 <p><img id="m19" src="img\open.gif" onclick="mclick(19)">
 <span onclick="mclick(19)" class="c">Rasta / Partner</span><br>
 <span id="m19l" style="display: none;">
-├<a href="npc\partner_doc.htm">Partner Description</a><br>
-├<a href="npc\partner_skill.htm">Partner Skills</a><br>
-├<a href="npc\partner_skill_tree.htm"> Derivation Tree</a><br>
-├<a href="npc\rasta_doc.htm">Rasta Description</a><br>
-├<a href="npc\rasta_lvup.htm">Rasta Enhancement</a><br>
-├<a href="npc\rasta_skill.htm">Rasta Skills</a><br>
-├<a href="npc\rasta_quest.htm">Behavior on Quests</a><br>
-├<a href="npc\rasta_item.htm">Item Lending</a><br>
-└<a href="shop\mix-gp.htm">GCP Combos</a>
+├<a  href="npc\partner_doc.htm">Partner Description</a><br>
+├<a  href="npc\partner_skill.htm">Partner Skills</a><br>
+├<a  href="npc\partner_skill_tree.htm"> Derivation Tree</a><br>
+├<a  href="npc\rasta_doc.htm">Rasta Description</a><br>
+├<a  href="npc\rasta_lvup.htm">Rasta Enhancement</a><br>
+├<a  href="npc\rasta_skill.htm">Rasta Skills</a><br>
+├<a  href="npc\rasta_quest.htm">Behavior on Quests</a><br>
+├<a  href="npc\rasta_item.htm">Item Lending</a><br>
+└<a  href="shop\mix-gp.htm">GCP Combos</a>
 </span></p>
 
 <p><img id="m14" src="img\open.gif" onclick="mclick(14)">
 <span onclick="mclick(14)" class="c">Great Tournament (PvP)</span><br>
 <span id="m14l" style="display: none;">
-├<a href="pet\readme.htm">Great Tournament Info (PvP)</a><br>
-├<a href="pet\lv.htm">Strength</a><br>
-├<a href="pet\yukou.htm">Friendship Lv</a><br>
-└<a href="pet\petesa.htm">Bait/attack methods</a>
+├<a  href="pet\readme.htm">Great Tournament Info (PvP)</a><br>
+├<a  href="pet\lv.htm">Strength</a><br>
+├<a  href="pet\yukou.htm">Friendship Lv</a><br>
+└<a  href="pet\petesa.htm">Bait/attack methods</a>
 </span></p>
 
 <p><img id="m17" src="img\open.gif" onclick="mclick(17)">
 <span onclick="mclick(17)" class="c">Other Info</span><br>
 <span id="m17l" style="display: none;">
-├<a href="koneta\doc-sword.htm">Weapon Statistics</a><br>
-├<a href="koneta\item_bomb.htm">Item Damage</a><br>
-├<a href="koneta\item_kouka.htm">Item Effects</a><br>
-├<a href="koneta\item_kireaji.htm">Sharpness</a><br>
+├<a  href="koneta\doc-sword.htm">Weapon Statistics</a><br>
+├<a  href="koneta\item_bomb.htm">Item Damage</a><br>
+├<a  href="koneta\item_kouka.htm">Item Effects</a><br>
+├<a  href="koneta\item_kireaji.htm">Sharpness</a><br>
 ├Hunter Points<br>
-｜└<a href="koneta\rp_h.htm">ＨＲ</a>/<a href="koneta/rp_s.htm">ＳＲ</a>/<a href="koneta/rp_g.htm">ＧＲ</a><br>
-├<a href="koneta\tourina.htm">Street Name/Title/Color</a><br>
-<!--├<a href="koneta/idou.htm">移動速度の差</a><br>-->
-├<a href="koneta\fish.htm">Fish</a><br>
-├<a href="koneta\mons-lv.htm">Monster Statistics</a><br>
-├<a href="koneta\mons-size.htm">Monster Size</a><br>
-├<a href="koneta\damage.htm">Damage</a><br>
-├<a href="koneta\houshu.htm">Quest Rewards</a><br>
-└<a href="koneta\dailybonus.htm">Daily Special Offers</a>
+｜└<a  href="koneta\rp_h.htm">ＨＲ</a>/<a  href="koneta/rp_s.htm">ＳＲ</a>/<a  href="koneta/rp_g.htm">ＧＲ</a><br>
+├<a  href="koneta\tourina.htm">Street Name/Title/Color</a><br>
+<!--├<a  href="koneta/idou.htm">移動速度の差</a><br>-->
+├<a  href="koneta\fish.htm">Fish</a><br>
+├<a  href="koneta\mons-lv.htm">Monster Statistics</a><br>
+├<a  href="koneta\mons-size.htm">Monster Size</a><br>
+├<a  href="koneta\damage.htm">Damage</a><br>
+├<a  href="koneta\houshu.htm">Quest Rewards</a><br>
+└<a  href="koneta\dailybonus.htm">Daily Special Offers</a>
 </span></p>
-<!--<p style="margin-top:1.5em;"><small><a href="https://blog.so-net.ne.jp/ochaken" target="_top">??cFreeDom?{??</a><span style="font-size: 70%">(??~??)</span></small></p>-->
-<div style="text-align:right; font-size:80%;margin-top:0.5em;"><a href="cm.htm">AD</a></div>
-<div style="text-align:right; font-size:80%;margin-top:0.5em;margin-bottom:1.0em;"><a href="wforum/wforum.cgi.html" target="_blank">Report Problems</a></div>
+<!--<p style="margin-top:1.5em;"><small><a  href="https://blog.so-net.ne.jp/ochaken" target="_top">??cFreeDom?{??</a><span style="font-size: 70%">(??~??)</span></small></p>-->
+<div style="text-align:right; font-size:80%;margin-top:0.5em;"><a  href="cm.htm">AD</a></div>
+<div style="text-align:right; font-size:80%;margin-top:0.5em;margin-bottom:1.0em;"><a  href="wforum/wforum.cgi.html" target="_blank">Report Problems</a></div>
 <!--shinobi1-->
 <script type="text/javascript" src="http://ct2.koiwazurai.com/sc/1729162"></script>
-<noscript><a href="http://ct2.koiwazurai.com/gg/1729162"><img src="http://ct2.koiwazurai.com/ll/1729162" border="0" alt="カウンター"></a></noscript>
+<noscript><a  href="http://ct2.koiwazurai.com/gg/1729162"><img src="http://ct2.koiwazurai.com/ll/1729162" border="0" alt="カウンター"></a></noscript>
 <!--shinobi2-->
 <iframe src="log.htm" style="width:0px; height:0px; display:none;"></iframe>
 <div style="font-size:80%;">Since：2007/07/06</div>

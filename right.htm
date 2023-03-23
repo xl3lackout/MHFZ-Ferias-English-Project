@@ -17,11 +17,19 @@ a:active {color:black;}
 .sen1 {border-left:1px solid silver;}
 .sen2 {border-left:2px solid silver;}
 -->
+
+	:root {
+	background: #2b2b2b;
+	color: white;
+}
+a:link { color: #33B2FF;}
+a:visited { color: #D37AFF;}
+	
 </style>
 <title>表紙</title>
 <base target="_blank">
 </head>
-<body>
+<body onload="checkTheme()" style="background-color: var(--background); color: var(--color)">
 <p>This page is the database of
 <br>Monster Hunter Frontier Team FreeDom
 </p><p>
@@ -444,6 +452,17 @@ showCountdown();
 setInterval("showCountdown()",1000);
 })();
 // -->
+</script>
+<script>
+	function checkTheme() {
+	let darkMode = localStorage.getItem("dark");
+
+	if(darkMode === "enabled") {
+			document.body.classList.add("dark");
+		} else {
+			document.body.classList.remove("dark");
+		}
+}
 </script>
 </div></body>
 </html>

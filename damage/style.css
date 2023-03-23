@@ -1,10 +1,10 @@
 * {margin:0; padding:0;}
 html,body {margin:5px;}
-th {text-align:center;white-space:nowrap;font-weight:normal;background-color:silver;}
-td {white-space:nowrap;padding:0 2px;border-color:silver;}
+th {text-align:center;white-space:nowrap;font-weight:normal;background-color:#1C1C1C;}
+td {white-space:nowrap;padding:0 2px;border-color:#1C1C1C;}
 select {font-family:"‚l‚r ƒSƒVƒbƒN";}
-.t {text-align:center;background-color:silver;}
-.box {padding:0 0.4em;border-collapse:collapse;border:2px ridge #333333;background-color:silver;}
+.t {text-align:center;background-color:#1C1C1C;}
+.box {padding:0 0.4em;border-collapse:collapse;border:2px ridge #333333;background-color:#1C1C1C;}
 #d_slot,#g_att,#g_attB {text-align:center;}
 #d_att,#d_cri,#g_cri,#i_att,#i_zoku,#i_cri {text-align:right;}
 #s_guns,#s_fue,#s_yumi_G,#s_gun_G,#c_gun_G,#c_yumi_G,#c_betu,#c_betu2,#c_sinka,#c_Gclass,#c_fueATup,#c_sizilkyoku {display:none}
@@ -13,8 +13,15 @@ select {font-family:"‚l‚r ƒSƒVƒbƒN";}
 #damage small {color:mediumblue
 ;}
 
-#damage .dai {background-color:silver;}
-#damage tr>td:first-child {background-color:silver;}
+:root {
+	background: #2b2b2b;
+	color: white;
+}
+a:link { color: #33B2FF;}
+a:visited { color: #D37AFF;}
+
+#damage .dai {background-color:#1C1C1C;}
+#damage tr>td:first-child {background-color:#1C1C1C;}
 .stop2 {color:blue;}
 .stop1 {color:green;}
 .stop0 {color:gray;}
@@ -22,8 +29,8 @@ select {font-family:"‚l‚r ƒSƒVƒbƒN";}
 .aj2:after {content:"[‘Å]";font-size: x-small;}
 .aj3:after {content:"[’e]";font-size: x-small;}
 
-#niku .dai {background-color:silver;white-space:normal;}
-#niku tr>td:first-child {background-color:silver;white-space:normal;}
+#niku .dai {background-color:#1C1C1C;white-space:normal;}
+#niku tr>td:first-child {background-color:#1C1C1C;white-space:normal;}
 #niku .suu {text-align:right;}
 #niku tr>td+td {text-align:right;}
 
@@ -36,7 +43,7 @@ select {font-family:"‚l‚r ƒSƒVƒbƒN";}
 #sub_WinBody .sozai td {vertical-align:top;}
 /*•Šíˆê——‚æ‚è*/
 /*“J*/
-#d_spec .f {background-color:silver;}
+#d_spec .f {background-color:#1C1C1C;}
 #d_spec .fr {color:red;}
 #d_spec .fb {color:blue;}
 #d_spec .fw {color:white;}

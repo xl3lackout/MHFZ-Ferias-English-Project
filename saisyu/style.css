@@ -1,8 +1,16 @@
 /*共通*/
 table {border-collapse:collapse;table-layout:fixed;}
-th {text-align:center;white-space:nowrap;font-weight:normal;background-color:silver;}
-th,td {white-space:nowrap;padding:2px;border:2px ridge #ffffff;}
+th {text-align:center;white-space:nowrap;font-weight:normal;background-color:#1C1C1C;}
+th,td {white-space:nowrap;padding:2px;border:2px ridge #708090;}
 input {font-size:60%;padding-right:2px;padding-left:2px;}
+
+:root {
+	background: #2b2b2b;
+	color: white;
+}
+a:link { color: #33B2FF;}
+a:visited { color: #D37AFF;}
+
 
 body {margin:7px}
 col#c1 {width:200px;}
@@ -21,7 +29,7 @@ col#c10n {width:2em;text-align:right;}
 span.b {color:blue;} /*寒冷*/
 span.r {color:red;} /*炎天*/
 .c {text-align:center;}
-.y {background-color:silver;}
+.y {background-color:#1C1C1C;}
 a:hover {background-color:lightgrey;}
 img {display:block}
 

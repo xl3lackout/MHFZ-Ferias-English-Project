@@ -1,11 +1,19 @@
 /*共通*/
 table {border-collapse:collapse;border:1px ridge #333333;}
-th,td {vertical-align:top;padding:2px;border:2px ridge #ffffff;}
-th {text-align:center;white-space:nowrap;font-weight:normal;background-color:silver;}
+th,td {vertical-align:top;padding:2px;border:2px ridge #708090;}
+th {text-align:center;white-space:nowrap;font-weight:normal;background-color:#708090;}
 
 body {margin:5px 0 0 5px;width:100em;}
-tr.l th {background-color:gray;}
+tr.l th {background-color:#1C1C1C;}
 hr {clear:left;height:0;visibility:hidden}
+
+
+:root {
+	background: #2b2b2b;
+	color: white;
+}
+a:link { color: #33B2FF;}
+a:visited { color: #D37AFF;}
 
 /*TOP*/
 #monsname {width:14em;float:left;}
@@ -15,8 +23,8 @@ hr {clear:left;height:0;visibility:hidden}
 #tophosoku span.han {font-size:80%;background-color:#00E100}
 /*補足*/
 #hosoku {clear:both;margin:5px 0 0 0;padding:0;}
-#hosoku span {margin:0;padding:0 1px;border:1px solid silver;white-space:nowrap;}
-#hosoku span em {margin:0 2px;padding:0 2px;font-style:normal;background-color:silver;}
+#hosoku span {margin:0;padding:0 1px;border:1px solid #708090;white-space:nowrap;}
+#hosoku span em {margin:0 2px;padding:0 2px;font-style:normal;background-color:#1C1C1C;}
 /*状態異常*/
 #izyo {clear:both;margin:5px 5px 0 0;float:left;}
 #izyo col.c1 {width:2.5em;}
@@ -26,7 +34,7 @@ hr {clear:left;height:0;visibility:hidden}
 #izyo col.c5 {}
 /*怒り*/
 #izyo td span {margin:0;padding:3px;border:1px solid gray;}
-#izyo td span.l {background-color:silver;}
+#izyo td span.l {background-color:#1C1C1C;}
 /*HP怒り*/
 #hpang {margin:5px 5px 0 0;float:left;}
 #hpang td {text-align:right}
@@ -58,7 +66,7 @@ hr {clear:left;height:0;visibility:hidden}
 #down1 col.c3 {width:23em;}
 #down div {margin:0 0 0 0;padding:0;}
 #down div span {margin:0;padding:0 1px;border:1px solid silver;}
-#down div span em {margin:0 2px;padding:0 2px;font-style:normal;background-color:silver;}
+#down div span em {margin:0 2px;padding:0 2px;font-style:normal;background-color:#708090;}
 /*攻撃*/
 #kou {clear:both;margin-top:1em}
 

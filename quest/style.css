@@ -1,8 +1,16 @@
 /*共通*/
 table {border-collapse:collapse;table-layout:fixed;}
-th {text-align:center;font-weight:normal;background-color:silver;}
-th,td {vertical-align:top;white-space:nowrap;padding:2px;border:2px ridge #ffffff;}
+th {text-align:center;font-weight:normal;background-color:#1C1C1C;}
+th,td {vertical-align:top;white-space:nowrap;padding:2px;border:2px ridge #708090;}
 b {font-family: "ＭＳ ゴシック",sans-serif; border-right:2px ridge #ffffff;margin-right:2px;font-weight:normal;}
+
+
+:root {
+	background: #2b2b2b;
+	color: white;
+}
+a:link { color: #33B2FF;}
+a:visited { color: #D37AFF;}
 
 body {width:65em}
 .g{background-color:gainsboro;} /*期間外*/
@@ -25,11 +33,11 @@ i {font-style:normal;display:block;font-size:80%;} /*期間*/
 
 #rd {margin-left:47em;}
 #top {margin-left:47em;font-size:80%;}
-#top span {color:blue;cursor:pointer;}
+#top span {color:#33B2FF;cursor:pointer;}
 
 /*シリーズ*/
 #sl {margin-top:0.2em;}
-#sl span {color:blue;cursor:pointer;}
+#sl span {color:#33B2FF;cursor:pointer;}
 #sl .c1 {width:5em;}
 #sl .c2 {width:2em;}
 #sl .c3 {width:15em;}
@@ -38,7 +46,7 @@ i {font-style:normal;display:block;font-size:80%;} /*期間*/
 
 /*くじ*/
 #lt {margin-top:0.2em;}
-#lt span {color:blue;cursor:pointer;}
+#lt span {color:#33B2FF;cursor:pointer;}
 #lt .c1 {width:4em;}
 #lt .c2 {width:10em;}
 #lt .c3 {width:10em;}
