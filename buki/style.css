@@ -7,10 +7,12 @@ body {margin:5px; padding:0;}
 table {table-layout:fixed;margin-bottom:60em;}
 td {border-color:#c0c0c0;} /*FF,Opera‚ÌŒrü‘Î‰ž*/
 
+
 :root {
 	background: #2b2b2b;
 	color: white;
 }
+
 a:link { color: #33B2FF;}
 a:visited { color: #D37AFF;}
 
@@ -18,7 +20,7 @@ a:visited { color: #D37AFF;}
 #tree small {font-size:60%;}
 #tree em {display: inline;font-style: normal;color:#FF3333;font-size:60%} /*•â‘«*/
 #tree a {text-decoration:none;}
-#tree a:link,#tree a:visited {color:#33B2FF;}
+#tree a:link {color:#33B2FF;},#tree a:visited {color:#33B2FF;}
 #tree a.new:link,#tree a.new:visited,td.new:first-line {color:crimson;} /*V•Ší*/
 #tree a:hover {color:red;}
 #tree a:active {color:white;}
@@ -31,7 +33,7 @@ a:visited { color: #D37AFF;}
 #data {height:99%;width:79%;overflow: scroll;}
 
 input {font-size:60%;padding-right:2px;padding-left:2px;}
-.k {color:red;} /*ƒL[‘fÞ*/
+.k {color:#FF3333 !important;} /*ƒL[‘fÞ*/
 #data p {font-size:80%;color:red;margin-bottom:0;} /*„Ží•Ší*/
 #data td div {font-size:60%;margin-left:0.5em;} /*‹­‰»Œ³æ*/
 #data td div a {display:block;text-decoration: none;}
@@ -182,3 +184,5 @@ i {font-style:normal;color:blue;clear:left;display:block;} /*ƒrƒ“‘¬ŽË*/
 #ken .fg {color:lime;}
 #ken .fa {color:aqua;}
 #ken .fp {color:fuchsia;}
+
+

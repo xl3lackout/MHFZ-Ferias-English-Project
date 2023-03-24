@@ -30,7 +30,7 @@ a:visited { color: #D37AFF;}
 #data {height:99%;width:78%;overflow: scroll;}
 
 input {font-size:60%;padding-right:2px;padding-left:2px;}
-.k {color:red;} /*キー素材*/
+.k {color:#FF3333 !important;} /*キー素材*/
 table p {font-size:80%;color:red;} /*剛種武器*/
 td div {font-size:60%;margin-left:0.5em;} /*強化元先*/
 td div a {display:block;text-decoration: none;}

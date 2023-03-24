@@ -66,11 +66,11 @@ i {font-style:normal;display:block;font-size:80%;} /*期間*/
 .mei .cb {width:4.5em;}
 
 .s,.S,.sa {width:9.3em;float:left;margin-right:1px;margin-bottom:1em;}
-.s th,.S th,.sa th {background-color:aquamarine;}
+.s th,.S th,.sa th {background-color:#2FD033;}
 .S {margin-right:9.3em;}
 
 .t {width:11.6em;float:left;margin-right:1px;}
-.t th {background-color:pink;}
+.t th {background-color:#D65C5C;}
 .con0,.con1 {margin-left:45em;border:2px ridge #ffffff;width:12.8em;}
 .con2 {margin-left:53em;border:2px ridge #ffffff;width:12.8em;}
 
