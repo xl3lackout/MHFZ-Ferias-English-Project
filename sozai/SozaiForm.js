@@ -213,7 +213,7 @@ if (MST_Other.Riyou[item_id]) {
 if (MST_Quest.Riyou[item_id]) { //クエスト
 	for (var i = 0,list = MST_Quest.Riyou[item_id].split(","),m = list.length,txt = ""; i < m; i++) {
 		var w = MST_Quest.Name[list[i].substring(0,4)].split(",");
-		txt += "<a href=\"../quest/" + w[0] + ".htm#l" + list[i].substring(0,4) + "\"" + (w[1].charAt(4) ? " class="+w[1].charAt(4) : "") + ">" + MST_Quest.Btype[parseInt(w[1].substring(0,2),16)] + Quest_Season[w[1].charAt(2)] + Quest_Time[w[1].charAt(3)] + ":" + w[3] + MST_Quest.Qtype[parseInt(w[2],16)] + w[4] + "</a> -" + list[i].substring(5) + "x " +(list[i].charAt(4) === "N" ? "納品<br>" : "受注で消費<br>");
+		txt += "<a href=\"../quest/" + w[0] + ".htm#l" + list[i].substring(0,4) + "\"" + (w[1].charAt(4) ? " class="+w[1].charAt(4) : "") + ">" + MST_Quest.Btype[parseInt(w[1].substring(0,2),16)] + Quest_Season[w[1].charAt(2)] + Quest_Time[w[1].charAt(3)] + ":" + w[3] + MST_Quest.Qtype[parseInt(w[2],16)] + w[4] + "</a> -" + list[i].substring(5) + "x " +(list[i].charAt(4) === "N" ? "納品<br>" : "Consumed<br>");
 	}
 	document.getElementById("riyou").innerHTML = (MST_Other.Riyou[item_id] ? document.getElementById("riyou").innerHTML : "") + txt.replace(/HR\D/g,"SR");
 }
