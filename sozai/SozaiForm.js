@@ -70,7 +70,7 @@ var creSaiLink = function (data,obj,rank,season) {
 				(w.length > 4	? " <span id=\"" + map_id + w[4] + "." + map_id + rank + "." + w[5] + "." + season + i + "\"><span class=y>Night</span> " + w[6] + "%</span><br>"
 								: "<br>");
 	}
-	obj.innerHTML = txt;/*.replace(/s /g," Mine ").replace(/m /g," Bugs ").replace(/t /g," Fish ")*/;
+	obj.innerHTML = txt.replace(/s /g," Mine ").replace(/m /g," Bugs ").replace(/t /g," Fish ");
 	if (m > 4) {
 		obj.style.height = "5em";
 		obj.style.overflow = "auto";
