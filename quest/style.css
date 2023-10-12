@@ -15,7 +15,7 @@ a:visited { color: #D37AFF;}
 body {width:65em}
 .g{background-color:gainsboro;} /*期間外*/
 .e{background-color:cornsilk;} /*EX*/
-.r{background-color:honeydew;} /*猟団*/
+.r{background-color:#98f498;} /*猟団*/
 .h{background-color:gray;} /*廃止*/
 i {font-style:normal;display:block;font-size:80%;} /*期間*/
 
