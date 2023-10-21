@@ -32,8 +32,8 @@ Item Index <input type="text" value="" name="i_item" id="i_item" autocomplete="o
 (function(document){
 /*@cc_on if (@_jscript_version < 9) {_d=document;eval('var document=_d');}@*/
 
-function isNumeric(value) {
-    return /^-?\d+$/.test(value);
+function isHex(value) {
+    return /^[A-F0-9]+$/i.test(value);
 }
 
 var MST_Item = setItem(),
@@ -44,7 +44,7 @@ i_item.focus();
 i_item.value = searchMei;
 
 var n = 0,cnt = 0,page = 1,list = [];
-if (searchMei.length == 4 && isNumeric(searchMei)) { 
+if (searchMei.length == 4 && isHex(searchMei)) { 
 	var hexId = searchMei.slice(2) + searchMei.slice(0,2);
 	if (MST_Item[hexId]) {
 		list[n++] = MST_Item[hexId][5] + hexId;
