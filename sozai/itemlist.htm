@@ -44,7 +44,6 @@ i_item.focus();
 i_item.value = searchMei;
 
 var n = 0,cnt = 0,page = 1,list = [];
-console.log(isHex(searchMei));
 if (searchMei.length == 4 && isHex(searchMei)) { 
 	var hexId = searchMei.slice(2) + searchMei.slice(0,2);
 	if (MST_Item[hexId]) {
