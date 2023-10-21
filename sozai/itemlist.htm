@@ -33,7 +33,7 @@ Item Index <input type="text" value="" name="i_item" id="i_item" autocomplete="o
 /*@cc_on if (@_jscript_version < 9) {_d=document;eval('var document=_d');}@*/
 
 function isHex(value) {
-    return /^[A-F0-9]+$/i.test(value);
+    return /^[A-F0-9]+$/.test(value);
 }
 
 var MST_Item = setItem(),
