@@ -23,10 +23,13 @@ a:visited { color: #D37AFF;}
 <title>?f???</title>
 </head>
 <body>
+<div style="display:flex;">
 <form name="ls" action="" onsubmit="location.href = 'itemlist.htm?' + document.ls.i_item.value;return false;" style="margin-bottom:1em;">
 <div>
 Item Index <input type="text" value="" name="i_item" id="i_item" autocomplete="off" style="ime-mode: active;">
 <input type="submit" value="Search"></div></form>
+<button style="align-self: center; margin-bottom: 1em; margin-left: 1em;" id="toggleTranslate">Toggle Translate</button>
+</div>
 <script type="text/javascript">
 <!--
 (function(document){
@@ -36,12 +39,20 @@ function isHex(value) {
     return /^[A-F0-9]+$/.test(value);
 }
 
+language = localStorage.getItem("language") || "en";
+
+function toggleLanguage() {
+	language = language === "en" ? "jp" : "en";
+	localStorage.setItem("language", language);
+	window.location.reload();
+}
 var MST_Item = setItem(),
 	i_item = document.getElementById("i_item"),
 	searchMei = /*@if (true) location.search.substring(1) @else@*/ UnescapeSJIS(location.search.substring(1)) /*@end@*/;
 setItem = null;
 i_item.focus();
 i_item.value = searchMei;
+var JMST_Item = setItemJP();
 
 var n = 0,cnt = 0,page = 1,list = [];
 if (searchMei.length == 4 && isHex(searchMei)) { 
@@ -54,11 +65,11 @@ else {
 	for (var i in MST_Item) {
 		if (MST_Item[i][0].toLowerCase().indexOf(searchMei.toLowerCase()) !== -1 && MST_Item[i][1] !== "-") {
 			list[n++] = MST_Item[i][5] + i;
-			/* console.log(MST_Item[i], i); */
 		}
 	}
 }
 list.sort();
+Item = language === "en" ? MST_Item : JMST_Item;
 document.write("<ul>");
 for (var i = 0,t = ""; i < n; i++) {
 	if (cnt === 150) {
@@ -67,12 +78,13 @@ for (var i = 0,t = ""; i < n; i++) {
 		cnt=0;
 	}
 	t = list[i].substring(4);
-	document.write("<li><a href=\"sozai.htm?"+t+"\">"+MST_Item[t][0]+"<\/a>");
+	document.write("<li><a href=\"sozai.htm?"+t+"\">"+Item[t][0]+"<\/a>");
 	cnt++;
-}
+}	
 
 document.write("<\/ul>");
 document.getElementsByTagName("body")[0].style.width = (page * 110) + "px";
+document.getElementById("toggleTranslate").onclick = toggleLanguage;
 })(document);
 //-->
 </script>
