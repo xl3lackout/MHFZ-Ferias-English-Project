@@ -54,12 +54,12 @@ var armorCK = location.pathname.indexOf("deco") === -1,
 	s = document.createElement("select");
 dt.className = "m",i.type = "button";
 //名称ソート
-i.value = "名前",i.title = "Sort by Name";
+i.value = "Name",i.title = "Sort by Name";
 dt.appendChild(i.cloneNode(false));
 tH.cells[0].appendChild(dt);
 if (armorCK) {
 	//防御ソート
-	i.value = "防御",i.title = "Sort by Defense";
+	i.value = "Def.",i.title = "Sort by Defense";
 	dt.appendChild(i.cloneNode(false));
 	//レア制限
 	s.title = "Filter by Rarity";
@@ -268,7 +268,7 @@ function (evt) {
 			for (var i = 0; i < N; marker.appendChild(x[i++].row));
 			tB.parentNode.replaceChild( marker,tB );
 			break;
-		case "Sort by Defence":
+		case "Sort by Defense":
 			for (var i = 0; i < N; x[i] = [tr[i].cells[5].lastChild.nodeValue.split("/")[0]], x[i].row=tr[i++]);
 			x.sort(function(a, b){return b - a});
 			for (var i = 0; i < N; marker.appendChild(x[i++].row));

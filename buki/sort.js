@@ -58,14 +58,14 @@ var tH = document.getElementsByTagName("thead")[0].rows[0],
 	s = document.createElement("select");
 i.type = "button";
 //名称ソート
-i.value = "名前",i.title = "Sort by Name";
+i.value = "Name",i.title = "Sort by Name";
 dt.appendChild(i.cloneNode(false));
 //攻撃ソート
-i.value = "攻撃",i.title = "Sort by Attack Value";
+i.value = "Atk.",i.title = "Sort by Attack Value";
 dt.appendChild(i.cloneNode(false));
 //属性ソート
 if (treeCK){
-	i.value = "属性",i.title = "Sort by Element Value"; //,i.disabled = true
+	i.value = "Elem.",i.title = "Sort by Element Value"; //,i.disabled = true
 	dt.appendChild(i.cloneNode(false));
 }
 if (ckG) {
@@ -111,8 +111,8 @@ if (treeCK){ //剣士弓
 		dt.appendChild(s.cloneNode(true));
 		var ckIzyo_F = function (e) {
 			return	e === "Status" ? function(){return true} :
-					e === "None"	? function (cell) {return !(/[麻睡毒爆]/).test(cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/);}
-								: function (cell) {	return cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.lastIndexOf(e) !== -1;};
+					e === "None"	? function (cell) {return !["Para","Sleep","Poison","Blast"].some(status => cell.textContent.includes(status));}
+								: function (cell) {	return cell.textContent.lastIndexOf(e) !== -1;};
 		};
 	} else {
 		//曲射
@@ -132,7 +132,7 @@ if (treeCK){ //剣士弓
 	tH.cells[2].childNodes.item(1).style.marginLeft = "0.5em";
 	var ckZoku_F = function (e) {
 		return	e === "Element" ? function(){return true} :
-				e === "None"	? function (cell) {return !(/[火水雷龍氷炎光天熾焔奏闇紅風響]/).test(cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/);} :
+				e === "None"	? function (cell) {return !["Fire","Water","Thunder","Dragon","Ice","Blaze","Light","Thunder Pole","Tenshou","Okiko","Black Flame","Music","Darkness","Crimson Demon","Wind","Sound","Burning Zero","Emperor's Roar"].some(element => cell.textContent.includes(element));} :
 				e === "Thunder"	? function (cell) {return cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.lastIndexOf("雷極") === -1 && cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.lastIndexOf(e) !== -1;}
 							: function (cell) {return cell./*@if (@_jscript_version < 9) innerText @else@*/ textContent /*@end@*/.lastIndexOf(e) !== -1;};
 	};
