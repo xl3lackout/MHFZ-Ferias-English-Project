@@ -20,11 +20,11 @@ a:visited { color: #D37AFF;}
 </style>
 <script type="text/javascript" src="0henkan.js"></script>
 <script type="text/javascript" src="item.js"></script>
-<title>?f???</title>
+<title>Item List</title>
 </head>
 <body>
 <div style="display:flex;">
-<form name="ls" action="" onsubmit="location.href = 'itemlist.htm?' + document.ls.i_item.value;return false;" style="margin-bottom:1em;">
+<form name="ls" action="" onsubmit="location.href = 'itemlist.htm?' + EscapeSJIS(document.ls.i_item.value);return false;" style="margin-bottom:1em;">
 <div>
 Item Index <input type="text" value="" name="i_item" id="i_item" autocomplete="off" style="ime-mode: active;">
 <input type="submit" value="Search"></div></form>
@@ -39,6 +39,10 @@ function isHex(value) {
     return /^[A-F0-9]+$/.test(value);
 }
 
+function isEng(value) {
+	return /^[A-Za-z0-9]*$/.test(value);
+}
+
 language = localStorage.getItem("language") || "en";
 
 function toggleLanguage() {
@@ -46,9 +50,10 @@ function toggleLanguage() {
 	localStorage.setItem("language", language);
 	window.location.reload();
 }
+
 var MST_Item = setItem(),
 	i_item = document.getElementById("i_item"),
-	searchMei = /*@if (true) location.search.substring(1) @else@*/ UnescapeSJIS(location.search.substring(1)) /*@end@*/;
+	searchMei = isEng(location.search.substring(1)) ? location.search.substring(1) : UnescapeSJIS(location.search.substring(1));
 setItem = null;
 i_item.focus();
 i_item.value = searchMei;
@@ -59,6 +64,13 @@ if (searchMei.length == 4 && isHex(searchMei)) {
 	var hexId = searchMei.slice(2) + searchMei.slice(0,2);
 	if (MST_Item[hexId]) {
 		list[n++] = MST_Item[hexId][5] + hexId;
+	}
+}
+else if (!isEng(searchMei)) {
+	for (var i in JMST_Item) {
+		if (JMST_Item[i][0].toLowerCase().indexOf(searchMei.toLowerCase()) !== -1 && JMST_Item[i][1] !== "-") {
+			list[n++] = MST_Item[i][5] + i;
+		}
 	}
 }
 else {
