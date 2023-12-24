@@ -16,50 +16,98 @@ addEvent(document.getElementById("b_search"),"click",function () {
 var searchMei = document.getElementById("equip").value;
 if (!searchMei) return;
 
+function isEng(value) {
+	return /^[A-Za-z0-9.?!,'+-=_& \/\:\)\(\[\]]*$/.test(value);
+}
+
 var BouguName = {"h":"Head","b":"Chest","a":"Arm","w":"Waist","l":"Leg","d":"Deco","p":"SP Deco","t":"Tower Deco","f":"Tower Sigil","c":"Cuff","s":"Sigil","n":"Cat","H":"ＰHead","B":"ＰChest"},
 	BouguId = {"h":"head","b":"body","a":"arm","w":"wst","l":"leg","d":"deco","c":"decocf","p":"decosp","n":"deconk","t":"decot","f":"decof","s":"sigil","H":"head_pertnya","B":"body_pertnya"},
 	BukiName = {0:"GS",1:"HBG",2:"Hammer",3:"Lance",4:"SnS",5:"LBG",6:"DS",7:"LS",8:"HH",9:"GL","A":"Bow","B":"Tonfa","C":"SwAxe","D":"MagSpike","a":"ＰGS","b":"ＰHammer"},
 	BukiId = {0:"taiken",1:"heavy",2:"hammer",3:"lance",4:"katate",5:"right",6:"souken",7:"tachi",8:"horn",9:"gunlance","A":"yumi","B":"tonfa","C":"slaxe","D":"magspike","a":"taiken_partnya","c":"hammer_partnya"},
 	MST_Equip = setBuki();
+	JMST_Equip = setBukiJP();
 
 var txt = "<table><tr><th style=\"width:7em;\">Weapon Type</th><th style=\"width:10em;\">Weapon Name</th></tr>";
-for (var i in MST_Equip.Name) {
-	if (MST_Equip.Name[i].toLowerCase().indexOf(searchMei.toLowerCase()) !== -1) {
-		var eq_rui = i.charAt(0),
-			eq_id = i.substring(1,5),
-			eq_name = MST_Equip.Name[i],
-			sp = "";
-		if (MST_Equip.G.indexOf(eq_rui+eq_id) !== -1) { //G武器
-			sp = "_g";
-		} else if (MST_Equip.SP.indexOf(eq_rui+eq_id) !== -1) { //SP武器
-			sp = "_sp";
-		} else if (MST_Equip.Neko.indexOf(eq_rui+eq_id) !== -1) { //剛ねこ武器
-			sp = "_n";
-		} else if (MST_Equip.Sinka.indexOf(eq_rui+eq_id) !== -1) { //進化武器
-			sp = "_s";
+if (isEng(searchMei)) {
+	for (var i in MST_Equip.Name) {
+		if (MST_Equip.Name[i].toLowerCase().indexOf(searchMei.toLowerCase()) !== -1) {
+			var eq_rui = i.charAt(0),
+				eq_id = i.substring(1,5),
+				eq_name = MST_Equip.Name[i],
+				sp = "";
+			if (MST_Equip.G.indexOf(eq_rui+eq_id) !== -1) { //G武器
+				sp = "_g";
+			} else if (MST_Equip.SP.indexOf(eq_rui+eq_id) !== -1) { //SP武器
+				sp = "_sp";
+			} else if (MST_Equip.Neko.indexOf(eq_rui+eq_id) !== -1) { //剛ねこ武器
+				sp = "_n";
+			} else if (MST_Equip.Sinka.indexOf(eq_rui+eq_id) !== -1) { //進化武器
+				sp = "_s";
+			}
+			txt += "<tr><td>" + BukiName[eq_rui] + "</td><td><a href='../buki/" + BukiId[eq_rui] + sp + ".htm#l" + eq_id + "'>" + eq_name + "</a></tr>";
 		}
-		txt += "<tr><td>" + BukiName[eq_rui] + "</td><td><a href='../buki/" + BukiId[eq_rui] + sp + ".htm#l" + eq_id + "'>" + eq_name + "</a></tr>";
+	}
+} else {
+	for (var i in JMST_Equip.Name) {
+		if (JMST_Equip.Name[i].toLowerCase().indexOf(searchMei.toLowerCase()) !== -1) {
+			var eq_rui = i.charAt(0),
+				eq_id = i.substring(1,5),
+				eq_name = MST_Equip.Name[i],
+				sp = "";
+			if (JMST_Equip.G.indexOf(eq_rui+eq_id) !== -1) { //G武器
+				sp = "_g";
+			} else if (JMST_Equip.SP.indexOf(eq_rui+eq_id) !== -1) { //SP武器
+				sp = "_sp";
+			} else if (JMST_Equip.Neko.indexOf(eq_rui+eq_id) !== -1) { //剛ねこ武器
+				sp = "_n";
+			} else if (JMST_Equip.Sinka.indexOf(eq_rui+eq_id) !== -1) { //進化武器
+				sp = "_s";
+			}
+			txt += "<tr><td>" + BukiName[eq_rui] + "</td><td><a href='../buki/" + BukiId[eq_rui] + sp + ".htm#l" + eq_id + "'>" + eq_name + "</a></tr>";
+		}
 	}
 }
 document.getElementById("tblBuki").innerHTML = txt + "<table>";
 
 MST_Equip = setBougu();
+JMST_Equip = setBouguJP();
 var txt = "<table><tr><th style=\"width:4em;\">Part</th><th style=\"width:10em;\">Armor Name</th></tr>";
 var txts = "<table><tr><th style=\"width:4em;\">Deco type</th><th style=\"width:10em;\">Deco Name</th></tr>";
-for (var i in MST_Equip.Name) {
-	if (MST_Equip.Name[i].toLowerCase().indexOf(searchMei.toLowerCase()) !== -1) {
-		var eq_rui = i.charAt(0),
-			eq_id = i.substring(1,5),
-			eq_name = MST_Equip.Name[i],
-			sp = "";
-		if (eq_rui === "d" || eq_rui === "n" || eq_rui === "c" || eq_rui === "p" || eq_rui === "s" || eq_rui === "t" || eq_rui === "f") {
-			txts += "<tr><td>" + BouguName[eq_rui] + "</td><td><a href='../bougu/" + BouguId[eq_rui] + ".htm#l" + eq_id + "'>" + eq_name + "</a></td></tr>";
-		} else {
-			//防具
-			if (eq_name.lastIndexOf("SP") !== -1) {
-				txt += "<tr><td>" + BouguName[eq_rui] + "</td><td><a href='../bougu/" + BouguId[eq_rui] + "sp.htm#l" + eq_id + "'>" + eq_name + "</a></td></tr>";
+if (isEng(searchMei)) {
+	for (var i in MST_Equip.Name) {
+		if (MST_Equip.Name[i].toLowerCase().indexOf(searchMei.toLowerCase()) !== -1) {
+			var eq_rui = i.charAt(0),
+				eq_id = i.substring(1,5),
+				eq_name = MST_Equip.Name[i],
+				sp = "";
+			if (eq_rui === "d" || eq_rui === "n" || eq_rui === "c" || eq_rui === "p" || eq_rui === "s" || eq_rui === "t" || eq_rui === "f") {
+				txts += "<tr><td>" + BouguName[eq_rui] + "</td><td><a href='../bougu/" + BouguId[eq_rui] + ".htm#l" + eq_id + "'>" + eq_name + "</a></td></tr>";
 			} else {
-				txt += "<tr><td>" + BouguName[eq_rui] + "</td><td><a href='../bougu/tree.htm#" + BouguId[eq_rui].charAt(0) + eq_id + "'>" + eq_name + "</a></td></tr>";
+				//防具
+				if (eq_name.lastIndexOf("SP") !== -1) {
+					txt += "<tr><td>" + BouguName[eq_rui] + "</td><td><a href='../bougu/" + BouguId[eq_rui] + "sp.htm#l" + eq_id + "'>" + eq_name + "</a></td></tr>";
+				} else {
+					txt += "<tr><td>" + BouguName[eq_rui] + "</td><td><a href='../bougu/tree.htm#" + BouguId[eq_rui].charAt(0) + eq_id + "'>" + eq_name + "</a></td></tr>";
+				}
+			}
+		}
+	}
+} else {
+	for (var i in JMST_Equip.Name) {
+		if (JMST_Equip.Name[i].toLowerCase().indexOf(searchMei.toLowerCase()) !== -1) {
+			var eq_rui = i.charAt(0),
+				eq_id = i.substring(1,5),
+				eq_name = MST_Equip.Name[i],
+				sp = "";
+			if (eq_rui === "d" || eq_rui === "n" || eq_rui === "c" || eq_rui === "p" || eq_rui === "s" || eq_rui === "t" || eq_rui === "f") {
+				txts += "<tr><td>" + BouguName[eq_rui] + "</td><td><a href='../bougu/" + BouguId[eq_rui] + ".htm#l" + eq_id + "'>" + eq_name + "</a></td></tr>";
+			} else {
+				//防具
+				if (eq_name.lastIndexOf("SP") !== -1) {
+					txt += "<tr><td>" + BouguName[eq_rui] + "</td><td><a href='../bougu/" + BouguId[eq_rui] + "sp.htm#l" + eq_id + "'>" + eq_name + "</a></td></tr>";
+				} else {
+					txt += "<tr><td>" + BouguName[eq_rui] + "</td><td><a href='../bougu/tree.htm#" + BouguId[eq_rui].charAt(0) + eq_id + "'>" + eq_name + "</a></td></tr>";
+				}
 			}
 		}
 	}
