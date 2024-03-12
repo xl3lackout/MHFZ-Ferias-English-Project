@@ -14,8 +14,8 @@ td {white-space:normal;text-align:center;}
 span {white-space:nowrap;}
 table.fue td {cursor:pointer;}
 table.fue span {color:black;}
-.s{background-color: silver; color: silver;}
-input {font-size:80%;}
+.s{background-color: #708090; color: silver;}
+input {font-size:80%; background-color:#708090;}
 .r {color:red;}
 .b {color:blue;}
 .w {color:white;}
@@ -28,12 +28,12 @@ input {font-size:80%;}
 .B {color:blue;} /*親方*/
 .D,.E,.G,.H,.I,.J {color:red;} /*剛種系*/
 .K,.L,.M {color:goldenrod;} /*G級*/
-.l1i {background-color:lavenderblush;}
-.l3- {background-color:lightgreen;}
-.l4k,l5p {background-color:lavender;}
-.l4g {background-color:aqua;}
-.l5- {background-color:khaki;}
-.w,.y,.r,.b,.a,.g,.p,.c{background-color: silver;}
+.l1i {background-color:lavenderblush; color:black;}
+.l3- {background-color:lightgreen; color:black;}
+.l4k,l5p {background-color:lavender; color:black;}
+.l4g {background-color:aqua; color:black;}
+.l5- {background-color:khaki; color:black;}
+.w,.y,.r,.b,.a,.g,.p,.c{background-color: #708090;}
 td {border-color:#c0c0c0;} /*FF,Operaの罫線対応*/
 
 	:root {
@@ -73,7 +73,7 @@ a:visited { color: #D37AFF;}
 </tbody></table>
 </div>
 <div id=data>
-<p><input type="button value="戻る onclick="history.back();">　　　<span class=K>Grank Weapons</span>／<span class=D>Gou|Tenrou|Weapons</span>／<span class=B>Master Seal</span>／<span class=C>HC Weapon</span>／<span class=l1i>Event</span>／<span class=l4k>Premium Kit</span>／<span class=l4g>Gacha</span>／<span class=l3->NetCafe</span>／<span class=l5->Special</span></p>
+<p>　　<span class=K>Grank Weapons</span>／<span class=D>Gou|Tenrou|Weapons</span>／<span class=B>Master Seal</span>／<span class=C>HC Weapon</span>／<span class=l1i>Event</span>／<span class=l4k>Premium Kit</span>／<span class=l4g>Gacha</span>／<span class=l3->NetCafe</span>／<span class=l5->Special</span></p>
 <table id=gakufu border=1 cellspacing=0 cellpadding=2 style="font-size:90%;">
 <col span=4 style="width:1em;"><col style="width:11em;"><col style="width:4em;"><col style="width:11em;"><col style="width:5em;"><col style="width:7em;">
 <thead><tr><th colspan=4>Sheet Music</th><th colspan=2>Effect</th><th colspan=2>Replay</th><th>Max</th></tr></thead><tbody>
@@ -141,7 +141,12 @@ var SENRITU = {
 "bgbp":	"No Flinching,60 secs,-,60 secs added,Max 90 secs",
 "abw":	"Sharp Sword Recovery【Small】,75 Sharpness,-,-,",
 "agg":	"Sharp Sword Recovery【Small】,75 Sharpness,-,-,",
-"apba":	"Sharp Sword Recovery【Large】,150 Sharpness,-,-,"};
+"apba":	"Sharp Sword Recovery【Large】,150 Sharpness,-,-,",
+"pgp":	"Stun Up [1.1x],90 secs,-,60 secs added,Max 90 secs",
+"pbp":	"Status Up [1.125x],90 secs,-,60 secs added,Max 90 secs",
+"pyb":	"Fire Res【Large】[+15],60 secs,Fire Res[+20],60 secs,Max 60 secs",
+"ybbp":	"Water Res【Large】[+15],60 secs,Water Res[+20],60 secs,Max 60 secs",
+"pyp":  "Sharp Sword,60 secs,-,30 secs added,Max 60 secs"};
 
 var senritu_arasi = {
 "wcg":	"Cold Invalid,240 secs,-,240 secs added,Max 480 secs",
