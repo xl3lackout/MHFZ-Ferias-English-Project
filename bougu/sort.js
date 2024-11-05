@@ -74,7 +74,7 @@ if (armorCK) {
 	selectSet(s,["Res","Fire","Water","Thunder","Ice","Dragon"]);
 	tH.cells[3].appendChild(s.cloneNode(true));
 	//スロ制限
-	s.title = "Sort by Slot";
+	s.style.display = "block",s.title = "Sort by Slot";
 	selectSet(s,["Slot","3","2","1"]);
 	tH.cells[5].removeChild(tH.cells[5].childNodes.item(1));
 	tH.cells[5].appendChild(s.cloneNode(true));
@@ -157,6 +157,35 @@ if (armorCK || location.pathname.indexOf("decocz") !== -1) {
 		return e === "Zenith Skill" ? function(){return true} : function (cell) {return cell.innerHTML.indexOf("「"+e) !== -1;};
 		};
 }
+
+s = document.createElement("select");
+
+s.style.display = "block", s.title = "Limit by Rank";
+var dt = document.createElement("div"),
+	i = document.createElement("input");
+i.type = "text", i.title = "Limit to what Rank?", i.style = "width: 30px; text-align: right; font-size: 12px";
+dt.appendChild(i.cloneNode(false));
+selectSet(s, ["Rank","HR","SR","GR","GSR","-"]);
+if (armorCK) {tH.cells[6].appendChild(s.cloneNode(true)); tH.cells[6].appendChild(dt);}
+else {tH.cells[5].appendChild(s.cloneNode(true)); tH.cells[5].appendChild(dt);}
+var rankSort = function (rank) { return rank === "Rank" ? function(){return true} : function (cell) {return RegExp(`\\b${rank}\\d*`, 'g').test(cell.innerHTML);} }
+var limitRank = function (rank) {
+	return rank === "" ? function(){return true} : function (cell) {
+		const s = document.getElementsByTagName("thead")[0].getElementsByTagName("select");
+		var splitted = cell.innerHTML.split("<br>");
+		
+		if (s[s.length-1].value == "Rank") {
+			let hit = false;
+			for (let value in splitted) {
+				if (parseInt(splitted[value].replace(/[A-Z]/g, "")) <= rank) {hit = true;}
+			}
+			return hit;
+		}
+		return (splitted[0].indexOf("-") !== -1 || (RegExp(`\\b${s[s.length-1].value}\\d*`, 'g').test(splitted[0]) && parseInt(splitted[0].replace(/[A-Z]/g, "")) <= rank));
+	};
+}
+
+
 tH=dt=i=s=null;
 
 //フィルター
@@ -164,14 +193,17 @@ if (armorCK) {
 	//防具
 	var filter = function () {
 		var s = document.getElementsByTagName("thead")[0].getElementsByTagName("select"),
+			i = document.getElementsByTagName("thead")[0].getElementsByTagName("input"),
 			tr = document.getElementsByTagName("tbody")[0].rows, 
 			N = tr.length,
 			ckRare = ckRare_F(s[0].value),
 			ckSkill1 = ckSkill_F(s[2].value),
 			ckSkill2 = ckSkill_F(s[3].value),
 			ckTeni = ckTeni_F(s[4].value),
-			ckSlot = ckSlot_F(s[5].value);
-		for (var i = 0,cel; i < N; i++) cel = tr[i].cells,tr[i].style.display = ckRare(cel[2]) && ckSkill1(cel[4]) && ckSkill2(cel[4]) && ckTeni(cel[4]) && ckSlot(cel[5]) ? "" : "none";
+			ckSlot = ckSlot_F(s[5].value),
+			ckRank = rankSort(s[6].value),
+			ckRankMin = limitRank(i[2].value);
+		for (var i = 0,cel; i < N; i++) cel = tr[i].cells,tr[i].style.display = ckRare(cel[2]) && ckSkill1(cel[4]) && ckSkill2(cel[4]) && ckTeni(cel[4]) && ckSlot(cel[5]) && ckRank(cel[6]) && ckRankMin(cel[6]) ? "" : "none";
 		}
 	var taisort = function () {
 		var s1 = document.getElementsByTagName("thead")[0].getElementsByTagName("select")[1].selectedIndex;
@@ -202,8 +234,10 @@ if (armorCK) {
 			ckSkill1 = ckSkill_F(s[1].value),
 			ckSkill2 = ckSkill_F(s[2].value),
 			ckTeni = ckTeni_F(s[3].value),
-			ckSozai = ckSozai_F(i[1].value);
-		for (var i = 0,cel; i < N; i++) cel = tr[i].cells,tr[i].style.display = ckGr(cel[0]) && ckSkill1(cel[4]) && ckSkill2(cel[4]) && ckTeni(cel[4]) && ckSozai(cel[7]) ? "" : "none";
+			ckSozai = ckSozai_F(i[2].value),
+			ckRank = rankSort(s[4].value),
+			ckRankMin = limitRank(i[1].value);
+		for (var i = 0,cel; i < N; i++) cel = tr[i].cells,tr[i].style.display = ckGr(cel[0]) && ckSkill1(cel[4]) && ckSkill2(cel[4]) && ckTeni(cel[4]) && ckRank(cel[5]) && ckRankMin(cel[5]) && ckSozai(cel[7]) ? "" : "none";
 		}
 } else {
 	//装飾品
@@ -215,12 +249,15 @@ if (armorCK) {
 			ckGr = ckGr_F(s[0].value),
 			ckSkill1 = ckSkill_F(s[1].value),
 			ckSkill2 = ckSkill_F(s[2].value),
-			ckSozai = ckSozai_F(i[1].value);
-		for (var i = 0,cel; i < N; i++) cel = tr[i].cells,tr[i].style.display = ckGr(cel[0]) && ckSkill1(cel[4]) && ckSkill2(cel[4]) && ckSozai(cel[7]) ? "" : "none";
+			ckRank = rankSort(s[3].value),
+			ckRankMin = limitRank(i[1].value),
+			ckSozai = ckSozai_F(i[2].value);
+		for (var i = 0,cel; i < N; i++) cel = tr[i].cells,tr[i].style.display = ckGr(cel[0]) && ckSkill1(cel[4]) && ckSkill2(cel[4]) && ckRank(cel[5]) && ckRankMin(cel[5]) && ckSozai(cel[7]) ? "" : "none";
 		}
 }
 
-var s = document.getElementsByTagName("thead")[0].getElementsByTagName("select");
+var s = document.getElementsByTagName("thead")[0].getElementsByTagName("select"),
+i = document.getElementsByTagName("thead")[0].getElementsByTagName("input");
 if (armorCK) {
 	addEvent(s[0],"change",filter);
 	addEvent(s[1],"change",taisort);
@@ -228,11 +265,14 @@ if (armorCK) {
 	addEvent(s[3],"change",filter);
 	addEvent(s[4],"change",filter);
 	addEvent(s[5],"change",filter);
+	addEvent(s[6],"change",filter);
+	addEvent(i[2],"change",filter);
 	//防具
 } else {
 	//装飾品
 	for (var i = 0,max = s.length; i < max; addEvent(s[i++],"change",filter));
-	addEvent(document.getElementsByTagName("thead")[0].getElementsByTagName("input")[1],"change",filter);
+	addEvent(document.getElementsByTagName("thead")[0].getElementsByTagName("input")[1],"change",filter),
+	addEvent(document.getElementsByTagName("thead")[0].getElementsByTagName("input")[2],"change",filter);
 }
 s=null;
 

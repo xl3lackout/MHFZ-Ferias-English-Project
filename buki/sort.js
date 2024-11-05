@@ -265,6 +265,29 @@ i.value = "Clear Selections",i.title = "Clear Selected Drop Downs",i.style.displ
 tH.cells[col+3].appendChild(i.cloneNode(true));
 tH.cells[col+3].style.marginRight = "auto";
 
+s = document.createElement("select");
+
+s.style.display = "block", s.title = "Limit by Rank";
+var dt = document.createElement("div"),
+	i = document.createElement("input");
+i.type = "text", i.title = "Limit to what Rank?", i.style = "width: 30px; text-align: right; font-size: 12px";
+dt.appendChild(i.cloneNode(false));
+selectSet(s, ["Rank","HR","SR","GR","GSR"]);
+if (location.pathname.indexOf("_g") !== -1 || location.pathname.indexOf("_n") !== -1) {}
+else if (treeCK && location.pathname.indexOf("yumi") === -1) {tH.cells[5].appendChild(s.cloneNode(true)); tH.cells[5].appendChild(dt);}
+else {tH.cells[6].appendChild(s.cloneNode(true)); tH.cells[6].appendChild(dt);}
+var rankSort = function (rank) { return rank === "Rank" ? function(){return true} : function (cell) {return RegExp(`\\b${rank}\\d*`, 'g').test(cell.innerHTML);} }
+var limitRank = function (rank) {
+	return rank === "" ? function(){return true} : function (cell) {
+		const s = document.getElementsByTagName("thead")[0].getElementsByTagName("select");
+		var concatRank = cell.innerHTML.replace("<br>", "");
+		if (s[s.length-1].value == "Rank") {
+			return (parseInt(concatRank.replace(/[A-Z]/g, "")) <= rank);
+		}
+		return (concatRank.indexOf("-") !== -1 || (RegExp(`\\b${s[s.length-1].value}\\d*`, 'g').test(concatRank) && parseInt(concatRank.replace(/[A-Z]/g, "")) <= rank));
+	};
+}
+
 tH=dt=i=s=null;
 
 //フィルター
@@ -272,6 +295,7 @@ if (treeCK){
 	//剣士弓
 	var filter = function () {
 		var s = document.getElementsByTagName("thead")[0].getElementsByTagName("select"),
+			i = document.getElementsByTagName("thead")[0].getElementsByTagName("input"),
 			tr = document.getElementsByTagName("tbody")[0].rows,
 			N = tr.length;
 			w_col1 = col,
@@ -281,27 +305,36 @@ if (treeCK){
 			ckZoku = ckZoku_F(s[2].value),
 			ckKobetu = ckKobetu_F(s[3].value),
 			ckTeni = ckTeni_F(s[4].value),
-			ckSlot = ckSlot_F(s[5].value);
-		for (var i = 0,cel; i < N; i++) cel = tr[i].cells,tr[i].style.display = ckRare(cel[ckGS]) && ckIzyo(cel[2]) && ckZoku(cel[2]) && ckKobetu(cel[3]) && ckTeni(cel[3]) && ckSlot(cel[w_col1]) ? "" : "none";
+			ckSlot = ckSlot_F(s[5].value),
+			ckRank = rankSort(s[6].value),
+			ckRankMin = limitRank(i[3].value);
+		if (location.pathname.indexOf("yumi") !== -1) {for (var i = 0,cel; i < N; i++) cel = tr[i].cells,tr[i].style.display = ckRare(cel[ckGS]) && ckIzyo(cel[2]) && ckZoku(cel[2]) && ckKobetu(cel[3]) && ckTeni(cel[3]) && ckSlot(cel[w_col1]) && ckRank(cel[6]) && ckRankMin(cel[6]) ? "" : "none";}	
+		else {for (var i = 0,cel; i < N; i++) cel = tr[i].cells,tr[i].style.display = ckRare(cel[ckGS]) && ckIzyo(cel[2]) && ckZoku(cel[2]) && ckKobetu(cel[3]) && ckTeni(cel[3]) && ckSlot(cel[w_col1]) && ckRank(cel[5]) && ckRankMin(cel[5]) ? "" : "none";}
 	}
 } else {
 	//ガン
 	var filter = function () {
 		var s = document.getElementsByTagName("thead")[0].getElementsByTagName("select"),
+			i = document.getElementsByTagName("thead")[0].getElementsByTagName("input"),
 			tr = document.getElementsByTagName("tbody")[0].rows,
-			N = tr.length,
+			N = tr.length;
 			ckRare = ckRare_F(s[0].value),
 			ckGun = ckGun_F(s[1].value,s[2].value,s[3].value),
 			ckTama = ckTama_F(s[4].value,s[5].value),
 			ckTeni = ckTeni_F(s[6].value),
-			ckSlot = ckSlot_F(s[7].value);
-		for (var i = 0,cel; i<N; i++) cel=tr[i].cells,tr[i].style.display = ckRare(cel[ckGS]) && ckGun(cel[3]) && ckTama(cel[4]) && ckTeni(cel[4]) && ckSlot(cel[5]) ? "" : "none";
+			ckSlot = ckSlot_F(s[7].value),
+			ckRank = rankSort(s[8].value),
+			ckRankMin = limitRank(i[2].value);
+		for (var i = 0,cel; i<N; i++) cel=tr[i].cells,tr[i].style.display = ckRare(cel[ckGS]) && ckGun(cel[3]) && ckTama(cel[4]) && ckTeni(cel[4]) && ckSlot(cel[5]) && ckRank(cel[6]) && ckRankMin(cel[6]) ? "" : "none";
 	}
 }
 
 var s = document.getElementsByTagName("thead")[0].getElementsByTagName("select");
 for (var i = 0,max = s.length; i<max; addEvent(s[i++],"change",filter));
-s=null;
+i = document.getElementsByTagName("thead")[0].getElementsByTagName("input");
+for (var s = 0,max = i.length; s<max; addEvent(i[s++],"change",filter));
+
+s=i=null;
 
 var IsMouseDown = false;
 //線可変
@@ -1282,7 +1315,7 @@ if (treeCK){ //剣士弓
 			break;
 		}
 	}
-	document.cookie = "buki=" + [location.pathname+location.hash,s[0].selectedIndex,s[1].selectedIndex,s[2].selectedIndex,s[3].selectedIndex,s[4].selectedIndex,s[5].selectedIndex,document.getElementsByTagName("tbody")[0].id,dispflg,document.getElementById("tree").scrollTop,document.getElementById("data").scrollTop].join("!");
+	document.cookie = "buki=" + [location.pathname+location.hash,s[0].selectedIndex,s[1].selectedIndex,s[2].selectedIndex,s[3].selectedIndex,s[4].selectedIndex,s[5].selectedIndex,s[6].selectedIndex,document.getElementsByTagName("tbody")[0].id,dispflg,document.getElementById("tree").scrollTop,document.getElementById("data").scrollTop].join("!");
 	});
 } else {
 	addEvent(window,"unload",function () {
@@ -1303,17 +1336,6 @@ if (w.indexOf("buki=" + location.pathname+location.hash) !== -1) {
 	w = w.split("buki=")[1].split("!");
 	var s=document.getElementsByTagName("thead")[0].getElementsByTagName("select");
 	if (treeCK){ //剣士弓
-		if (w[1]+w[2]+w[3]+w[4]+w[5]+w[6] > 0) {
-			s[0].selectedIndex = w[1];
-			s[1].selectedIndex = w[2];
-			s[2].selectedIndex = w[3];
-			s[3].selectedIndex = w[4];
-			s[4].selectedIndex = w[5];
-			s[5].selectedIndex = w[6];
-			filter();
-		}
-		var s1 = w[7],s2 = w[8];
-	} else {
 		if (w[1]+w[2]+w[3]+w[4]+w[5]+w[6]+w[7] > 0) {
 			s[0].selectedIndex = w[1];
 			s[1].selectedIndex = w[2];
@@ -1322,6 +1344,19 @@ if (w.indexOf("buki=" + location.pathname+location.hash) !== -1) {
 			s[4].selectedIndex = w[5];
 			s[5].selectedIndex = w[6];
 			s[6].selectedIndex = w[7];
+			filter();
+		}
+		var s1 = w[8],s2 = w[9];
+	} else {
+		if (w[1]+w[2]+w[3]+w[4]+w[5]+w[6]+w[7]+w[8] > 0) {
+			s[0].selectedIndex = w[1];
+			s[1].selectedIndex = w[2];
+			s[2].selectedIndex = w[3];
+			s[3].selectedIndex = w[4];
+			s[4].selectedIndex = w[5];
+			s[5].selectedIndex = w[6];
+			s[6].selectedIndex = w[7];
+			s[7].selectedIndex = w[8];
 			filter();
 		}
 		var s1 = w[8],s2 = w[9];
@@ -1365,8 +1400,8 @@ if (w.indexOf("buki=" + location.pathname+location.hash) !== -1) {
 		document.getElementById("t"+s2).dispatchEvent(evt);
 		/*@end@*/
 	}
-	document.getElementById("tree").scrollTop = parseInt(w[8]);
-	document.getElementById("data").scrollTop = parseInt(w[9]);
+	document.getElementById("tree").scrollTop = parseInt(w[9]);
+	document.getElementById("data").scrollTop = parseInt(w[10]);
 } else if (location.hash.length > 4) {
 	setTimeout(function (){
 		var creB = document.getElementById("tree").getElementsByTagName("div");
