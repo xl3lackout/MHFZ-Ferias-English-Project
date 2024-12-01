@@ -305,11 +305,12 @@ if (treeCK){
 			ckZoku = ckZoku_F(s[2].value),
 			ckKobetu = ckKobetu_F(s[3].value),
 			ckTeni = ckTeni_F(s[4].value),
-			ckSlot = ckSlot_F(s[5].value),
-			ckRank = rankSort(s[6].value),
-			ckRankMin = limitRank(i[3].value);
-		if (location.pathname.indexOf("yumi") !== -1) {for (var i = 0,cel; i < N; i++) cel = tr[i].cells,tr[i].style.display = ckRare(cel[ckGS]) && ckIzyo(cel[2]) && ckZoku(cel[2]) && ckKobetu(cel[3]) && ckTeni(cel[3]) && ckSlot(cel[w_col1]) && ckRank(cel[6]) && ckRankMin(cel[6]) ? "" : "none";}	
-		else {for (var i = 0,cel; i < N; i++) cel = tr[i].cells,tr[i].style.display = ckRare(cel[ckGS]) && ckIzyo(cel[2]) && ckZoku(cel[2]) && ckKobetu(cel[3]) && ckTeni(cel[3]) && ckSlot(cel[w_col1]) && ckRank(cel[5]) && ckRankMin(cel[5]) ? "" : "none";}
+			ckSlot = ckSlot_F(s[5].value);
+			if (!ckG) { ckRank = rankSort(s[6].value), ckRankMin = limitRank(i[3].value); }
+		if (location.pathname.indexOf("yumi") !== -1 && !ckG) {for (var i = 0,cel; i < N; i++) cel = tr[i].cells,tr[i].style.display = ckRare(cel[ckGS]) && ckIzyo(cel[2]) && ckZoku(cel[2]) && ckKobetu(cel[3]) && ckTeni(cel[3]) && ckSlot(cel[w_col1]) && ckRank(cel[6]) && ckRankMin(cel[6]) ? "" : "none";}
+		else if (location.pathname.indexOf("yumi") !== -1) {for (var i = 0,cel; i < N; i++) cel = tr[i].cells,tr[i].style.display = ckRare(cel[ckGS]) && ckIzyo(cel[2]) && ckZoku(cel[2]) && ckKobetu(cel[3]) && ckTeni(cel[3]) && ckSlot(cel[w_col1]) ? "" : "none";}
+		else if (!ckG) {for (var i = 0,cel; i < N; i++) cel = tr[i].cells,tr[i].style.display = ckRare(cel[ckGS]) && ckIzyo(cel[2]) && ckZoku(cel[2]) && ckKobetu(cel[3]) && ckTeni(cel[3]) && ckSlot(cel[w_col1]) && ckRank(cel[5]) && ckRankMin(cel[5]) ? "" : "none";}
+		else {for (var i = 0,cel; i < N; i++) cel = tr[i].cells,tr[i].style.display = ckRare(cel[ckGS]) && ckIzyo(cel[2]) && ckZoku(cel[2]) && ckKobetu(cel[3]) && ckTeni(cel[3]) && ckSlot(cel[w_col1]) ? "" : "none";}
 	}
 } else {
 	//ガン
@@ -322,10 +323,10 @@ if (treeCK){
 			ckGun = ckGun_F(s[1].value,s[2].value,s[3].value),
 			ckTama = ckTama_F(s[4].value,s[5].value),
 			ckTeni = ckTeni_F(s[6].value),
-			ckSlot = ckSlot_F(s[7].value),
-			ckRank = rankSort(s[8].value),
-			ckRankMin = limitRank(i[2].value);
-		for (var i = 0,cel; i<N; i++) cel=tr[i].cells,tr[i].style.display = ckRare(cel[ckGS]) && ckGun(cel[3]) && ckTama(cel[4]) && ckTeni(cel[4]) && ckSlot(cel[5]) && ckRank(cel[6]) && ckRankMin(cel[6]) ? "" : "none";
+			ckSlot = ckSlot_F(s[7].value);
+			if (!ckG) {ckRank = rankSort(s[8].value), ckRankMin = limitRank(i[2].value);}
+		if (!ckG) {for (var i = 0,cel; i<N; i++) cel=tr[i].cells,tr[i].style.display = ckRare(cel[ckGS]) && ckGun(cel[3]) && ckTama(cel[4]) && ckTeni(cel[4]) && ckSlot(cel[5]) && ckRank(cel[6]) && ckRankMin(cel[6]) ? "" : "none";}
+		else {for (var i = 0,cel; i<N; i++) cel=tr[i].cells,tr[i].style.display = ckRare(cel[ckGS]) && ckGun(cel[3]) && ckTama(cel[4]) && ckTeni(cel[4]) && ckSlot(cel[5]) ? "" : "none";}
 	}
 }
 
