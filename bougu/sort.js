@@ -117,7 +117,7 @@ if (location.pathname.indexOf("deconk") !== -1) {
 	["Status",["Poison","Paralysis","Sleep","Stun"]],
 	["Res Skills",["All Res","Fire Res","Water Res","Thunder Res","Ice Res","Dragon Res"]],
 	["Protect Skills",["Soundproof","Quake Res","Wind Pressure","Courage"]],
-	["Item & Combo",["Demon Flute","Health Flute","Armour Flute","Shock Trap"]],
+	["Item & Combo",["Demon Flute","Health Flute","Armor Flute","Shock Trap"]],
 	["Rewards Skills",["Luck"]],
 	["Other Skills",["Resilience","Excitement","Encouragement","Bonding","Movement Speed"]]
 	]);

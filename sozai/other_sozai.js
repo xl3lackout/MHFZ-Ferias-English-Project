@@ -9130,7 +9130,7 @@ Cyougo : {
 ,"1C70":"041x +|1C6F1x for 0z =|25F5x,041x +|1C6F1x for 0z =|25F6x,041x +|1C6F1x for 0z =|25F8x,041x +|1C6F1x for 0z =|25F9x,7Raise the monster's Lv +5 in Extreme Conquest"
 ,"1C6F":"041x +|1C701x for 0z =|25F5x,041x +|1C701x for 0z =|25F6x,041x +|1C701x for 0z =|25F8x,041x +|1C701x for 0z =|25F9x,7Raise the monster's Lv +1 in Extreme Conquest"
 ,"1C71":"041x for 0z =|25F5x,7Raise the monster's Lv+10 in Extreme Conquest"
-,"2C01":"7If you bring it in during the Extreme Conquest Battle、you can get 「Valor Stones」 and 「Armour Stones」."
+,"2C01":"7If you bring it in during the Extreme Conquest Battle、you can get 「Valor Stones」 and 「Armor Stones」."
 ,"1348":"7Goocoo Pot：1x and get |15093x or Weapon Soul Mid 4x ;|15101x Bonus"
 ,"0F97":"7Goocoo Pot：15x and get |0x  ;|18141x Bonus"
 ,"0F92":"7Goocoo Pot：15x and get |0x  ;|18141x Bonus(50%)"
